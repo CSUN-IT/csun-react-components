@@ -1,0 +1,16 @@
+header {
+  .wo-header-container{
+    #wo-full-logo {
+      display: block;
+      float: left;
+      width: 347px;
+      height: 56px;
+      background-size: cover;
+      background-image: $csun-logo-full;
+    }
+    #wo-header-right {
+      display: block;
+      float: right;
+    }
+  }
+}
