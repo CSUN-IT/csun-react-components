@@ -30,7 +30,7 @@ class MetaPrimaryNav extends Component {
 }
 
 MetaPrimaryNav.defaultProps = {
-  menuItems: {},
+  menuItems: [{}],
   navColor: '',
 };
 

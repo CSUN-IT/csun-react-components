@@ -1,3 +1,4 @@
-import csunReactComponents from './components/meta/Nav';
+import MetaPrimaryNav from './components/meta/Nav';
+import MetaBreadcrumbs from './components/meta/Breadcrumbs';
 
-export default csunReactComponents;
+export { MetaBreadcrumbs, MetaPrimaryNav };
