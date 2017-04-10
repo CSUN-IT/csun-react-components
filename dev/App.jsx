@@ -4,7 +4,10 @@ import {
   Route,
 } from 'react-router-dom';
 import './App.css';
-import MetaPrimaryNav from '../src';
+import {
+   MetaPrimaryNav,
+   MetaBreadcrumbs,
+ } from '../src';
 
 class App extends Component {
 
@@ -26,6 +29,22 @@ class App extends Component {
         active: false,
       },
     ];
+
+    const breadcrumbs = [
+      {
+        title: 'Home',
+        to: '',
+        home: true,
+      },
+      {
+        title: 'Documentation',
+        typeStyle: 'strike',
+      },
+      {
+        title: 'Breadcrumbs',
+      },
+    ];
+
     const Home = () => (
       <div>
         <h2>Home</h2>
@@ -48,6 +67,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} />
+          <MetaBreadcrumbs breadcrumbItems={breadcrumbs} typeColor={'red'}/>
           <Route exact path="/" component={Home} />
           <Route path="/it" component={It} />
           <Route path="/giving" component={Giving} />
