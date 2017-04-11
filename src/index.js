@@ -4,6 +4,7 @@ import MetaSubNav from './components/meta/SubNav';
 import MetaButton from './components/meta/Button';
 import MetaContainer from './components/meta/Container';
 import MetaRow from './components/meta/Row';
+import MetaColumn from './components/meta/Column';
 
 export {
   MetaBreadcrumbs,
@@ -12,4 +13,5 @@ export {
   MetaButton,
   MetaContainer,
   MetaRow,
+  MetaColumn,
 };
