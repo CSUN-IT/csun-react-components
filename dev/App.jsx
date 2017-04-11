@@ -9,6 +9,7 @@ import {
    MetaBreadcrumbs,
    MetaSubNav,
    MetaButton,
+   MetaContainer,
  } from '../src';
 
 class App extends Component {
@@ -87,9 +88,11 @@ class App extends Component {
       <Router>
         <div className="App">
           <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} />
-          <MetaBreadcrumbs breadcrumbItems={breadcrumbs} typeColor={'red'} />
-          <MetaSubNav menuItems={subNavMenu} />
-          <MetaButton text={'Activate'} color={'primary'} size={'lg'} btnStyle={'primary-outline'} />
+          <MetaContainer>
+            <MetaBreadcrumbs breadcrumbItems={breadcrumbs} typeColor={'red'} />
+            <MetaSubNav menuItems={subNavMenu} />
+            <MetaButton text={'Activate'} color={'primary'} size={'lg'} btnStyle={'primary-outline'} />
+          </MetaContainer>
           <Route exact path="/" component={Home} />
           <Route path="/it" component={It} />
           <Route path="/giving" component={Giving} />

@@ -10,6 +10,7 @@ export const typeStyles = [
   'italic',
   'marginless',
   'uppercase',
+  '',
 ];
 
 export const typeColors = [
@@ -17,4 +18,5 @@ export const typeColors = [
   'gray',
   'dark-gray',
   'light-gray',
+  '',
 ];
