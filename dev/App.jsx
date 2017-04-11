@@ -7,6 +7,7 @@ import './App.css';
 import {
    MetaPrimaryNav,
    MetaBreadcrumbs,
+   MetaSubNav,
  } from '../src';
 
 class App extends Component {
@@ -45,6 +46,24 @@ class App extends Component {
       },
     ];
 
+    const subNavMenu = [
+      {
+        title: 'Nav 1',
+        to: 'nav1',
+        active: true,
+      },
+      {
+        title: 'Nav 2',
+        to: 'nav2',
+        active: false,
+      },
+      {
+        title: 'Nav 3',
+        to: 'nav3',
+        active: false,
+      },
+    ];
+
     const Home = () => (
       <div>
         <h2>Home</h2>
@@ -67,7 +86,8 @@ class App extends Component {
       <Router>
         <div className="App">
           <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} />
-          <MetaBreadcrumbs breadcrumbItems={breadcrumbs} typeColor={'red'}/>
+          <MetaBreadcrumbs breadcrumbItems={breadcrumbs} typeColor={'red'} />
+          <MetaSubNav menuItems={subNavMenu} />
           <Route exact path="/" component={Home} />
           <Route path="/it" component={It} />
           <Route path="/giving" component={Giving} />
