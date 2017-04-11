@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { generate as shortIdGenerate } from 'shortid';
+import { typeStyles, typeColors } from './commons/typographyStyles';
 
 class MetaBreadcrumbs extends Component {
+
   render() {
     const breadcrumbs = this.props.breadcrumbItems.map(breadcrumb =>
       <li key={shortIdGenerate()} className={`breadcrumb__item ${breadcrumb.home ? 'breadcrumb__item--home' : ''} ${breadcrumb.typeStyle ? `type--${breadcrumb.typeStyle}` : ''}`}>
@@ -42,27 +44,10 @@ MetaBreadcrumbs.propTypes = {
     title: React.PropTypes.string.isRequired,
     to: React.PropTypes.string,
     home: React.PropTypes.bool,
-    typeStyle: React.PropTypes.oneOf([
-      'header',
-      'emphasis',
-      'strike',
-      'left',
-      'center',
-      'right',
-      'thin',
-      'bold',
-      'italic',
-      'marginless',
-      'uppercase',
-    ]),
+    typeStyle: React.PropTypes.oneOf(typeStyles),
   }),
   ),
-  typeColor: React.PropTypes.oneOf([
-    'red',
-    'gray',
-    'dark-gray',
-    'light-gray',
-  ]),
+  typeColor: React.PropTypes.oneOf(typeColors),
 };
 
 export default MetaBreadcrumbs;
