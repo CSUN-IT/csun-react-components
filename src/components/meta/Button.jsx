@@ -27,11 +27,13 @@ MetaButton.propTypes = {
   size: React.PropTypes.oneOf([
     'sm',
     'lg',
+    '',
   ]),
   btnStyle: React.PropTypes.oneOf([
     'default-outline',
     'primary-outline',
     'success-outline',
+    '',
   ]),
 };
 
