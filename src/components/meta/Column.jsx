@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class MetaColumn extends Component {
   render() {
     return (
-      <div className={`'col-${this.props.size}-'${this.props.value}`}>
+      <div className={`col-${this.props.size}-${this.props.value}`}>
         {this.props.children}
       </div>
     );

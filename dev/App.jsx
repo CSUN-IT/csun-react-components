@@ -14,6 +14,8 @@ import {
    MetaColumn,
    MetaTag,
    MetaPanel,
+   MetaFormField,
+   MetaFormGroup,
  } from '../src';
 
 class App extends Component {
@@ -70,6 +72,24 @@ class App extends Component {
       },
     ];
 
+    const formField = {
+      id: '1',
+      labelText: 'Example 1',
+      type: 'text',
+      placeholder: 'Example 1',
+      inputType: 'textarea',
+    };
+
+    const selectFormField = {
+      id: '2',
+      labelText: 'Options',
+      selectOptions: [{
+        value: '1',
+        text: 'wookie',
+      }],
+      inputType: 'select',
+    };
+
     const Home = () => (
       <div>
         <h2>Home</h2>
@@ -96,6 +116,10 @@ class App extends Component {
             <MetaColumn size={'sm'} value={'12'}>
               <MetaRow>
                 <MetaBreadcrumbs breadcrumbItems={breadcrumbs} typeColor={'red'} />
+                <MetaFormGroup>
+                  <MetaFormField field={formField} size={'sm'} value={'12'} />
+                  <MetaFormField field={selectFormField} size={'sm'} value={'12'} />
+                </MetaFormGroup>
               </MetaRow>
               <MetaRow>
                 <MetaSubNav menuItems={subNavMenu} />
