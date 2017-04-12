@@ -6,6 +6,7 @@ import MetaContainer from './components/meta/Container';
 import MetaRow from './components/meta/Row';
 import MetaColumn from './components/meta/Column';
 import MetaTag from './components/meta/Tag';
+import MetaPanel from './components/meta/Panel';
 
 export {
   MetaBreadcrumbs,
@@ -16,4 +17,5 @@ export {
   MetaRow,
   MetaColumn,
   MetaTag,
+  MetaPanel,
 };
