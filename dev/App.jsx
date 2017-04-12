@@ -12,6 +12,7 @@ import {
    MetaContainer,
    MetaRow,
    MetaColumn,
+   MetaTag,
  } from '../src';
 
 class App extends Component {
@@ -97,7 +98,12 @@ class App extends Component {
               </MetaRow>
               <MetaRow>
                 <MetaSubNav menuItems={subNavMenu} />
+              </MetaRow>
+              <MetaRow>
                 <MetaButton text={'Activate'} color={'primary'} size={'lg'} btnStyle={'primary-outline'} />
+              </MetaRow>
+              <MetaRow>
+                <MetaTag text={'Tag'} color={'success'} to={''} action={'close'} />
               </MetaRow>
             </MetaColumn>
           </MetaContainer>
