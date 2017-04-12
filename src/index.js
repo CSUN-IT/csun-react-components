@@ -10,6 +10,7 @@ import MetaFormGroup from './components/meta/FormGroup';
 import MetaTag from './components/meta/Tag';
 import MetaPanel from './components/meta/Panel';
 import MetaAlert from './components/meta/Alert';
+import MetaList from './components/meta/List';
 
 export {
   MetaBreadcrumbs,
@@ -24,4 +25,5 @@ export {
   MetaFormField,
   MetaFormGroup,
   MetaAlert,
+  MetaList,
 };

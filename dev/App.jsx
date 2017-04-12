@@ -17,6 +17,7 @@ import {
    MetaFormField,
    MetaFormGroup,
    MetaAlert,
+   MetaList,
  } from '../src';
 
 class App extends Component {
@@ -91,6 +92,17 @@ class App extends Component {
       inputType: 'select',
     };
 
+    const listItems = [
+      {
+        text: 'Nav 1',
+        to: 'nav1',
+      },
+      {
+        text: 'Nav 2',
+        to: 'nav2',
+      },
+    ];
+
     const Home = () => (
       <div>
         <h2>Home</h2>
@@ -136,6 +148,9 @@ class App extends Component {
               </MetaRow>
               <MetaRow>
                 <MetaAlert color={'warning'} strongText={'Warning! '} text={'Whoa there calm down'} to='#' />
+              </MetaRow>
+              <MetaRow>
+                <MetaList listItems={listItems} modifiers={['arrows', 'hover']} />
               </MetaRow>
             </MetaColumn>
           </MetaContainer>
