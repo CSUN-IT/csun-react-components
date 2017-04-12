@@ -13,6 +13,7 @@ import {
    MetaRow,
    MetaColumn,
    MetaTag,
+   MetaPanel,
  } from '../src';
 
 class App extends Component {
@@ -104,6 +105,9 @@ class App extends Component {
               </MetaRow>
               <MetaRow>
                 <MetaTag text={'Tag'} color={'success'} to={''} action={'close'} />
+              </MetaRow>
+              <MetaRow>
+                <MetaPanel panelHeader={{ text: 'Panel Header' }} panelImage={{ imageURL: 'https://www.amherst.edu/system/files/styles/fs_1220_800/private/Psychology_compressed_1920x1280.jpg?itok=FAEv8xqf&__=1458580432' }}panelContent={{ text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam voluptatem harum cupiditate quae aliquid quia optio suscipit ex temporibus adipisci.' }} panelFooter={{ strongText: 'warning: ', text: 'Are You Sure You Want To Do That?' }} />
               </MetaRow>
             </MetaColumn>
           </MetaContainer>
