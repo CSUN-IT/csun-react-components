@@ -11,6 +11,7 @@ import MetaTag from './components/meta/Tag';
 import MetaPanel from './components/meta/Panel';
 import MetaAlert from './components/meta/Alert';
 import MetaList from './components/meta/List';
+import MetaSideNav from './components/meta/SideNav';
 
 export {
   MetaBreadcrumbs,
@@ -26,4 +27,5 @@ export {
   MetaFormGroup,
   MetaAlert,
   MetaList,
+  MetaSideNav,
 };
