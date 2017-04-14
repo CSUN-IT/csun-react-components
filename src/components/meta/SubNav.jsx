@@ -8,9 +8,9 @@ class MetaSubNav extends Component {
     // Generates each individual sub nav link
 
     const subNavLinks = this.props.menuItems.map(link =>
-      <Link className="tab__list" key={shortIdGenerate()}>
-        <a className={`tab__link ${link.active ? 'tab__link--active' : ''} ${this.props.typeColor ? `type--${this.props.typeColor}` : ''}`} to={link.to}>{link.title}</a>
-      </Link>,
+      <li className="tab__list" key={shortIdGenerate()}>
+        <Link className={`tab__link ${link.active ? 'tab__link--active' : ''} ${this.props.typeColor ? `type--${this.props.typeColor}` : ''}`} to={link.to}>{link.title}</Link>
+      </li>,
     );
 
     return (
