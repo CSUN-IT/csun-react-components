@@ -3,6 +3,17 @@ import { Link } from 'react-router-dom';
 import { generate as shortIdGenerate } from 'shortid';
 
 class MetaPrimaryNav extends Component {
+  componentWillMount() {
+    const activeIndex = this.props.menuItems.findIndex(item =>
+      item.active,
+    );
+    this.setState({ activeIndex });
+  }
+  
+  componentWillUpdate() {
+    console.log(this.state);
+  }
+
   render() {
     const navLinks = this.props.menuItems.map(link =>
       <li key={shortIdGenerate()}>
