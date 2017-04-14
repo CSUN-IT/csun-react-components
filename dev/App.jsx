@@ -18,6 +18,7 @@ import {
    MetaFormGroup,
    MetaAlert,
    MetaList,
+   MetaSideNav,
  } from '../src';
 
 class App extends Component {
@@ -33,6 +34,25 @@ class App extends Component {
         title: 'IT',
         to: 'it',
         active: false,
+      },
+      {
+        title: 'Giving',
+        to: 'giving',
+        active: false,
+      },
+    ];
+
+    const sideNavItems = [
+      {
+        title: 'Home',
+        to: '',
+        active: true,
+      },
+      {
+        title: 'IT',
+        to: 'it',
+        active: false,
+        fill: true,
       },
       {
         title: 'Giving',
@@ -152,6 +172,9 @@ class App extends Component {
               <MetaRow>
                 <MetaList listItems={listItems} modifiers={['arrows', 'hover']} />
               </MetaRow>
+              <MetaColumn size={'sm'} value={'3'}>
+                <MetaSideNav menuItems={sideNavItems} />
+              </MetaColumn>
             </MetaColumn>
           </MetaContainer>
           <Route exact path="/" component={Home} />
