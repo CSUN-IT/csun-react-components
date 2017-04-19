@@ -104,21 +104,14 @@ class App extends Component {
       },
     ];
 
-    const headerItems = [
+    const columns = [
       {
-        title: 'Header',
-      },
-      {
-        title: 'Another',
-      },
-    ];
-
-    const bodyItems = [
-      {
-        text: 'sample text',
-      },
-      {
-        text: 'another sample text',
+        headerTitle: 'Igloo',
+        items: [
+          'lunchbox!',
+          'made at home',
+          'CVS for LYFE!',
+        ],
       },
     ];
 
@@ -173,7 +166,7 @@ class App extends Component {
                 <MetaList listItems={listItems} modifiers={['arrows', 'hover']} />
               </MetaRow>
             </MetaColumn>
-            <MetaTable headerItems={headerItems} bodyItems={bodyItems} tableProperties={['padded', 'bordered', 'hover']} />
+            <MetaTable columns={columns} tableProperties={['padded', 'bordered', 'hover']} />
           </MetaContainer>
           <Route exact path="/" component={Home} />
           <Route path="/it" component={It} />

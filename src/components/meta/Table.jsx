@@ -2,32 +2,40 @@ import React, { Component } from 'react';
 
 class MetaTable extends Component {
   render() {
-    const headerRow = this.props.headerItems.map(title => <th>{title.title}</th>);
-    // const bodyRow = this.props.bodyItems.map(body => <)
+    const headerRow = this.props.columns.map(column => <th>{column.headerTitle}</th>);
+    //const bodyRow = this.props.columns.map((column) => { test = column.items.map(item => <tr><td>{item}</td></tr>); return test; });
+    const test = this.props.columns.map(column => column.items);
+    console.table(test);
+    const newArray = test[0].map((col, i) => test.map(row => row[i]));
+
+    console.table(newArray);
+
+    const bodyRow = newArray.map(row => <tr>{row.map(item => <td>{item}</td>)}</tr>);
+    //const bodyRow = this.props.columns.map(column => <tr>{ newArray.map(item => <td>{item}</td>)}</tr>);
+
+
+
+
+
+
+
+
     const tableClassName = `table${this.props.tableProperties ?
       (this.props.tableProperties.map(style => ` table--${style}`)).join('') : ''}`;
-    console.log(tableClassName);
     return (
       <div className="table--responsive">
         <table className={tableClassName}>
-          {this.props.headerItems ?
+          {
             <thead>
               <tr>
                 {headerRow}
-                {/*<th>{this.props.headerItems[0].title}</th>*/}
               </tr>
             </thead>
-            :
-            ''
           }
-          {this.props.bodyItems ?
+          {
             <tbody>
-              <tr>
-                <td>{this.props.bodyItems[0].text}</td>
-              </tr>
+              {bodyRow}
             </tbody>
-            :
-            ''
           }
         </table>
       </div>
@@ -36,19 +44,16 @@ class MetaTable extends Component {
 }
 
 MetaTable.defaultProps = {
-  headerItems: {},
-  bodyItems: {},
   tableProperties: undefined,
 };
 
 MetaTable.propTypes = {
-  column: React.PropTypes.arrayOf(React.PropTypes.shape({
-    headerTitle: React.PropTypes.string.isRequired,
-    items: React.PropTypes.arrayOf(React.PropTypes.string.isRequired),
-  }),
+  columns: React.PropTypes.arrayOf(
+    React.PropTypes.shape({
+      headerTitle: React.PropTypes.string.isRequired,
+      items: React.PropTypes.arrayOf(React.PropTypes.string.isRequired),
+    }).isRequired,
   ),
-  headerItems: React.PropTypes.arrayOf(React.PropTypes.object),
-  bodyItems: React.PropTypes.arrayOf(React.PropTypes.object),
   tableProperties: React.PropTypes.arrayOf(React.PropTypes.oneOf([
     'striped',
     'bordered',
