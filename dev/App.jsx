@@ -18,6 +18,7 @@ import {
    MetaFormGroup,
    MetaAlert,
    MetaList,
+   MetaTable,
  } from '../src';
 
 class App extends Component {
@@ -103,6 +104,24 @@ class App extends Component {
       },
     ];
 
+    const headerItems = [
+      {
+        title: 'Header',
+      },
+      {
+        title: 'Another',
+      },
+    ];
+
+    const bodyItems = [
+      {
+        text: 'sample text',
+      },
+      {
+        text: 'another sample text',
+      },
+    ];
+
     const Home = () => (
       <div>
         <h2>Home</h2>
@@ -135,7 +154,8 @@ class App extends Component {
                 </MetaFormGroup>
               </MetaRow>
               <MetaRow>
-                <MetaSubNav menuItems={subNavMenu} />
+                {/*<MetaSubNav menuItems={subNavMenu} />*/}
+                <MetaButton text={'Activate'} color={'primary'} size={'lg'} btnStyle={'primary-outline'} />
               </MetaRow>
               <MetaRow>
                 <MetaButton text={'Activate'} color={'primary'} size={'lg'} btnStyle={'primary-outline'} />
@@ -153,6 +173,7 @@ class App extends Component {
                 <MetaList listItems={listItems} modifiers={['arrows', 'hover']} />
               </MetaRow>
             </MetaColumn>
+            <MetaTable headerItems={headerItems} bodyItems={bodyItems} tableProperties={['padded', 'bordered', 'hover']} />
           </MetaContainer>
           <Route exact path="/" component={Home} />
           <Route path="/it" component={It} />
