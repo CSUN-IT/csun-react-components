@@ -124,13 +124,35 @@ class App extends Component {
       },
     ];
 
-    const columns = [
+    const headerItems = [
       {
-        headerTitle: 'Igloo',
-        items: [
-          'lunchbox!',
-          'made at home',
-          'CVS for LYFE!',
+        headerTitle: 'Title 1',
+      },
+      {
+        headerTitle: 'Title 2',
+        headerStyle: ['italic'],
+      },
+      {
+        headerTitle: 'Title 3',
+        headerStyle: ['italic'],
+      },
+    ];
+
+    const rows = [
+      {
+        row: [
+          {
+            text: 'Sample text',
+            textStyle: ['strike', 'bold'],
+          },
+          {
+            text: 'Another sample',
+            textStyle: ['italic'],
+          },
+          {
+            text: 'Beep Boop',
+            textStyle: ['bold'],
+          },
         ],
       },
     ];
@@ -155,7 +177,7 @@ class App extends Component {
 
     return (
       <Router>
-        <div className="App">
+        <div>
           <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} />
           <MetaContainer>
             <MetaColumn size={'sm'} value={'12'}>
@@ -189,7 +211,7 @@ class App extends Component {
                 <MetaSideNav menuItems={sideNavItems} />
               </MetaColumn>
             </MetaColumn>
-            <MetaTable columns={columns} tableProperties={['padded', 'bordered', 'hover']} />
+            <MetaTable headerItems={headerItems} bodyItems={rows} tableProperties={['padded', 'bordered', 'hover']} />
           </MetaContainer>
           <Route exact path="/" component={Home} />
           <Route path="/it" component={It} />
