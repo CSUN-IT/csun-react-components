@@ -1,25 +1,10 @@
 import React, { Component } from 'react';
+import { generate as shortIdGenerate } from 'shortid';
+import { typeStyles, typeColors } from './commons/typographyStyles';
+
 
 class MetaTable extends Component {
   render() {
-    const headerRow = this.props.columns.map(column => <th>{column.headerTitle}</th>);
-    //const bodyRow = this.props.columns.map((column) => { test = column.items.map(item => <tr><td>{item}</td></tr>); return test; });
-    const test = this.props.columns.map(column => column.items);
-    console.table(test);
-    const newArray = test[0].map((col, i) => test.map(row => row[i]));
-
-    console.table(newArray);
-
-    const bodyRow = newArray.map(row => <tr>{row.map(item => <td>{item}</td>)}</tr>);
-    //const bodyRow = this.props.columns.map(column => <tr>{ newArray.map(item => <td>{item}</td>)}</tr>);
-
-
-
-
-
-
-
-
     const tableClassName = `table${this.props.tableProperties ?
       (this.props.tableProperties.map(style => ` table--${style}`)).join('') : ''}`;
     return (
@@ -28,13 +13,28 @@ class MetaTable extends Component {
           {
             <thead>
               <tr>
-                {headerRow}
+                {this.props.headerItems.map((header) => {
+                  const tableHeaderclassName = `${header.headerStyle ? header.headerStyle.map(style => `type--${style} `).join('') : ''}`;
+                  return (<th className={tableHeaderclassName}key={shortIdGenerate()}>{header.headerTitle}</th>);
+                })
+                }
               </tr>
             </thead>
           }
           {
             <tbody>
-              {bodyRow}
+              {this.props.bodyItems.map((tableRow) => {
+                return (
+                  <tr key={shortIdGenerate()}>
+                    {tableRow.row.map((textObject) => {
+                      const tableCellClassName = `${textObject.textStyle ? textObject.textStyle.map(style => `type--${style} `).join('') : ''}`;
+                      return (<td key={shortIdGenerate()} className={tableCellClassName}>{textObject.text}</td>);
+                    })
+                    }
+                  </tr>
+                );
+              })
+              }
             </tbody>
           }
         </table>
@@ -45,15 +45,29 @@ class MetaTable extends Component {
 
 MetaTable.defaultProps = {
   tableProperties: undefined,
+  headerItems: {
+    headerStyle: undefined,
+  },
+  bodyItems: {
+    row: {
+      textStyle: undefined,
+    },
+  },
 };
 
 MetaTable.propTypes = {
-  columns: React.PropTypes.arrayOf(
-    React.PropTypes.shape({
-      headerTitle: React.PropTypes.string.isRequired,
-      items: React.PropTypes.arrayOf(React.PropTypes.string.isRequired),
-    }).isRequired,
-  ),
+  headerItems: React.PropTypes.arrayOf(React.PropTypes.shape({
+    headerTitle: React.PropTypes.string.isRequired,
+    headerStyle: React.PropTypes.arrayOf(React.PropTypes.oneOf(typeStyles)),
+  })).isRequired,
+
+  bodyItems: React.PropTypes.arrayOf(React.PropTypes.shape({
+    row: React.PropTypes.arrayOf(React.PropTypes.shape({
+      text: React.PropTypes.string.isRequired,
+      textStyle: React.PropTypes.arrayOf(React.PropTypes.oneOf(typeStyles)),
+    })),
+  })).isRequired,
+
   tableProperties: React.PropTypes.arrayOf(React.PropTypes.oneOf([
     'striped',
     'bordered',
