@@ -19,6 +19,7 @@ import {
    MetaAlert,
    MetaList,
    MetaSideNav,
+   MetaAccordion,
  } from '../src';
 
 class App extends Component {
@@ -168,6 +169,9 @@ class App extends Component {
               </MetaRow>
               <MetaRow>
                 <MetaAlert color={'warning'} strongText={'Warning! '} text={'Whoa there calm down'} to='#' />
+              </MetaRow>
+              <MetaRow>
+                <MetaAccordion />
               </MetaRow>
               <MetaRow>
                 <MetaList listItems={listItems} modifiers={['arrows', 'hover']} />
