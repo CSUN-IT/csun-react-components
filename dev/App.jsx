@@ -19,6 +19,7 @@ import {
    MetaAlert,
    MetaList,
    MetaSideNav,
+   MetaTimeline,
  } from '../src';
 
 class App extends Component {
@@ -171,6 +172,9 @@ class App extends Component {
               </MetaRow>
               <MetaRow>
                 <MetaList listItems={listItems} modifiers={['arrows', 'hover']} />
+              </MetaRow>
+              <MetaRow>
+                <MetaTimeline />
               </MetaRow>
               <MetaColumn size={'sm'} value={'3'}>
                 <MetaSideNav menuItems={sideNavItems} />
