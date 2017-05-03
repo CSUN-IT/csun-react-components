@@ -142,6 +142,21 @@ class App extends Component {
       </div>
     );
 
+    const accItems = [
+      {
+        heading: 'First',
+        body: 'I am the first item in the accordion!',
+      },
+      {
+        heading: 'Second',
+        body: 'Second verse same as the first',
+      },
+      {
+        heading: 'Third',
+        body: 'Third verse different from the first',
+      },
+    ];
+
     return (
       <Router>
         <div className="App">
@@ -171,7 +186,7 @@ class App extends Component {
                 <MetaAlert color={'warning'} strongText={'Warning! '} text={'Whoa there calm down'} to='#' />
               </MetaRow>
               <MetaRow>
-                <MetaAccordion />
+                <MetaAccordion bodyItems={accItems} />
               </MetaRow>
               <MetaRow>
                 <MetaList listItems={listItems} modifiers={['arrows', 'hover']} />
