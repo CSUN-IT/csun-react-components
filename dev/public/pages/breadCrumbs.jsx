@@ -3,68 +3,62 @@ import {
   MetaContainer,
   MetaColumn,
   MetaRow,
-  MetaPrimaryNav,
+  MetaBreadcrumbs,
 } from '../../../src';
 
 class DocPrimaryNav extends Component {
   render() {
-    const menuItems = [
+    const breadcrumbs = [
       {
         title: 'Home',
         to: '',
-        active: true,
+        home: true,
       },
       {
         title: 'IT',
         to: 'it',
-        active: false,
       },
       {
         title: 'Giving',
-        to: 'giving',
-        active: false,
       },
     ];
-    const code = `import MetaPrimaryNav from 'csun-react-components';
 
-      const menuItems = [
+    const code = `import MetaBreadcrumbs from 'csun-react-components';
+
+    const breadcrumbs = [
       {
         title: 'Home',
         to: '',
-        active: true,
+        home: true,
       },
       {
         title: 'IT',
         to: 'it',
-        active: false,
       },
       {
         title: 'Giving',
-        to: 'giving',
-        active: false,
       },
     ];
     
-    <MetaPrimaryNav menuitems={menuItems} navColor={'cream'}
+    <MetaBreadcrumbs breadcrumbItems={breadcrumbs} typecColor={'red'} />
     `;
 
     const propTypesTitle = '// Prop Types';
     const propTypes = `
-  menuItems: React.PropTypes.arrayOf(React.PropTypes.shape({
+  breadcrumbItems: React.PropTypes.arrayOf(React.PropTypes.shape({
     title: React.PropTypes.string.isRequired,
-    to: React.PropTypes.string.isRequired,
-    active: React.PropTypes.bool.isRequired,
+    to: React.PropTypes.string,
+    home: React.PropTypes.bool,
+    typeStyle: React.PropTypes.oneOf(typeStyles),
   }),
   ),
-  navColor: React.PropTypes.string,`;
+  typeColor: React.PropTypes.oneOf(typeColors),`;
 
     return (
       <MetaContainer>
         <MetaRow>
           <MetaColumn size={'sm'} value={'9'}>
-            <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} />
-            <MetaPrimaryNav menuItems={menuItems} />
-            <MetaPrimaryNav menuItems={menuItems} navColor={'black'} />
+            <MetaBreadcrumbs breadcrumbItems={breadcrumbs} typecColor={'red'} />
             <br />
             <pre>
               <code>

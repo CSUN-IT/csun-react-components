@@ -13,9 +13,6 @@ import {
  } from '../src';
 
 class App extends Component {
-   componentWillMount() {
-    console.log(this);
-  }
   render() {
     const menuItems = [
       {

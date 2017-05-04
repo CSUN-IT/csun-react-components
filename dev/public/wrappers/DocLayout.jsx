@@ -9,17 +9,22 @@ import {
 } from '../../../src';
 import {
   DocPrimaryNav,
+  DocBreadcrumbs,
+  DocAlerts,
+  DocButtons,
+  DocLists,
+  DocPanels,
+  DocSideNav,
+  DocSubNav,
+  DocTags,
+  DocGrid,
 } from '../pages';
 
 class DocLayout extends Component {
-   componentWillUpdate() {
-    console.log(this);
-  }
-
 
   render() {
     const match = this.props.match;
-    
+
     const sideNavMenuItems = [
       {
         title: 'Grid System',
@@ -44,6 +49,11 @@ class DocLayout extends Component {
       {
         title: 'Sub Nav',
         to: `${match.url}/subnavigation`,
+        active: false,
+      },
+      {
+        title: 'Side Nav',
+        to: `${match.url}/sidenav`,
         active: false,
       },
       {
@@ -109,9 +119,16 @@ class DocLayout extends Component {
         <MetaColumn size={'sm'} value={'3'}>
           <MetaSideNav menuItems={sideNavMenuItems} />
         </MetaColumn>
-        <MetaColumn size={'sm'} value={'9'}>
-          <Route path={`${match.url}/nav`} component={DocPrimaryNav} />
-        </MetaColumn>
+        <Route path={`${match.url}/nav`} component={DocPrimaryNav} />
+        <Route path={`${match.url}/breadcrumbs`} component={DocBreadcrumbs} />
+        <Route path={`${match.url}/alerts`} component={DocAlerts} />
+        <Route path={`${match.url}/buttons`} component={DocButtons} />
+        <Route path={`${match.url}/lists`} component={DocLists} />
+        <Route path={`${match.url}/panels`} component={DocPanels} />
+        <Route path={`${match.url}/sidenav`} component={DocSideNav} />
+        <Route path={`${match.url}/subnavigation`} component={DocSubNav} />
+        <Route path={`${match.url}/tags`} component={DocTags} />
+        <Route path={`${match.url}/grid`} component={DocGrid} />
       </MetaRow>
     );
   }

@@ -3,49 +3,60 @@ import {
   MetaContainer,
   MetaColumn,
   MetaRow,
-  MetaPrimaryNav,
+  MetaSubNav,
 } from '../../../src';
 
-class DocPrimaryNav extends Component {
+class DocSubNav extends Component {
   render() {
     const menuItems = [
       {
-        title: 'Home',
-        to: '',
+        title: 'Link #1',
+        to: '#',
         active: true,
       },
       {
-        title: 'IT',
-        to: 'it',
+        title: 'Link #2',
+        to: '#',
         active: false,
       },
       {
-        title: 'Giving',
-        to: 'giving',
+        title: 'Link #3',
+        to: '#',
+        active: false,
+      },
+      {
+        title: 'Link #4',
+        to: '#',
         active: false,
       },
     ];
-    const code = `import MetaPrimaryNav from 'csun-react-components';
 
-      const menuItems = [
+    const code = `import MetaSubNav from 'csun-react-components';
+
+    const menuItems = [
       {
-        title: 'Home',
-        to: '',
+        title: 'Link #1',
+        to: '#',
         active: true,
       },
       {
-        title: 'IT',
-        to: 'it',
+        title: 'Link #2',
+        to: '#',
         active: false,
       },
       {
-        title: 'Giving',
-        to: 'giving',
+        title: 'Link #3',
+        to: '#',
+        active: false,
+      },
+      {
+        title: 'Link #4',
+        to: '#',
         active: false,
       },
     ];
-    
-    <MetaPrimaryNav menuitems={menuItems} navColor={'cream'}
+
+<MetaSubNav menuItems={menuItems} />
     `;
 
     const propTypesTitle = '// Prop Types';
@@ -54,17 +65,16 @@ class DocPrimaryNav extends Component {
     title: React.PropTypes.string.isRequired,
     to: React.PropTypes.string.isRequired,
     active: React.PropTypes.bool.isRequired,
+    typeStyle: React.PropTypes.oneOf(typeStyles),
   }),
   ),
-  navColor: React.PropTypes.string,`;
+  typeColor: React.PropTypes.oneOf(typeColors),`;
 
     return (
       <MetaContainer>
         <MetaRow>
           <MetaColumn size={'sm'} value={'9'}>
-            <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} />
-            <MetaPrimaryNav menuItems={menuItems} />
-            <MetaPrimaryNav menuItems={menuItems} navColor={'black'} />
+            <MetaSubNav menuItems={menuItems} />
             <br />
             <pre>
               <code>
@@ -82,4 +92,5 @@ class DocPrimaryNav extends Component {
   }
 }
 
-export default DocPrimaryNav;
+export default DocSubNav;
+
