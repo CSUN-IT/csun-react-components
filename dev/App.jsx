@@ -17,13 +17,12 @@ class App extends Component {
     const menuItems = [
       {
         title: 'Home',
-        to: '',
-        active: true,
+        to: '/',
+        exact: true,
       },
       {
         title: 'Documentation',
         to: '/docs',
-        active: false,
       },
     ];
 
