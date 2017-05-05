@@ -3,14 +3,13 @@ import React, { Component } from 'react';
 
 class MetaAccordion extends Component {
   render() {
-    console.log(this.props.bodyItems);
-    const AccordionBody = this.props.bodyItems.map((Item) => (
-    <div>
-      <dt className="accordion__header">{Item.heading}</dt>
-      <dd className="accordion__content">
-        <p>{Item.body}</p>
-      </dd>
-    </div>));
+    const AccordionBody = this.props.bodyItems.map(Item => (
+      <div>
+        <dt className="accordion__header">{Item.heading}</dt>
+        <dd className="accordion__content">
+          <p>{Item.body}</p>
+        </dd>
+      </div>));
 
     return (
       <dl className="accordion">
@@ -22,8 +21,8 @@ class MetaAccordion extends Component {
 
 MetaAccordion.propTypes = {
   bodyItems: React.PropTypes.arrayOf(React.PropTypes.shape({
-    heading: React.PropTypes.string,
-    body: React.PropTypes.string,
+    heading: React.PropTypes.string.isRequired,
+    body: React.PropTypes.string.isRequired,
   })).isRequired,
 };
 
