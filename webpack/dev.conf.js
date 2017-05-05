@@ -7,6 +7,9 @@ module.exports = Object.assign(config, {
   devtool: 'eval-source-map',
   devServer: {
     contentBase: 'dev',
+    historyApiFallback: {
+      index: '/index.html',
+    },
   },
   module: {
     loaders: [
