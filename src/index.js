@@ -12,6 +12,7 @@ import MetaPanel from './components/meta/Panel';
 import MetaAlert from './components/meta/Alert';
 import MetaList from './components/meta/List';
 import MetaSideNav from './components/meta/SideNav';
+import MetaAccordion from './components/meta/Accordion';
 
 export {
   MetaBreadcrumbs,
@@ -28,4 +29,5 @@ export {
   MetaAlert,
   MetaList,
   MetaSideNav,
+  MetaAccordion,
 };

@@ -8,6 +8,7 @@ import DocSideNav from './sideNav';
 import DocSubNav from './subNav';
 import DocTags from './tags';
 import DocGrid from './gridSystem';
+import DocAccordion from './accordion';
 
 export {
   DocPrimaryNav,
@@ -20,4 +21,5 @@ export {
   DocSubNav,
   DocTags,
   DocGrid,
+  DocAccordion,
 };

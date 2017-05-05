@@ -18,6 +18,7 @@ import {
   DocSubNav,
   DocTags,
   DocGrid,
+  DocAccordion,
 } from '../pages';
 
 class DocLayout extends Component {
@@ -129,6 +130,7 @@ class DocLayout extends Component {
         <Route path={`${match.url}/subnavigation`} component={DocSubNav} />
         <Route path={`${match.url}/tags`} component={DocTags} />
         <Route path={`${match.url}/grid`} component={DocGrid} />
+        <Route path={`${match.url}/accordion`} component={DocAccordion} />
       </MetaRow>
     );
   }
