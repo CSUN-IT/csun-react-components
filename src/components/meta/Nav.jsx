@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { generate as shortIdGenerate } from 'shortid';
 
 class MetaPrimaryNav extends Component {
   render() {
     const navLinks = this.props.menuItems.map(link =>
       <li key={shortIdGenerate()}>
-        <Link className={`primary-nav__link ${link.active ? 'active' : ''}`} to={link.to}>{ link.title }</Link>
+        <NavLink exact={link.exact ? link.exact : false} className={'primary-nav__link'} to={link.to}>{ link.title }</NavLink>
       </li>);
 
     return (<nav className={`primary-nav primary-nav${this.props.navColor ? `--${this.props.navColor}` : ''} `}>
@@ -38,7 +38,7 @@ MetaPrimaryNav.propTypes = {
   menuItems: React.PropTypes.arrayOf(React.PropTypes.shape({
     title: React.PropTypes.string.isRequired,
     to: React.PropTypes.string.isRequired,
-    active: React.PropTypes.bool.isRequired,
+    exact: React.PropTypes.bool,
   }),
   ),
   navColor: React.PropTypes.string,

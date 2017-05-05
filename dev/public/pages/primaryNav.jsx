@@ -12,17 +12,15 @@ class DocPrimaryNav extends Component {
       {
         title: 'Home',
         to: '',
-        active: true,
+        exact: true,
       },
       {
         title: 'IT',
         to: 'it',
-        active: false,
       },
       {
         title: 'Giving',
         to: 'giving',
-        active: false,
       },
     ];
     const code = `import MetaPrimaryNav from 'csun-react-components';
@@ -31,17 +29,15 @@ class DocPrimaryNav extends Component {
       {
         title: 'Home',
         to: '',
-        active: true,
+        exact: true,
       },
       {
         title: 'IT',
         to: 'it',
-        active: false,
       },
       {
         title: 'Giving',
         to: 'giving',
-        active: false,
       },
     ];
     
@@ -53,7 +49,7 @@ class DocPrimaryNav extends Component {
   menuItems: React.PropTypes.arrayOf(React.PropTypes.shape({
     title: React.PropTypes.string.isRequired,
     to: React.PropTypes.string.isRequired,
-    active: React.PropTypes.bool.isRequired,
+    exact: React.PropTypes.bool,
   }),
   ),
   navColor: React.PropTypes.string,`;

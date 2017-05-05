@@ -12,22 +12,18 @@ class DocSideNav extends Component {
       {
         title: 'Link #1',
         to: '#',
-        active: true,
       },
       {
         title: 'Link #2',
         to: '#',
-        active: false,
       },
       {
         title: 'Link #3',
         to: '#',
-        active: false,
       },
       {
         title: 'Link #4',
         to: '#',
-        active: false,
       },
     ];
 
@@ -35,23 +31,18 @@ class DocSideNav extends Component {
       {
         title: 'Link #1',
         to: '#',
-        active: true,
-        fill: true,
       },
       {
         title: 'Link #2',
         to: '#',
-        active: false,
       },
       {
         title: 'Link #3',
         to: '#',
-        active: false,
       },
       {
         title: 'Link #4',
         to: '#',
-        active: false,
       },
     ];
     const code = `import MetaSideNav from 'csun-react-components';
@@ -60,22 +51,18 @@ class DocSideNav extends Component {
       {
         title: 'Link #1',
         to: '#',
-        active: true,
       },
       {
         title: 'Link #2',
         to: '#',
-        active: false,
       },
       {
         title: 'Link #3',
         to: '#',
-        active: false,
       },
       {
         title: 'Link #4',
         to: '#',
-        active: false,
       },
     ];
 
@@ -87,7 +74,7 @@ class DocSideNav extends Component {
   menuItems: React.PropTypes.arrayOf(React.PropTypes.shape({
     title: React.PropTypes.string.isRequired,
     to: React.PropTypes.string.isRequired,
-    active: React.PropTypes.bool.isRequired,
+    exact: React.PropTypes.bool,
     fill: React.PropTypes.bool,
   }),
   ),`;

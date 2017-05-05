@@ -12,22 +12,18 @@ class DocSubNav extends Component {
       {
         title: 'Link #1',
         to: '#',
-        active: true,
       },
       {
         title: 'Link #2',
         to: '#',
-        active: false,
       },
       {
         title: 'Link #3',
         to: '#',
-        active: false,
       },
       {
         title: 'Link #4',
         to: '#',
-        active: false,
       },
     ];
 
@@ -37,22 +33,18 @@ class DocSubNav extends Component {
       {
         title: 'Link #1',
         to: '#',
-        active: true,
       },
       {
         title: 'Link #2',
         to: '#',
-        active: false,
       },
       {
         title: 'Link #3',
         to: '#',
-        active: false,
       },
       {
         title: 'Link #4',
         to: '#',
-        active: false,
       },
     ];
 
@@ -64,7 +56,7 @@ class DocSubNav extends Component {
   menuItems: React.PropTypes.arrayOf(React.PropTypes.shape({
     title: React.PropTypes.string.isRequired,
     to: React.PropTypes.string.isRequired,
-    active: React.PropTypes.bool.isRequired,
+    exact: React.PropTypes.bool,
     typeStyle: React.PropTypes.oneOf(typeStyles),
   }),
   ),
