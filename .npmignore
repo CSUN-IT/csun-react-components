@@ -1,0 +1,9 @@
+/dev/
+/dist/
+/webpack/
+/node_modules/
+/src/
+.babelrc
+.eslintrc.js
+.npmignore
+yarn.lock
