@@ -9,8 +9,8 @@ import {
  } from './public/wrappers';
 import {
    MetaPrimaryNav,
-   MetaContainer,
  } from '../src';
+
 
 class App extends Component {
   render() {
@@ -30,9 +30,7 @@ class App extends Component {
       <Router>
         <div>
           <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} />
-          <MetaContainer>
-            <Route path="/docs" component={DocLayout} />
-          </MetaContainer>
+          <Route path="/docs" component={DocLayout} />
         </div>
       </Router>
     );
