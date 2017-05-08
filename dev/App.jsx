@@ -26,10 +26,15 @@ class App extends Component {
       },
     ];
 
+    const subBrand = {
+      to: '#',
+      title: 'CSUN Metaphor React Components',
+    };
+
     return (
       <Router>
         <div>
-          <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} />
+          <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} subBrand={subBrand} />
           <Route path="/docs" component={DocLayout} />
         </div>
       </Router>

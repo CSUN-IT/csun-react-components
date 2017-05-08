@@ -52,7 +52,11 @@ class DocPrimaryNav extends Component {
     exact: React.PropTypes.bool,
   }),
   ),
-  navColor: React.PropTypes.string,`;
+  navColor: React.PropTypes.string,
+  subBrand: React.PropTypes.shape({
+    to: React.PropTypes.string.isRequired,
+    title: React.PropTypes.string.isRequired,
+  }),`;
 
     return (
       <MetaContainer>

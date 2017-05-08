@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { generate as shortIdGenerate } from 'shortid';
 
 class MetaPrimaryNav extends Component {
@@ -17,9 +17,12 @@ class MetaPrimaryNav extends Component {
             <div className="bar" />
             <div className="bar" />
           </div>
-          <div className="primary-nav__brand">
+          <a href={'https://www.csun.edu'} className="primary-nav__brand">
             <span className="sr-only">California State University, Northridge (CSUN)</span>
-          </div>
+          </a>
+          {this.props.subBrand ? <Link to={this.props.subBrand.to} className={'primary-nav__sub-brand'}>
+            {this.props.subBrand.title}
+          </Link> : ''}
         </div>
         <ul className="primary-nav__links">
           {navLinks}
@@ -32,6 +35,7 @@ class MetaPrimaryNav extends Component {
 MetaPrimaryNav.defaultProps = {
   menuItems: [{}],
   navColor: '',
+  subBrand: undefined,
 };
 
 MetaPrimaryNav.propTypes = {
@@ -42,6 +46,10 @@ MetaPrimaryNav.propTypes = {
   }),
   ),
   navColor: React.PropTypes.string,
+  subBrand: React.PropTypes.shape({
+    to: React.PropTypes.string.isRequired,
+    title: React.PropTypes.string.isRequired,
+  }),
 };
 
 export default MetaPrimaryNav;
