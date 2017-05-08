@@ -3,6 +3,7 @@ import {
   Route,
 } from 'react-router-dom';
 import {
+  MetaContainer,
   MetaColumn,
   MetaRow,
   MetaSideNav,
@@ -20,6 +21,7 @@ import {
   DocGrid,
   DocAccordion,
 } from '../pages';
+import SectionHelper from '../components/SectionHelper';
 
 class DocLayout extends Component {
 
@@ -116,22 +118,29 @@ class DocLayout extends Component {
 
 
     return (
-      <MetaRow>
-        <MetaColumn size={'sm'} value={'3'}>
-          <MetaSideNav menuItems={sideNavMenuItems} />
-        </MetaColumn>
-        <Route path={`${match.url}/nav`} component={DocPrimaryNav} />
-        <Route path={`${match.url}/breadcrumbs`} component={DocBreadcrumbs} />
-        <Route path={`${match.url}/alerts`} component={DocAlerts} />
-        <Route path={`${match.url}/buttons`} component={DocButtons} />
-        <Route path={`${match.url}/lists`} component={DocLists} />
-        <Route path={`${match.url}/panels`} component={DocPanels} />
-        <Route path={`${match.url}/sidenav`} component={DocSideNav} />
-        <Route path={`${match.url}/subnavigation`} component={DocSubNav} />
-        <Route path={`${match.url}/tags`} component={DocTags} />
-        <Route path={`${match.url}/grid`} component={DocGrid} />
-        <Route path={`${match.url}/accordion`} component={DocAccordion} />
-      </MetaRow>
+      <div>
+        <SectionHelper title={'Documentation'} />
+        <div className={'section'}>
+          <MetaContainer>
+            <MetaRow>
+              <MetaColumn size={'sm'} value={'3'}>
+                <MetaSideNav menuItems={sideNavMenuItems} />
+              </MetaColumn>
+              <Route path={`${match.url}/nav`} component={DocPrimaryNav} />
+              <Route path={`${match.url}/breadcrumbs`} component={DocBreadcrumbs} />
+              <Route path={`${match.url}/alerts`} component={DocAlerts} />
+              <Route path={`${match.url}/buttons`} component={DocButtons} />
+              <Route path={`${match.url}/lists`} component={DocLists} />
+              <Route path={`${match.url}/panels`} component={DocPanels} />
+              <Route path={`${match.url}/sidenav`} component={DocSideNav} />
+              <Route path={`${match.url}/subnavigation`} component={DocSubNav} />
+              <Route path={`${match.url}/tags`} component={DocTags} />
+              <Route path={`${match.url}/grid`} component={DocGrid} />
+              <Route path={`${match.url}/accordion`} component={DocAccordion} />
+            </MetaRow>
+          </MetaContainer>
+        </div>
+      </div>
     );
   }
 
