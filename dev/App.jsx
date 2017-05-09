@@ -4,53 +4,38 @@ import {
   Route,
 } from 'react-router-dom';
 import './App.css';
-import MetaPrimaryNav from '../src';
+import {
+   DocLayout,
+ } from './public/wrappers';
+import {
+   MetaPrimaryNav,
+ } from '../src';
+
 
 class App extends Component {
-
   render() {
     const menuItems = [
       {
         title: 'Home',
-        to: '',
-        active: true,
+        to: '/',
+        exact: true,
       },
       {
-        title: 'IT',
-        to: 'it',
-        active: false,
-      },
-      {
-        title: 'Giving',
-        to: 'giving',
-        active: false,
+        title: 'Documentation',
+        to: '/docs',
       },
     ];
-    const Home = () => (
-      <div>
-        <h2>Home</h2>
-      </div>
-    );
 
-    const It = () => (
-      <div>
-        <h2>It</h2>
-      </div>
-      );
-
-    const Giving = () => (
-      <div>
-        <h2>Giving</h2>
-      </div>
-    );
+    const subBrand = {
+      to: '#',
+      title: 'CSUN Metaphor React Components',
+    };
 
     return (
       <Router>
-        <div className="App">
-          <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} />
-          <Route exact path="/" component={Home} />
-          <Route path="/it" component={It} />
-          <Route path="/giving" component={Giving} />
+        <div>
+          <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} subBrand={subBrand} />
+          <Route path="/docs" component={DocLayout} />
         </div>
       </Router>
     );
