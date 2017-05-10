@@ -155,6 +155,10 @@ class App extends Component {
         heading: 'Third',
         body: 'Third verse different from the first',
       },
+      {
+        heading: 'Fourth',
+        body: 'Another item added.',
+      }
     ];
 
     return (
