@@ -2,7 +2,8 @@
   "name": "csun-components",
   "version": "0.1.0",
   "private": false,
-  "main": "lib/index.js",
+  "main": "lib/index",
+  "typings": "lib/index",
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
@@ -11,6 +12,10 @@
     "shortid": "^2.2.8"
   },
   "devDependencies": {
+    "@types/react": "^15.0.24",
+    "@types/react-dom": "^15.5.0",
+    "@types/react-router-dom": "^4.0.4",
+    "@types/shortid": "^0.0.29",
     "babel": "^6.23.0",
     "babel-cli": "^6.24.0",
     "babel-core": "^6.24.0",
@@ -23,6 +28,9 @@
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.0",
     "react-scripts": "0.9.5",
+    "ts-loader": "^2.0.3",
+    "typescript": "^2.3.2",
+    "typings": "^2.1.1",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.2"
   },
