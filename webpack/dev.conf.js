@@ -2,9 +2,9 @@ const config = require('./base.conf');
 
 // Webpack Development Settings
 module.exports = Object.assign(config, {
-  entry: './dev/Index.jsx',
+  entry: './dev/index.jsx',
   output: 'bundle.js',
-  devtool: 'eval-source-map',
+  devtool: 'source-map',
   devServer: {
     contentBase: 'dev',
     historyApiFallback: {

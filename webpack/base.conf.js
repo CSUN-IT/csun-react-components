@@ -4,6 +4,8 @@ module.exports = {
     extensions: [
       '.js',
       '.jsx',
+      '.ts',
+      '.tsx',
     ],
   },
   module: {
@@ -11,6 +13,10 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
+      },
+      {
+        test: /\.tsx?$/,
+        loader: 'awesome-typescript-loader',
       },
     ],
   },

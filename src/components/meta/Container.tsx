@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
-class MetaContainer extends Component {
+interface Props {
+  children: {} 
+}
+
+class MetaContainer extends Component <Props, {}> {
   render() {
     return (
       <div className="container">
@@ -9,13 +13,5 @@ class MetaContainer extends Component {
     );
   }
 }
-
-MetaContainer.defaultProps = {
-  children: {},
-};
-
-MetaContainer.propTypes = {
-  children: React.PropTypes.node.isRequired,
-};
 
 export default MetaContainer;
