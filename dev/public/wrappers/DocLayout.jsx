@@ -20,6 +20,7 @@ import {
   DocTags,
   DocGrid,
   DocAccordion,
+  DocTables,
 } from '../pages';
 import SectionHelper from '../components/SectionHelper';
 
@@ -132,6 +133,7 @@ class DocLayout extends Component {
               <Route path={`${match.url}/buttons`} component={DocButtons} />
               <Route path={`${match.url}/lists`} component={DocLists} />
               <Route path={`${match.url}/panels`} component={DocPanels} />
+              <Route path={`${match.url}/tables`} component={DocTables} />
               <Route path={`${match.url}/sidenav`} component={DocSideNav} />
               <Route path={`${match.url}/subnavigation`} component={DocSubNav} />
               <Route path={`${match.url}/tags`} component={DocTags} />
