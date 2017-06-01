@@ -1,28 +1,40 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class MetaPanel extends Component {
   render() {
+    if (this.props.panelObject == null) {
+      return (
+        <div style={{ border: 'solid 1px black', display: 'flex', justifyContent: 'center' }}>
+          Empty Panel Placeholder (Did you forget to pass in a panelObject?)
+        </div>
+      );
+    }
     return (
       <div className="panel">
-        {this.props.panelHeader ?
+        {this.props.panelObject.header ?
           <div className="panel__header">
-            <strong>{this.props.panelHeader.text}</strong>
+            <strong>{this.props.panelObject.header}</strong>
           </div>
           :
           ''
         }
-        {this.props.panelImage ?
-          <div className="panel__img" style={{ backgroundImage: `url(${this.props.panelImage.imageURL})` }} />
+        {this.props.panelObject.imageURL ?
+          <div className="panel__img" style={{ backgroundImage: `url(${this.props.panelObject.imageURL})` }} />
           :
           ''
         }
-        <div className="panel__content">
-          {this.props.panelContent.text}
-        </div>
-        {this.props.panelFooter ?
+        {this.props.panelObject.content ?
+          <div className="panel__content">
+            {this.props.panelObject.content}
+          </div>
+          :
+          ''
+        }
+        {this.props.panelObject.footer ?
           <div className="panel__footer">
-            <strong>{this.props.panelFooter.strongText}</strong>
-            {this.props.panelFooter.text}
+            <strong>{this.props.panelObject.footer.strongText}</strong>
+            {this.props.panelObject.footer.text}
           </div>
           :
           ''
@@ -33,27 +45,18 @@ class MetaPanel extends Component {
 }
 
 MetaPanel.defaultProps = {
-  panelHeader: {},
-  panelImage: {},
-  panelContent: {
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam voluptatem harum cupiditate quae aliquid quia optio suscipit ex temporibus adipisci.',
-  },
-  panelFooter: {},
+  panelObject: null,
 };
 
 MetaPanel.propTypes = {
-  panelHeader: React.PropTypes.shape({
-    text: React.PropTypes.string.isRequired,
-  }),
-  panelImage: React.PropTypes.shape({
-    imageURL: React.PropTypes.string.isRequired,
-  }),
-  panelContent: React.PropTypes.shape({
-    text: React.PropTypes.string.isRequired,
-  }).isRequired,
-  panelFooter: React.PropTypes.shape({
-    strongText: React.PropTypes.string,
-    text: React.PropTypes.string.isRequired,
+  panelObject: React.PropTypes.shape({
+    header: React.PropTypes.string,
+    content: React.PropTypes.string,
+    footer: React.PropTypes.shape({
+      text: React.PropTypes.string,
+      strongText: React.PropTypes.string,
+    }),
+    imageURL: React.PropTypes.string,
   }),
 };
 

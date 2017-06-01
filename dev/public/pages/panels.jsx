@@ -8,61 +8,44 @@ import {
 
 class DocPanels extends Component {
   render() {
-    const listItems = [
-      {
-        text: 'Side Nav Link',
-        to: '#',
+    const panelObject = {
+      header: 'Awesome Example Title',
+      content: 'This is clearly example content.',
+      footer: {
+        text: 'This text is in the footer.',
       },
-      {
-        text: 'Side Nav Link',
-        to: '#',
-      },
-      {
-        text: 'Side Nav Link',
-        to: '#',
-      },
-    ];
-    const code = `import MetaList from 'csun-react-components';
+    };
+    const code = `import MetaPanel from 'csun-react-components';
+    
+const panelObject = {
+  header: 'Awesome Example Title',
+  content: 'This is clearly example content.',
+  footer: {
+    text: 'This text is in the footer.'
+  }
 
-const listItems = [
-  {
-    text: 'Side Nav Link',
-    to: '#',
-  },
-  {
-    text: 'Side Nav Link',
-    to: '#',
-  },
-  {
-    text: 'Side Nav Link',
-    to: '#',
-  },
-];
+}
 
-<MetaList listItems={listItems} modifiers={['arrows']} />
+<MetaPanel panelObject={panelObject} />
     `;
 
     const propTypesTitle = '// Prop Types';
     const propTypes = `
-  panelHeader: React.PropTypes.shape({
-    text: React.PropTypes.string.isRequired,
-  }),
-  panelImage: React.PropTypes.shape({
-    imageURL: React.PropTypes.string.isRequired,
-  }),
-  panelContent: React.PropTypes.shape({
-    text: React.PropTypes.string.isRequired,
-  }).isRequired,
-  panelFooter: React.PropTypes.shape({
-    strongText: React.PropTypes.string,
-    text: React.PropTypes.string.isRequired,
-  }),`;
+  PanelObject: {
+    header: React.PropTypes.string,
+    content: React.PropTypes.string,
+    imageURL: React.PropTypes.string,
+    footer: React.PropTypes.shape({
+      text: React.PropTypes.string,
+      strongText: React.PropTypes.string
+    }),
+  }`;
 
     return (
       <MetaContainer>
         <MetaRow>
           <MetaColumn size={'sm'} value={'9'}>
-            <MetaPanel panelContent={{ text: 'This is a basic panel' }} />
+            <MetaPanel panelObject={panelObject} />
             <br />
             <pre>
               <code>
