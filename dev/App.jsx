@@ -5,14 +5,15 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import {
-   DocLayout,
- } from './public/wrappers';
+  DocLayout,
+} from './public/wrappers';
 import {
-   MetaPrimaryNav,
-   MetaContainer,
-   MetaRow,
-   MetaColumn,
- } from '../src';
+  MetaPrimaryNav,
+  MetaContainer,
+  MetaRow,
+  MetaColumn,
+  MetaChatBubble,
+} from '../src';
 
 
 class App extends Component {
@@ -53,16 +54,10 @@ class App extends Component {
         <div>
           <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} subBrand={subBrand} />
           <Route path="/docs" component={DocLayout} />
-          <div style={styles.homeContStyle}>
-            <MetaContainer>
-              <MetaRow>
-                <MetaColumn size={'sm'} value={'6'} offSet={'6'}>
-                  <p style={styles.paragraphStyle}>CSUN offers a lot services that students may not know about. Did you know that
-                    you can travel the world while doing things such as camping, kayaking, mountain climbing or even playing a sport.
-                  </p>
-                </MetaColumn>
-              </MetaRow>
-            </MetaContainer>
+          <div style={{ marginTop: '10', marginLeft: '10' }}>
+            <MetaChatBubble text="Hey, I'm Matty!" subText="Today at 3:23pm" receiver />
+            <br />
+            <MetaChatBubble text="Hey Matty, I forgot my password!" subText="Today at 3:26pm" receiver={false} />
           </div>
         </div>
       </Router>
