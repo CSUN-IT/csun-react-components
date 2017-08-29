@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './css/ChatBubble.css';
 
 const styles = {
 
@@ -34,9 +34,9 @@ class MetaChatBubble extends Component {
   render() {
     const chatStyle = this.props.receiver ? styles.receiverStyle : styles.senderStyle;
     return (
-      <div style={chatStyle}>
-        <p style={styles.mainText}>{this.props.text}</p>
-        <p style={styles.timeStamp}>{this.props.subText}</p>
+      <div className="bubble-container">
+        <p className="bubble me">{this.props.text}</p>
+        {/*<p className="bubble me">{this.props.subText}</p>*/}
       </div>
     );
   }
