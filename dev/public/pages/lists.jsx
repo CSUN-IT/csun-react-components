@@ -44,11 +44,11 @@ const listItems = [
 
     const propTypesTitle = '// Prop Types';
     const propTypes = `
-  listItems: React.PropTypes.arrayOf(React.PropTypes.shape({
-    text: React.PropTypes.string.isRequired,
-    to: React.PropTypes.string.isRequired,
+  listItems: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired,
   })),
-  modifiers: React.PropTypes.arrayOf(React.PropTypes.oneOf([
+  modifiers: PropTypes.arrayOf(PropTypes.oneOf([
     'arrows',
     'hover',
     'underlined',

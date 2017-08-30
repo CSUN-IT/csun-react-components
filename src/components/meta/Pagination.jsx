@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class MetaPagination extends Component {
 
@@ -34,15 +35,15 @@ MetaPagination.defaultProps = {
 };
 
 MetaPagination.propTypes = {
-  startRange: React.PropTypes.shape({
-    start: React.PropTypes.number.isRequired,
-    end: React.PropTypes.number.isRequired,
+  startRange: PropTypes.shape({
+    start: PropTypes.number.isRequired,
+    end: PropTypes.number.isRequired,
   }).isRequired,
-  endRange: React.PropTypes.shape({
-    start: React.PropTypes.number.isRequired,
-    end: React.PropTypes.number.isRequired,
+  endRange: PropTypes.shape({
+    start: PropTypes.number.isRequired,
+    end: PropTypes.number.isRequired,
   }),
-  activeNumber: React.PropTypes.number.isRequired,
+  activeNumber: PropTypes.number.isRequired,
 };
 
 export default MetaPagination;

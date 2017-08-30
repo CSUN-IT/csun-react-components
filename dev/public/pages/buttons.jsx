@@ -15,18 +15,18 @@ class DocButtons extends Component {
 
     const propTypesTitle = '// Prop Types';
     const propTypes = `
-  text: React.PropTypes.string.isRequired,
-  color: React.PropTypes.oneOf([
+  text: PropTypes.string.isRequired,
+  color: PropTypes.oneOf([
     'default',
     'primary',
     'success',
   ]).isRequired,
-  size: React.PropTypes.oneOf([
+  size: PropTypes.oneOf([
     'sm',
     'lg',
     '',
   ]),
-  btnStyle: React.PropTypes.oneOf([
+  btnStyle: PropTypes.oneOf([
     'default-outline',
     'primary-outline',
     'success-outline',
