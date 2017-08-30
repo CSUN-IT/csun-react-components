@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { generate as shortIdGenerate } from 'shortid';
+import PropTypes from 'prop-types';
 
 
 class MetaAccordion extends Component {
@@ -21,9 +22,9 @@ class MetaAccordion extends Component {
 }
 
 MetaAccordion.propTypes = {
-  bodyItems: React.PropTypes.arrayOf(React.PropTypes.shape({
-    heading: React.PropTypes.string.isRequired,
-    body: React.PropTypes.string.isRequired,
+  bodyItems: PropTypes.arrayOf(PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
   })).isRequired,
 };
 

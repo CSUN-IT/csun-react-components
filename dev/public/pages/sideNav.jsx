@@ -71,11 +71,11 @@ class DocSideNav extends Component {
 
     const propTypesTitle = '// Prop Types';
     const propTypes = `
-  menuItems: React.PropTypes.arrayOf(React.PropTypes.shape({
-    title: React.PropTypes.string.isRequired,
-    to: React.PropTypes.string.isRequired,
-    exact: React.PropTypes.bool,
-    fill: React.PropTypes.bool,
+  menuItems: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired,
+    exact: PropTypes.bool,
+    fill: PropTypes.bool,
   }),
   ),`;
 

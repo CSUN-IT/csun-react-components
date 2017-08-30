@@ -15,15 +15,15 @@ class DocTags extends Component {
 
     const propTypesTitle = '// Prop Types';
     const propTypes = `
-  text: React.PropTypes.string,
-  color: React.PropTypes.oneOf([
+  text: PropTypes.string,
+  color: PropTypes.oneOf([
     'success',
     'warning',
     'danger',
     '',
   ]),
-  action: React.PropTypes.oneOf(['close', '']),
-  to: React.PropTypes.string.isRequired,`;
+  action: PropTypes.oneOf(['close', '']),
+  to: PropTypes.string.isRequired,`;
 
     return (
       <MetaContainer>

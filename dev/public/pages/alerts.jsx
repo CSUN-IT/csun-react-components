@@ -15,15 +15,15 @@ class DocAlerts extends Component {
 
     const propTypesTitle = '// Prop Types';
     const propTypes = `
-  color: React.PropTypes.oneOf([
+  color: PropTypes.oneOf([
     'info',
     'success',
     'warning',
     'danger',
   ]),
-  strongText: React.PropTypes.string,
-  text: React.PropTypes.string.isRequired,
-  to: React.PropTypes.string,`;
+  strongText: PropTypes.string,
+  text: PropTypes.string.isRequired,
+  to: PropTypes.string,`;
 
     return (
       <MetaContainer>

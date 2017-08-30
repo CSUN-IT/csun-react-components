@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class MetaTag extends Component {
   render() {
@@ -20,15 +21,15 @@ MetaTag.defaultProps = {
 };
 
 MetaTag.propTypes = {
-  text: React.PropTypes.string,
-  color: React.PropTypes.oneOf([
+  text: PropTypes.string,
+  color: PropTypes.oneOf([
     'success',
     'warning',
     'danger',
     '',
   ]),
-  action: React.PropTypes.oneOf(['close', '']),
-  to: React.PropTypes.string.isRequired,
+  action: PropTypes.oneOf(['close', '']),
+  to: PropTypes.string.isRequired,
 };
 
 export default MetaTag;

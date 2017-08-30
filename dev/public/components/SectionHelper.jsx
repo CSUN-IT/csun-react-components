@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import {
   MetaContainer,
@@ -28,7 +29,7 @@ class SectionHelper extends Component {
 }
 
 SectionHelper.propTypes = {
-  title: React.PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default SectionHelper;

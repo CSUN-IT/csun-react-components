@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class MetaPanel extends Component {
   render() {
@@ -42,18 +43,18 @@ MetaPanel.defaultProps = {
 };
 
 MetaPanel.propTypes = {
-  panelHeader: React.PropTypes.shape({
-    text: React.PropTypes.string.isRequired,
+  panelHeader: PropTypes.shape({
+    text: PropTypes.string.isRequired,
   }),
-  panelImage: React.PropTypes.shape({
-    imageURL: React.PropTypes.string.isRequired,
+  panelImage: PropTypes.shape({
+    imageURL: PropTypes.string.isRequired,
   }),
-  panelContent: React.PropTypes.shape({
-    text: React.PropTypes.string.isRequired,
+  panelContent: PropTypes.shape({
+    text: PropTypes.string.isRequired,
   }).isRequired,
-  panelFooter: React.PropTypes.shape({
-    strongText: React.PropTypes.string,
-    text: React.PropTypes.string.isRequired,
+  panelFooter: PropTypes.shape({
+    strongText: PropTypes.string,
+    text: PropTypes.string.isRequired,
   }),
 };
 
