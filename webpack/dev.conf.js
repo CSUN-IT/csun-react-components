@@ -14,10 +14,6 @@ module.exports = Object.assign(config, {
   module: {
     loaders: [
       ...config.module.loaders,
-      {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader',
-      },
     ],
   },
 });
