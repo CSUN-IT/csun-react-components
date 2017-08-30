@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { generate as shortIdGenerate } from 'shortid';
+import PropTypes from 'prop-types';
 
 class MetaPrimaryNav extends Component {
   render() {
@@ -33,22 +34,22 @@ class MetaPrimaryNav extends Component {
 }
 
 MetaPrimaryNav.defaultProps = {
-  menuItems: [{}],
+  menuItems: [],
   navColor: '',
   subBrand: undefined,
 };
 
 MetaPrimaryNav.propTypes = {
-  menuItems: React.PropTypes.arrayOf(React.PropTypes.shape({
-    title: React.PropTypes.string.isRequired,
-    to: React.PropTypes.string.isRequired,
-    exact: React.PropTypes.bool,
+  menuItems: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired,
+    exact: PropTypes.bool,
   }),
   ),
-  navColor: React.PropTypes.string,
-  subBrand: React.PropTypes.shape({
-    to: React.PropTypes.string.isRequired,
-    title: React.PropTypes.string.isRequired,
+  navColor: PropTypes.string,
+  subBrand: PropTypes.shape({
+    to: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   }),
 };
 

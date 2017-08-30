@@ -62,7 +62,7 @@ class DocPrimaryNav extends Component {
       <MetaContainer>
         <MetaRow>
           <MetaColumn size={'sm'} value={'9'}>
-            <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} />
+            <MetaPrimaryNav subBrand={{title: 'CSUN React Components', to: ''}} navColor={'cream'} />
             <MetaPrimaryNav menuItems={menuItems} />
             <MetaPrimaryNav menuItems={menuItems} navColor={'black'} />
             <br />
