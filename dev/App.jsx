@@ -12,6 +12,7 @@ import {
    MetaContainer,
    MetaRow,
    MetaColumn,
+   QuickResponseButton,
  } from '../src';
 
 
@@ -60,6 +61,14 @@ class App extends Component {
                   <p style={styles.paragraphStyle}>CSUN offers a lot services that students may not know about. Did you know that
                     you can travel the world while doing things such as camping, kayaking, mountain climbing or even playing a sport.
                   </p>
+                  <QuickResponseButton
+                    button={{
+                      title: 'Yes',
+                      _id: '599e02e0e4017e0031d5dd93',
+                      payload: 'null',
+                      content_type: 'text',
+                    }}
+                  />
                 </MetaColumn>
               </MetaRow>
             </MetaContainer>
