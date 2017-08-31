@@ -45,14 +45,14 @@ class DocPrimaryNav extends Component {
 
     const propTypesTitle = '// Prop Types';
     const propTypes = `
-  breadcrumbItems: React.PropTypes.arrayOf(React.PropTypes.shape({
-    title: React.PropTypes.string.isRequired,
-    to: React.PropTypes.string,
-    home: React.PropTypes.bool,
-    typeStyle: React.PropTypes.oneOf(typeStyles),
+  breadcrumbItems: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    to: PropTypes.string,
+    home: PropTypes.bool,
+    typeStyle: PropTypes.oneOf(typeStyles),
   }),
   ),
-  typeColor: React.PropTypes.oneOf(typeColors),`;
+  typeColor: PropTypes.oneOf(typeColors),`;
 
     return (
       <MetaContainer>

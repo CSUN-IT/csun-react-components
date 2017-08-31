@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { generate as shortIdGenerate } from 'shortid';
 import { NavLink } from 'react-router-dom';
 import { typeStyles, typeColors } from './commons/typographyStyles';
+import PropTypes from 'prop-types';
 
 class MetaSubNav extends Component {
   render() {
@@ -23,19 +24,19 @@ class MetaSubNav extends Component {
 }
 
 MetaSubNav.defaultProps = {
-  menuItems: [{}],
+  menuItems: [],
   typeColor: '',
 };
 
 MetaSubNav.propTypes = {
-  menuItems: React.PropTypes.arrayOf(React.PropTypes.shape({
-    title: React.PropTypes.string.isRequired,
-    to: React.PropTypes.string.isRequired,
-    exact: React.PropTypes.bool,
-    typeStyle: React.PropTypes.oneOf(typeStyles),
+  menuItems: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired,
+    exact: PropTypes.bool,
+    typeStyle: PropTypes.oneOf(typeStyles),
   }),
   ),
-  typeColor: React.PropTypes.oneOf(typeColors),
+  typeColor: PropTypes.oneOf(typeColors),
 };
 
 export default MetaSubNav;

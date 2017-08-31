@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class MetaRow extends Component {
   render() {
@@ -15,7 +16,7 @@ MetaRow.defaultProps = {
 };
 
 MetaRow.propTypes = {
-  children: React.PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default MetaRow;

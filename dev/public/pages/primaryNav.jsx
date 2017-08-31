@@ -46,23 +46,23 @@ class DocPrimaryNav extends Component {
 
     const propTypesTitle = '// Prop Types';
     const propTypes = `
-  menuItems: React.PropTypes.arrayOf(React.PropTypes.shape({
-    title: React.PropTypes.string.isRequired,
-    to: React.PropTypes.string.isRequired,
-    exact: React.PropTypes.bool,
+  menuItems: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired,
+    exact: PropTypes.bool,
   }),
   ),
-  navColor: React.PropTypes.string,
-  subBrand: React.PropTypes.shape({
-    to: React.PropTypes.string.isRequired,
-    title: React.PropTypes.string.isRequired,
+  navColor: PropTypes.string,
+  subBrand: PropTypes.shape({
+    to: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   }),`;
 
     return (
       <MetaContainer>
         <MetaRow>
           <MetaColumn size={'sm'} value={'9'}>
-            <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} />
+            <MetaPrimaryNav subBrand={{title: 'CSUN React Components', to: ''}} navColor={'cream'} />
             <MetaPrimaryNav menuItems={menuItems} />
             <MetaPrimaryNav menuItems={menuItems} navColor={'black'} />
             <br />

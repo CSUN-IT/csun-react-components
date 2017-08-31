@@ -43,9 +43,9 @@ const bodyItems = [
 
     const propTypesTitle = '// Prop Types';
     const propTypes = `
-  bodyItems: React.PropTypes.arrayOf(React.PropTypes.shape({
-    heading: React.PropTypes.string.isRequired,
-    body: React.PropTypes.string.isRequired,
+  bodyItems: PropTypes.arrayOf(PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
   })).isRequired,`;
 
     return (
