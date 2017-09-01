@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class MetaColumn extends Component {
   render() {
     return (
-      <div className={`col-${this.props.size}-${this.props.value}`}>
+      <div className={`col-${this.props.size}-${this.props.value} col-${this.props.size}-offset-${this.props.offSet}`}>
         {this.props.children}
       </div>
     );
@@ -14,6 +14,7 @@ MetaColumn.defaultProps = {
   children: {},
   size: 'sm',
   value: '12',
+  offSet: '0'
 };
 
 MetaColumn.propTypes = {
@@ -39,6 +40,7 @@ MetaColumn.propTypes = {
     '11',
     '12',
   ]),
+  offSet: React.PropTypes.string,
 };
 
 export default MetaColumn;
