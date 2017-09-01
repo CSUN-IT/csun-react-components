@@ -1,18 +1,6 @@
 import React, { Component } from 'react';
 import './sass/_chatBubble.scss';
 
-const styles = {
-  mainText: {
-    margin: 0,
-  },
-
-  timeStamp: {
-    fontSize: 10,
-    margin: 0,
-  },
-
-};
-
 class MetaChatBubble extends Component {
   render() {
     const bubbleStyle = this.props.receiver ? 'bubble bot' : 'bubble you';
@@ -39,6 +27,5 @@ MetaChatBubble.propTypes = {
   subText: React.PropTypes.string.isRequired,
   receiver: React.PropTypes.bool.isRequired,
 };
-
 
 export default MetaChatBubble;
