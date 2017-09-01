@@ -28,15 +28,6 @@ class App extends Component {
         <div>
           <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} subBrand={subBrand} />
           <Route path="/docs" component={DocLayout} />
-          <div style={{ marginTop: '10', marginLeft: '10' }}>
-            <MetaChatBubble text="Hello boss 12-3" subText="Today at 3:23pm" receiver />
-            <br />
-            <MetaChatBubble
-              text="Hey Matty, I forgot my password!"
-              subText="Today at 3:26pm"
-              receiver={false}
-            />
-          </div>
         </div>
       </Router>
     );
