@@ -1,24 +1,9 @@
-.chat-container {
-  display: flex;
-  font-family: sans-serif;
-  font-size: 14px;
-  align-items: center;
-}
 
-.test-bubble {
-  background-color: #F2F2F2;
-  content: "\00a0";
-  display: block;
-  height: 16px;
-  position: absolute;
-  top: 11px;
-  transform:             rotate( 29deg ) skew( -35deg );
-      -moz-transform:    rotate( 29deg ) skew( -35deg );
-      -ms-transform:     rotate( 29deg ) skew( -35deg );
-      -o-transform:      rotate( 29deg ) skew( -35deg );
-      -webkit-transform: rotate( 29deg ) skew( -35deg );
-  width:  20px;
-}
+$botBubbleColor: #DFE9EF;
+$botTextColor: #555;
+
+$youBubbleColor: #D00D2D; 
+$youTextColor: #EEE;
 
 .bubble-container{
   margin-top: 8px;
@@ -41,12 +26,6 @@
     word-wrap: break-word;
 }
 
-.me {
-    background-color: #8f5db7;
-    margin-left: 18px;
-    margin-right:60px;
-}
-
  .bubble::before {
     background-color: #F2F2F2;
     content: "\00a0";
@@ -62,8 +41,32 @@
     width:  20px;
 } 
 
-.me::before {
+.bot {
+    background-color: $botBubbleColor;
+    margin-left: 18px;
+    margin-right:60px;
+    color: $botTextColor;
+}
+
+.bot::before {
     box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
     left: -9px;
-    background-color: #8f5db7;
+    background-color: $botBubbleColor;
+}
+
+.you {
+    background-color: $youBubbleColor;
+    margin-left: 60px;
+    margin-right:18px;
+    color: $youTextColor;
+}
+
+.you::before {
+    box-shadow: 2px -2px 2px 0 rgba( 178, 178, 178, .4 );
+    right: -9px;
+    background-color: $youBubbleColor
+}
+
+.timeStamp {
+    font-size: 10px
 }

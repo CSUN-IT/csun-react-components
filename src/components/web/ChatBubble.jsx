@@ -1,24 +1,7 @@
 import React, { Component } from 'react';
-import './css/ChatBubble.css';
+import './sass/_chatBubble.scss';
 
 const styles = {
-
-  senderStyle: {
-    backgroundColor: '#D00D2D',
-    color: '#fff',
-    width: '20%',
-    borderRadius: 5,
-    padding: 10,
-  },
-
-  receiverStyle: {
-    backgroundColor: '#a9aba9',
-    color: '#333',
-    width: '20%',
-    borderRadius: 5,
-    padding: 10,
-  },
-
   mainText: {
     margin: 0,
   },
@@ -32,11 +15,14 @@ const styles = {
 
 class MetaChatBubble extends Component {
   render() {
-    const chatStyle = this.props.receiver ? styles.receiverStyle : styles.senderStyle;
+    const bubbleStyle = this.props.receiver ? 'bubble bot' : 'bubble you';
     return (
       <div className="bubble-container">
-        <p className="bubble me">{this.props.text}</p>
-        {/*<p className="bubble me">{this.props.subText}</p>*/}
+        <p className={bubbleStyle}>
+          {this.props.text}
+          <br />
+          <span className="timeStamp">{this.props.subText}</span>
+        </p>
       </div>
     );
   }
