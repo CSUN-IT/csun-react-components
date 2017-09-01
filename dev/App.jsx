@@ -6,14 +6,13 @@ import {
 } from './public/wrappers';
 import {
   MetaPrimaryNav,
-  MetaContainer,
-  MetaRow,
-  MetaColumn,
   MetaChatBubble,
 } from '../src';
+import messages from './messages.json';
 
 class App extends Component {
   render() {
+    var bottMessage = bot.sendMessage('hello');
     const menuItems = [
       {
         title: 'Home',

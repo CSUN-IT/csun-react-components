@@ -1,82 +1,72 @@
-$receiverBubbleColor: #dfe9ef;
-$receiverTextColor: #555;
 
-$senderBubbleColor: #d00d2d;
-$senderTextColor: #eee;
+$botBubbleColor: #DFE9EF;
+$botTextColor: #555;
 
-@import "./mixins/_transforms";
+$youBubbleColor: #D00D2D; 
+$youTextColor: #EEE;
 
-.bubble-container-right {
+.bubble-container{
   margin-top: 8px;
   margin-bottom: 8px;
-  margin-right: 8px;
-  display: flex;
+  display:flex;
   font-family: sans-serif;
   font-size: 14px;
   align-items: center;
-  justify-content: flex-end;
 }
 
-.bubble-container-left {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  margin-left: 8px;
-  display: flex;
-  font-family: sans-serif;
-  font-size: 14px;
-  align-items: center;
-  justify-content: flex-start;
+.bubble{
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #B2B2B2;
+    display: block;
+    padding: 10px 18px;
+    position: relative;
+    vertical-align: top;
+    color: white;
+    word-wrap: break-word;
 }
 
-.bubble {
-  background-color: #f2f2f2;
-  border-radius: 5px;
-  box-shadow: 0 0 6px #b2b2b2;
-  display: block;
-  padding: 10px 18px;
-  position: relative;
-  vertical-align: top;
-  color: white;
-  word-wrap: break-word;
+ .bubble::before {
+    background-color: #F2F2F2;
+    content: "\00a0";
+    display: block;
+    height: 16px;
+    position: absolute;
+    top: 11px;
+    transform:             rotate( 29deg ) skew( -35deg );
+        -moz-transform:    rotate( 29deg ) skew( -35deg );
+        -ms-transform:     rotate( 29deg ) skew( -35deg );
+        -o-transform:      rotate( 29deg ) skew( -35deg );
+        -webkit-transform: rotate( 29deg ) skew( -35deg );
+    width:  20px;
+} 
+
+.bot {
+    background-color: $botBubbleColor;
+    margin-left: 18px;
+    margin-right:60px;
+    color: $botTextColor;
 }
 
-.bubble::before {
-  background-color: #f2f2f2;
-  content: "\00a0";
-  display: block;
-  height: 16px;
-  position: absolute;
-  top: 11px;
-  @include transform(29deg, -35deg);
-  width: 20px;
+.bot::before {
+    box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
+    left: -9px;
+    background-color: $botBubbleColor;
 }
 
-.receiver {
-  background-color: $receiverBubbleColor;
-  margin-left: 18px;
-  margin-right: 60px;
-  color: $receiverTextColor;
+.you {
+    background-color: $youBubbleColor;
+    margin-left: 60px;
+    margin-right:18px;
+    color: $youTextColor;
 }
 
-.receiver::before {
-  box-shadow: -2px 2px 2px 0 rgba(178, 178, 178, 0.4);
-  left: -9px;
-  background-color: $receiverBubbleColor;
-}
-
-.sender {
-  background-color: $senderBubbleColor;
-  margin-left: 60px;
-  margin-right: 18px;
-  color: $senderTextColor;
-}
-
-.sender::before {
-  box-shadow: 2px -2px 2px 0 rgba(178, 178, 178, 0.4);
-  right: -9px;
-  background-color: $senderBubbleColor;
+.you::before {
+    box-shadow: 2px -2px 2px 0 rgba( 178, 178, 178, .4 );
+    right: -9px;
+    background-color: $youBubbleColor
 }
 
 .timeStamp {
-  font-size: 10px;
+    font-size: 10px
 }
