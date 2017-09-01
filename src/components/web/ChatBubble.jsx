@@ -3,7 +3,7 @@ import './sass/_chatBubble.scss';
 
 class MetaChatBubble extends Component {
   render() {
-    const bubbleStyle = this.props.receiver ? 'bubble bot' : 'bubble you';
+    const bubbleStyle = this.props.receiver ? 'bubble receiver' : 'bubble sender';
     return (
       <div className="bubble-container">
         <p className={bubbleStyle}>
@@ -18,13 +18,13 @@ class MetaChatBubble extends Component {
 
 MetaChatBubble.defaultProps = {
   text: '',
-  subtext: '',
+  subText: '',
   receiver: true,
 };
 
 MetaChatBubble.propTypes = {
   text: React.PropTypes.string.isRequired,
-  subText: React.PropTypes.string.isRequired,
+  subText: React.PropTypes.string,
   receiver: React.PropTypes.bool.isRequired,
 };
 
