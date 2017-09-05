@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class MetaColumn extends Component {
   render() {
@@ -18,15 +19,15 @@ MetaColumn.defaultProps = {
 };
 
 MetaColumn.propTypes = {
-  children: React.PropTypes.node.isRequired,
-  size: React.PropTypes.oneOf([
+  children: PropTypes.node.isRequired,
+  size: PropTypes.oneOf([
     'xs',
     'sm',
     'md',
     'lg',
     'xl',
   ]),
-  value: React.PropTypes.oneOf([
+  value: PropTypes.oneOf([
     '1',
     '2',
     '3',
@@ -40,7 +41,7 @@ MetaColumn.propTypes = {
     '11',
     '12',
   ]),
-  offSet: React.PropTypes.string,
+  offSet: PropTypes.string,
 };
 
 export default MetaColumn;

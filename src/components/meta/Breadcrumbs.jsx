@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { generate as shortIdGenerate } from 'shortid';
 import { typeStyles, typeColors } from './commons/typographyStyles';
+import PropTypes from 'prop-types';
 
 class MetaBreadcrumbs extends Component {
 
@@ -40,14 +41,14 @@ MetaBreadcrumbs.defaultProps = {
 };
 
 MetaBreadcrumbs.propTypes = {
-  breadcrumbItems: React.PropTypes.arrayOf(React.PropTypes.shape({
-    title: React.PropTypes.string.isRequired,
-    to: React.PropTypes.string,
-    home: React.PropTypes.bool,
-    typeStyle: React.PropTypes.oneOf(typeStyles),
+  breadcrumbItems: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    to: PropTypes.string,
+    home: PropTypes.bool,
+    typeStyle: PropTypes.oneOf(typeStyles),
   }),
   ),
-  typeColor: React.PropTypes.oneOf(typeColors),
+  typeColor: PropTypes.oneOf(typeColors),
 };
 
 export default MetaBreadcrumbs;
