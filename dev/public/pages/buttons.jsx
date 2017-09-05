@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import {
-  MetaContainer,
-  MetaColumn,
-  MetaRow,
-  MetaButton,
-} from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, MetaButton } from '../../../src';
 
 class DocButtons extends Component {
   render() {
@@ -45,7 +40,7 @@ class DocButtons extends Component {
             <br />
             <pre>
               <code>
-                { code }
+                {code}
                 <div className="type--dark-gray">
                   <strong>{propTypesTitle}</strong>
                   {propTypes}
