@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { generate as shortIdGenerate } from 'shortid';
+import PropTypes from 'prop-types';
 
 class MetaSideNav extends Component {
   render() {
@@ -19,16 +20,16 @@ class MetaSideNav extends Component {
 }
 
 MetaSideNav.defaultProps = {
-  menuItems: [{}],
+  menuItems: [],
   navColor: '',
 };
 
 MetaSideNav.propTypes = {
-  menuItems: React.PropTypes.arrayOf(React.PropTypes.shape({
-    title: React.PropTypes.string.isRequired,
-    to: React.PropTypes.string.isRequired,
-    exact: React.PropTypes.bool,
-    fill: React.PropTypes.bool,
+  menuItems: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired,
+    exact: PropTypes.bool,
+    fill: PropTypes.bool,
   }),
   ),
 };

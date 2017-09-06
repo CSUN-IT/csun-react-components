@@ -4,6 +4,7 @@
   "private": false,
   "main": "lib/index.js",
   "dependencies": {
+    "prop-types": "^15.5.10",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "^4.0.0",
@@ -30,13 +31,9 @@
   },
   "scripts": {
     "start": "yarn run dev-server",
-    "build-dist-js":
-      "webpack --config webpack/dist.conf.js --progress --colors",
-    "build-dist-js-min":
-      "webpack --config webpack/dist-min.conf.js --progress --colors",
-    "dev-server":
-      "webpack-dev-server --config webpack/dev.conf.js --progress --colors --hot --inline",
-    "build-lib":
-      "rm -rf lib && webpack --config webpack/npm.conf.js --progress --colors"
+    "build-dist-js": "webpack --config webpack/dist.conf.js --progress --colors",
+    "build-dist-js-min": "webpack --config webpack/dist-min.conf.js --progress --colors",
+    "dev-server": "webpack-dev-server --config webpack/dev.conf.js --progress --colors --hot --inline",
+    "build-lib": "rm -rf lib && webpack --config webpack/npm.conf.js --progress --colors"
   }
 }

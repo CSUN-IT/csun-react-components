@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { generate as shortIdGenerate } from 'shortid';
 import MetaColumn from './Column';
+import PropTypes from 'prop-types';
 
 const buildInput = (field) => {
   switch (field.inputType) {
@@ -40,19 +41,19 @@ MetaFormField.defaultProps = {
 };
 
 MetaFormField.propTypes = {
-  field: React.PropTypes.shape({
-    inputType: React.PropTypes.oneOf(['input', 'textarea', 'select', 'datepicker']).isRequired,
-    selectOptions: React.PropTypes.arrayOf(React.PropTypes.shape({
-      value: React.PropTypes.string.isRequired,
-      text: React.PropTypes.string.isRequired,
+  field: PropTypes.shape({
+    inputType: PropTypes.oneOf(['input', 'textarea', 'select', 'datepicker']).isRequired,
+    selectOptions: PropTypes.arrayOf(PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
     })),
-    id: React.PropTypes.string.isRequired,
-    labelText: React.PropTypes.string,
-    type: React.PropTypes.string,
-    placeholder: React.PropTypes.string,
+    id: PropTypes.string.isRequired,
+    labelText: PropTypes.string,
+    type: PropTypes.string,
+    placeholder: PropTypes.string,
   }),
-  size: React.PropTypes.string.isRequired,
-  value: React.PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
 };
 
 export default MetaFormField;

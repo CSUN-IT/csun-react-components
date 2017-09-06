@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class MetaAlert extends Component {
 
@@ -22,15 +23,15 @@ MetaAlert.defaultProps = {
 };
 
 MetaAlert.propTypes = {
-  color: React.PropTypes.oneOf([
+  color: PropTypes.oneOf([
     'info',
     'success',
     'warning',
     'danger',
   ]),
-  strongText: React.PropTypes.string,
-  text: React.PropTypes.string.isRequired,
-  to: React.PropTypes.string,
+  strongText: PropTypes.string,
+  text: PropTypes.string.isRequired,
+  to: PropTypes.string,
 };
 
 export default MetaAlert;
