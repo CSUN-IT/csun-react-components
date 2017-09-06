@@ -4,8 +4,9 @@ import './sass/_chatBubble.scss';
 class MetaChatBubble extends Component {
   render() {
     const bubbleStyle = this.props.receiver ? 'bubble receiver' : 'bubble sender';
+    const alignmentStyle = this.props.receiver ? 'bubble-container-left' : 'bubble-container-right';
     return (
-      <div className="bubble-container">
+      <div className={alignmentStyle}>
         <p className={bubbleStyle}>
           {this.props.text}
           <br />
