@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './sass/_quickResponse.css';
+import './sass/_quickResponse.scss';
 
 class QuickResponseButton extends Component {
   constructor() {
