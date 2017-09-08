@@ -14,6 +14,7 @@ import {
   DocGrid,
   DocAccordion,
   DocChatBubble,
+  DocWebHeader,
 } from '../pages';
 import SectionHelper from '../components/SectionHelper';
 
@@ -112,6 +113,11 @@ class DocLayout extends Component {
         to: `${match.url}/accordion`,
         active: false,
       },
+      {
+        title: 'Web Header',
+        to: `${match.url}/webheader`,
+        active: false,
+      },
     ];
 
     return (
@@ -135,6 +141,7 @@ class DocLayout extends Component {
               <Route path={`${match.url}/grid`} component={DocGrid} />
               <Route path={`${match.url}/accordion`} component={DocAccordion} />
               <Route path={`${match.url}/chatBubbles`} component={DocChatBubble} />
+              <Route path={`${match.url}/webheader`} component={DocWebHeader} />
             </MetaRow>
           </MetaContainer>
         </div>

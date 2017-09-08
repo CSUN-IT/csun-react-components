@@ -14,6 +14,7 @@ import MetaList from './components/meta/List';
 import MetaSideNav from './components/meta/SideNav';
 import MetaAccordion from './components/meta/Accordion';
 import MetaChatBubble from './components/web/ChatBubble';
+import WebHeader from './components/web/Header';
 
 export {
   MetaBreadcrumbs,
@@ -32,4 +33,5 @@ export {
   MetaSideNav,
   MetaAccordion,
   MetaChatBubble,
+  WebHeader,
 };
