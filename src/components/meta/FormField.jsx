@@ -1,7 +1,6 @@
 import React from 'react';
 import { generate as shortIdGenerate } from 'shortid';
 import PropTypes from 'prop-types';
-import MetaColumn from './Column';
 
 const MetaFormField = (props) => {
   const buildInput = (field, changeFunction, value) => {
@@ -15,6 +14,7 @@ const MetaFormField = (props) => {
             placeholder={field.placeholder}
             value={value}
             onChange={changeFunction}
+            autoComplete={field.autoComplete}
           />
         );
       case 'textarea':
@@ -48,16 +48,15 @@ const MetaFormField = (props) => {
   const input = buildInput(props.field, props.changeFunction, props.value);
 
   return (
-    <MetaColumn size={props.size}>
+    <div>
       {label}
       {input}
-    </MetaColumn>
+    </div>
   );
 };
 
 MetaFormField.defaultProps = {
   field: {},
-  size: 'sm',
   value: '12',
   changeFunction: () => {},
 };
@@ -75,8 +74,8 @@ MetaFormField.propTypes = {
     labelText: PropTypes.string,
     type: PropTypes.string,
     placeholder: PropTypes.string,
+    autoComplete: PropTypes.string,
   }),
-  size: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   changeFunction: PropTypes.func,
 };

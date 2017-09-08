@@ -7,11 +7,7 @@ class MetaChatBubble extends Component {
     const alignmentStyle = this.props.receiver ? 'bubble-container-left' : 'bubble-container-right';
     return (
       <div className={alignmentStyle}>
-        <p className={bubbleStyle}>
-          {this.props.text}
-          <br />
-          <span className="timeStamp">{this.props.subText}</span>
-        </p>
+        <p className={bubbleStyle} dangerouslySetInnerHTML={{ __html: this.props.text }} />
       </div>
     );
   }
