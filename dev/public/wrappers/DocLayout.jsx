@@ -15,6 +15,7 @@ import {
   DocAccordion,
   DocChatBubble,
   DocWebHeader,
+  DocWebPrimaryNav,
 } from '../pages';
 import SectionHelper from '../components/SectionHelper';
 
@@ -118,6 +119,11 @@ class DocLayout extends Component {
         to: `${match.url}/webheader`,
         active: false,
       },
+      {
+        title: 'Web Primary Nav',
+        to: `${match.url}/webprimarynav`,
+        active: false,
+      },
     ];
 
     return (
@@ -142,6 +148,7 @@ class DocLayout extends Component {
               <Route path={`${match.url}/accordion`} component={DocAccordion} />
               <Route path={`${match.url}/chatBubbles`} component={DocChatBubble} />
               <Route path={`${match.url}/webheader`} component={DocWebHeader} />
+              <Route path={`${match.url}/webprimarynav`} component={DocWebPrimaryNav} />
             </MetaRow>
           </MetaContainer>
         </div>
