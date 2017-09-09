@@ -16,6 +16,7 @@ import MetaAccordion from './components/meta/Accordion';
 import MetaChatBubble from './components/meta/ChatBubble';
 import WebPrimaryNav from './components/web/PrimaryNav';
 import WebHeader from './components/web/Header';
+import WebPrimaryNav from './components/web/PrimaryNav';
 
 export {
   MetaBreadcrumbs,
@@ -36,4 +37,5 @@ export {
   MetaChatBubble,
   WebPrimaryNav,
   WebHeader,
+  WebPrimaryNav,
 };
