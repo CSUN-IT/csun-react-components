@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
-import {
-  Route,
-} from 'react-router-dom';
-import {
-  MetaContainer,
-  MetaColumn,
-  MetaRow,
-  MetaSideNav,
-} from '../../../src';
+import { Route } from 'react-router-dom';
+import { MetaContainer, MetaColumn, MetaRow, MetaSideNav } from '../../../src';
 import {
   DocPrimaryNav,
   DocBreadcrumbs,
@@ -20,11 +13,13 @@ import {
   DocTags,
   DocGrid,
   DocAccordion,
+  DocChatBubble,
+  DocWebHeader,
+  DocWebPrimaryNav,
 } from '../pages';
 import SectionHelper from '../components/SectionHelper';
 
 class DocLayout extends Component {
-
   render() {
     const match = this.props.match;
 
@@ -62,6 +57,11 @@ class DocLayout extends Component {
       {
         title: 'Buttons',
         to: `${match.url}/buttons`,
+        active: false,
+      },
+      {
+        title: 'ChatBubble',
+        to: `${match.url}/chatBubbles`,
         active: false,
       },
       {
@@ -114,8 +114,17 @@ class DocLayout extends Component {
         to: `${match.url}/accordion`,
         active: false,
       },
+      {
+        title: 'Web Header',
+        to: `${match.url}/webheader`,
+        active: false,
+      },
+      {
+        title: 'Web Primary Nav',
+        to: `${match.url}/webprimarynav`,
+        active: false,
+      },
     ];
-
 
     return (
       <div>
@@ -137,13 +146,15 @@ class DocLayout extends Component {
               <Route path={`${match.url}/tags`} component={DocTags} />
               <Route path={`${match.url}/grid`} component={DocGrid} />
               <Route path={`${match.url}/accordion`} component={DocAccordion} />
+              <Route path={`${match.url}/chatBubbles`} component={DocChatBubble} />
+              <Route path={`${match.url}/webheader`} component={DocWebHeader} />
+              <Route path={`${match.url}/webprimarynav`} component={DocWebPrimaryNav} />
             </MetaRow>
           </MetaContainer>
         </div>
       </div>
     );
   }
-
 }
 
 export default DocLayout;

@@ -1,22 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class MetaFormGroup extends Component {
-  render() {
-    return (
-      <div className="form__group">
-        {this.props.children}
-      </div>
-    );
-  }
-}
+const MetaFormGroup = props => (
+  <form className="form__group" onSubmit={props.submitFunction}>
+    {props.children}
+  </form>
+);
 
 MetaFormGroup.defaultProps = {
   children: {},
+  submitFunction() {},
 };
 
 MetaFormGroup.propTypes = {
   children: PropTypes.node.isRequired,
+  submitFunction: PropTypes.func,
 };
 
 export default MetaFormGroup;

@@ -9,6 +9,9 @@ import DocSubNav from './subNav';
 import DocTags from './tags';
 import DocGrid from './gridSystem';
 import DocAccordion from './accordion';
+import DocChatBubble from './chatBubble';
+import DocWebHeader from './webHeader';
+import DocWebPrimaryNav from './webPrimaryNav';
 
 export {
   DocPrimaryNav,
@@ -22,4 +25,7 @@ export {
   DocTags,
   DocGrid,
   DocAccordion,
+  DocChatBubble,
+  DocWebHeader,
+  DocWebPrimaryNav,
 };

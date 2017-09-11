@@ -1,0 +1,7 @@
+@mixin transform($rot, $skw) {
+  transform: rotate($rot) skew($skw);
+  -moz-transform: rotate($rot) skew($skw);
+  -ms-transform: rotate($rot) skew($skw);
+  -o-transform: rotate($rot) skew($skw);
+  -webkit-transform: rotate($rot) skew($skw);
+}
