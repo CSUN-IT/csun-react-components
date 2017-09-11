@@ -15,13 +15,11 @@ class MetaChatBubble extends Component {
 
 MetaChatBubble.defaultProps = {
   text: '',
-  subText: '',
   receiver: true,
 };
 
 MetaChatBubble.propTypes = {
   text: React.PropTypes.string.isRequired,
-  subText: React.PropTypes.string,
   receiver: React.PropTypes.bool.isRequired,
 };
 
