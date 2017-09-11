@@ -5,14 +5,15 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import {
-   DocLayout,
- } from './public/wrappers';
+  DocLayout,
+} from './public/wrappers';
 import {
-   MetaPrimaryNav,
-   MetaContainer,
-   MetaRow,
-   MetaColumn,
- } from '../src';
+  MetaPrimaryNav,
+  MetaContainer,
+  MetaRow,
+  MetaColumn,
+  MetaChatBubble,
+} from '../src';
 
 
 class App extends Component {
