@@ -1,27 +1,52 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import './sass/_quickResponse.scss';
 
-class QuickResponseButton extends Component {
-  constructor() {
-    super();
-    this.state = {
-      value: null,
-    };
-  }
+const QuickResponseButton = (props) => {
+  const buttonClassName = `btn quickResponse-${props.size} btn-${props.color} ${props.size ? `btn-${props.size}` : ''} ${props.btnStyle ? `btn-${props.btnStyle}` : ''}`;
 
-  render() {
-    const button = this.props.button;
-
-    return (
-      <button role="button" className="quickResponse" onClick={() => console.log(button)}>
-        {button.title}
-      </button>
-    );
-  }
-}
+  return (
+    <button type="text" value={props.text} role="button" className={buttonClassName} onClick={props.action} disabled={props.disabled === 'true' || props.disabled === ''}>
+      {props.text}
+    </button>
+  );
+};
 
 QuickResponseButton.defaultProps = {
-  items: React.PropTypes.object,
+  color: 'default',
+  size: 'med',
+  btnStyle: '',
+  text: 'button',
+  disabled: 'false',
+  action: '',
+};
+
+QuickResponseButton.propTypes = {
+  text: PropTypes.string.isRequired,
+  color: PropTypes.oneOf([
+    'default',
+    'primary',
+    'success',
+  ]).isRequired,
+  size: PropTypes.oneOf([
+    'lg',
+    'med',
+    'sm',
+    'mini',
+    '',
+  ]),
+  disabled: PropTypes.oneOf([
+    'true',
+    'false',
+    '',
+  ]),
+  action: PropTypes.func,
+  btnStyle: PropTypes.oneOf([
+    'default-outline',
+    'primary-outline',
+    'success-outline',
+    '',
+  ]),
 };
 
 export default QuickResponseButton;

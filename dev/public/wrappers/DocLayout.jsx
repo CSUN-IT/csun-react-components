@@ -13,6 +13,7 @@ import {
   DocBreadcrumbs,
   DocAlerts,
   DocButtons,
+  DocQuickResponseButtons,
   DocLists,
   DocPanels,
   DocSideNav,
@@ -62,6 +63,11 @@ class DocLayout extends Component {
       {
         title: 'Buttons',
         to: `${match.url}/buttons`,
+        active: false,
+      },
+      {
+        title: 'Quick Response Buttons',
+        to: `${match.url}/quickResponseButtons`,
         active: false,
       },
       {
@@ -130,6 +136,7 @@ class DocLayout extends Component {
               <Route path={`${match.url}/breadcrumbs`} component={DocBreadcrumbs} />
               <Route path={`${match.url}/alerts`} component={DocAlerts} />
               <Route path={`${match.url}/buttons`} component={DocButtons} />
+              <Route path={`${match.url}/quickResponseButtons`} component={DocQuickResponseButtons} />
               <Route path={`${match.url}/lists`} component={DocLists} />
               <Route path={`${match.url}/panels`} component={DocPanels} />
               <Route path={`${match.url}/sidenav`} component={DocSideNav} />
