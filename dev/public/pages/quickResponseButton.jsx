@@ -9,10 +9,16 @@ import {
 const DocQuickResponseButtons = () => {
   const code = `import QuickResponseButton from 'csun-react-components';
 
-<QuickResponseButton type="text" value={''} text={'Button'} color={'default'} size={''} disabled={'false'} action={function}/>`;
+<QuickResponseButton type="submit" value={''} text={'Button'} color={'default'} size={''} disabled={'false'} action={function}/>`;
 
   const propTypesTitle = '// Prop Types';
   const propTypes = `
+
+  type: PropTypes.oneOf([
+    'submit',
+    'reset',
+    'button',
+  ]),
   text: PropTypes.string.isRequired,
   color: PropTypes.oneOf([
     'default',

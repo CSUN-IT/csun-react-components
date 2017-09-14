@@ -53,15 +53,6 @@ class App extends Component {
         <div>
           <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} subBrand={subBrand} />
           <Route path="/docs" component={DocLayout} />
-          <div style={styles.homeContStyle}>
-            <MetaContainer>
-              <MetaRow>
-                <MetaColumn>
-                  <p />
-                </MetaColumn>
-              </MetaRow>
-            </MetaContainer>
-          </div>
         </div>
       </Router>
     );

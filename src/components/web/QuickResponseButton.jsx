@@ -6,7 +6,7 @@ const QuickResponseButton = (props) => {
   const buttonClassName = `btn quickResponse-${props.size} btn-${props.color} ${props.size ? `btn-${props.size}` : ''} ${props.btnStyle ? `btn-${props.btnStyle}` : ''}`;
 
   return (
-    <button type="text" value={props.text} role="button" className={buttonClassName} onClick={props.action} disabled={props.disabled === 'true' || props.disabled === ''}>
+    <button type={props.type} value={props.text} role="button" className={buttonClassName} onClick={props.action} disabled={props.disabled === 'true' || props.disabled === ''}>
       {props.text}
     </button>
   );
@@ -19,9 +19,15 @@ QuickResponseButton.defaultProps = {
   text: 'button',
   disabled: 'false',
   action: '',
+  type: 'submit',
 };
 
 QuickResponseButton.propTypes = {
+  type: PropTypes.oneOf([
+    'submit',
+    'reset',
+    'button',
+  ]),
   text: PropTypes.string.isRequired,
   color: PropTypes.oneOf([
     'default',
