@@ -10,6 +10,7 @@ class DocButtons extends Component {
 
     const propTypesTitle = '// Prop Types';
     const propTypes = `
+  className: PropTypes.string,
   text: PropTypes.string.isRequired,
   color: PropTypes.oneOf([
     'default',

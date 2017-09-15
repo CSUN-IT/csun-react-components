@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 
 class MetaButton extends Component {
   render() {
-    const buttonClassName = `btn btn-${this.props.color} ${this.props.size
-      ? `btn-${this.props.size}`
-      : ''} ${this.props.btnStyle ? `btn-${this.props.btnStyle}` : ''}`;
+    const buttonClassName = `btn btn-${this.props.color} 
+    ${this.props.size ? `btn-${this.props.size}` : ''} 
+    ${this.props.className ? `${this.props.className}` : ''}
+    ${this.props.btnStyle ? `btn-${this.props.btnStyle}` : ''}`;
 
     return (
       <button
@@ -22,6 +23,7 @@ class MetaButton extends Component {
 }
 
 MetaButton.defaultProps = {
+  className: '',
   color: 'default',
   size: '',
   btnStyle: '',
@@ -32,6 +34,7 @@ MetaButton.defaultProps = {
 };
 
 MetaButton.propTypes = {
+  className: PropTypes.string,
   text: PropTypes.string.isRequired,
   type: PropTypes.string,
   onClick: PropTypes.func,
