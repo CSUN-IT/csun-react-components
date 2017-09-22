@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './sass/_quickResponse.scss';
 
 const QuickResponseButton = (props) => {
-  const buttonClassName = `btn quickResponse-${props.size} btn-${props.color} ${props.size ? `btn-${props.size}` : ''} ${props.btnStyle ? `btn-${props.btnStyle}` : ''}`;
+  const buttonClassName = `btn quickResponse-${props.size} btn-${props.color} ${props.btnStyle ? `btn-${props.btnStyle}` : ''}`;
 
   return (
     <button type={props.type} value={props.text} role="button" className={buttonClassName} onClick={props.action} disabled={props.disabled === 'true' || props.disabled === ''}>
