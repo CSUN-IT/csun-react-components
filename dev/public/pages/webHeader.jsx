@@ -37,11 +37,16 @@ const DocWebHeader = () => {
     title: PropTypes.string.isRequired,
   }),`;
 
+  const secondaryWordmark = {
+    title: 'Information \nTechnology',
+    to: '/it',
+  };
+
   return (
     <MetaContainer>
       <MetaRow>
         <MetaColumn size={'sm'} value={'9'}>
-          <WebHeader />
+          <WebHeader secondaryWordmark={secondaryWordmark} />
           <br />
           <pre>
             <code>
