@@ -12,6 +12,7 @@ import DocAccordion from './accordion';
 import DocChatBubble from './chatBubble';
 import DocWebHeader from './webHeader';
 import DocWebPrimaryNav from './webPrimaryNav';
+import DocWebSidebar from './webSidebar';
 
 export {
   DocPrimaryNav,
@@ -28,4 +29,5 @@ export {
   DocChatBubble,
   DocWebHeader,
   DocWebPrimaryNav,
+  DocWebSidebar,
 };

@@ -16,6 +16,7 @@ import {
   DocChatBubble,
   DocWebHeader,
   DocWebPrimaryNav,
+  DocWebSidebar,
 } from '../pages';
 import SectionHelper from '../components/SectionHelper';
 
@@ -124,6 +125,11 @@ class DocLayout extends Component {
         to: `${match.url}/webprimarynav`,
         active: false,
       },
+      {
+        title: 'Web Sidebar',
+        to: `${match.url}/websidebar`,
+        active: false,
+      },
     ];
 
     return (
@@ -149,6 +155,7 @@ class DocLayout extends Component {
               <Route path={`${match.url}/chatBubbles`} component={DocChatBubble} />
               <Route path={`${match.url}/webheader`} component={DocWebHeader} />
               <Route path={`${match.url}/webprimarynav`} component={DocWebPrimaryNav} />
+              <Route path={`${match.url}/websidebar`} component={DocWebSidebar} />
             </MetaRow>
           </MetaContainer>
         </div>
