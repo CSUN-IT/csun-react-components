@@ -1,7 +1,4 @@
 import React from 'react';
-import MetaRow from '../meta/Row';
-import MetaColumn from '../meta/Column';
-import MetaContainer from '../meta/Container';
 import './sass/_webPrimaryNav.scss';
 
 const WebPrimaryNav = () => (

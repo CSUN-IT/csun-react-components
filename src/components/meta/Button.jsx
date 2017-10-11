@@ -1,26 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class MetaButton extends Component {
-  render() {
-    const buttonClassName = `btn btn-${this.props.color} 
-    ${this.props.size ? `btn-${this.props.size}` : ''} 
-    ${this.props.className ? `${this.props.className}` : ''}
-    ${this.props.btnStyle ? `btn-${this.props.btnStyle}` : ''}`;
+const MetaButton = (props) => {
+  const buttonClassName = `btn btn-${props.color} 
+    ${props.size ? `btn-${props.size}` : ''} 
+    ${props.className ? `${props.className}` : ''}
+    ${props.btnStyle ? `btn-${props.btnStyle}` : ''}`;
 
-    return (
-      <button
-        role="button"
-        className={buttonClassName}
-        type={this.props.type}
-        value={this.props.value}
-        onClick={this.props.onClick}
-      >
-        {this.props.text}
-      </button>
-    );
-  }
-}
+  return (
+    <button
+      role="button"
+      className={buttonClassName}
+      type={props.type}
+      value={props.value}
+      onClick={props.onClick}
+    >
+      {props.text}
+    </button>
+  );
+};
 
 MetaButton.defaultProps = {
   className: '',
