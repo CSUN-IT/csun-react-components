@@ -40,6 +40,7 @@ const bodyItems = [
 
   const propTypesTitle = '// Prop Types';
   const propTypes = `
+  className: PropTypes.string,
   bodyItems: PropTypes.arrayOf(PropTypes.shape({
     heading: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
