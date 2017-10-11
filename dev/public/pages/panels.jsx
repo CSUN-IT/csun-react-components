@@ -1,28 +1,22 @@
-import React, { Component } from 'react';
-import {
-  MetaContainer,
-  MetaColumn,
-  MetaRow,
-  MetaPanel,
-} from '../../../src';
+import React from 'react';
+import { MetaContainer, MetaColumn, MetaRow, MetaPanel } from '../../../src';
 
-class DocPanels extends Component {
-  render() {
-    const listItems = [
-      {
-        text: 'Side Nav Link',
-        to: '#',
-      },
-      {
-        text: 'Side Nav Link',
-        to: '#',
-      },
-      {
-        text: 'Side Nav Link',
-        to: '#',
-      },
-    ];
-    const code = `import MetaList from 'csun-react-components';
+const DocPanels = () => {
+  const listItems = [
+    {
+      text: 'Side Nav Link',
+      to: '#',
+    },
+    {
+      text: 'Side Nav Link',
+      to: '#',
+    },
+    {
+      text: 'Side Nav Link',
+      to: '#',
+    },
+  ];
+  const code = `import MetaList from 'csun-react-components';
 
 const listItems = [
   {
@@ -42,8 +36,8 @@ const listItems = [
 <MetaList listItems={listItems} modifiers={['arrows']} />
     `;
 
-    const propTypesTitle = '// Prop Types';
-    const propTypes = `
+  const propTypesTitle = '// Prop Types';
+  const propTypes = `
   panelHeader: PropTypes.shape({
     text: PropTypes.string.isRequired,
   }),
@@ -58,26 +52,25 @@ const listItems = [
     text: PropTypes.string.isRequired,
   }),`;
 
-    return (
-      <MetaContainer>
-        <MetaRow>
-          <MetaColumn size={'sm'} value={'9'}>
-            <MetaPanel panelContent={{ text: 'This is a basic panel' }} />
-            <br />
-            <pre>
-              <code>
-                { code }
-                <div className="type--dark-gray">
-                  <strong>{propTypesTitle}</strong>
-                  {propTypes}
-                </div>
-              </code>
-            </pre>
-          </MetaColumn>
-        </MetaRow>
-      </MetaContainer>
-    );
-  }
-}
+  return (
+    <MetaContainer>
+      <MetaRow>
+        <MetaColumn size={'sm'} value={'9'}>
+          <MetaPanel panelContent={{ text: 'This is a basic panel' }} />
+          <br />
+          <pre>
+            <code>
+              {code}
+              <div className="type--dark-gray">
+                <strong>{propTypesTitle}</strong>
+                {propTypes}
+              </div>
+            </code>
+          </pre>
+        </MetaColumn>
+      </MetaRow>
+    </MetaContainer>
+  );
+};
 
 export default DocPanels;
