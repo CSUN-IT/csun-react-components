@@ -21,15 +21,17 @@ const MetaSideNav = (props) => {
     );
   });
 
-  return <ul className="nav">{navLinks}</ul>;
+  return <ul className={`${props.className} nav`}>{navLinks}</ul>;
 };
 
 MetaSideNav.defaultProps = {
+  className: '',
   menuItems: [],
   navColor: '',
 };
 
 MetaSideNav.propTypes = {
+  className: PropTypes.string,
   menuItems: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,

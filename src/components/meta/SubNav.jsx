@@ -21,7 +21,7 @@ const MetaSubNav = (props) => {
   ));
 
   return (
-    <div className="tab-container">
+    <div className={`${props.className} tab-container`}>
       <ul className="tabs cf">{subNavLinks}</ul>
     </div>
   );
@@ -30,9 +30,11 @@ const MetaSubNav = (props) => {
 MetaSubNav.defaultProps = {
   menuItems: [],
   typeColor: '',
+  className: '',
 };
 
 MetaSubNav.propTypes = {
+  className: PropTypes.className,
   menuItems: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,

@@ -2,36 +2,37 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const MetaPanel = props => (
-  <div className="panel">
+  <div className={`${props.className} panel`}>
     {props.panelHeader ? (
       <div className="panel__header">
         <strong>{props.panelHeader.text}</strong>
       </div>
-      ) : (
-        ''
-      )}
+    ) : (
+      ''
+    )}
     {props.panelImage ? (
       <div
         className="panel__img"
         style={{ backgroundImage: `url(${props.panelImage.imageURL})` }}
       />
-      ) : (
-        ''
-      )}
+    ) : (
+      ''
+    )}
     <div className="panel__content">{props.panelContent.text}</div>
     {props.panelFooter ? (
       <div className="panel__footer">
         <strong>{props.panelFooter.strongText}</strong>
         {props.panelFooter.text}
       </div>
-      ) : (
-        ''
-      )}
+    ) : (
+      ''
+    )}
   </div>
-  );
+);
 
 MetaPanel.defaultProps = {
   panelHeader: {},
+  className: '',
   panelImage: {},
   panelContent: {
     text:
@@ -41,6 +42,7 @@ MetaPanel.defaultProps = {
 };
 
 MetaPanel.propTypes = {
+  className: PropTypes.string,
   panelHeader: PropTypes.shape({
     text: PropTypes.string.isRequired,
   }),

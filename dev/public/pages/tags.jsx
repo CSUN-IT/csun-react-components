@@ -9,6 +9,7 @@ const DocTags = () => {
 
   const propTypesTitle = '// Prop Types';
   const propTypes = `
+  className: PropTypes.string,
   text: PropTypes.string,
   color: PropTypes.oneOf([
     'success',
@@ -25,7 +26,7 @@ const DocTags = () => {
         <MetaColumn size={'sm'} value={'9'}>
           <p>
             <span>Tag Cloud: </span>
-            <MetaTag text={'When'} action={'close'} to={'#'} />
+            <MetaTag className={'test'} text={'When'} action={'close'} to={'#'} />
             <MetaTag text={'A'} action={'close'} to={'#'} />
             <MetaTag text={'Problem'} action={'close'} to={'#'} />
             <MetaTag text={'Comes'} action={'close'} to={'#'} />

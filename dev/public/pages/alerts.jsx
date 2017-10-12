@@ -15,6 +15,7 @@ const DocAlerts = () => {
     'warning',
     'danger',
   ]),
+  className: PropTypes.string,
   strongText: PropTypes.string,
   text: PropTypes.string.isRequired,
   to: PropTypes.string,`;
@@ -24,7 +25,12 @@ const DocAlerts = () => {
       <MetaRow>
         <MetaColumn size={'sm'} value={'9'}>
           <MetaAlert strongText={'Pro Tip:'} text={'No color is default and this grey'} />
-          <MetaAlert color={'info'} strongText={'Pro Tip:'} text={'Color is info'} />
+          <MetaAlert
+            className={'test classTest'}
+            color={'info'}
+            strongText={'Pro Tip:'}
+            text={'Color is info'}
+          />
           <MetaAlert color={'success'} strongText={'Pro Tip:'} text={'Color is success'} />
           <MetaAlert color={'warning'} strongText={'Pro Tip:'} text={'Color is warning'} />
           <MetaAlert color={'danger'} strongText={'Pro Tip:'} text={'Color is danger'} />

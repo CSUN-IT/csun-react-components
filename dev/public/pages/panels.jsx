@@ -38,6 +38,7 @@ const listItems = [
 
   const propTypesTitle = '// Prop Types';
   const propTypes = `
+  className: PropTypes.string,
   panelHeader: PropTypes.shape({
     text: PropTypes.string.isRequired,
   }),
@@ -56,7 +57,7 @@ const listItems = [
     <MetaContainer>
       <MetaRow>
         <MetaColumn size={'sm'} value={'9'}>
-          <MetaPanel panelContent={{ text: 'This is a basic panel' }} />
+          <MetaPanel className={'test'} panelContent={{ text: 'This is a basic panel' }} />
           <br />
           <pre>
             <code>

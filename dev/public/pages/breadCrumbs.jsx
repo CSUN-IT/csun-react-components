@@ -39,6 +39,7 @@ const DocPrimaryNav = () => {
 
   const propTypesTitle = '// Prop Types';
   const propTypes = `
+  className: PropTypes.string,
   breadcrumbItems: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     to: PropTypes.string,
@@ -52,7 +53,7 @@ const DocPrimaryNav = () => {
     <MetaContainer>
       <MetaRow>
         <MetaColumn size={'sm'} value={'9'}>
-          <MetaBreadcrumbs breadcrumbItems={breadcrumbs} typecColor={'red'} />
+          <MetaBreadcrumbs className={'test'} breadcrumbItems={breadcrumbs} typecColor={'red'} />
           <br />
           <pre>
             <code>

@@ -10,12 +10,15 @@ const MetaList = (props) => {
     </li>
   ));
 
-  const ulClassnames = `list ${props.modifiers.map(modifier => `list--${modifier} `)}`;
+  const ulClassnames = `${props.className} list ${props.modifiers.map(
+    modifier => `list--${modifier} `,
+  )}`;
 
   return <ul className={ulClassnames}>{listItems}</ul>;
 };
 
 MetaList.defaultProps = {
+  className: '',
   listItems: [
     {
       text: 'Insert Text',
@@ -26,6 +29,7 @@ MetaList.defaultProps = {
 };
 
 MetaList.propTypes = {
+  className: PropTypes.className,
   listItems: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string.isRequired,

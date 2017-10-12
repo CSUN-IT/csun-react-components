@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const MetaTag = (props) => {
   const tagStatus = `${props.color ? `tag--${props.color}` : ''}`;
   const tagAction = `${props.action ? `tag--${props.action}` : ''}`;
-  const tagClasses = `tag ${tagStatus} ${tagAction}`;
+  const tagClasses = `${props.className} tag ${tagStatus} ${tagAction}`;
   return (
     <Link to={props.to} className={tagClasses}>
       {props.text}
@@ -14,6 +14,7 @@ const MetaTag = (props) => {
 };
 
 MetaTag.defaultProps = {
+  className: '',
   color: '',
   action: '',
   text: 'Tag',
@@ -25,6 +26,7 @@ MetaTag.propTypes = {
   color: PropTypes.oneOf(['success', 'warning', 'danger', '']),
   action: PropTypes.oneOf(['close', '']),
   to: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 export default MetaTag;
