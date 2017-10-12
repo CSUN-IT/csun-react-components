@@ -38,6 +38,7 @@ const listItems = [
 
   const propTypesTitle = '// Prop Types';
   const propTypes = `
+  classNames: PropTypes.string,
   listItems: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string.isRequired,
     to: PropTypes.string.isRequired,
@@ -53,7 +54,7 @@ const listItems = [
       <MetaRow>
         <MetaColumn size={'sm'} value={'9'}>
           <MetaColumn size={'sm'} value={'4'}>
-            <MetaList listItems={listItems} />
+            <MetaList className={'test'} listItems={listItems} />
           </MetaColumn>
           <MetaColumn size={'sm'} value={'4'}>
             <MetaList listItems={listItems} modifiers={['arrows']} />

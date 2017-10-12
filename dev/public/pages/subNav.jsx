@@ -47,6 +47,7 @@ const DocSubNav = () => {
 
   const propTypesTitle = '// Prop Types';
   const propTypes = `
+  className: PropTypes.string,
   menuItems: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     to: PropTypes.string.isRequired,
@@ -60,7 +61,7 @@ const DocSubNav = () => {
     <MetaContainer>
       <MetaRow>
         <MetaColumn size={'sm'} value={'9'}>
-          <MetaSubNav menuItems={menuItems} />
+          <MetaSubNav className={'test'} menuItems={menuItems} />
           <br />
           <pre>
             <code>

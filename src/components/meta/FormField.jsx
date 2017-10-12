@@ -3,11 +3,12 @@ import { generate as shortIdGenerate } from 'shortid';
 import PropTypes from 'prop-types';
 
 const MetaFormField = (props) => {
-  const buildInput = (field, changeFunction, value) => {
+  const buildInput = (field, changeFunction, value, className) => {
     switch (field.inputType) {
       case 'input':
         return (
           <input
+            className={className}
             type={field.type}
             id={field.id}
             name={field.id}
@@ -18,10 +19,17 @@ const MetaFormField = (props) => {
           />
         );
       case 'textarea':
-        return <textarea id={field.id} name={field.id} placeholder={field.placeholder} />;
+        return (
+          <textarea
+            className={className}
+            id={field.id}
+            name={field.id}
+            placeholder={field.placeholder}
+          />
+        );
       case 'select':
         return (
-          <select name={field.id} id={field.id}>
+          <select className={className} name={field.id} id={field.id}>
             {field.selectOptions.map(option => (
               <option value={option.value} key={shortIdGenerate()}>
                 {option.text}
@@ -36,7 +44,7 @@ const MetaFormField = (props) => {
             id={field.id}
             name={field.id}
             placeholder={field.placeholder}
-            className="datepicker"
+            className={`${className} datepicker`}
           />
         );
       default:
@@ -45,7 +53,7 @@ const MetaFormField = (props) => {
   };
 
   const label = <label htmlFor={props.field.id}>{props.field.labelText}</label>;
-  const input = buildInput(props.field, props.changeFunction, props.value);
+  const input = buildInput(props.field, props.changeFunction, props.value, props.className);
 
   return (
     <div>
@@ -59,6 +67,7 @@ MetaFormField.defaultProps = {
   field: {},
   value: '12',
   changeFunction: () => {},
+  className: '',
 };
 
 MetaFormField.propTypes = {
@@ -76,6 +85,7 @@ MetaFormField.propTypes = {
     placeholder: PropTypes.string,
     autoComplete: PropTypes.string,
   }),
+  className: PropTypes.string,
   value: PropTypes.string.isRequired,
   changeFunction: PropTypes.func,
 };

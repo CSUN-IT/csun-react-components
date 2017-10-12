@@ -24,7 +24,11 @@ const MetaBreadcrumbs = (props) => {
   ));
 
   return (
-    <ul className={`breadcrumbs ${props.typeColor ? `type--${props.typeColor}` : ''} `}>
+    <ul
+      className={`${props.className} breadcrumbs ${props.typeColor
+        ? `type--${props.typeColor}`
+        : ''} `}
+    >
       {breadcrumbs}
     </ul>
   );
@@ -40,9 +44,11 @@ MetaBreadcrumbs.defaultProps = {
   ],
   typeStyle: '',
   typeColor: '',
+  className: '',
 };
 
 MetaBreadcrumbs.propTypes = {
+  className: PropTypes.string,
   breadcrumbItems: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,

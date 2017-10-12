@@ -65,6 +65,7 @@ const DocSideNav = () => {
 
   const propTypesTitle = '// Prop Types';
   const propTypes = `
+  className: PropTypes.string,
   menuItems: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     to: PropTypes.string.isRequired,
@@ -78,7 +79,7 @@ const DocSideNav = () => {
       <MetaRow>
         <MetaColumn size={'sm'} value={'9'}>
           <MetaColumn size={'sm'} value={'6'}>
-            <MetaSideNav menuItems={menuItems} />
+            <MetaSideNav className={'test'} menuItems={menuItems} />
           </MetaColumn>
           <MetaColumn size={'sm'} value={'6'}>
             <MetaSideNav menuItems={menuItemsFill} />

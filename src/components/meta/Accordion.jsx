@@ -12,10 +12,15 @@ const MetaAccordion = (props) => {
     </div>
   ));
 
-  return <dl className="accordion">{AccordionBody}</dl>;
+  return <dl className={`accordion ${props.className}`}>{AccordionBody}</dl>;
+};
+
+MetaAccordion.defaultProps = {
+  className: '',
 };
 
 MetaAccordion.propTypes = {
+  className: PropTypes.string,
   bodyItems: PropTypes.arrayOf(
     PropTypes.shape({
       heading: PropTypes.string.isRequired,

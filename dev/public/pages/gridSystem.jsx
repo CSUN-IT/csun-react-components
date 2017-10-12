@@ -17,6 +17,7 @@ const DocGrid = () => {
 
   const propTypesTitle = '// Prop Type for MetaColumn';
   const propTypes = `
+  className: PropTypes.string,
   children: PropTypes.node.isRequired,
   size: PropTypes.oneOf([
     'xs',
@@ -41,9 +42,9 @@ const DocGrid = () => {
   ]),`;
 
   return (
-    <MetaContainer>
-      <MetaRow>
-        <MetaColumn size={'sm'} value={'9'}>
+    <MetaContainer className={'test'}>
+      <MetaRow className={'test'}>
+        <MetaColumn className={'test'} size={'sm'} value={'9'}>
           <div className={'grid--outline cf'}>
             <MetaColumn size={'sm'} value={'12'}>
               12
