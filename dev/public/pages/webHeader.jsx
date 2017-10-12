@@ -1,22 +1,7 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaPrimaryNav } from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, WebHeader } from '../../../src';
 
-const DocPrimaryNav = () => {
-  const menuItems = [
-    {
-      title: 'Home',
-      to: '',
-      exact: true,
-    },
-    {
-      title: 'IT',
-      to: 'it',
-    },
-    {
-      title: 'Giving',
-      to: 'giving',
-    },
-  ];
+const DocWebHeader = () => {
   const code = `import MetaPrimaryNav from 'csun-react-components';
 
       const menuItems = [
@@ -56,12 +41,7 @@ const DocPrimaryNav = () => {
     <MetaContainer>
       <MetaRow>
         <MetaColumn size={'sm'} value={'9'}>
-          <MetaPrimaryNav
-            subBrand={{ title: 'CSUN React Components', to: '' }}
-            navColor={'cream'}
-          />
-          <MetaPrimaryNav menuItems={menuItems} />
-          <MetaPrimaryNav menuItems={menuItems} navColor={'black'} />
+          <WebHeader />
           <br />
           <pre>
             <code>
@@ -78,4 +58,4 @@ const DocPrimaryNav = () => {
   );
 };
 
-export default DocPrimaryNav;
+export default DocWebHeader;
