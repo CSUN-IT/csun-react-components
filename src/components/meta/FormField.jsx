@@ -44,7 +44,7 @@ const MetaFormField = (props) => {
     }
   };
 
-  const label = <label htmlFor={props.field.id}>{props.field.labelText}</label>;
+  const label = props.field.labelText ? <label htmlFor={props.field.id}>{props.field.labelText}</label> : null;
   const input = buildInput(props.field, props.changeFunction, props.value);
 
   return (
@@ -58,7 +58,7 @@ const MetaFormField = (props) => {
 MetaFormField.defaultProps = {
   field: {},
   value: '12',
-  changeFunction: () => {},
+  changeFunction: () => { },
 };
 
 MetaFormField.propTypes = {
