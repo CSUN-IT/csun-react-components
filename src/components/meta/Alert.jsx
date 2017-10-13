@@ -8,7 +8,7 @@ const MetaAlert = (props) => {
   return (
     <div className={alertParentClasses}>
       {props.strongText ? strongText : ''} {props.text}
-      <a href={props.to} className="alert__close" data-alert-close>
+      <a href={props.to} className="alert__close" data-alert-close onClick={props.onClick}>
         &times;
       </a>
     </div>
@@ -21,6 +21,7 @@ MetaAlert.defaultProps = {
   text: '',
   className: '',
   to: '#',
+  onClick: () => {},
 };
 
 MetaAlert.propTypes = {
@@ -29,6 +30,7 @@ MetaAlert.propTypes = {
   strongText: PropTypes.string,
   text: PropTypes.string.isRequired,
   to: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default MetaAlert;

@@ -4,7 +4,7 @@ import { MetaContainer, MetaColumn, MetaRow, MetaAlert } from '../../../src';
 const DocAlerts = () => {
   const code = `import MetaAlert from 'csun-react-components';
 
-<MetaAlert color={'info'} strongText={'Pro Tip'} text={'Color is info'} />
+<MetaAlert color={'info'} strongText={'Pro Tip'} text={'Color is info'} onClick={ () => { console.log('hello world'); }}/>
     `;
 
   const propTypesTitle = '// Prop Types';
@@ -18,7 +18,8 @@ const DocAlerts = () => {
   className: PropTypes.string,
   strongText: PropTypes.string,
   text: PropTypes.string.isRequired,
-  to: PropTypes.string,`;
+  to: PropTypes.string,
+  onClick: PropTypes.func,`;
 
   return (
     <MetaContainer>
@@ -33,7 +34,7 @@ const DocAlerts = () => {
           />
           <MetaAlert color={'success'} strongText={'Pro Tip:'} text={'Color is success'} />
           <MetaAlert color={'warning'} strongText={'Pro Tip:'} text={'Color is warning'} />
-          <MetaAlert color={'danger'} strongText={'Pro Tip:'} text={'Color is danger'} />
+          <MetaAlert color={'danger'} strongText={'Pro Tip:'} text={'Color is danger'} onClick={() => { console.log('Hello world.'); }} />
           <br />
           <pre>
             <code>
