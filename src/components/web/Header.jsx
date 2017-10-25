@@ -22,13 +22,11 @@ const WebHeader = (props) => {
     <MetaContainer>
       <div className={'header'}>
         <MetaRow>
-          <MetaColumn size={'sm'} value={'7'}>
-            <a className={'csun-logo'} href={'http://www.csun.edu'}>
-              <span className="sr-only">California State University, Northridge (CSUN)</span>
-            </a>
-            {secondaryWordmark}
-            {tertiaryWordmark}
-          </MetaColumn>
+          <a className={'csun-logo'} href={'http://www.csun.edu'}>
+            <span className="sr-only">California State University, Northridge (CSUN)</span>
+          </a>
+          {secondaryWordmark}
+          {tertiaryWordmark}
           <ul className={'list-inline mini-nav pull-right'}>
             <li>
               <a href={'http://www.csun.edu/universaldesigncenter'}>Accessibility</a>
