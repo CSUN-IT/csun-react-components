@@ -1,12 +1,17 @@
+@import "variables";
+
 .navbar-body {
   background-color: #cf0a2c;
   height: 43px;
+  @media screen and (max-width: $break-small) {
+    height: 2px;
+  }
 }
 
-.nav {
-  border-left: none !important;
+.web-nav {
+  border-left: none;
 }
-@media (min-width: 768px) {
+
   .navbar-center {
     display: inline-block;
     float: none;
@@ -58,4 +63,3 @@
     color: #fff;
     text-decoration: none;
   }
-}

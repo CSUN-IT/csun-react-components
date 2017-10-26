@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MetaRow from '../meta/Row';
-import MetaColumn from '../meta/Column';
 import MetaContainer from '../meta/Container';
 import './sass/_webHeader.scss';
 

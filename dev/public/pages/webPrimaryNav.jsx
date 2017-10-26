@@ -36,12 +36,28 @@ const DocWebPrimaryNav = () => {
     to: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
   }),`;
-
+  const menuItems = [
+    {
+      title: 'About IT',
+      to: 'https://www.csun.edu/it/about',
+      external: true,
+    },
+    {
+      title: 'IT',
+      to: 'it',
+      external: true,
+    },
+    {
+      title: 'Giving',
+      to: 'giving',
+      external: true,
+    },
+  ];
   return (
     <MetaContainer>
       <MetaRow>
         <MetaColumn size={'sm'} value={'9'}>
-          <WebPrimaryNav />
+          <WebPrimaryNav menuItems={menuItems} />
           <br />
           <pre>
             <code>
