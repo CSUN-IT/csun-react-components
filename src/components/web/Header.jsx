@@ -57,8 +57,8 @@ const WebHeader = (props) => {
 };
 
 WebHeader.defaultProps = {
-  secondaryWordmark: {},
-  tertiaryWordmark: {},
+  secondaryWordmark: null,
+  tertiaryWordmark: null,
 };
 
 WebHeader.propTypes = {
