@@ -2,9 +2,8 @@ import React from 'react';
 import { MetaContainer, MetaColumn, MetaRow, MetaFormField, MetaFormGroup } from '../../../src';
 
 const DocForms = () => {
-  const code = `import MetaFormField from 'csun-react-components';
-import MetaFormGroup from 'csun-react-components';
-
+  const code = `import { MetaFormGroup, MetaFormField } from 'csun-components';
+  
 <MetaFormGroup>
   //Input Field
   <MetaFormField
