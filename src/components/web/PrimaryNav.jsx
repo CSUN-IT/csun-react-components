@@ -14,17 +14,18 @@ const WebPrimaryNav = (props) => {
     </li>
   ));
 
-  return (<div className="navbar-bg">
-    <div className="navbar-body">
-      <div className="container">
-        <div className="collapse navbar-collapse navbar-ex1-collapse">
-          <ul className="web-nav navbar-nav navbar-center">
-            {navLinks}
-          </ul>
+  return (
+    <div>
+      <div className="navbar">
+        <div className="container">
+          <div className="navbar-link-wrapper">
+            <ul className="web-nav navbar-nav navbar-center">
+              {navLinks}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   );
 };
 

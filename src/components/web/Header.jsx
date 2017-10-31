@@ -49,6 +49,9 @@ const WebHeader = (props) => {
               <a href={'http://www.csun.edu/it/webmail'}>Webmail</a>
             </li>
           </ul>
+          <div className="nav-dropdown">
+            <button className="nav-dropdown-button" title="Menu" />
+          </div>
         </MetaRow>
       </div>
     </MetaContainer>

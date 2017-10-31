@@ -40,10 +40,15 @@ const App = () => {
     },
   ];
 
+  const secondaryWordmark = {
+    to: 'https://www.csun.edu/it',
+    title: 'Information\nTechnology',
+  };
+
   return (
     <Router>
       <div>
-        <WebHeader />
+        <WebHeader secondaryWordmark={secondaryWordmark} />
         <WebPrimaryNav menuItems={menuItems2} />
         <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} subBrand={subBrand} />
         <Route path="/docs" component={DocLayout} />
