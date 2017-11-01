@@ -48,8 +48,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <WebHeader secondaryWordmark={secondaryWordmark} />
-        <WebPrimaryNav menuItems={menuItems2} />
+        <WebHeader secondaryWordmark={secondaryWordmark} menuItems={menuItems2} />
         <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} subBrand={subBrand} />
         <Route path="/docs" component={DocLayout} />
       </div>

@@ -11,7 +11,7 @@ $secondary-border-color: #000;
   font-size: .65em;
   margin-bottom: 8px;
   margin-top: 15px;
-  @media screen and (max-width: $break-small) {
+  @media (max-width: $break-large) {
     display: none;
   }
 }
@@ -44,7 +44,7 @@ $secondary-border-color: #000;
 .nav-dropdown-button {
   display: none;
 
-  @media screen and (max-width: $break-small) {
+  @media (max-width: $break-large) {
     background-image: $mobile-menu-button;
     background-position: 0 top;
     background-repeat: no-repeat;
@@ -65,6 +65,66 @@ $secondary-border-color: #000;
   }
 }
 
+.web-nav-mobile {
+  display: none;
+  @media (max-width: $break-large) {
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.navbar-link-wrapper {
+  background-color: $csun-red;
+  display: block;
+  height: 43px;
+  margin-bottom: 10px;
+  overflow: visible;
+  padding-bottom: 0;
+  text-align: center;
+  visibility: visible;
+  @media (max-width: $break-large) {
+    display: none;
+  }
+
+  .navbar-center {
+    display: inline-block;
+    float: none;
+    list-style: none;
+    vertical-align: top;
+  }
+
+  .web-nav {
+    border-left: 0;
+  }
+
+  .navbar-nav > li {
+    float: left;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+    &:first-child > a {
+      border-left: 0;
+    }
+
+    a {
+      border-left: 1px solid $nav-bar-border-color;
+      color: $nav-bar-text-color;
+      font-family: 'museo-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      line-height: 1.25;
+      padding: 0 25px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
+  @media (max-width: $break-large) {
+    height: 2px;
+  }
+}
+
+
 // Header main
 
 .header {
@@ -74,12 +134,12 @@ $secondary-border-color: #000;
   .csun-logo {
     float: left;
     margin-top: 5px;
-    @media screen and (min-width: $break-large) {
+    @media (min-width: $break-large) {
       background-image: $csun-logo-large;
       height: 43px;
       width: 160px;
     }
-    @media screen and (max-width: $break-small) {
+    @media (max-width: $break-large) {
       background-image: $csun-logo-small;
       height: 29px;
       width: 107px;
@@ -89,7 +149,7 @@ $secondary-border-color: #000;
   // Wordmarks
   .wordmark {
     text-align: center;
-    
+
     &.secondary-wordmark {
       font-size: 24px;
       font-weight: bold;
@@ -98,7 +158,7 @@ $secondary-border-color: #000;
     &.tertiary-wordmark {
       font-size: 22px;
     }
-    @media screen and (min-width: $break-large) {
+    @media (min-width: $break-large) {
       border-left: 1px solid $secondary-border-color;
       display: inline-block;
       float: left;
@@ -110,7 +170,7 @@ $secondary-border-color: #000;
       white-space: pre;
     }
 
-    @media screen and (max-width: $break-large) {
+    @media (max-width: $break-large) {
       white-space: nowrap;
     }
   }
