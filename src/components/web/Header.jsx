@@ -34,7 +34,7 @@ class WebHeader extends Component {
 
     const navLinks = this.props.menuItems ? this.props.menuItems.map(link => (
       <li key={shortIdGenerate()}>
-        {link.external ? <a to={link.to}>{link.title}</a>
+        {link.external ? <a href={link.to}>{link.title}</a>
           : <NavLink exact={link.exact ? link.exact : false} to={link.to}>
             {link.title}
           </NavLink>}
