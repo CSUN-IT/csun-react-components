@@ -32,19 +32,19 @@ class WebHeader extends Component {
       </a>
     ) : null;
 
-    const navLinks = this.props.menuItems.map(link => (
+    const navLinks = this.props.menuItems ? this.props.menuItems.map(link => (
       <li key={shortIdGenerate()}>
         {link.external ? <a to={link.to}>{link.title}</a>
           : <NavLink exact={link.exact ? link.exact : false} to={link.to}>
             {link.title}
           </NavLink>}
       </li>
-    ));
+    )) : null;
 
     return (<div>
       <MetaContainer>
         <div className={'header'}>
-          <MetaRow>
+          <MetaRow className="header-row">
             <a className={'csun-logo'} href={'http://www.csun.edu'}>
               <span className="sr-only">California State University, Northridge (CSUN)</span>
             </a>
@@ -79,16 +79,18 @@ class WebHeader extends Component {
           </MetaRow>
         </div>
       </MetaContainer>
-      <div className={`web-nav-mobile ${this.state.showMobileNav ? 'active' : ''}`} >
-        <ul className="mobile-menu">
-          {navLinks}
-        </ul>
-      </div>
-      <div className="navbar-link-wrapper">
-        <ul className="web-nav navbar-nav navbar-center">
-          {navLinks}
-        </ul>
-      </div>
+      {this.props.menuItems ?
+        (<div><div className={`web-nav-mobile ${this.state.showMobileNav ? 'active' : ''}`} >
+          <ul className="mobile-menu">
+            {navLinks}
+          </ul>
+        </div>
+          <div className="navbar-link-wrapper">
+            <ul className="web-nav navbar-nav navbar-center">
+              {navLinks}
+            </ul>
+          </div></div>) : null
+      }
     </div>);
   }
 }

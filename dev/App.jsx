@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import { DocLayout } from './public/wrappers';
-import { MetaPrimaryNav, WebPrimaryNav, WebHeader } from '../src';
+import { MetaPrimaryNav, WebHeader } from '../src';
 
 const App = () => {
   const menuItems = [
@@ -45,10 +45,15 @@ const App = () => {
     title: 'Information\nTechnology',
   };
 
+  const tertiaryWordmark = {
+    to: 'https://www.csun.edu/it',
+    title: 'Information\nTechnology',
+  };
+
   return (
     <Router>
       <div>
-        <WebHeader secondaryWordmark={secondaryWordmark} menuItems={menuItems2} />
+        <WebHeader secondaryWordmark={secondaryWordmark} tertiaryWordmark={tertiaryWordmark} menuItems={menuItems2} />
         <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} subBrand={subBrand} />
         <Route path="/docs" component={DocLayout} />
       </div>

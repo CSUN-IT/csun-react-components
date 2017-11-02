@@ -5,11 +5,24 @@
 $mobile-menu-button: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAgCAYAAACFM/9sAAABAUlEQVR42u2XTQrCMBBGR1Ai5gA9hGfwAu6La8/QTa/TtYfxBIILl6K4MP1bRGdbLEaEyTR8hUcJBIY8hmQ+6vvea4aIdAOBEKhPYOeuPs/zKFRVFSRwMye/XcjB9YIFNreTeoHH1VqccIH3MwQOONgMAsU6sH1c1AvkjlDbgYx2gYwZWZsv0GAfffjTyL5ggXyQWGAOxCANgf8J7Brf1s675xsnQ938JtBEIKkksjPk90s5uB6SCJLIVJIIOjD9JML3UmHl4HrJJRHVcyCSCAZpCJx0Eon1hQrMZvIk9Qrzy1gKwvUwByKJIIkgiWgRyPeSpLzSIokgiWCQRhKBwCEvwLSRj8/zxTMAAAAASUVORK5CYII=');
 $mini-nav-text-color: #000;
 $secondary-border-color: #000;
+$primary-mobile-menu-border-color: #fff;
+$primary-mobile-menu-text-color: #fff;
+
+.header-row {
+  display: flex;
+
+  @media (max-width: $break-large) {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 // Mini nav
 .mini-nav {
   font-size: .65em;
   margin-bottom: 8px;
+  margin-left: auto;
   margin-top: 15px;
   @media (max-width: $break-large) {
     display: none;
@@ -18,7 +31,6 @@ $secondary-border-color: #000;
 
 .list-inline {
   list-style: none;
-  margin-left: -5px;
   margin-right: 10px;
   padding-left: 0;
 }
@@ -69,7 +81,23 @@ $secondary-border-color: #000;
   display: none;
   @media (max-width: $break-large) {
     &.active {
+      background-color: $csun-red;
       display: block;
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li > a {
+        border-bottom: 1px solid $primary-mobile-menu-border-color;
+        color: $primary-mobile-menu-text-color;
+        display: block;
+        font-size: 25px;
+        padding: 5px 10px;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -160,9 +188,9 @@ $secondary-border-color: #000;
     }
     @media (min-width: $break-large) {
       border-left: 1px solid $secondary-border-color;
-      display: inline-block;
-      float: left;
-      font-weight: normal;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       line-height: 26px;
       margin-bottom: .1em;
       margin-left: 10px;
@@ -171,6 +199,8 @@ $secondary-border-color: #000;
     }
 
     @media (max-width: $break-large) {
+      clear: both;
+      float: left;
       white-space: nowrap;
     }
   }
