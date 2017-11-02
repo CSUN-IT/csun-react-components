@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import { DocLayout } from './public/wrappers';
-import { MetaPrimaryNav } from '../src';
+import { MetaPrimaryNav, WebHeader } from '../src';
 
 const App = () => {
   const menuItems = [
