@@ -13,6 +13,8 @@ const DocForms = () => {
       placeholder: 'Type a message...',
       type: 'text',
       autoComplete: 'off',
+      labelText: 'name',
+      labelTextVisible: true,
     }}
     value={''}
   />
@@ -25,6 +27,7 @@ const DocForms = () => {
       placeholder: 'Type a message...',
       type: 'text',
       autoComplete: 'off',
+      labelTextVisible: false,
     }}
     value={''}
   />
@@ -45,6 +48,7 @@ const DocForms = () => {
           text: 'Example 2',
         },
       ],
+      labelTextVisible: false,
     }}
     value={''}
   />
@@ -55,6 +59,7 @@ const DocForms = () => {
       inputType: 'datepicker',
       id: 'datepicker',
       type: 'date',
+      labelTextVisible: false,
     }}
     value={''}
   />
@@ -77,6 +82,7 @@ const DocForms = () => {
     type: PropTypes.string,
     placeholder: PropTypes.string,
     autoComplete: PropTypes.string,
+    labelTextVisible: PropTypes.bool.isRequired,
   }),
   className: PropTypes.string,
   value: PropTypes.string.isRequired,
@@ -104,6 +110,8 @@ const DocForms = () => {
                 placeholder: 'Type a message...',
                 type: 'text',
                 autoComplete: 'off',
+                labelText: 'Name',
+                labelTextVisible: false,
               }}
               value={''}
             />
@@ -116,6 +124,7 @@ const DocForms = () => {
                 placeholder: 'Type a message...',
                 type: 'text',
                 autoComplete: 'off',
+                labelTextVisible: false,
               }}
               value={''}
             />
@@ -136,6 +145,7 @@ const DocForms = () => {
                     text: 'Example 2',
                   },
                 ],
+                labelTextVisible: false,
               }}
               value={''}
             />
@@ -146,6 +156,7 @@ const DocForms = () => {
                 inputType: 'datepicker',
                 id: 'datepicker',
                 type: 'date',
+                labelTextVisible: false,
               }}
               value={''}
             />

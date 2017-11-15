@@ -52,7 +52,14 @@ const MetaFormField = (props) => {
     }
   };
 
-  const label = props.field.labelText ? <label htmlFor={props.field.id}>{props.field.labelText}</label> : null;
+  const buildLabel = field =>
+    field ? (
+      <label htmlFor={field.id}>{field.labelText}</label>
+    ) : (
+      <label htmlFor={field.id} className="visuallyhidden" />
+    );
+
+  const label = buildLabel(props.field);
   const input = buildInput(props.field, props.changeFunction, props.value, props.className);
 
   return (
@@ -66,7 +73,7 @@ const MetaFormField = (props) => {
 MetaFormField.defaultProps = {
   field: {},
   value: '12',
-  changeFunction: () => { },
+  changeFunction: () => {},
   className: '',
 };
 
@@ -84,6 +91,7 @@ MetaFormField.propTypes = {
     type: PropTypes.string,
     placeholder: PropTypes.string,
     autoComplete: PropTypes.string,
+    labelTextVisible: PropTypes.bool.isRequired,
   }),
   className: PropTypes.string,
   value: PropTypes.string.isRequired,
