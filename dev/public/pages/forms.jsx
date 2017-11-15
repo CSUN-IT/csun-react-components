@@ -13,6 +13,7 @@ const DocForms = () => {
       placeholder: 'Type a message...',
       type: 'text',
       autoComplete: 'off',
+      ariaLabel: 'input field',
     }}
     value={''}
   />
@@ -77,6 +78,7 @@ const DocForms = () => {
     type: PropTypes.string,
     placeholder: PropTypes.string,
     autoComplete: PropTypes.string,
+    labelTextVisible: PropTypes.bool.isRequired,
   }),
   className: PropTypes.string,
   value: PropTypes.string.isRequired,
@@ -104,6 +106,7 @@ const DocForms = () => {
                 placeholder: 'Type a message...',
                 type: 'text',
                 autoComplete: 'off',
+                ariaLabel: 'input field',
               }}
               value={''}
             />
