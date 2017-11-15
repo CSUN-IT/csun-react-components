@@ -17,6 +17,7 @@ import {
   DocChatBubble,
   DocWebHeader,
   DocWebPrimaryNav,
+  DocTables,
 } from '../pages';
 import SectionHelper from '../components/SectionHelper';
 
@@ -24,6 +25,11 @@ const DocLayout = (props) => {
   const match = props.match;
 
   const sideNavMenuItems = [
+    {
+      title: 'Tables',
+      to: `${match.url}/tables`,
+      active: false,
+    },
     {
       title: 'Grid System',
       to: `${match.url}/grid`,
@@ -139,6 +145,7 @@ const DocLayout = (props) => {
             <Route path={`${match.url}/breadcrumbs`} component={DocBreadcrumbs} />
             <Route path={`${match.url}/alerts`} component={DocAlerts} />
             <Route path={`${match.url}/buttons`} component={DocButtons} />
+            <Route path={`${match.url}/tables`} component={DocTables} />
             <Route path={`${match.url}/lists`} component={DocLists} />
             <Route path={`${match.url}/panels`} component={DocPanels} />
             <Route path={`${match.url}/sidenav`} component={DocSideNav} />
