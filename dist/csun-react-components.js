@@ -2965,19 +2965,21 @@ var MetaFormField = function MetaFormField(props) {
           placeholder: field.placeholder,
           value: value,
           onChange: changeFunction,
-          autoComplete: field.autoComplete
+          autoComplete: field.autoComplete,
+          'aria-label': field.ariaLabel
         });
       case 'textarea':
         return _react2.default.createElement('textarea', {
           className: className,
           id: field.id,
           name: field.id,
-          placeholder: field.placeholder
+          placeholder: field.placeholder,
+          'aria-label': field.ariaLabel
         });
       case 'select':
         return _react2.default.createElement(
           'select',
-          { className: className, name: field.id, id: field.id },
+          { className: className, name: field.id, id: field.id, 'aria-label': field.ariaLabel },
           field.selectOptions.map(function (option) {
             return _react2.default.createElement(
               'option',
@@ -2992,7 +2994,8 @@ var MetaFormField = function MetaFormField(props) {
           id: field.id,
           name: field.id,
           placeholder: field.placeholder,
-          className: className + ' datepicker'
+          className: className + ' datepicker',
+          'aria-label': field.ariaLabel
         });
       default:
         return null;
@@ -3032,7 +3035,8 @@ MetaFormField.propTypes = {
     labelText: _propTypes2.default.string,
     type: _propTypes2.default.string,
     placeholder: _propTypes2.default.string,
-    autoComplete: _propTypes2.default.string
+    autoComplete: _propTypes2.default.string,
+    ariaLabel: _propTypes2.default.string
   }),
   className: _propTypes2.default.string,
   value: _propTypes2.default.string.isRequired,
@@ -8270,7 +8274,7 @@ exports = module.exports = __webpack_require__(22)();
 
 
 // module
-exports.push([module.i, ".bubble-container-right {\n  margin-top: 8px;\n  margin-bottom: 8px;\n  margin-right: 8px;\n  display: flex;\n  font-family: sans-serif;\n  font-size: 14px;\n  align-items: center;\n  justify-content: flex-end; }\n\n.bubble-container-left {\n  margin-top: 8px;\n  margin-bottom: 8px;\n  margin-left: 8px;\n  display: flex;\n  font-family: sans-serif;\n  font-size: 14px;\n  align-items: center;\n  justify-content: flex-start; }\n\n.bubble {\n  background-color: #f2f2f2;\n  border-radius: 5px;\n  box-shadow: 0 0 6px #b2b2b2;\n  display: block;\n  padding: 10px 18px;\n  position: relative;\n  vertical-align: top;\n  color: white;\n  word-wrap: break-word; }\n\n.bubble::before {\n  background-color: #f2f2f2;\n  content: \"\\A0\";\n  display: block;\n  height: 16px;\n  position: absolute;\n  top: 11px;\n  transform: rotate(29deg) skew(-35deg);\n  -moz-transform: rotate(29deg) skew(-35deg);\n  -ms-transform: rotate(29deg) skew(-35deg);\n  -o-transform: rotate(29deg) skew(-35deg);\n  -webkit-transform: rotate(29deg) skew(-35deg);\n  width: 20px; }\n\n.receiver {\n  background-color: #dfe9ef;\n  margin-left: 18px;\n  margin-right: 60px;\n  color: #555; }\n\n.receiver::before {\n  box-shadow: -2px 2px 2px 0 rgba(178, 178, 178, 0.4);\n  left: -9px;\n  background-color: #dfe9ef; }\n\n.sender {\n  background-color: #d00d2d;\n  margin-left: 60px;\n  margin-right: 18px;\n  color: #eee; }\n\n.sender::before {\n  box-shadow: 2px -2px 2px 0 rgba(178, 178, 178, 0.4);\n  right: -9px;\n  background-color: #d00d2d; }\n\n.timeStamp {\n  font-size: 10px; }\n", ""]);
+exports.push([module.i, ".bubble-container-right {\n  margin-top: 8px;\n  margin-bottom: 8px;\n  margin-right: 8px;\n  display: flex;\n  font-family: sans-serif;\n  font-size: 14px;\n  align-items: center;\n  justify-content: flex-end; }\n\n.bubble-container-left {\n  margin-top: 8px;\n  margin-bottom: 8px;\n  margin-left: 8px;\n  display: flex;\n  font-family: sans-serif;\n  font-size: 14px;\n  align-items: center;\n  justify-content: flex-start; }\n\n.bubble {\n  background-color: #f2f2f2;\n  border-radius: 5px;\n  box-shadow: 0 0 6px #b2b2b2;\n  display: block;\n  padding: 10px 18px;\n  position: relative;\n  vertical-align: top;\n  word-wrap: break-word; }\n\n.bubble::before {\n  background-color: #f2f2f2;\n  content: \"\\A0\";\n  display: block;\n  height: 16px;\n  position: absolute;\n  top: 11px;\n  transform: rotate(29deg) skew(-35deg);\n  -moz-transform: rotate(29deg) skew(-35deg);\n  -ms-transform: rotate(29deg) skew(-35deg);\n  -o-transform: rotate(29deg) skew(-35deg);\n  -webkit-transform: rotate(29deg) skew(-35deg);\n  width: 20px; }\n\n.receiver {\n  background-color: #dfe9ef;\n  margin-left: 18px;\n  margin-right: 60px;\n  color: #555; }\n\n.receiver::before {\n  box-shadow: -2px 2px 2px 0 rgba(178, 178, 178, 0.4);\n  left: -9px;\n  background-color: #dfe9ef; }\n\n.sender {\n  background-color: #d00d2d;\n  margin-left: 60px;\n  margin-right: 18px;\n  color: #eee; }\n\n.sender::before {\n  box-shadow: 2px -2px 2px 0 rgba(178, 178, 178, 0.4);\n  right: -9px;\n  background-color: #d00d2d; }\n\n.timeStamp {\n  font-size: 10px; }\n", ""]);
 
 // exports
 
