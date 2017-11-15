@@ -16,6 +16,7 @@ const MetaFormField = (props) => {
             value={value}
             onChange={changeFunction}
             autoComplete={field.autoComplete}
+            aria-label={field.ariaLabel}
           />
         );
       case 'textarea':
@@ -25,11 +26,12 @@ const MetaFormField = (props) => {
             id={field.id}
             name={field.id}
             placeholder={field.placeholder}
+            aria-label={field.ariaLabel}
           />
         );
       case 'select':
         return (
-          <select className={className} name={field.id} id={field.id}>
+          <select className={className} name={field.id} id={field.id} aria-label={field.ariaLabel}>
             {field.selectOptions.map(option => (
               <option value={option.value} key={shortIdGenerate()}>
                 {option.text}
@@ -45,6 +47,7 @@ const MetaFormField = (props) => {
             name={field.id}
             placeholder={field.placeholder}
             className={`${className} datepicker`}
+            aria-label={field.ariaLabel}
           />
         );
       default:
@@ -52,14 +55,9 @@ const MetaFormField = (props) => {
     }
   };
 
-  const buildLabel = field =>
-    field ? (
-      <label htmlFor={field.id}>{field.labelText}</label>
-    ) : (
-      <label htmlFor={field.id} className="visuallyhidden" />
-    );
-
-  const label = buildLabel(props.field);
+  const label = props.field.labelText ? (
+    <label htmlFor={props.field.id}>{props.field.labelText}</label>
+  ) : null;
   const input = buildInput(props.field, props.changeFunction, props.value, props.className);
 
   return (
@@ -91,7 +89,7 @@ MetaFormField.propTypes = {
     type: PropTypes.string,
     placeholder: PropTypes.string,
     autoComplete: PropTypes.string,
-    labelTextVisible: PropTypes.bool.isRequired,
+    ariaLabel: PropTypes.string,
   }),
   className: PropTypes.string,
   value: PropTypes.string.isRequired,

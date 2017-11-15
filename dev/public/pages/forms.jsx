@@ -13,8 +13,7 @@ const DocForms = () => {
       placeholder: 'Type a message...',
       type: 'text',
       autoComplete: 'off',
-      labelText: 'name',
-      labelTextVisible: true,
+      ariaLabel: 'input field',
     }}
     value={''}
   />
@@ -27,7 +26,6 @@ const DocForms = () => {
       placeholder: 'Type a message...',
       type: 'text',
       autoComplete: 'off',
-      labelTextVisible: false,
     }}
     value={''}
   />
@@ -48,7 +46,6 @@ const DocForms = () => {
           text: 'Example 2',
         },
       ],
-      labelTextVisible: false,
     }}
     value={''}
   />
@@ -59,7 +56,6 @@ const DocForms = () => {
       inputType: 'datepicker',
       id: 'datepicker',
       type: 'date',
-      labelTextVisible: false,
     }}
     value={''}
   />
@@ -110,8 +106,7 @@ const DocForms = () => {
                 placeholder: 'Type a message...',
                 type: 'text',
                 autoComplete: 'off',
-                labelText: 'Name',
-                labelTextVisible: false,
+                ariaLabel: 'input field',
               }}
               value={''}
             />
@@ -124,7 +119,6 @@ const DocForms = () => {
                 placeholder: 'Type a message...',
                 type: 'text',
                 autoComplete: 'off',
-                labelTextVisible: false,
               }}
               value={''}
             />
@@ -145,7 +139,6 @@ const DocForms = () => {
                     text: 'Example 2',
                   },
                 ],
-                labelTextVisible: false,
               }}
               value={''}
             />
@@ -156,7 +149,6 @@ const DocForms = () => {
                 inputType: 'datepicker',
                 id: 'datepicker',
                 type: 'date',
-                labelTextVisible: false,
               }}
               value={''}
             />
