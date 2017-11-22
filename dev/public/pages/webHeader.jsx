@@ -43,9 +43,11 @@ const DocWebHeader = () => {
     tertiaryWordmark: null,
     showMobileNav: false,
     menuItems: null,
+    id: null,
   };
   
   WebHeader.propTypes = {
+    id: PropTypes.string,
     secondaryWordmark: PropTypes.shape({
       title: PropTypes.string.isRequired,
       to: PropTypes.string.isRequired,
