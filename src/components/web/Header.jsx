@@ -6,7 +6,6 @@ import MetaRow from '../meta/Row';
 import MetaContainer from '../meta/Container';
 import './sass/_webHeader.scss';
 
-
 class WebHeader extends Component {
   constructor(props, context) {
     super(props, context);
@@ -32,66 +31,75 @@ class WebHeader extends Component {
       </a>
     ) : null;
 
-    const navLinks = this.props.menuItems ? this.props.menuItems.map(link => (
-      <li key={shortIdGenerate()}>
-        {link.external ? <a href={link.to}>{link.title}</a>
-          : <NavLink exact={link.exact ? link.exact : false} to={link.to}>
-            {link.title}
-          </NavLink>}
-      </li>
-    )) : null;
+    const navLinks = this.props.menuItems
+      ? this.props.menuItems.map(link => (
+        <li key={shortIdGenerate()}>
+          {link.external ? (
+            <a href={link.to}>{link.title}</a>
+            ) : (
+              <NavLink exact={link.exact ? link.exact : false} to={link.to}>
+                {link.title}
+              </NavLink>
+            )}
+        </li>
+        ))
+      : null;
 
-    return (<div>
-      <MetaContainer>
-        <div className={'header'}>
-          <MetaRow className="header-row">
-            <a className={'csun-logo'} href={'http://www.csun.edu'}>
-              <span className="sr-only">California State University, Northridge (CSUN)</span>
-            </a>
-            {secondaryWordmark}
-            {tertiaryWordmark}
-            <ul className={'list-inline mini-nav pull-right'}>
-              <li>
-                <a href={'http://www.csun.edu/universaldesigncenter'}>Accessibility</a>
-              </li>|
-            <li>
-                <a
-                  href={
-                    'https://mynorthridge.csun.edu/psc/PANRPRD/EMPLOYEE/EMPL/c/NRPA_CSUN_APPS.NR_PEOPLESRCH_CMP.GBL'
-                  }
-                >
-                  Directory
+    return (
+      <div id={this.props.id}>
+        <MetaContainer>
+          <div className={'header'}>
+            <MetaRow className="header-row">
+              <a className={'csun-logo'} href={'http://www.csun.edu'}>
+                <span className="sr-only">California State University, Northridge (CSUN)</span>
               </a>
-              </li>|
-            <li>
-                <a href={'http://www.csun.edu/calendar'}>Calendar</a>
-              </li>|
-            <li>
-                <a href={'http://www.csun.edu/atoz/'}>A to Z</a>
-              </li>|
-            <li>
-                <a href={'http://www.csun.edu/it/webmail'}>Webmail</a>
-              </li>
-            </ul>
-            <div className="nav-dropdown">
-              <button className={`nav-dropdown-button ${this.state.showMobileNav ? 'active' : ''}`} title="Menu" onClick={this.togglePrimaryNav} />
+              {secondaryWordmark}
+              {tertiaryWordmark}
+              <ul className={'list-inline mini-nav pull-right'}>
+                <li>
+                  <a href={'http://www.csun.edu/universaldesigncenter'}>Accessibility</a>
+                </li>|
+                <li>
+                  <a
+                    href={
+                      'https://mynorthridge.csun.edu/psc/PANRPRD/EMPLOYEE/EMPL/c/NRPA_CSUN_APPS.NR_PEOPLESRCH_CMP.GBL'
+                    }
+                  >
+                    Directory
+                  </a>
+                </li>|
+                <li>
+                  <a href={'http://www.csun.edu/calendar'}>Calendar</a>
+                </li>|
+                <li>
+                  <a href={'http://www.csun.edu/atoz/'}>A to Z</a>
+                </li>|
+                <li>
+                  <a href={'http://www.csun.edu/it/webmail'}>Webmail</a>
+                </li>
+              </ul>
+              <div className="nav-dropdown">
+                <button
+                  className={`nav-dropdown-button ${this.state.showMobileNav ? 'active' : ''}`}
+                  title="Menu"
+                  onClick={this.togglePrimaryNav}
+                />
+              </div>
+            </MetaRow>
+          </div>
+        </MetaContainer>
+        {this.props.menuItems ? (
+          <div>
+            <div className={`web-nav-mobile ${this.state.showMobileNav ? 'active' : ''}`}>
+              <ul className="mobile-menu">{navLinks}</ul>
             </div>
-          </MetaRow>
-        </div>
-      </MetaContainer>
-      {this.props.menuItems ?
-        (<div><div className={`web-nav-mobile ${this.state.showMobileNav ? 'active' : ''}`} >
-          <ul className="mobile-menu">
-            {navLinks}
-          </ul>
-        </div>
-          <div className="navbar-link-wrapper">
-            <ul className="web-nav navbar-nav navbar-center">
-              {navLinks}
-            </ul>
-          </div></div>) : null
-      }
-    </div>);
+            <div className="navbar-link-wrapper">
+              <ul className="web-nav navbar-nav navbar-center">{navLinks}</ul>
+            </div>
+          </div>
+        ) : null}
+      </div>
+    );
   }
 }
 
@@ -100,6 +108,7 @@ WebHeader.defaultProps = {
   tertiaryWordmark: null,
   showMobileNav: false,
   menuItems: null,
+  id: null,
 };
 
 WebHeader.propTypes = {
@@ -119,6 +128,7 @@ WebHeader.propTypes = {
       external: PropTypes.bool,
     }),
   ),
+  id: PropTypes.string,
 };
 
 export default WebHeader;
