@@ -17,6 +17,7 @@ const DocGrid = () => {
 
   const propTypesTitle = '// Prop Type for MetaColumn';
   const propTypes = `
+  id: PropTypes.string,
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   size: PropTypes.oneOf([

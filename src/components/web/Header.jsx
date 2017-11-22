@@ -46,7 +46,7 @@ class WebHeader extends Component {
       : null;
 
     return (
-      <div id={this.props.id ? `${this.props.id}` : null}>
+      <div id={this.props.id}>
         <MetaContainer>
           <div className={'header'}>
             <MetaRow className="header-row">
