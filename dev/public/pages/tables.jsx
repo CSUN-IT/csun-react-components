@@ -10,6 +10,12 @@ const DocTables = () => {
   return (
     <MetaContainer>
       <MetaRow>
+        <MetaColumn size={'sm'} value={'12'}>
+          <h1>Tables</h1>
+          <hr />
+        </MetaColumn>
+      </MetaRow>
+      <MetaRow>
         <MetaColumn size={'sm'} value={'9'}>
           <MetaTable test="It finally works" />
           <br />

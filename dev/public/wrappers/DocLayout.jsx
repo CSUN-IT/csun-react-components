@@ -27,11 +27,6 @@ const DocLayout = (props) => {
 
   const sideNavMenuItems = [
     {
-      title: 'Tables',
-      to: `${match.url}/tables`,
-      active: false,
-    },
-    {
       title: 'Grid System',
       to: `${match.url}/grid`,
       active: false,
@@ -148,6 +143,7 @@ const DocLayout = (props) => {
               <Route path={`${match.url}/subnavigation`} component={DocSubNav} />
               <Route path={`${match.url}/tags`} component={DocTags} />
               <Route path={`${match.url}/grid`} component={DocGrid} />
+              <Route path={`${match.url}/tables`} component={DocTables} />
               <Route path={`${match.url}/forms`} component={DocForms} />
               <Route path={`${match.url}/accordion`} component={DocAccordion} />
               <Route path={`${match.url}/chatBubbles`} component={DocChatBubble} />

@@ -35,6 +35,5 @@ export {
   MetaAccordion,
   MetaChatBubble,
   MetaTable,
-  WebPrimaryNav,
   WebHeader,
 };
