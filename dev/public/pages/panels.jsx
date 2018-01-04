@@ -2,41 +2,10 @@ import React from 'react';
 import { MetaContainer, MetaColumn, MetaRow, MetaPanel } from '../../../src';
 
 const DocPanels = () => {
-  const listItems = [
-    {
-      text: 'Side Nav Link',
-      to: '#',
-    },
-    {
-      text: 'Side Nav Link',
-      to: '#',
-    },
-    {
-      text: 'Side Nav Link',
-      to: '#',
-    },
-  ];
-  const code = `import MetaList from 'csun-react-components';
-
-const listItems = [
-  {
-    text: 'Side Nav Link',
-    to: '#',
-  },
-  {
-    text: 'Side Nav Link',
-    to: '#',
-  },
-  {
-    text: 'Side Nav Link',
-    to: '#',
-  },
-];
-
-<MetaList listItems={listItems} modifiers={['arrows']} />
+  const code = `import MetaPanel from 'csun-react-components';\n\n<MetaPanel panelHeader={{ text: 'Panel'}} panelContent={{ text: 'This is a panel w/a header' }}/>
     `;
 
-  const propTypesTitle = '// Prop Types';
+  const propTypesTitle = '// Panel Prop Types';
   const propTypes = `
   className: PropTypes.string,
   panelHeader: PropTypes.shape({
@@ -56,18 +25,29 @@ const listItems = [
   return (
     <MetaContainer>
       <MetaRow>
-        <MetaColumn size={'sm'} value={'9'}>
-          <MetaPanel className={'test'} panelContent={{ text: 'This is a basic panel' }} />
-          <br />
+        <MetaColumn size={'sm'} value={'12'}>
+          <h1>Panels</h1>
+          <hr />
           <pre>
             <code>
               {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
             </code>
+            <div>
+              <strong>{propTypesTitle}</strong>
+              {propTypes}
+            </div>
           </pre>
+        </MetaColumn>
+      </MetaRow>
+      <MetaRow>
+        <MetaColumn size={'sm'} value={'4'}>
+          <MetaPanel panelHeader={{ text: 'Panel' }} panelContent={{ text: 'This is a panel w/ a header' }} />
+        </MetaColumn>
+        <MetaColumn size={'sm'} value={'4'}>
+          <MetaPanel panelContent={{ text: 'This is a panel w/ a footer' }} panelFooter={{ strongText: 'Pro Tip! ', text: 'Footer Text' }} />
+        </MetaColumn>
+        <MetaColumn size={'sm'} value={'4'}>
+          <MetaPanel panelContent={{ text: 'This is a basic panel' }} />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>
