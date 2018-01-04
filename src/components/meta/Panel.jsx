@@ -8,16 +8,16 @@ const MetaPanel = props => (
         <strong>{props.panelHeader.text}</strong>
       </div>
     ) : (
-      ''
-    )}
+        null
+      )}
     {props.panelImage ? (
       <div
         className="panel__img"
         style={{ backgroundImage: `url(${props.panelImage.imageURL})` }}
       />
     ) : (
-      ''
-    )}
+        null
+      )}
     <div className="panel__content">{props.panelContent.text}</div>
     {props.panelFooter ? (
       <div className="panel__footer">
@@ -25,20 +25,19 @@ const MetaPanel = props => (
         {props.panelFooter.text}
       </div>
     ) : (
-      ''
-    )}
+        null
+      )}
   </div>
 );
 
 MetaPanel.defaultProps = {
-  panelHeader: {},
+  panelHeader: null,
   className: '',
-  panelImage: {},
+  panelImage: null,
   panelContent: {
-    text:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam voluptatem harum cupiditate quae aliquid quia optio suscipit ex temporibus adipisci.',
+    text: '',
   },
-  panelFooter: {},
+  panelFooter: null,
 };
 
 MetaPanel.propTypes = {
