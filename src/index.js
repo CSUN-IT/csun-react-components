@@ -14,7 +14,6 @@ import MetaList from './components/meta/List';
 import MetaSideNav from './components/meta/SideNav';
 import MetaAccordion from './components/meta/Accordion';
 import MetaChatBubble from './components/web/ChatBubble';
-import WebPrimaryNav from './components/web/PrimaryNav';
 import WebHeader from './components/web/Header';
 import MetaTable from './components/meta/Table';
 

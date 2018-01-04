@@ -6,6 +6,7 @@ import DocLists from './lists';
 import DocPanels from './panels';
 import DocSideNav from './sideNav';
 import DocSubNav from './subNav';
+import DocForms from './forms';
 import DocTags from './tags';
 import DocGrid from './gridSystem';
 import DocAccordion from './accordion';
@@ -22,6 +23,7 @@ export {
   DocLists,
   DocPanels,
   DocSideNav,
+  DocForms,
   DocSubNav,
   DocTags,
   DocGrid,
