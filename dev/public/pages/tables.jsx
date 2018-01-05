@@ -2,10 +2,13 @@ import React from 'react';
 import { MetaContainer, MetaColumn, MetaRow, MetaTable } from '../../../src';
 
 const DocTables = () => {
-  const code = 'Code goes here';
+  const code = `import MetaTable from csun-react-components\n\n<MetaTable header={['Hello', 'World']} body={[['Foo', 'Bar'], ['Welcome', 'Back'], ['Aces', 'Clubs']]} />`;
 
-  const propTypesTitle = '// Prop Types';
-  const propTypes = 'Prop types goe here';
+
+  const propTypesTitle = '\n\nProp Types:\n';
+  const propTypes = `  className: PropTypes.string,
+  header: PropTypes.arrayOf(PropTypes.string),
+  body: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string).isRequired).isRequired,`;
 
   return (
     <MetaContainer>
@@ -17,7 +20,7 @@ const DocTables = () => {
       </MetaRow>
       <MetaRow>
         <MetaColumn size={'sm'} value={'9'}>
-          <MetaTable test="It finally works" />
+          <MetaTable header={['Hello', 'World']} body={[['Foo', 'Bar'], ['Welcome', 'Back'], ['Aces', 'Clubs']]} />
           <br />
           <pre>
             <code>
