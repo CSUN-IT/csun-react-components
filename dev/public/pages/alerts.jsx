@@ -34,7 +34,14 @@ const DocAlerts = () => {
           />
           <MetaAlert color={'success'} strongText={'Pro Tip:'} text={'Color is success'} />
           <MetaAlert color={'warning'} strongText={'Pro Tip:'} text={'Color is warning'} />
-          <MetaAlert color={'danger'} strongText={'Pro Tip:'} text={'Color is danger'} onClick={() => { console.log('Hello world.'); }} />
+          <MetaAlert
+            color={'danger'}
+            strongText={'Pro Tip:'}
+            text={'Color is danger'}
+            onClick={() => {
+              console.log('Hello world.');
+            }}
+          />
           <br />
           <pre>
             <code>
