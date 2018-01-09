@@ -6,14 +6,14 @@ const DocTables = () => {
   const code = `\n\n<MetaTable>
   <MetaTableHead>
     <MetaTableRow>
-      <MetaTableHeaderCell content="Hello" />
-      <MetaTableHeaderCell content="World" />
+      <MetaTableHeaderCell> Hello </MetaTableHeaderCell>
+      <MetaTableHeaderCell> World </MetaTableHeaderCell>
     </MetaTableRow>
   </MetaTableHead>
   <MetaTableBody>
     <MetaTableRow>
-      <MetaTableCell content="Foo" />
-      <MetaTableCell content="Bar" />
+      <MetaTableCell> Foo </MetaTableCell>
+      <MetaTableCell> Bar </MetaTableCell>
     </MetaTableRow>
   </MetaTableBody>
 </MetaTable>`;
@@ -37,14 +37,14 @@ const DocTables = () => {
           <MetaTable>
             <MetaTableHead>
               <MetaTableRow>
-                <MetaTableHeaderCell content="Hello" />
-                <MetaTableHeaderCell content="World" />
+                <MetaTableHeaderCell>Hello</MetaTableHeaderCell>
+                <MetaTableHeaderCell>World</MetaTableHeaderCell>
               </MetaTableRow>
             </MetaTableHead>
             <MetaTableBody>
               <MetaTableRow>
-                <MetaTableCell content="Foo" />
-                <MetaTableCell content="Bar" />
+                <MetaTableCell>Foo</MetaTableCell>
+                <MetaTableCell>Bar</MetaTableCell>
               </MetaTableRow>
             </MetaTableBody>
           </MetaTable>

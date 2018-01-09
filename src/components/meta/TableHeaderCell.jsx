@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const TableHeaderCell = props => <th>{props.content}</th>;
+const TableHeaderCell = props => <th>{props.children}</th>;
 
 TableHeaderCell.propTypes = {
-  content: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
 };
 
 export default TableHeaderCell;
