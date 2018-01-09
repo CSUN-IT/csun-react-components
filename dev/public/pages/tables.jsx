@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaTable } from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, MetaTable, MetaTableHead, MetaTableRow, MetaTableCell, MetaTableHeaderCell, MetaTableBody } from '../../../src';
 
 const DocTables = () => {
   const code = `import MetaTable from csun-react-components\n\n<MetaTable header={['Hello', 'World']} body={[['Foo', 'Bar'], ['Welcome', 'Back'], ['Aces', 'Clubs']]} />`;
@@ -20,7 +20,20 @@ const DocTables = () => {
       </MetaRow>
       <MetaRow>
         <MetaColumn size={'sm'} value={'9'}>
-          <MetaTable header={['Hello', 'World']} body={[['Foo', 'Bar'], ['Welcome', 'Back'], ['Aces', 'Clubs']]} />
+          <MetaTable>
+            <MetaTableHead>
+              <MetaTableRow>
+                <MetaTableHeaderCell content="Hello" />
+                <MetaTableHeaderCell content="World" />
+              </MetaTableRow>
+            </MetaTableHead>
+            <MetaTableBody>
+              <MetaTableRow>
+                <MetaTableCell content="Foo" />
+                <MetaTableCell content="Bar" />
+              </MetaTableRow>
+            </MetaTableBody>
+          </MetaTable>
           <br />
           <pre>
             <code>
