@@ -2,7 +2,21 @@ import React from 'react';
 import { MetaContainer, MetaColumn, MetaRow, MetaTable, MetaTableHead, MetaTableRow, MetaTableCell, MetaTableHeaderCell, MetaTableBody } from '../../../src';
 
 const DocTables = () => {
-  const code = `import MetaTable from csun-react-components\n\n<MetaTable header={['Hello', 'World']} body={[['Foo', 'Bar'], ['Welcome', 'Back'], ['Aces', 'Clubs']]} />`;
+  const importCode = `import { MetaTable, MetaTableHead, MetaTableRow, MetaTableBody, MetaTableHeaderCell, MetaTableCell } from csun-react-components\n`;
+  const code = `\n\n<MetaTable>
+  <MetaTableHead>
+    <MetaTableRow>
+      <MetaTableHeaderCell content="Hello" />
+      <MetaTableHeaderCell content="World" />
+    </MetaTableRow>
+  </MetaTableHead>
+  <MetaTableBody>
+    <MetaTableRow>
+      <MetaTableCell content="Foo" />
+      <MetaTableCell content="Bar" />
+    </MetaTableRow>
+  </MetaTableBody>
+</MetaTable>`;
 
 
   const propTypesTitle = '\n\nProp Types:\n';
@@ -37,6 +51,7 @@ const DocTables = () => {
           <br />
           <pre>
             <code>
+              {importCode}
               {code}
               <div className="type--dark-gray">
                 <strong>{propTypesTitle}</strong>
