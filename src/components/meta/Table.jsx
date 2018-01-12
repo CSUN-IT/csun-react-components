@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { generate as shortIdGenerate } from 'shortid';
 
 const MetaTable = (props) => {
+  const className = props.className ? `table-responsive ${props.className}` : `table-responsive`;
   return (
-    <div className="table--responvie">
+    <div className={className} >
       <table className="table table--striped table--bordered table--padded table--hover">
         {props.children}
       </table>
