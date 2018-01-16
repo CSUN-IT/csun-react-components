@@ -34,6 +34,8 @@ const DocGrid = () => {
     <MetaContainer>
       <MetaRow>
         <MetaColumn sizes={['sm']} values={['9']}>
+          <h1>Grid System</h1>
+          <hr />
           <MetaColumn className={'grid-outline'} sizes={['sm']} values={['12']}>
             12
           </MetaColumn>
