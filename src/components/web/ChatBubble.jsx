@@ -5,8 +5,8 @@ import './sass/_chatBubble.scss';
 const MetaChatBubble = (props) => {
   const bubbleStyle = props.receiver ? 'bubble receiver' : 'bubble sender';
   const alignmentStyle = `${props.className} ${props.receiver
-    ? 'bubble-container-left'
-    : 'bubble-container-right'}`;
+    ? 'bubble-container bubble-container--left'
+    : 'bubble-container bubble-container--right'}`;
   return (
     <div className={alignmentStyle}>
       <p className={bubbleStyle}>{props.text}</p>
