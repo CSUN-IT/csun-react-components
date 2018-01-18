@@ -9,7 +9,6 @@ $senderTextColor: #eee;
 .bubble-container {
   display: flex;
     align-items: center;
-    justify-content: flex-end;
   font-family: sans-serif;
   font-size: 14px;
   margin-top: 8px;
@@ -18,10 +17,12 @@ $senderTextColor: #eee;
 
 .bubble-container--right {
   margin-right: 8px;
+  justify-content: flex-end;
 }
 
 .bubble-container--left {
   margin-left: 8px;
+  justify-content: flex-start;
 }
 
 .bubble {
@@ -33,7 +34,6 @@ $senderTextColor: #eee;
   margin: 0; // Removes default margins on anything .bubble is applied to; use margin utility instead
   padding: 10px 18px;
   position: relative;
-  vertical-align: top;
   word-wrap: break-word;
 }
 
