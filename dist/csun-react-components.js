@@ -3572,7 +3572,11 @@ var MetaChatBubble = function MetaChatBubble(props) {
   return _react2.default.createElement(
     'div',
     { className: alignmentStyle },
-    _react2.default.createElement('p', { className: bubbleStyle, dangerouslySetInnerHTML: { __html: props.text } })
+    _react2.default.createElement(
+      'p',
+      { className: bubbleStyle },
+      props.text
+    )
   );
 };
 
