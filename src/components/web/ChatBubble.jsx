@@ -9,7 +9,7 @@ const MetaChatBubble = (props) => {
     : 'bubble-container bubble-container--right'}`;
   return (
     <div className={alignmentStyle}>
-      <p className={bubbleStyle} dangerouslySetInnerHTML={{ __html: props.text }} />
+      <p className={bubbleStyle}>{props.text}</p>
     </div>
   );
 };
