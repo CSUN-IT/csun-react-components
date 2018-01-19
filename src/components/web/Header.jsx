@@ -50,11 +50,13 @@ class WebHeader extends Component {
         <MetaContainer>
           <div className={'header'}>
             <MetaRow className="header-row">
-              <a className={'csun-logo'} href={'http://www.csun.edu'}>
-                <span className="sr-only">California State University, Northridge (CSUN)</span>
-              </a>
-              {secondaryWordmark}
-              {tertiaryWordmark}
+              <div className="wordmark-container">
+                <a className={'csun-logo'} href={'http://www.csun.edu'}>
+                  <span className="sr-only">California State University, Northridge (CSUN)</span>
+                </a>
+                {secondaryWordmark}
+                {tertiaryWordmark}
+              </div>
               <ul className={'list-inline mini-nav pull-right'}>
                 <li>
                   <a href={'http://www.csun.edu/universaldesigncenter'}>Accessibility</a>
