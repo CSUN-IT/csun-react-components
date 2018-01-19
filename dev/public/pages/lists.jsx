@@ -61,7 +61,7 @@ const listItems = [
             <MetaList className={'test'} listItems={listItems} />
           </MetaColumn>
           <MetaColumn size={'sm'} value={'4'}>
-            <MetaList listItems={listItems} modifiers={['arrows']} />
+            <MetaList listItems={listItems} modifiers={['arrows', 'hover']} />
           </MetaColumn>
           <MetaColumn size={'sm'} value={'4'}>
             <MetaList listItems={listItems} modifiers={['underlined']} />
