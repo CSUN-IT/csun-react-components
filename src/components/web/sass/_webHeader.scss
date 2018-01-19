@@ -10,12 +10,24 @@ $primary-mobile-menu-text-color: #fff;
 
 .header-row {
   display: flex;
+    justify-content: space-between;
+}
 
-  @media (max-width: $break-large) {
-    align-items: flex-start;
+// This is stone thrown to a broken window. Ideally, Metaphor would have a responsive
+// flexbox utlity system similar to Bootstrap's, then we could apply these as single utilities.
+//
+// @ToDo Contribute flex utility system to Metaphor; update this when ready
+@media (min-width: $break-large) {
+  .wordmark-container {
     display: flex;
-    flex-direction: column;
+      align-items: stretch;
   }
+}
+
+// Remove clearfix on header-row.row, otherwise burger menu will not push against
+// the container edge with flex between (as ::after blank content is there instead)
+.header-row.row::after {
+  display: none;
 }
 
 // Mini nav
@@ -43,14 +55,6 @@ $primary-mobile-menu-text-color: #fff;
   a {
     color: $mini-nav-text-color;
   }
-}
-
-// Mobile primary nav button
-
-.nav-dropdown {
-  position: absolute;
-  right: 16px;
-  top: 0;
 }
 
 .nav-dropdown-button {
