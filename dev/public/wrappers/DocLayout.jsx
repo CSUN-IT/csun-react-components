@@ -129,10 +129,10 @@ const DocLayout = (props) => {
       <div className={'section'}>
         <MetaContainer>
           <MetaRow>
-            <MetaColumn size={'sm'} value={'3'}>
+            <MetaColumn sizes={['sm']} values={['3']}>
               <MetaSideNav menuItems={sideNavMenuItems} />
             </MetaColumn>
-            <MetaColumn size={'sm'} value={'9'}>
+            <MetaColumn sizes={['sm']} values={['9']}>
               <Route path={`${match.url}/nav`} component={DocPrimaryNav} />
               <Route path={`${match.url}/breadcrumbs`} component={DocBreadcrumbs} />
               <Route path={`${match.url}/alerts`} component={DocAlerts} />
