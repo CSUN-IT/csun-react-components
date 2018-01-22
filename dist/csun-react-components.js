@@ -3129,8 +3129,10 @@ var MetaList = function MetaList(props) {
     );
   });
 
-  var ulClassnames = props.className + ' list ' + props.modifiers.map(function (modifier) {
-    return 'list--' + modifier + ' ';
+  var ulClassnames = props.className ? props.className + ' list' : 'list';
+
+  props.modifiers.forEach(function (modifier) {
+    ulClassnames = ulClassnames + ' list--' + modifier;
   });
 
   return _react2.default.createElement(
@@ -3146,7 +3148,7 @@ MetaList.defaultProps = {
     text: 'Insert Text',
     to: '#'
   }],
-  modifiers: ['']
+  modifiers: []
 };
 
 MetaList.propTypes = {
