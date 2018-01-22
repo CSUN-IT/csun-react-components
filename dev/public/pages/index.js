@@ -12,6 +12,7 @@ import DocGrid from './gridSystem';
 import DocAccordion from './accordion';
 import DocChatBubble from './chatBubble';
 import DocWebHeader from './webHeader';
+import DocTables from './tables';
 
 export {
   DocPrimaryNav,
@@ -28,4 +29,5 @@ export {
   DocAccordion,
   DocChatBubble,
   DocWebHeader,
+  DocTables,
 };
