@@ -32,7 +32,7 @@ $senderTextColor: #eee;
   color: white;
   display: block;
   margin: 0; // Removes default margins on anything .bubble is applied to; use margin utility instead
-  max-width: 60ex; // Allows only 60 characters to be placed max per line on each chat bubble
+  max-width: 60ex; // Allows a rough max of 60 characters to be placed per line on each chat bubble
   padding: 10px 18px;
   position: relative;
   word-wrap: break-word;
