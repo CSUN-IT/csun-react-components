@@ -17,7 +17,7 @@ import {
   DocAccordion,
   DocChatBubble,
   DocWebHeader,
-  DocWebPrimaryNav,
+  DocWebSidebar,
   DocTables,
 } from '../pages';
 import SectionHelper from '../components/SectionHelper';
@@ -121,6 +121,11 @@ const DocLayout = (props) => {
       to: `${match.url}/webheader`,
       active: false,
     },
+    {
+      title: 'Web Sidebar',
+      to: `${match.url}/websidebar`,
+      active: false,
+    },
   ];
 
   return (
@@ -148,6 +153,7 @@ const DocLayout = (props) => {
               <Route path={`${match.url}/accordion`} component={DocAccordion} />
               <Route path={`${match.url}/chatBubbles`} component={DocChatBubble} />
               <Route path={`${match.url}/webheader`} component={DocWebHeader} />
+              <Route path={`${match.url}/websidebar`} component={DocWebSidebar} />
             </MetaColumn>
           </MetaRow>
         </MetaContainer>
