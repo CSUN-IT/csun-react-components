@@ -19,17 +19,17 @@ const DocWebSidebar = () => {
   return (
     <MetaContainer>
       <MetaRow className={'flex'}>
-        <MetaColumn className={'flex'} size={['lg']} value={['3']}>
+        <MetaColumn className={'flex'} sizes={['md', 'xl']} values={['12', '3']}>
           <WebSidebar>
             <h3> Test Header </h3>
             <h4> Test Title </h4>
             <p> Example paragraph for WebSidebar component. </p>
           </WebSidebar>
         </MetaColumn>
-        <MetaColumn className={'flex'} size={['lg']} value={['6']}>
+        <MetaColumn className={'flex'} sizes={['md', 'xl']} values={['12', '6']}>
           <p>Testing with lots of text to see if it makes a difference in the positioning.</p>
         </MetaColumn>
-        <MetaColumn className={'flex'} size={['lg']} value={['3']}>
+        <MetaColumn className={'flex'} sizes={['md', 'xl']} values={['12', '3']}>
           <WebSidebar>
             <h3> Test Header </h3>
             <h4> Test Title </h4>
