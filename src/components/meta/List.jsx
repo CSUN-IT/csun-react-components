@@ -1,44 +1,44 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { generate as shortIdGenerate } from 'shortid';
 import PropTypes from 'prop-types';
 
-class MetaList extends Component {
-  render() {
-    const listItems = this.props.listItems.map(listItem =>
-      <li className="list__item" key={shortIdGenerate()}><Link to={listItem.to}>{listItem.text}</Link></li>,
-    );
+const MetaList = (props) => {
+  const listItems = props.listItems.map(listItem => (
+    <li className="list__item" key={shortIdGenerate()}>
+      <Link to={listItem.to}>{listItem.text}</Link>
+    </li>
+  ));
 
-    const ulClassnames = `list ${this.props.modifiers.map(modifier => (`list--${modifier} `))}`;
+  let ulClassnames = props.className ? `${props.className} list` : 'list';
 
-    return (
-      <ul className={ulClassnames}>
-        {listItems}
-      </ul>
-    );
-  }
-}
+  props.modifiers.forEach((modifier) => {
+    ulClassnames = `${ulClassnames} list--${modifier}`;
+  });
+
+  return <ul className={ulClassnames}>{listItems}</ul>;
+};
 
 MetaList.defaultProps = {
+  className: '',
   listItems: [
     {
       text: 'Insert Text',
       to: '#',
     },
   ],
-  modifiers: [''],
+  modifiers: [],
 };
 
 MetaList.propTypes = {
-  listItems: PropTypes.arrayOf(PropTypes.shape({
-    text: PropTypes.string.isRequired,
-    to: PropTypes.string.isRequired,
-  })),
-  modifiers: PropTypes.arrayOf(PropTypes.oneOf([
-    'arrows',
-    'hover',
-    'underlined',
-  ])),
+  className: PropTypes.className,
+  listItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      to: PropTypes.string.isRequired,
+    }),
+  ),
+  modifiers: PropTypes.arrayOf(PropTypes.oneOf(['arrows', 'hover', 'underlined'])),
 };
 
 export default MetaList;

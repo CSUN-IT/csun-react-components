@@ -1,37 +1,38 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class MetaAlert extends Component {
+const MetaAlert = (props) => {
+  const alertParentClasses = `${props.className} alert ${
+    props.color ? `alert--${props.color}` : ''
+  }`;
+  const strongText = <strong>{props.strongText}</strong>;
 
-  render() {
-    const alertParentClasses = `alert ${this.props.color ? `alert--${this.props.color}` : ''}`;
-    const strongText = <strong>{this.props.strongText}</strong>;
-
-    return (<div className={alertParentClasses}>
-      {this.props.strongText ? strongText : ''} {this.props.text}
-      <a href={this.props.to} className="alert__close" data-alert-close>&times;</a>
+  return (
+    <div className={alertParentClasses}>
+      {props.strongText ? strongText : ''} {props.text}
+      <a href={props.to} className="alert__close" data-alert-close onClick={props.onClick}>
+        &times;
+      </a>
     </div>
-    );
-  }
-}
+  );
+};
 
 MetaAlert.defaultProps = {
   color: '',
   strongText: '',
   text: '',
+  className: '',
   to: '#',
+  onClick: () => {},
 };
 
 MetaAlert.propTypes = {
-  color: PropTypes.oneOf([
-    'info',
-    'success',
-    'warning',
-    'danger',
-  ]),
+  className: PropTypes.string,
+  color: PropTypes.oneOf(['info', 'success', 'warning', 'danger', '']),
   strongText: PropTypes.string,
   text: PropTypes.string.isRequired,
   to: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default MetaAlert;

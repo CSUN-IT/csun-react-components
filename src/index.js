@@ -14,9 +14,14 @@ import MetaList from './components/meta/List';
 import MetaSideNav from './components/meta/SideNav';
 import MetaAccordion from './components/meta/Accordion';
 import MetaChatBubble from './components/web/ChatBubble';
-import WebPrimaryNav from './components/web/PrimaryNav';
 import WebHeader from './components/web/Header';
 import WebSidebar from './components/web/Sidebar';
+import MetaTable from './components/meta/Table';
+import MetaTableCell from './components/meta/TableCell';
+import MetaTableRow from './components/meta/TableRow';
+import MetaTableHead from './components/meta/TableHead';
+import MetaTableHeaderCell from './components/meta/TableHeaderCell';
+import MetaTableBody from './components/meta/TableBody';
 
 export {
   MetaBreadcrumbs,
@@ -35,7 +40,12 @@ export {
   MetaSideNav,
   MetaAccordion,
   MetaChatBubble,
-  WebPrimaryNav,
+  MetaTable,
+  MetaTableHead,
+  MetaTableRow,
+  MetaTableCell,
+  MetaTableHeaderCell,
+  MetaTableBody,
   WebHeader,
   WebSidebar,
 };

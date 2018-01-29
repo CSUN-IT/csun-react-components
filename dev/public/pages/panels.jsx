@@ -1,49 +1,13 @@
-import React, { Component } from 'react';
-import {
-  MetaContainer,
-  MetaColumn,
-  MetaRow,
-  MetaPanel,
-} from '../../../src';
+import React from 'react';
+import { MetaContainer, MetaColumn, MetaRow, MetaPanel } from '../../../src';
 
-class DocPanels extends Component {
-  render() {
-    const listItems = [
-      {
-        text: 'Side Nav Link',
-        to: '#',
-      },
-      {
-        text: 'Side Nav Link',
-        to: '#',
-      },
-      {
-        text: 'Side Nav Link',
-        to: '#',
-      },
-    ];
-    const code = `import MetaList from 'csun-react-components';
-
-const listItems = [
-  {
-    text: 'Side Nav Link',
-    to: '#',
-  },
-  {
-    text: 'Side Nav Link',
-    to: '#',
-  },
-  {
-    text: 'Side Nav Link',
-    to: '#',
-  },
-];
-
-<MetaList listItems={listItems} modifiers={['arrows']} />
+const DocPanels = () => {
+  const code = `import MetaPanel from 'csun-react-components';\n\n<MetaPanel panelHeader={{ text: 'Panel'}} panelContent={{ text: 'This is a panel w/a header' }}/>
     `;
 
-    const propTypesTitle = '// Prop Types';
-    const propTypes = `
+  const propTypesTitle = '// Panel Prop Types';
+  const propTypes = `
+  className: PropTypes.string,
   panelHeader: PropTypes.shape({
     text: PropTypes.string.isRequired,
   }),
@@ -58,26 +22,36 @@ const listItems = [
     text: PropTypes.string.isRequired,
   }),`;
 
-    return (
-      <MetaContainer>
-        <MetaRow>
-          <MetaColumn size={'sm'} value={'9'}>
-            <MetaPanel panelContent={{ text: 'This is a basic panel' }} />
-            <br />
-            <pre>
-              <code>
-                { code }
-                <div className="type--dark-gray">
-                  <strong>{propTypesTitle}</strong>
-                  {propTypes}
-                </div>
-              </code>
-            </pre>
-          </MetaColumn>
-        </MetaRow>
-      </MetaContainer>
-    );
-  }
-}
+  return (
+    <MetaContainer>
+      <MetaRow>
+        <MetaColumn size={'sm'} value={'12'}>
+          <h1>Panels</h1>
+          <hr />
+          <pre>
+            <code>
+              {code}
+            </code>
+            <div>
+              <strong>{propTypesTitle}</strong>
+              {propTypes}
+            </div>
+          </pre>
+        </MetaColumn>
+      </MetaRow>
+      <MetaRow>
+        <MetaColumn size={'sm'} value={'4'}>
+          <MetaPanel panelHeader={{ text: 'Panel' }} panelContent={{ text: 'This is a panel w/ a header' }} />
+        </MetaColumn>
+        <MetaColumn size={'sm'} value={'4'}>
+          <MetaPanel panelContent={{ text: 'This is a panel w/ a footer' }} panelFooter={{ strongText: 'Pro Tip! ', text: 'Footer Text' }} />
+        </MetaColumn>
+        <MetaColumn size={'sm'} value={'4'}>
+          <MetaPanel panelContent={{ text: 'This is a basic panel' }} />
+        </MetaColumn>
+      </MetaRow>
+    </MetaContainer>
+  );
+};
 
 export default DocPanels;

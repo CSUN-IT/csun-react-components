@@ -1,32 +1,38 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { generate as shortIdGenerate } from 'shortid';
 import { typeStyles, typeColors } from './commons/typographyStyles';
-import PropTypes from 'prop-types';
 
-class MetaBreadcrumbs extends Component {
+const MetaBreadcrumbs = (props) => {
+  const breadcrumbs = props.breadcrumbItems.map(breadcrumb => (
+    <li
+      key={shortIdGenerate()}
+      className={`breadcrumb__item ${breadcrumb.home
+        ? 'breadcrumb__item--home'
+        : ''} ${breadcrumb.typeStyle ? `type--${breadcrumb.typeStyle}` : ''}`}
+    >
+      {breadcrumb.home ? (
+        <Link to={breadcrumb.to}>
+          <i className="fa fa-home" aria-hidden="true" />
+        </Link>
+      ) : (
+        ''
+      )}
+      {breadcrumb.title}
+    </li>
+  ));
 
-  render() {
-    const breadcrumbs = this.props.breadcrumbItems.map(breadcrumb =>
-      <li key={shortIdGenerate()} className={`breadcrumb__item ${breadcrumb.home ? 'breadcrumb__item--home' : ''} ${breadcrumb.typeStyle ? `type--${breadcrumb.typeStyle}` : ''}`}>
-        {breadcrumb.home ?
-          <Link to={breadcrumb.to}>
-            <i className="fa fa-home" aria-hidden="true" />
-          </Link>
-          :
-          ''
-        }
-        {breadcrumb.title}
-      </li>,
-    );
-
-    return (
-      <ul className={`breadcrumbs ${this.props.typeColor ? `type--${this.props.typeColor}` : ''} `}>
-        {breadcrumbs}
-      </ul>
-    );
-  }
-}
+  return (
+    <ul
+      className={`${props.className} breadcrumbs ${props.typeColor
+        ? `type--${props.typeColor}`
+        : ''} `}
+    >
+      {breadcrumbs}
+    </ul>
+  );
+};
 
 MetaBreadcrumbs.defaultProps = {
   breadcrumbItems: [
@@ -38,15 +44,18 @@ MetaBreadcrumbs.defaultProps = {
   ],
   typeStyle: '',
   typeColor: '',
+  className: '',
 };
 
 MetaBreadcrumbs.propTypes = {
-  breadcrumbItems: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    to: PropTypes.string,
-    home: PropTypes.bool,
-    typeStyle: PropTypes.oneOf(typeStyles),
-  }),
+  className: PropTypes.string,
+  breadcrumbItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      to: PropTypes.string,
+      home: PropTypes.bool,
+      typeStyle: PropTypes.oneOf(typeStyles),
+    }),
   ),
   typeColor: PropTypes.oneOf(typeColors),
 };

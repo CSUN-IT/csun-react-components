@@ -1,48 +1,47 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class MetaPanel extends Component {
-  render() {
-    return (
-      <div className="panel">
-        {this.props.panelHeader ?
-          <div className="panel__header">
-            <strong>{this.props.panelHeader.text}</strong>
-          </div>
-          :
-          ''
-        }
-        {this.props.panelImage ?
-          <div className="panel__img" style={{ backgroundImage: `url(${this.props.panelImage.imageURL})` }} />
-          :
-          ''
-        }
-        <div className="panel__content">
-          {this.props.panelContent.text}
-        </div>
-        {this.props.panelFooter ?
-          <div className="panel__footer">
-            <strong>{this.props.panelFooter.strongText}</strong>
-            {this.props.panelFooter.text}
-          </div>
-          :
-          ''
-        }
+const MetaPanel = props => (
+  <div className={`${props.className} panel`}>
+    {props.panelHeader ? (
+      <div className="panel__header">
+        <strong>{props.panelHeader.text}</strong>
       </div>
-    );
-  }
-}
+    ) : (
+        null
+      )}
+    {props.panelImage ? (
+      <div
+        className="panel__img"
+        style={{ backgroundImage: `url(${props.panelImage.imageURL})` }}
+      />
+    ) : (
+        null
+      )}
+    <div className="panel__content">{props.panelContent.text}</div>
+    {props.panelFooter ? (
+      <div className="panel__footer">
+        <strong>{props.panelFooter.strongText}</strong>
+        {props.panelFooter.text}
+      </div>
+    ) : (
+        null
+      )}
+  </div>
+);
 
 MetaPanel.defaultProps = {
-  panelHeader: {},
-  panelImage: {},
+  panelHeader: null,
+  className: '',
+  panelImage: null,
   panelContent: {
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam voluptatem harum cupiditate quae aliquid quia optio suscipit ex temporibus adipisci.',
+    text: '',
   },
-  panelFooter: {},
+  panelFooter: null,
 };
 
 MetaPanel.propTypes = {
+  className: PropTypes.string,
   panelHeader: PropTypes.shape({
     text: PropTypes.string.isRequired,
   }),

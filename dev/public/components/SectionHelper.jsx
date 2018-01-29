@@ -1,32 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-import {
-  MetaContainer,
-  MetaColumn,
-  MetaRow,
-} from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow } from '../../../src';
 
-class SectionHelper extends Component {
+const SectionHelper = (props) => {
+  const inlineStyle = {
+    backgroundColor: '#252525',
+  };
 
-  render() {
-    const inlineStyle = {
-      backgroundColor: '#252525',
-    };
-
-    return (
-      <section className="section" style={inlineStyle}>
-        <MetaContainer>
-          <MetaRow>
-            <MetaColumn size={'sm'} value={'12'}>
-              <h1 className="type--white type--thin type--marginless">{ this.props.title }</h1>
-            </MetaColumn>
-          </MetaRow>
-        </MetaContainer>
-      </section>
-    );
-  }
-}
+  return (
+    <section className="section" style={inlineStyle}>
+      <MetaContainer>
+        <MetaRow>
+          <MetaColumn size={'sm'} value={'12'}>
+            <h1 className="type--white type--thin type--marginless">{props.title}</h1>
+          </MetaColumn>
+        </MetaRow>
+      </MetaContainer>
+    </section>
+  );
+};
 
 SectionHelper.propTypes = {
   title: PropTypes.string.isRequired,

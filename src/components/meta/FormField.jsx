@@ -3,11 +3,12 @@ import { generate as shortIdGenerate } from 'shortid';
 import PropTypes from 'prop-types';
 
 const MetaFormField = (props) => {
-  const buildInput = (field, changeFunction, value) => {
+  const buildInput = (field, changeFunction, value, className) => {
     switch (field.inputType) {
       case 'input':
         return (
           <input
+            className={className}
             type={field.type}
             id={field.id}
             name={field.id}
@@ -15,13 +16,22 @@ const MetaFormField = (props) => {
             value={value}
             onChange={changeFunction}
             autoComplete={field.autoComplete}
+            aria-label={field.ariaLabel}
           />
         );
       case 'textarea':
-        return <textarea id={field.id} name={field.id} placeholder={field.placeholder} />;
+        return (
+          <textarea
+            className={className}
+            id={field.id}
+            name={field.id}
+            placeholder={field.placeholder}
+            aria-label={field.ariaLabel}
+          />
+        );
       case 'select':
         return (
-          <select name={field.id} id={field.id}>
+          <select className={className} name={field.id} id={field.id} aria-label={field.ariaLabel}>
             {field.selectOptions.map(option => (
               <option value={option.value} key={shortIdGenerate()}>
                 {option.text}
@@ -36,7 +46,8 @@ const MetaFormField = (props) => {
             id={field.id}
             name={field.id}
             placeholder={field.placeholder}
-            className="datepicker"
+            className={`${className} datepicker`}
+            aria-label={field.ariaLabel}
           />
         );
       default:
@@ -44,8 +55,10 @@ const MetaFormField = (props) => {
     }
   };
 
-  const label = <label htmlFor={props.field.id}>{props.field.labelText}</label>;
-  const input = buildInput(props.field, props.changeFunction, props.value);
+  const label = props.field.labelText ? (
+    <label htmlFor={props.field.id}>{props.field.labelText}</label>
+  ) : null;
+  const input = buildInput(props.field, props.changeFunction, props.value, props.className);
 
   return (
     <div>
@@ -59,6 +72,7 @@ MetaFormField.defaultProps = {
   field: {},
   value: '12',
   changeFunction: () => {},
+  className: '',
 };
 
 MetaFormField.propTypes = {
@@ -75,7 +89,9 @@ MetaFormField.propTypes = {
     type: PropTypes.string,
     placeholder: PropTypes.string,
     autoComplete: PropTypes.string,
+    ariaLabel: PropTypes.string,
   }),
+  className: PropTypes.string,
   value: PropTypes.string.isRequired,
   changeFunction: PropTypes.func,
 };
