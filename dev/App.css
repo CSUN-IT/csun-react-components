@@ -19,10 +19,16 @@
 }
 
 .grid-outline {
+  
   border-radius: 4px;
-  border: solid 1px;
-  border-color: black;
+  border: solid 2px;
+  border-color: #aaa;
+  color: #444;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
   margin-bottom: 4px;
+
 }
 
 @keyframes App-logo-spin {

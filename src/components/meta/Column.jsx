@@ -17,8 +17,8 @@ const MetaColumn = (props) => {
 
 MetaColumn.defaultProps = {
   children: {},
-  sizes: ['sm'],
-  values: ['12'],
+  sizes: [],
+  values: [],
   className: '',
 };
 
