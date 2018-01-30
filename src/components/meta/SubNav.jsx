@@ -34,7 +34,7 @@ MetaSubNav.defaultProps = {
 };
 
 MetaSubNav.propTypes = {
-  className: PropTypes.className,
+  className: PropTypes.string,
   menuItems: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
