@@ -1,0 +1,8 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex > div,
+.flex > aside {
+  flex: 1 1 auto;
+}
