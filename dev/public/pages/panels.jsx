@@ -25,7 +25,7 @@ const DocPanels = () => {
   return (
     <MetaContainer>
       <MetaRow>
-        <MetaColumn sizes={['sm']} value={['12']}>
+        <MetaColumn sizes={['sm']} values={['12']}>
           <h1>Panels</h1>
           <hr />
           <pre>

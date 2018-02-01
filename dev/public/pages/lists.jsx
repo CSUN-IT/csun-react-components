@@ -57,7 +57,7 @@ const listItems = [
           <hr />
         </MetaColumn>
         <MetaColumn sizes={['sm']} values={['9']}>
-          <MetaColumn sizes={['sm']} value={['4']}>
+          <MetaColumn sizes={['sm']} values={['4']}>
             <MetaList className={'test'} listItems={listItems} />
           </MetaColumn>
           <MetaColumn sizes={['sm']} values={['4']}>
