@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const MetaButton = (props) => {
-  const buttonClassName = `btn btn-${props.color} ${props.size ? `btn-${props.size}` : ''} 
-${props.className ? `${props.className}` : ''} ${props.btnStyle ? `btn-${props.btnStyle}` : ''}`;
+  const buttonClassName = `btn btn-${props.color} ${props.size ? `btn-${props.size}` : ''} ${
+    props.className ? `${props.className}` : ''
+  } ${props.btnStyle ? `btn-${props.btnStyle}` : ''}`;
 
   return (
     <button
@@ -21,11 +22,11 @@ ${props.className ? `${props.className}` : ''} ${props.btnStyle ? `btn-${props.b
 MetaButton.defaultProps = {
   className: '',
   color: '',
-  size: 'sm',
+  size: '',
   btnStyle: '',
   text: 'button',
-  type: 'null',
-  value: 'null',
+  type: null,
+  value: null,
   onClick: () => {},
 };
 
