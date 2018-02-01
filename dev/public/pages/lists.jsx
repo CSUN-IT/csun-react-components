@@ -52,18 +52,18 @@ const listItems = [
   return (
     <MetaContainer>
       <MetaRow>
-        <MetaColumn size={'sm'} value={'12'}>
+        <MetaColumn sizes={['sm']} values={['12']}>
           <h1>Lists</h1>
           <hr />
         </MetaColumn>
-        <MetaColumn size={'sm'} value={'9'}>
-          <MetaColumn size={'sm'} value={'4'}>
+        <MetaColumn sizes={['sm']} values={['9']}>
+          <MetaColumn sizes={['sm']} value={['4']}>
             <MetaList className={'test'} listItems={listItems} />
           </MetaColumn>
-          <MetaColumn size={'sm'} value={'4'}>
+          <MetaColumn sizes={['sm']} values={['4']}>
             <MetaList listItems={listItems} modifiers={['arrows', 'hover']} />
           </MetaColumn>
-          <MetaColumn size={'sm'} value={'4'}>
+          <MetaColumn sizes={['sm']} values={['4']}>
             <MetaList listItems={listItems} modifiers={['underlined']} />
           </MetaColumn>
           <br />

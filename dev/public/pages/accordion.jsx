@@ -49,7 +49,7 @@ const bodyItems = [
   return (
     <MetaContainer>
       <MetaRow>
-        <MetaColumn size={'sm'} value={'9'}>
+        <MetaColumn sizes={['sm']} values={['9']}>
           <MetaAccordion bodyItems={bodyItems} />
           <br />
           <pre>

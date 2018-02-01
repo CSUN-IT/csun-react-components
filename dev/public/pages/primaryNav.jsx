@@ -55,7 +55,7 @@ const DocPrimaryNav = () => {
   return (
     <MetaContainer>
       <MetaRow>
-        <MetaColumn size={'sm'} value={'9'}>
+        <MetaColumn sizes={['sm']} values={['9']}>
           <MetaPrimaryNav
             subBrand={{ title: 'CSUN React Components', to: '' }}
             navColor={'cream'}
