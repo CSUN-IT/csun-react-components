@@ -12,7 +12,7 @@ const SectionHelper = (props) => {
     <section className="section" style={inlineStyle}>
       <MetaContainer>
         <MetaRow>
-          <MetaColumn size={'sm'} value={'12'}>
+          <MetaColumn sizes={['sm']} values={['12']}>
             <h1 className="type--white type--thin type--marginless">{props.title}</h1>
           </MetaColumn>
         </MetaRow>
