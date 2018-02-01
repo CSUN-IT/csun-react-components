@@ -31,7 +31,7 @@ MetaList.defaultProps = {
 };
 
 MetaList.propTypes = {
-  className: PropTypes.className,
+  className: PropTypes.string,
   listItems: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string.isRequired,
