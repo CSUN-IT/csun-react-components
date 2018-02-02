@@ -25,7 +25,7 @@ const DocPanels = () => {
   return (
     <MetaContainer>
       <MetaRow>
-        <MetaColumn size={'sm'} value={'12'}>
+        <MetaColumn sizes={['sm']} values={['12']}>
           <h1>Panels</h1>
           <hr />
           <pre>
@@ -40,13 +40,13 @@ const DocPanels = () => {
         </MetaColumn>
       </MetaRow>
       <MetaRow>
-        <MetaColumn size={'sm'} value={'4'}>
+        <MetaColumn sizes={['sm']} values={['4']}>
           <MetaPanel panelHeader={{ text: 'Panel' }} panelContent={{ text: 'This is a panel w/ a header' }} />
         </MetaColumn>
-        <MetaColumn size={'sm'} value={'4'}>
+        <MetaColumn sizes={['sm']} values={['4']}>
           <MetaPanel panelContent={{ text: 'This is a panel w/ a footer' }} panelFooter={{ strongText: 'Pro Tip! ', text: 'Footer Text' }} />
         </MetaColumn>
-        <MetaColumn size={'sm'} value={'4'}>
+        <MetaColumn sizes={['sm']} values={['4']}>
           <MetaPanel panelContent={{ text: 'This is a basic panel' }} />
         </MetaColumn>
       </MetaRow>

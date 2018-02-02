@@ -60,7 +60,7 @@ const DocSubNav = () => {
   return (
     <MetaContainer>
       <MetaRow>
-        <MetaColumn size={'sm'} value={'9'}>
+        <MetaColumn sizes={['sm']} values={['9']}>
           <MetaSubNav className={'test'} menuItems={menuItems} />
           <br />
           <pre>

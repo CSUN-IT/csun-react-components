@@ -27,13 +27,13 @@ const DocTables = () => {
   return (
     <MetaContainer>
       <MetaRow>
-        <MetaColumn size={'sm'} value={'12'}>
+        <MetaColumn sizes={['sm']} values={['12']}>
           <h1>Tables</h1>
           <hr />
         </MetaColumn>
       </MetaRow>
       <MetaRow>
-        <MetaColumn size={'sm'} value={'9'}>
+        <MetaColumn sizes={['sm']} values={['9']}>
           <MetaTable>
             <MetaTableHead>
               <MetaTableRow>

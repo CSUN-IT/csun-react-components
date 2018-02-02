@@ -39,7 +39,7 @@ const DocWebSidebar = () => {
         </MetaColumn>
       </MetaRow>
       <MetaRow>
-        <MetaColumn size={['sm']} value={['9']}>
+        <MetaColumn sizes={['sm']} values={['9']}>
           <br />
           <pre>
             <code>

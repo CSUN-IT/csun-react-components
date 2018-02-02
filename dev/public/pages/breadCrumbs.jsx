@@ -52,7 +52,7 @@ const DocPrimaryNav = () => {
   return (
     <MetaContainer>
       <MetaRow>
-        <MetaColumn size={'sm'} value={'9'}>
+        <MetaColumn sizes={['sm']} values={['9']}>
           <MetaBreadcrumbs className={'test'} breadcrumbItems={breadcrumbs} typecColor={'red'} />
           <br />
           <pre>
