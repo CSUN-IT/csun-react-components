@@ -21,7 +21,7 @@ const DocChatBubble = () => {
     <MetaContainer>
       <MetaRow>
         <MetaColumn sizes={['sm']} values={['9']}>
-          <p>
+          <div>
             <MetaChatBubble
               className={'test'}
               text="Hey I'm Matty!"
@@ -33,7 +33,7 @@ const DocChatBubble = () => {
               subText="This will be small too."
               receiver={false}
             />
-          </p>
+          </div>
           <br />
           <pre>
             <code>
