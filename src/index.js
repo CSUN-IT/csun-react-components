@@ -23,6 +23,7 @@ import MetaTableHead from './components/meta/TableHead';
 import MetaTableHeaderCell from './components/meta/TableHeaderCell';
 import MetaTableBody from './components/meta/TableBody';
 import WebCardList from './components/web/CardList';
+import WebCard from './components/web/Card';
 
 export {
   MetaBreadcrumbs,
@@ -50,4 +51,5 @@ export {
   WebHeader,
   WebSidebar,
   WebCardList,
+  WebCard,
 };

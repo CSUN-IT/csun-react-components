@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, WebCardList } from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, WebCardList, WebCard } from '../../../src';
 
 const DocCardList = (props) => {
   const code = `import Webheader from 'csun-components';
@@ -73,7 +73,10 @@ const DocCardList = (props) => {
           <hr />
         </MetaColumn>
         <MetaColumn sizes={['sm']} values={['12']}>
-          <WebCardList />
+          <WebCardList>
+            <WebCard />
+            <WebCard />
+          </WebCardList>
         </MetaColumn>
       </MetaRow>
     </MetaContainer>

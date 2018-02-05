@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 
 const CardList = (props) => {
   return (
-    <p>Hello this is a card list</p>
+    <div className={props.className}>
+      {props.children}
+    </div>
   );
 };
 
