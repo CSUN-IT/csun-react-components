@@ -74,8 +74,7 @@ const DocCardList = (props) => {
         </MetaColumn>
         <MetaColumn sizes={['sm']} values={['12']}>
           <WebCardList>
-            <WebCard />
-            <WebCard />
+            <WebCard title={'My clever title'} content={'Here is content.'} img={'test'} btn={'support'} />
           </WebCardList>
         </MetaColumn>
       </MetaRow>
