@@ -4,6 +4,7 @@ import './App.css';
 import { DocLayout } from './public/wrappers';
 import { DocMain } from './public/pages';
 import { MetaPrimaryNav } from '../src';
+import Redirect from 'react-router-dom/Redirect';
 
 const App = () => {
   const menuItems = [
@@ -24,7 +25,7 @@ const App = () => {
   };
 
   return (
-    <Router>
+    <Router path="/home" component={DocMain}>
       <div>
         <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} subBrand={subBrand} />
         <Route path="/home" component={DocMain} />
