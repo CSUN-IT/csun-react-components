@@ -14,6 +14,7 @@ import DocChatBubble from './chatBubble';
 import DocWebHeader from './webHeader';
 import DocWebSidebar from './webSidebar';
 import DocTables from './tables';
+import DocCardList from './webCardlist';
 
 export {
   DocPrimaryNav,
@@ -32,4 +33,5 @@ export {
   DocWebHeader,
   DocWebSidebar,
   DocTables,
+  DocCardList,
 };
