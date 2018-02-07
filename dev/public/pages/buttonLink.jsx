@@ -4,7 +4,7 @@ import { MetaContainer, MetaColumn, MetaRow, MetaButtonLink } from '../../../src
 const DocButtonLink = () => {
   const code = `import MetaButtonLink from 'csun-react-components';
 
-<MetaButtonLink text={'Button'} color={'default'} size={''} href={'/home'}/>
+<MetaButtonLink text={'Button'} color={'default'} size={''} to={''}/>
     `;
 
   const propTypesTitle = '// Prop Types';
@@ -34,9 +34,9 @@ const DocButtonLink = () => {
       <MetaRow>
         <MetaColumn sizes={['sm']} values={['9']}>
           <p>
-            <MetaButtonLink text={'Home'} color={'default'} size={''} href={'/home'} />
-            <MetaButtonLink text={'Breadcrumbs'} color={'primary'} size={''} href={'breadcrumbs'} />
-            <MetaButtonLink text={'Nav'} color={'success'} size={''} href={'nav'} />
+            <MetaButtonLink text={'Home'} color={'default'} size={''} to={'/home'} />
+            <MetaButtonLink text={'Breadcrumbs'} color={'primary'} size={''} to={'breadcrumbs'} />
+            <MetaButtonLink text={'Nav'} color={'success'} size={''} to={'nav'} />
           </p>
           <br />
           <pre>

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 const MetaButtonLink = (props) => {
   const buttonClassName = `btn btn-${props.color}${
@@ -8,12 +9,12 @@ const MetaButtonLink = (props) => {
     props.btnStyle ? ` btn-${props.btnStyle}` : ''}`;
 
   return (
-    <a
+    <NavLink
       className={buttonClassName}
-      href={props.href}
+      to={props.to}
     >
       {props.text}
-    </a>
+    </NavLink>
   );
 };
 
@@ -23,7 +24,7 @@ MetaButtonLink.defaultProps = {
   size: '',
   btnStyle: '',
   text: 'button',
-  href: '#',
+  to: '',
 };
 
 MetaButtonLink.propTypes = {
@@ -32,7 +33,7 @@ MetaButtonLink.propTypes = {
   color: PropTypes.oneOf(['default', 'primary', 'success']).isRequired,
   size: PropTypes.oneOf(['sm', 'lg', '']),
   btnStyle: PropTypes.oneOf(['default-outline', 'primary-outline', 'success-outline', '']),
-  href: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
 };
 
 export default MetaButtonLink;
