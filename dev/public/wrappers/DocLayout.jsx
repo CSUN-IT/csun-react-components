@@ -19,6 +19,7 @@ import {
   DocWebHeader,
   DocWebSidebar,
   DocTables,
+  DocButtonLink,
 } from '../pages';
 import SectionHelper from '../components/SectionHelper';
 
@@ -59,6 +60,11 @@ const DocLayout = (props) => {
     {
       title: 'Buttons',
       to: `${match.url}/buttons`,
+      active: false,
+    },
+    {
+      title: 'Button Links',
+      to: `${match.url}/buttonLink`,
       active: false,
     },
     {
@@ -142,6 +148,7 @@ const DocLayout = (props) => {
               <Route path={`${match.url}/breadcrumbs`} component={DocBreadcrumbs} />
               <Route path={`${match.url}/alerts`} component={DocAlerts} />
               <Route path={`${match.url}/buttons`} component={DocButtons} />
+              <Route path={`${match.url}/buttonLink`} component={DocButtonLink} />
               <Route path={`${match.url}/lists`} component={DocLists} />
               <Route path={`${match.url}/panels`} component={DocPanels} />
               <Route path={`${match.url}/sidenav`} component={DocSideNav} />

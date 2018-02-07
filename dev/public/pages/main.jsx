@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaSideNav } from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, MetaButtonLink } from '../../../src';
 
 const DocMain = () => {
   return (
@@ -11,7 +11,7 @@ const DocMain = () => {
         </MetaColumn>
       </MetaRow>
       <MetaRow className="centerRow">
-        <MetaSideNav className="btn btn-default" menuItems={[{ title: 'Get Started', to: '/docs' }]} />
+        <MetaButtonLink className={'default'} color={'default'} text={'Get Started'} to={'/docs'} />
       </MetaRow>
     </MetaContainer>
   );

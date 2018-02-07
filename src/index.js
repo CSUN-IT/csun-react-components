@@ -22,6 +22,7 @@ import MetaTableRow from './components/meta/TableRow';
 import MetaTableHead from './components/meta/TableHead';
 import MetaTableHeaderCell from './components/meta/TableHeaderCell';
 import MetaTableBody from './components/meta/TableBody';
+import MetaButtonLink from './components/meta/ButtonLink';
 
 export {
   MetaBreadcrumbs,
@@ -48,4 +49,5 @@ export {
   MetaTableBody,
   WebHeader,
   WebSidebar,
+  MetaButtonLink,
 };

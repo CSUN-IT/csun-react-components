@@ -15,6 +15,7 @@ import DocWebHeader from './webHeader';
 import DocWebSidebar from './webSidebar';
 import DocTables from './tables';
 import DocMain from './main';
+import DocButtonLink from './buttonLink';
 
 export {
   DocPrimaryNav,
@@ -34,4 +35,5 @@ export {
   DocWebSidebar,
   DocTables,
   DocMain,
+  DocButtonLink,
 };
