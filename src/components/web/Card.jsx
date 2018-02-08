@@ -6,13 +6,21 @@ const Card = (props) => {
   const title = props.title ? <h3>{props.title}</h3> : null;
   const contents = props.content ? <p>{props.content}</p> : null;
   const image = props.img ? <img src={props.img} alt={'alt text'} height={'100'} width={'300'} /> : null;
-  const btn = props.linkTo ? (typeof props.linkTo === 'string' ? <a href={props.linkTo}>Button</a> : <a>Arr Button</a>) : null;
+
+  const createButtons = (obj) => {
+    return Array.isArray(obj) ?
+      obj.map(lnk => <a className={'btn btn-default'} href={lnk.link}> {lnk.title}</a>) : <a href={obj.link} > {obj.title}</a>;
+  };
+
+  const buttons = createButtons(props.linkTo);
+
+
   return (
     <div className={`${props.className} cardz`}>
       {image}
       {title}
       {contents}
-      {btn}
+      {buttons}
     </div>
   );
 };
@@ -30,7 +38,7 @@ Card.propTypes = {
   title: PropTypes.string,
   content: PropTypes.string,
   img: PropTypes.string,
-  linkTo: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)])
+  linkTo: PropTypes.oneOfType([PropTypes.object, PropTypes.arrayOf(PropTypes.object)]),
 };
 
 export default Card;
