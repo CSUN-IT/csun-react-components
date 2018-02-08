@@ -24,6 +24,7 @@ import MetaTableHeaderCell from './components/meta/TableHeaderCell';
 import MetaTableBody from './components/meta/TableBody';
 import WebCardList from './components/web/CardList';
 import WebCard from './components/web/Card';
+import MetaButtonLink from './components/meta/ButtonLink';
 
 export {
   MetaBreadcrumbs,
@@ -52,4 +53,5 @@ export {
   WebSidebar,
   WebCardList,
   WebCard,
+  MetaButtonLink,
 };

@@ -24,7 +24,7 @@ const DocChatBubble = () => {
           <div>
             <MetaChatBubble
               className={'test'}
-              text="Hey I'm Matty!"
+              text="Hey I'm Matty!\nHow can I help you"
               subText="This will be small"
               receiver
             />
