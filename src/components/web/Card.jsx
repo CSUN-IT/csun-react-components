@@ -16,7 +16,7 @@ const Card = (props) => {
 
 
   return (
-    <div className={`${props.className} cardz`}>
+    <div className={`${props.className}`}>
       {image}
       {title}
       {contents}
