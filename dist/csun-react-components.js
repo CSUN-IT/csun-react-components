@@ -3849,7 +3849,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var MetaChatBubble = function MetaChatBubble(props) {
   var bubbleStyle = props.receiver ? 'bubble receiver' : 'bubble sender';
   var alignmentStyle = props.className + ' ' + (props.receiver ? 'bubble-container bubble-container--left' : 'bubble-container bubble-container--right');
-  var paragraphs = props.text.split(/\\n/).map(function (sentence) {
+  var paragraphs = props.text.split(/\\n|\n/).map(function (sentence) {
     return _react2.default.createElement(
       'p',
       null,
