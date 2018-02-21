@@ -7,7 +7,7 @@ const MetaChatBubble = (props) => {
   const alignmentStyle = `${props.className} ${props.receiver
     ? 'bubble-container bubble-container--left'
     : 'bubble-container bubble-container--right'}`;
-  const paragraphs = props.text.split(/\\n/).map(sentence => <p>{sentence}</p>);
+  const paragraphs = props.text.split(/\\n|\n/).map(sentence => <p>{sentence}</p>);
   return (
     <div className={alignmentStyle}>
       <div className={bubbleStyle}>
