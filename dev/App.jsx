@@ -1,16 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Route  } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import { DocLayout } from './public/wrappers';
 import { DocMain } from './public/pages';
 import { MetaPrimaryNav } from '../src';
-import Redirect from 'react-router-dom/Redirect';
 
 const App = () => {
   const menuItems = [
     {
       title: 'Home',
-      to: '/home',
+      to: '/',
       exact: true,
     },
     {
@@ -25,10 +24,10 @@ const App = () => {
   };
 
   return (
-    <Router path="/home" component={DocMain}>
+    <Router path="/" component={DocMain}>
       <div>
         <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} subBrand={subBrand} />
-        <Route path="/home" component={DocMain} />
+        <Route exact path="/" component={DocMain} />
         <Route path="/docs" component={DocLayout} />
       </div>
     </Router>
