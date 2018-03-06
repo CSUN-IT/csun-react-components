@@ -24,7 +24,7 @@ const App = () => {
   };
 
   return (
-    <Router path="/" component={DocMain}>
+    <Router>
       <div>
         <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} subBrand={subBrand} />
         <Route exact path="/" component={DocMain} />
