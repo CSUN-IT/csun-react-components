@@ -51,12 +51,14 @@ const DocTables = () => {
               'Test Child 2',
               'Test Child 3',
               'Test Child 4',
-              '\n',
               'Test Child 5',
               'Test Child 6',
               'Test Child 7',
               'Test Child 8',
               'Test Child 9',
+              'Test Child 10',
+              'Test Child 11',
+              'Test Child 12',
             ]}
           />
           <br />
