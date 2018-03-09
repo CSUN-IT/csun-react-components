@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MetaAlert Renders component correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MetaAlert
+    className=""
+    color="success"
+    onClick={[MockFunction]}
+    strongText="Pro Tip:"
+    text="Color is success"
+    to="#"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <strong>
+          Pro Tip:
+        </strong>,
+        " ",
+        "Color is success",
+        <a
+          className="alert__close"
+          data-alert-close={true}
+          href="#"
+          onClick={[MockFunction]}
+        >
+          ×
+        </a>,
+      ],
+      "className": " alert alert--success",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Pro Tip:",
+        },
+        "ref": null,
+        "rendered": "Pro Tip:",
+        "type": "strong",
+      },
+      " ",
+      "Color is success",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "×",
+          "className": "alert__close",
+          "data-alert-close": true,
+          "href": "#",
+          "onClick": [MockFunction],
+        },
+        "ref": null,
+        "rendered": "×",
+        "type": "a",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <strong>
+            Pro Tip:
+          </strong>,
+          " ",
+          "Color is success",
+          <a
+            className="alert__close"
+            data-alert-close={true}
+            href="#"
+            onClick={[MockFunction]}
+          >
+            ×
+          </a>,
+        ],
+        "className": " alert alert--success",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Pro Tip:",
+          },
+          "ref": null,
+          "rendered": "Pro Tip:",
+          "type": "strong",
+        },
+        " ",
+        "Color is success",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "×",
+            "className": "alert__close",
+            "data-alert-close": true,
+            "href": "#",
+            "onClick": [MockFunction],
+          },
+          "ref": null,
+          "rendered": "×",
+          "type": "a",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
