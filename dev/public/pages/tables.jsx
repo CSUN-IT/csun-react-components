@@ -57,7 +57,7 @@ const DocTables = () => {
           'className',
           'String',
           'No',
-          'Header',
+          'headerCells',
           'Array',
           'Yes',
           'dataCells',
