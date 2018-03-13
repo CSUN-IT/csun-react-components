@@ -1,20 +1,10 @@
 import React from 'react';
-import {
-  MetaContainer,
-  MetaColumn,
-  MetaRow,
-  MetaTable,
-  MetaTableHead,
-  MetaTableRow,
-  MetaTableCell,
-  MetaTableHeaderCell,
-  MetaTableBody,
-} from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, MetaTable } from '../../../src';
 
 const DocTables = () => {
   const importCode = 'import { MetaTable } from csun-react-components\n';
   const code = `<MetaTable
-  header={['Test Header', 'Test Header 2']}
+  headerCells={['Test Header', 'Test Header 2']}
   dataCells={[
     'Test Child',
     'Test Child 2',
@@ -39,7 +29,7 @@ const DocTables = () => {
         </MetaColumn>
       </MetaRow>
       <MetaTable
-        header={['Test Header', 'Test Header 2']}
+        headerCells={['Test Header', 'Test Header 2']}
         dataCells={[
           'Test Child',
           'Test Child 2',
@@ -60,8 +50,9 @@ const DocTables = () => {
           </div>
         </code>
       </pre>
+      <strong>Prop Types</strong>
       <MetaTable
-        header={['Name', 'Type', 'Required']}
+        headerCells={['Name', 'Type', 'Required']}
         dataCells={[
           'className',
           'String',

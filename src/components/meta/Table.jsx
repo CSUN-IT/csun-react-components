@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 const MetaTable = (props) => {
   const className = props.className ? `table-responsive ${props.className}` : 'table-responsive';
   const tableHead = [];
-  const numColumns = props.header.length;
-  for (let i = 0; i < props.header.length; i += 1) {
-    tableHead.push(<th key={i}>{props.header[i]}</th>);
+  const numColumns = props.headerCells.length;
+  for (let i = 0; i < props.headerCells.length; i += 1) {
+    tableHead.push(<th key={i}>{props.headerCells[i]}</th>);
   }
   const tableBody = [];
   for (let i = 0; i < props.dataCells.length / numColumns; i += 1) {
@@ -33,7 +33,7 @@ MetaTable.defaultProps = {
 
 MetaTable.propTypes = {
   className: PropTypes.string,
-  header: PropTypes.arrayOf(PropTypes.string).isRequired,
+  headerCells: PropTypes.arrayOf(PropTypes.string).isRequired,
   dataCells: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
