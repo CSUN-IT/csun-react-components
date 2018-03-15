@@ -12,9 +12,9 @@ const MetaTable = (props) => {
   for (let i = 0; i < props.dataCells.length / numColumns; i += 1) {
     const rowItems = [];
     for (let j = 0; j < numColumns; j += 1) {
-      rowItems.push(<td>{props.dataCells[i * numColumns + j]}</td>);
+      rowItems.push(<td key={i + j}>{props.dataCells[i * numColumns + j]}</td>);
     }
-    tableBody.push(<tr>{rowItems}</tr>);
+    tableBody.push(<tr key={i}>{rowItems}</tr>);
   }
   return (
     <div className={className}>

@@ -15,11 +15,6 @@ const DocTables = () => {
   ]}
 />`;
 
-  const propTypesTitle = '\n\nProp Types:\n';
-  const propTypes = `  className: PropTypes.string,
-  header: PropTypes.arrayOf(PropTypes.string).isRequired,
-  dataCells: PropTypes.arrayOf(PropTypes.string).isRequired,`;
-
   return (
     <MetaContainer>
       <MetaRow>
@@ -40,14 +35,11 @@ const DocTables = () => {
         ]}
       />
       <br />
+      <strong>Example Code</strong>
       <pre>
         <code>
           {importCode}
           {code}
-          <div className="type--dark-gray">
-            <strong>{propTypesTitle}</strong>
-            {propTypes}
-          </div>
         </code>
       </pre>
       <strong>Prop Types</strong>
