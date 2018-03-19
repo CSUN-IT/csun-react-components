@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WebSidebar Renders component correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <WebSidebar>
+    <h3>
+       Test Header 
+    </h3>
+    <h4>
+       Test Title 
+    </h4>
+    <p>
+       Example paragraph for WebSidebar component. 
+    </p>
+  </WebSidebar>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        Array [
+          <h3>
+             Test Header 
+          </h3>,
+          <h4>
+             Test Title 
+          </h4>,
+          <p>
+             Example paragraph for WebSidebar component. 
+          </p>,
+        ],
+        " ",
+      ],
+      "className": "sidebar-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": " Test Header ",
+        },
+        "ref": null,
+        "rendered": " Test Header ",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": " Test Title ",
+        },
+        "ref": null,
+        "rendered": " Test Title ",
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": " Example paragraph for WebSidebar component. ",
+        },
+        "ref": null,
+        "rendered": " Example paragraph for WebSidebar component. ",
+        "type": "p",
+      },
+      " ",
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          Array [
+            <h3>
+               Test Header 
+            </h3>,
+            <h4>
+               Test Title 
+            </h4>,
+            <p>
+               Example paragraph for WebSidebar component. 
+            </p>,
+          ],
+          " ",
+        ],
+        "className": "sidebar-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": " Test Header ",
+          },
+          "ref": null,
+          "rendered": " Test Header ",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": " Test Title ",
+          },
+          "ref": null,
+          "rendered": " Test Title ",
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": " Example paragraph for WebSidebar component. ",
+          },
+          "ref": null,
+          "rendered": " Example paragraph for WebSidebar component. ",
+          "type": "p",
+        },
+        " ",
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
