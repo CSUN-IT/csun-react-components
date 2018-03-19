@@ -1,28 +1,19 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaTable, MetaTableHead, MetaTableRow, MetaTableCell, MetaTableHeaderCell, MetaTableBody } from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, MetaTable } from '../../../src';
 
 const DocTables = () => {
-  const importCode = `import { MetaTable, MetaTableHead, MetaTableRow, MetaTableBody, MetaTableHeaderCell, MetaTableCell } from csun-react-components\n`;
-  const code = `\n\n<MetaTable>
-  <MetaTableHead>
-    <MetaTableRow>
-      <MetaTableHeaderCell> Hello </MetaTableHeaderCell>
-      <MetaTableHeaderCell> World </MetaTableHeaderCell>
-    </MetaTableRow>
-  </MetaTableHead>
-  <MetaTableBody>
-    <MetaTableRow>
-      <MetaTableCell> Foo </MetaTableCell>
-      <MetaTableCell> Bar </MetaTableCell>
-    </MetaTableRow>
-  </MetaTableBody>
-</MetaTable>`;
-
-
-  const propTypesTitle = '\n\nProp Types:\n';
-  const propTypes = `  className: PropTypes.string,
-  header: PropTypes.arrayOf(PropTypes.string),
-  body: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string).isRequired).isRequired,`;
+  const importCode = 'import { MetaTable } from csun-react-components\n';
+  const code = `<MetaTable
+  headerCells={['Test Header', 'Test Header 2']}
+  dataCells={[
+    'Test Child',
+    'Test Child 2',
+    'Test Child 3',
+    'Test Child 4',
+    'Test Child 5',
+    'Test Child 6',
+  ]}
+/>`;
 
   return (
     <MetaContainer>
@@ -32,35 +23,40 @@ const DocTables = () => {
           <hr />
         </MetaColumn>
       </MetaRow>
-      <MetaRow>
-        <MetaColumn sizes={['sm']} values={['9']}>
-          <MetaTable>
-            <MetaTableHead>
-              <MetaTableRow>
-                <MetaTableHeaderCell>Hello</MetaTableHeaderCell>
-                <MetaTableHeaderCell>World</MetaTableHeaderCell>
-              </MetaTableRow>
-            </MetaTableHead>
-            <MetaTableBody>
-              <MetaTableRow>
-                <MetaTableCell>Foo</MetaTableCell>
-                <MetaTableCell>Bar</MetaTableCell>
-              </MetaTableRow>
-            </MetaTableBody>
-          </MetaTable>
-          <br />
-          <pre>
-            <code>
-              {importCode}
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
-          </pre>
-        </MetaColumn>
-      </MetaRow>
+      <MetaTable
+        headerCells={['Test Header', 'Test Header 2']}
+        dataCells={[
+          'Test Child',
+          'Test Child 2',
+          'Test Child 3',
+          'Test Child 4',
+          'Test Child 5',
+          'Test Child 6',
+        ]}
+      />
+      <br />
+      <strong>Example Code</strong>
+      <pre>
+        <code>
+          {importCode}
+          {code}
+        </code>
+      </pre>
+      <strong>Prop Types</strong>
+      <MetaTable
+        headerCells={['Name', 'Type', 'Required']}
+        dataCells={[
+          'className',
+          'String',
+          'No',
+          'headerCells',
+          'Array',
+          'Yes',
+          'dataCells',
+          'Array',
+          'Yes',
+        ]}
+      />
     </MetaContainer>
   );
 };
