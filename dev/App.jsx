@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import { DocLayout } from './public/wrappers';
+import { DocMain } from './public/pages';
 import { MetaPrimaryNav } from '../src';
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
     <Router>
       <div>
         <MetaPrimaryNav menuItems={menuItems} navColor={'cream'} subBrand={subBrand} />
+        <Route exact path="/" component={DocMain} />
         <Route path="/docs" component={DocLayout} />
       </div>
     </Router>

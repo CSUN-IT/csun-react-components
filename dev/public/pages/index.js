@@ -14,6 +14,7 @@ import DocChatBubble from './chatBubble';
 import DocWebHeader from './webHeader';
 import DocWebSidebar from './webSidebar';
 import DocTables from './tables';
+import DocMain from './main';
 import DocButtonLink from './buttonLink';
 
 export {
@@ -33,5 +34,6 @@ export {
   DocWebHeader,
   DocWebSidebar,
   DocTables,
+  DocMain,
   DocButtonLink,
 };
