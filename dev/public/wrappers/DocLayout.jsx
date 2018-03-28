@@ -11,12 +11,15 @@ import {
   DocPanels,
   DocSideNav,
   DocSubNav,
+  DocForms,
   DocTags,
   DocGrid,
   DocAccordion,
   DocChatBubble,
   DocWebHeader,
-  DocWebPrimaryNav,
+  DocWebSidebar,
+  DocTables,
+  DocButtonLink,
 } from '../pages';
 import SectionHelper from '../components/SectionHelper';
 
@@ -57,6 +60,11 @@ const DocLayout = (props) => {
     {
       title: 'Buttons',
       to: `${match.url}/buttons`,
+      active: false,
+    },
+    {
+      title: 'Button Links',
+      to: `${match.url}/buttonLink`,
       active: false,
     },
     {
@@ -120,8 +128,8 @@ const DocLayout = (props) => {
       active: false,
     },
     {
-      title: 'Web Primary Nav',
-      to: `${match.url}/webprimarynav`,
+      title: 'Web Sidebar',
+      to: `${match.url}/websidebar`,
       active: false,
     },
   ];
@@ -132,23 +140,28 @@ const DocLayout = (props) => {
       <div className={'section'}>
         <MetaContainer>
           <MetaRow>
-            <MetaColumn size={'sm'} value={'3'}>
+            <MetaColumn sizes={['sm']} values={['3']}>
               <MetaSideNav menuItems={sideNavMenuItems} />
             </MetaColumn>
-            <Route path={`${match.url}/nav`} component={DocPrimaryNav} />
-            <Route path={`${match.url}/breadcrumbs`} component={DocBreadcrumbs} />
-            <Route path={`${match.url}/alerts`} component={DocAlerts} />
-            <Route path={`${match.url}/buttons`} component={DocButtons} />
-            <Route path={`${match.url}/lists`} component={DocLists} />
-            <Route path={`${match.url}/panels`} component={DocPanels} />
-            <Route path={`${match.url}/sidenav`} component={DocSideNav} />
-            <Route path={`${match.url}/subnavigation`} component={DocSubNav} />
-            <Route path={`${match.url}/tags`} component={DocTags} />
-            <Route path={`${match.url}/grid`} component={DocGrid} />
-            <Route path={`${match.url}/accordion`} component={DocAccordion} />
-            <Route path={`${match.url}/chatBubbles`} component={DocChatBubble} />
-            <Route path={`${match.url}/webheader`} component={DocWebHeader} />
-            <Route path={`${match.url}/webprimarynav`} component={DocWebPrimaryNav} />
+            <MetaColumn sizes={['sm']} values={['9']}>
+              <Route path={`${match.url}/nav`} component={DocPrimaryNav} />
+              <Route path={`${match.url}/breadcrumbs`} component={DocBreadcrumbs} />
+              <Route path={`${match.url}/alerts`} component={DocAlerts} />
+              <Route path={`${match.url}/buttons`} component={DocButtons} />
+              <Route path={`${match.url}/buttonLink`} component={DocButtonLink} />
+              <Route path={`${match.url}/lists`} component={DocLists} />
+              <Route path={`${match.url}/panels`} component={DocPanels} />
+              <Route path={`${match.url}/sidenav`} component={DocSideNav} />
+              <Route path={`${match.url}/subnavigation`} component={DocSubNav} />
+              <Route path={`${match.url}/tags`} component={DocTags} />
+              <Route path={`${match.url}/grid`} component={DocGrid} />
+              <Route path={`${match.url}/tables`} component={DocTables} />
+              <Route path={`${match.url}/forms`} component={DocForms} />
+              <Route path={`${match.url}/accordion`} component={DocAccordion} />
+              <Route path={`${match.url}/chatBubbles`} component={DocChatBubble} />
+              <Route path={`${match.url}/webheader`} component={DocWebHeader} />
+              <Route path={`${match.url}/websidebar`} component={DocWebSidebar} />
+            </MetaColumn>
           </MetaRow>
         </MetaContainer>
       </div>

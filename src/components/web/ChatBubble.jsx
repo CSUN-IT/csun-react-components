@@ -1,15 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { generate as shortIdGenerate } from 'shortid';
 import './sass/_chatBubble.scss';
 
 const MetaChatBubble = (props) => {
   const bubbleStyle = props.receiver ? 'bubble receiver' : 'bubble sender';
   const alignmentStyle = `${props.className} ${props.receiver
-    ? 'bubble-container-left'
-    : 'bubble-container-right'}`;
+    ? 'bubble-container bubble-container--left'
+    : 'bubble-container bubble-container--right'}`;
+  const paragraphs = props.text.split(/\\n|\n/).map(sentence => <p key={shortIdGenerate()}>{sentence}</p>);
   return (
     <div className={alignmentStyle}>
-      <p className={bubbleStyle} dangerouslySetInnerHTML={{ __html: props.text }} />
+      <div className={bubbleStyle}>
+        {paragraphs}
+      </div>
     </div>
   );
 };

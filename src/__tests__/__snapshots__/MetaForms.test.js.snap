@@ -1,0 +1,465 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MetaFormGroup Renders component correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MetaFormGroup
+    className=""
+    onSubmit={[MockFunction]}
+    submitFunction={[Function]}
+  >
+    <MetaFormField
+      changeFunction={[Function]}
+      className=""
+      field={
+        Object {
+          "ariaLabel": "input field",
+          "autoComplete": "off",
+          "id": "inputFied",
+          "inputType": "input",
+          "placeholder": "Type a message...",
+          "type": "text",
+        }
+      }
+      value=""
+    />
+    <MetaFormField
+      changeFunction={[Function]}
+      className=""
+      field={
+        Object {
+          "autoComplete": "off",
+          "id": "textFied",
+          "inputType": "textarea",
+          "placeholder": "Type a message...",
+          "type": "text",
+        }
+      }
+      value=""
+    />
+    <br />
+    <MetaFormField
+      changeFunction={[Function]}
+      className=""
+      field={
+        Object {
+          "id": "selectField",
+          "inputType": "select",
+          "selectOptions": Array [
+            Object {
+              "text": "Example 1",
+              "value": "1",
+            },
+            Object {
+              "text": "Example 2",
+              "value": "2",
+            },
+          ],
+          "type": "checkbox",
+        }
+      }
+      value=""
+    />
+    <br />
+    <MetaFormField
+      changeFunction={[Function]}
+      className=""
+      field={
+        Object {
+          "id": "datepicker",
+          "inputType": "datepicker",
+          "type": "date",
+        }
+      }
+      value=""
+    />
+  </MetaFormGroup>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <MetaFormField
+          changeFunction={[Function]}
+          className=""
+          field={
+            Object {
+              "ariaLabel": "input field",
+              "autoComplete": "off",
+              "id": "inputFied",
+              "inputType": "input",
+              "placeholder": "Type a message...",
+              "type": "text",
+            }
+          }
+          value=""
+        />,
+        <MetaFormField
+          changeFunction={[Function]}
+          className=""
+          field={
+            Object {
+              "autoComplete": "off",
+              "id": "textFied",
+              "inputType": "textarea",
+              "placeholder": "Type a message...",
+              "type": "text",
+            }
+          }
+          value=""
+        />,
+        <br />,
+        <MetaFormField
+          changeFunction={[Function]}
+          className=""
+          field={
+            Object {
+              "id": "selectField",
+              "inputType": "select",
+              "selectOptions": Array [
+                Object {
+                  "text": "Example 1",
+                  "value": "1",
+                },
+                Object {
+                  "text": "Example 2",
+                  "value": "2",
+                },
+              ],
+              "type": "checkbox",
+            }
+          }
+          value=""
+        />,
+        <br />,
+        <MetaFormField
+          changeFunction={[Function]}
+          className=""
+          field={
+            Object {
+              "id": "datepicker",
+              "inputType": "datepicker",
+              "type": "date",
+            }
+          }
+          value=""
+        />,
+      ],
+      "className": " form__group",
+      "onSubmit": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "changeFunction": [Function],
+          "className": "",
+          "field": Object {
+            "ariaLabel": "input field",
+            "autoComplete": "off",
+            "id": "inputFied",
+            "inputType": "input",
+            "placeholder": "Type a message...",
+            "type": "text",
+          },
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "changeFunction": [Function],
+          "className": "",
+          "field": Object {
+            "autoComplete": "off",
+            "id": "textFied",
+            "inputType": "textarea",
+            "placeholder": "Type a message...",
+            "type": "text",
+          },
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "changeFunction": [Function],
+          "className": "",
+          "field": Object {
+            "id": "selectField",
+            "inputType": "select",
+            "selectOptions": Array [
+              Object {
+                "text": "Example 1",
+                "value": "1",
+              },
+              Object {
+                "text": "Example 2",
+                "value": "2",
+              },
+            ],
+            "type": "checkbox",
+          },
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "changeFunction": [Function],
+          "className": "",
+          "field": Object {
+            "id": "datepicker",
+            "inputType": "datepicker",
+            "type": "date",
+          },
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <MetaFormField
+            changeFunction={[Function]}
+            className=""
+            field={
+              Object {
+                "ariaLabel": "input field",
+                "autoComplete": "off",
+                "id": "inputFied",
+                "inputType": "input",
+                "placeholder": "Type a message...",
+                "type": "text",
+              }
+            }
+            value=""
+          />,
+          <MetaFormField
+            changeFunction={[Function]}
+            className=""
+            field={
+              Object {
+                "autoComplete": "off",
+                "id": "textFied",
+                "inputType": "textarea",
+                "placeholder": "Type a message...",
+                "type": "text",
+              }
+            }
+            value=""
+          />,
+          <br />,
+          <MetaFormField
+            changeFunction={[Function]}
+            className=""
+            field={
+              Object {
+                "id": "selectField",
+                "inputType": "select",
+                "selectOptions": Array [
+                  Object {
+                    "text": "Example 1",
+                    "value": "1",
+                  },
+                  Object {
+                    "text": "Example 2",
+                    "value": "2",
+                  },
+                ],
+                "type": "checkbox",
+              }
+            }
+            value=""
+          />,
+          <br />,
+          <MetaFormField
+            changeFunction={[Function]}
+            className=""
+            field={
+              Object {
+                "id": "datepicker",
+                "inputType": "datepicker",
+                "type": "date",
+              }
+            }
+            value=""
+          />,
+        ],
+        "className": " form__group",
+        "onSubmit": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "changeFunction": [Function],
+            "className": "",
+            "field": Object {
+              "ariaLabel": "input field",
+              "autoComplete": "off",
+              "id": "inputFied",
+              "inputType": "input",
+              "placeholder": "Type a message...",
+              "type": "text",
+            },
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "changeFunction": [Function],
+            "className": "",
+            "field": Object {
+              "autoComplete": "off",
+              "id": "textFied",
+              "inputType": "textarea",
+              "placeholder": "Type a message...",
+              "type": "text",
+            },
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "changeFunction": [Function],
+            "className": "",
+            "field": Object {
+              "id": "selectField",
+              "inputType": "select",
+              "selectOptions": Array [
+                Object {
+                  "text": "Example 1",
+                  "value": "1",
+                },
+                Object {
+                  "text": "Example 2",
+                  "value": "2",
+                },
+              ],
+              "type": "checkbox",
+            },
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "changeFunction": [Function],
+            "className": "",
+            "field": Object {
+              "id": "datepicker",
+              "inputType": "datepicker",
+              "type": "date",
+            },
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;

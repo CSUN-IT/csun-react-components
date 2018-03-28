@@ -1,41 +1,233 @@
+
+
+@import 'variables';
+
+$mobile-menu-button: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAgCAYAAACFM/9sAAABAUlEQVR42u2XTQrCMBBGR1Ai5gA9hGfwAu6La8/QTa/TtYfxBIILl6K4MP1bRGdbLEaEyTR8hUcJBIY8hmQ+6vvea4aIdAOBEKhPYOeuPs/zKFRVFSRwMye/XcjB9YIFNreTeoHH1VqccIH3MwQOONgMAsU6sH1c1AvkjlDbgYx2gYwZWZsv0GAfffjTyL5ggXyQWGAOxCANgf8J7Brf1s675xsnQ938JtBEIKkksjPk90s5uB6SCJLIVJIIOjD9JML3UmHl4HrJJRHVcyCSCAZpCJx0Eon1hQrMZvIk9Qrzy1gKwvUwByKJIIkgiWgRyPeSpLzSIokgiWCQRhKBwCEvwLSRj8/zxTMAAAAASUVORK5CYII=');
+$mini-nav-text-color: #000;
+$secondary-border-color: #000;
+$primary-mobile-menu-border-color: #fff;
+$primary-mobile-menu-text-color: #fff;
+
+.header-row {
+  display: flex;
+    justify-content: space-between;
+}
+
+// This is stone thrown to a broken window. Ideally, Metaphor would have a responsive
+// flexbox utlity system similar to Bootstrap's, then we could apply these as single utilities.
+//
+// @ToDo Contribute flex utility system to Metaphor; update this when ready
+@media (min-width: $break-large) {
+  .wordmark-container {
+    display: flex;
+      align-items: stretch;
+  }
+}
+
+// Remove clearfix on header-row.row, otherwise burger menu will not push against
+// the container edge with flex between (as ::after blank content is there instead)
+.header-row.row::after {
+  display: none;
+}
+
+// Mini nav
 .mini-nav {
-  margin-top: 15px;
+  font-size: .65em;
   margin-bottom: 8px;
-  font-size: 0.65em;
+  margin-left: auto;
+  margin-top: 15px;
+  @media (max-width: $break-large) {
+    display: none;
+  }
 }
 
 .list-inline {
-  padding-left: 0;
   list-style: none;
-  margin-left: -5px;
   margin-right: 10px;
+  padding-left: 0;
 }
 
 .list-inline > li {
   display: inline-block;
   padding-left: 5px;
   padding-right: 5px;
+
   a {
-    color: black;
+    color: $mini-nav-text-color;
   }
 }
 
+.nav-dropdown-button {
+  display: none;
+
+  @media (max-width: $break-large) {
+    background-image: $mobile-menu-button;
+    background-position: 0 top;
+    background-repeat: no-repeat;
+    border: 0;
+    display: block;
+    height: 33px;
+    overflow: hidden;
+    padding: 0;
+    text-decoration: none;
+    text-indent: -100%;
+    width: 40px;
+
+    &.active {
+      background-position: -40px top;
+      border: 0;
+      color: $csun-red;
+    }
+  }
+}
+
+.web-nav-mobile {
+  display: none;
+  @media (max-width: $break-large) {
+    &.active {
+      background-color: $csun-red;
+      display: block;
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li > a {
+        border-bottom: 1px solid $primary-mobile-menu-border-color;
+        color: $primary-mobile-menu-text-color;
+        display: block;
+        font-size: 25px;
+        padding: 5px 10px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.btn-default > .nav__item, .btn-default > .nav__item:hover {
+  border-left: 0px;
+}
+
+.btn-default > .nav__item > .nav__link, .btn-default > .nav__item > .nav__link:hover {
+  margin-left: 0px;
+}
+
+.mainContainer {
+  margin-top: 15px;
+}
+
+.centerRow {
+  display: flex;
+    justify-content: center;
+}
+
+.intro {
+  font-size: 1.5rem;
+  width: 600px;
+}
+
+.navbar-link-wrapper {
+  background-color: $csun-red;
+  display: block;
+  height: 43px;
+  margin-bottom: 10px;
+  overflow: visible;
+  padding-bottom: 0;
+  text-align: center;
+  visibility: visible;
+  @media (max-width: $break-large) {
+    display: none;
+  }
+
+  .navbar-center {
+    display: inline-block;
+    float: none;
+    list-style: none;
+    vertical-align: top;
+  }
+
+  .web-nav {
+    border-left: 0;
+  }
+
+  .navbar-nav > li {
+    float: left;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+    &:first-child > a {
+      border-left: 0;
+    }
+
+    a {
+      border-left: 1px solid $nav-bar-border-color;
+      color: $nav-bar-text-color;
+      font-family: 'museo-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      line-height: 1.25;
+      padding: 0 25px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
+  @media (max-width: $break-large) {
+    height: 2px;
+  }
+}
+
+
+// Header main
+
 .header {
-  margin: 10px 10px 10px 10px;
-}
+  margin: 10px;
 
-.wordmark-secondary {
-  float: left;
-  margin-bottom: 0.1em;
-  margin-left: 10px;
-}
+  // Logo
+  .csun-logo {
+    float: left;
+    margin-top: 5px;
+    @media (min-width: $break-large) {
+      background-image: $csun-logo-large;
+      height: 43px;
+      width: 160px;
+    }
+    @media (max-width: $break-large) {
+      background-image: $csun-logo-small;
+      height: 29px;
+      width: 107px;
+    }
+  }
 
-span.wordmark--offset {
-  border-left: 1px solid #000;
-  padding-left: 5px;
-  padding-right: 5px;
-}
+  // Wordmarks
+  .wordmark {
+    text-align: center;
 
-a.csun-logo {
-  float: left;
+    &.secondary-wordmark {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    &.tertiary-wordmark {
+      font-size: 22px;
+    }
+    @media (min-width: $break-large) {
+      border-left: 1px solid $secondary-border-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 26px;
+      margin-bottom: .1em;
+      margin-left: 10px;
+      padding: 0 16px;
+      white-space: pre;
+    }
+
+    @media (max-width: $break-large) {
+      clear: both;
+      float: left;
+      white-space: nowrap;
+    }
+  }
 }

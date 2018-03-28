@@ -1,28 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const MetaColumn = props => (
-  <div
-    className={`${props.className} col-${props.size}-${props.value} col-${props.size}-offset-${props.offSet}`}
-  >
-    {props.children}
-  </div>
-);
+const MetaColumn = (props) => {
+  let className = props.className ? `${props.className}` : '';
+  props.sizes.forEach((val, index) => {
+    className = `${className} col-${val}-${props.values[index]}`;
+  });
+
+  return (
+    <div
+      className={className}
+    >
+      {props.children}
+    </div>);
+};
 
 MetaColumn.defaultProps = {
   children: {},
-  size: 'sm',
-  value: '12',
-  offSet: '0',
   className: '',
 };
 
 MetaColumn.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
-  size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
-  value: PropTypes.oneOf(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
-  offSet: PropTypes.string,
+  sizes: PropTypes.arrayOf(PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl'])).isRequired,
+  values: PropTypes.arrayOf(PropTypes.oneOf(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'])).isRequired,
 };
 
 export default MetaColumn;

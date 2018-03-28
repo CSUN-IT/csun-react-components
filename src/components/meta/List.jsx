@@ -10,9 +10,11 @@ const MetaList = (props) => {
     </li>
   ));
 
-  const ulClassnames = `${props.className} list ${props.modifiers.map(
-    modifier => `list--${modifier} `,
-  )}`;
+  let ulClassnames = props.className ? `${props.className} list` : 'list';
+
+  props.modifiers.forEach((modifier) => {
+    ulClassnames = `${ulClassnames} list--${modifier}`;
+  });
 
   return <ul className={ulClassnames}>{listItems}</ul>;
 };
@@ -25,11 +27,11 @@ MetaList.defaultProps = {
       to: '#',
     },
   ],
-  modifiers: [''],
+  modifiers: [],
 };
 
 MetaList.propTypes = {
-  className: PropTypes.className,
+  className: PropTypes.string,
   listItems: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string.isRequired,

@@ -8,7 +8,7 @@ const DocGrid = () => {
   <!-- Your Code Here -->
   <MetaRow>
     <!-- Your Code Here -->
-    <MetaColumn size={'sm'} value={'9'}>
+    <MetaColumn sizes={['sm']} values={['9']}>
       <!-- Your Code here -->
     </MetaColumn>
   </MetaRow>
@@ -16,76 +16,65 @@ const DocGrid = () => {
     `;
 
   const propTypesTitle = '// Prop Type for MetaColumn';
-  const propTypes = `
-  className: PropTypes.string,
-  children: PropTypes.node.isRequired,
-  size: PropTypes.oneOf([
-    'xs',
-    'sm',
-    'md',
-    'lg',
-    'xl',
-  ]),
-  value: PropTypes.oneOf([
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    '10',
-    '11',
-    '12',
-  ]),`;
+  const propTypes = `MetaColumn.defaultProps = {
+    children: {},
+    sizes: ['sm'],
+    values: ['12'],
+    className: '',
+  };
+  
+  MetaColumn.propTypes = {
+    className: PropTypes.string,
+    children: PropTypes.node.isRequired,
+    sizes: PropTypes.arrayOf(PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl'])),
+    values: PropTypes.arrayOf(PropTypes.oneOf(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'])),
+  };`;
 
   return (
-    <MetaContainer className={'test'}>
-      <MetaRow className={'test'}>
-        <MetaColumn className={'test'} size={'sm'} value={'9'}>
-          <div className={'grid--outline cf'}>
-            <MetaColumn size={'sm'} value={'12'}>
-              12
-            </MetaColumn>
-            <MetaColumn size={'sm'} value={'1'}>
-              1
-            </MetaColumn>
-            <MetaColumn size={'sm'} value={'11'}>
-              11
-            </MetaColumn>
-            <MetaColumn size={'sm'} value={'2'}>
-              2
-            </MetaColumn>
-            <MetaColumn size={'sm'} value={'10'}>
-              10
-            </MetaColumn>
-            <MetaColumn size={'sm'} value={'3'}>
-              3
-            </MetaColumn>
-            <MetaColumn size={'sm'} value={'9'}>
-              9
-            </MetaColumn>
-            <MetaColumn size={'sm'} value={'4'}>
-              4
-            </MetaColumn>
-            <MetaColumn size={'sm'} value={'8'}>
-              8
-            </MetaColumn>
-            <MetaColumn size={'sm'} value={'5'}>
-              5
-            </MetaColumn>
-            <MetaColumn size={'sm'} value={'7'}>
-              7
-            </MetaColumn>
-            <MetaColumn size={'sm'} value={'6'}>
-              6
-            </MetaColumn>
-            <MetaColumn size={'sm'} value={'6'}>
-              6
-            </MetaColumn>
-          </div>
+    <MetaContainer>
+      <MetaRow>
+        <MetaColumn sizes={['sm']} values={['9']}>
+          <h1>Grid System</h1>
+          <hr />
+          <MetaColumn className={'grid-outline'} sizes={['sm']} values={['12']}>
+            12
+          </MetaColumn>
+          <MetaColumn className={'grid-outline'} sizes={['sm']} values={['1']}>
+            1
+          </MetaColumn>
+          <MetaColumn className={'grid-outline'} sizes={['sm']} values={['11']}>
+            11
+          </MetaColumn>
+          <MetaColumn className={'grid-outline'} sizes={['sm']} values={['2']}>
+            2
+          </MetaColumn>
+          <MetaColumn className={'grid-outline'} sizes={['sm']} values={['10']}>
+            10
+          </MetaColumn>
+          <MetaColumn className={'grid-outline'} sizes={['sm']} values={['3']}>
+            3
+          </MetaColumn>
+          <MetaColumn className={'grid-outline'} sizes={['sm']} values={['9']}>
+            9
+          </MetaColumn>
+          <MetaColumn className={'grid-outline'} sizes={['sm']} values={['4']}>
+            4
+          </MetaColumn>
+          <MetaColumn className={'grid-outline'} sizes={['sm']} values={['8']}>
+            8
+          </MetaColumn>
+          <MetaColumn className={'grid-outline'} sizes={['sm']} values={['5']}>
+            5
+          </MetaColumn>
+          <MetaColumn className={'grid-outline'} sizes={['sm']} values={['7']}>
+            7
+          </MetaColumn>
+          <MetaColumn className={'grid-outline'} sizes={['sm']} values={['6']}>
+            6
+          </MetaColumn>
+          <MetaColumn className={'grid-outline'} sizes={['sm']} values={['6']}>
+            6
+          </MetaColumn>
           <br />
           <pre>
             <code>

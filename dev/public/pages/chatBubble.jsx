@@ -20,11 +20,11 @@ const DocChatBubble = () => {
   return (
     <MetaContainer>
       <MetaRow>
-        <MetaColumn size={'sm'} value={'9'}>
-          <p>
+        <MetaColumn sizes={['sm']} values={['9']}>
+          <div>
             <MetaChatBubble
               className={'test'}
-              text="Hey I'm Matty!"
+              text="Hey I'm Matty!\nHow can I help you"
               subText="This will be small"
               receiver
             />
@@ -33,7 +33,7 @@ const DocChatBubble = () => {
               subText="This will be small too."
               receiver={false}
             />
-          </p>
+          </div>
           <br />
           <pre>
             <code>

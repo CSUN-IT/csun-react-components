@@ -2,7 +2,7 @@ import React from 'react';
 import { MetaContainer, MetaColumn, MetaRow, WebHeader } from '../../../src';
 
 const DocWebHeader = () => {
-  const code = `import MetaPrimaryNav from 'csun-react-components';
+  const code = `import Webheader from 'csun-components';
 
       const menuItems = [
       {
@@ -19,29 +19,90 @@ const DocWebHeader = () => {
         to: 'giving',
       },
     ];
+    const secondaryWordmark = {
+      to: 'https://www.csun.edu/it',
+      title: 'Information\nTechnology',
+    };
+  
+    const tertiaryWordmark = {
+      to: 'https://www.csun.edu/it',
+      title: 'AI',
+    };
     
-    <MetaPrimaryNav menuitems={menuItems} navColor={'cream'}
+    <WebHeader
+      secondaryWordmark={secondaryWordmark}
+      tertiaryWordmark={tertiaryWordmark}
+      menuItems={menuItems}
+    />
     `;
 
   const propTypesTitle = '// Prop Types';
   const propTypes = `
-  menuItems: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    to: PropTypes.string.isRequired,
-    exact: PropTypes.bool,
-  }),
-  ),
-  navColor: PropTypes.string,
-  subBrand: PropTypes.shape({
-    to: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-  }),`;
+  WebHeader.defaultProps = {
+    secondaryWordmark: null,
+    tertiaryWordmark: null,
+    showMobileNav: false,
+    menuItems: null,
+    id: null,
+  };
+  
+  WebHeader.propTypes = {
+    id: PropTypes.string,
+    secondaryWordmark: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      to: PropTypes.string.isRequired,
+    }),
+    tertiaryWordmark: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      to: PropTypes.string.isRequired,
+    }),
+    menuItems: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        to: PropTypes.string.isRequired,
+        exact: PropTypes.bool,
+        external: PropTypes.bool,
+      }),
+    ),
+  }`;
+
+  const secondaryWordmark = {
+    title: 'Information \nTechnology',
+    to: '/it',
+  };
+
+  const tertiaryWordmark = {
+    to: 'https://www.csun.edu/it',
+    title: 'AI',
+  };
+
+  const menuItems = [
+    {
+      title: 'About IT',
+      to: 'https://www.csun.edu/it/about',
+      external: true,
+    },
+    {
+      title: 'IT',
+      to: 'it',
+      external: true,
+    },
+    {
+      title: 'Giving',
+      to: 'giving',
+      external: true,
+    },
+  ];
 
   return (
     <MetaContainer>
       <MetaRow>
-        <MetaColumn size={'sm'} value={'9'}>
-          <WebHeader />
+        <MetaColumn sizes={['sm']} values={['9']}>
+          <WebHeader
+            secondaryWordmark={secondaryWordmark}
+            tertiaryWordmark={tertiaryWordmark}
+            menuItems={menuItems}
+          />
           <br />
           <pre>
             <code>

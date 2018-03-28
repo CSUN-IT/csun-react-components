@@ -6,12 +6,16 @@ import DocLists from './lists';
 import DocPanels from './panels';
 import DocSideNav from './sideNav';
 import DocSubNav from './subNav';
+import DocForms from './forms';
 import DocTags from './tags';
 import DocGrid from './gridSystem';
 import DocAccordion from './accordion';
 import DocChatBubble from './chatBubble';
 import DocWebHeader from './webHeader';
-import DocWebPrimaryNav from './webPrimaryNav';
+import DocWebSidebar from './webSidebar';
+import DocTables from './tables';
+import DocMain from './main';
+import DocButtonLink from './buttonLink';
 
 export {
   DocPrimaryNav,
@@ -21,11 +25,15 @@ export {
   DocLists,
   DocPanels,
   DocSideNav,
+  DocForms,
   DocSubNav,
   DocTags,
   DocGrid,
   DocAccordion,
   DocChatBubble,
   DocWebHeader,
-  DocWebPrimaryNav,
+  DocWebSidebar,
+  DocTables,
+  DocMain,
+  DocButtonLink,
 };
