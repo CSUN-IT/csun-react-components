@@ -44,17 +44,20 @@ const DocTables = () => {
       </pre>
       <strong>Prop Types</strong>
       <MetaTable
-        headerCells={['Name', 'Type', 'Required']}
+        headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
         dataCells={[
           'className',
           'String',
           'No',
+          '',
           'headerCells',
           'Array',
           'Yes',
+          '',
           'dataCells',
           'Array',
           'Yes',
+          '',
         ]}
       />
     </MetaContainer>

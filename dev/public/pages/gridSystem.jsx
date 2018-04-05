@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow } from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, MetaTable } from '../../../src';
 
 const DocGrid = () => {
   const code = `import { MetaContainer, MetaCoulumn, MetaRow } from 'csun-react-components';
@@ -76,15 +76,39 @@ const DocGrid = () => {
             6
           </MetaColumn>
           <br />
+          <strong>Example Code</strong>
           <pre>
             <code>
               {code}
               <div className="type--dark-gray">
                 <strong>{propTypesTitle}</strong>
+                <br />
                 {propTypes}
               </div>
             </code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'className',
+              'String',
+              'No',
+              '',
+              'children',
+              '',
+              'Yes',
+              '',
+              'sizes',
+              'Array',
+              'Yes',
+              'xs, sm, md, lg, xl',
+              'Values',
+              'Array',
+              'Yes',
+              '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12',
+            ]}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>
