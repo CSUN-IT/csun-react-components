@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaSideNav } from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, MetaTable, MetaSideNav } from '../../../src';
 
 const DocSideNav = () => {
   const menuItems = [
@@ -85,6 +85,7 @@ const DocSideNav = () => {
             <MetaSideNav menuItems={menuItemsFill} />
           </MetaColumn>
           <br />
+          <strong>Example Code</strong>
           <pre>
             <code>
               {code}
@@ -94,6 +95,42 @@ const DocSideNav = () => {
               </div>
             </code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'className',
+              'String',
+              'Yes',
+              '',
+              'menuItems',
+              'Array',
+              'Yes',
+              'Contains additional sub prop types.',
+            ]}
+          />
+          <strong>menuItems Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'title',
+              'String',
+              'Yes',
+              '',
+              'to',
+              'String',
+              'Yes',
+              '',
+              'exact',
+              'Boolean',
+              'No',
+              '',
+              'fill',
+              'Boolean',
+              'No',
+              '',
+            ]}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>
