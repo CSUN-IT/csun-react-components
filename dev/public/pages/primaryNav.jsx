@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaPrimaryNav } from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, MetaTable, MetaPrimaryNav } from '../../../src';
 
 const DocPrimaryNav = () => {
   const menuItems = [
@@ -63,6 +63,7 @@ const DocPrimaryNav = () => {
           <MetaPrimaryNav menuItems={menuItems} />
           <MetaPrimaryNav menuItems={menuItems} navColor={'black'} />
           <br />
+          <strong>Example Code</strong>
           <pre>
             <code>
               {code}
@@ -72,6 +73,47 @@ const DocPrimaryNav = () => {
               </div>
             </code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'menuItems',
+              'Array',
+              'Yes',
+              'Contains additional sub prop types.',
+              'navColor',
+              'String',
+              'No',
+              '',
+              'subBrand',
+              'Shape',
+              'Yes',
+              'Contains additional sub prop types.',
+            ]}
+          />
+          <strong>menuItems Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'title',
+              'String',
+              'Yes',
+              '',
+              'to',
+              'String',
+              'Yes',
+              '',
+              'exact',
+              'Boolean',
+              'No',
+              '',
+            ]}
+          />
+          <strong>subBrand Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={['to', 'String', 'Yes', '', 'title', 'String', 'Yes', '']}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>

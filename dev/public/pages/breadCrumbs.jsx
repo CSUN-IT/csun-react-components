@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaBreadcrumbs } from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, MetaBreadcrumbs, MetaTable } from '../../../src';
 
 const DocPrimaryNav = () => {
   const breadcrumbs = [
@@ -55,6 +55,7 @@ const DocPrimaryNav = () => {
         <MetaColumn sizes={['sm']} values={['9']}>
           <MetaBreadcrumbs className={'test'} breadcrumbItems={breadcrumbs} typecColor={'red'} />
           <br />
+          <strong>Example Code</strong>
           <pre>
             <code>
               {code}
@@ -64,6 +65,46 @@ const DocPrimaryNav = () => {
               </div>
             </code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'className',
+              'String',
+              'No',
+              '',
+              'breadcrumbItems',
+              'Array',
+              'Yes',
+              'Array within breadcrumbItems.',
+              'typeColor',
+              'Type Color',
+              'No',
+              '',
+            ]}
+          />
+          <strong>breadcrumbItems Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'title',
+              'String',
+              'Yes',
+              '',
+              'to',
+              'String',
+              'No',
+              '',
+              'home',
+              'bool',
+              'No',
+              '',
+              'typeStyle',
+              'Type Style',
+              'No',
+              '',
+            ]}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>
