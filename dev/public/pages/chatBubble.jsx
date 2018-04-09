@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaChatBubble } from '../../../src';
+import { MetaContainer, MetaColumn, MetaTable, MetaRow, MetaChatBubble } from '../../../src';
 
 const DocChatBubble = () => {
   const code = `import MetaChatBubble from 'csun-react-components';
@@ -35,6 +35,7 @@ const DocChatBubble = () => {
             />
           </div>
           <br />
+          <strong>Example Code</strong>
           <pre>
             <code>
               {code}
@@ -44,6 +45,28 @@ const DocChatBubble = () => {
               </div>
             </code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'className',
+              'String',
+              'No',
+              '',
+              'Text',
+              'String',
+              'Yes',
+              '',
+              'subText',
+              'String',
+              'No',
+              '',
+              'receiver',
+              'Boolean',
+              'Yes',
+              '',
+            ]}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>

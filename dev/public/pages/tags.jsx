@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaTag } from '../../../src';
+import { MetaContainer, MetaColumn, MetaTable, MetaRow, MetaTag } from '../../../src';
 
 const DocTags = () => {
   const code = `import MetaTag from 'csun-react-components';
@@ -42,6 +42,7 @@ const DocTags = () => {
             <MetaTag text={'Error'} action={'close'} to={'#'} color={'danger'} />
           </p>
           <br />
+          <strong>Example Code</strong>
           <pre>
             <code>
               {code}
@@ -51,6 +52,32 @@ const DocTags = () => {
               </div>
             </code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'className',
+              'String',
+              'No',
+              '',
+              'text',
+              'String',
+              'No',
+              '',
+              'color',
+              'oneOf',
+              'No',
+              "success, warning, danger, or ' '",
+              'action',
+              'oneOf',
+              'No',
+              "close, or ' '",
+              'to',
+              'String',
+              'Yes',
+              '',
+            ]}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>
