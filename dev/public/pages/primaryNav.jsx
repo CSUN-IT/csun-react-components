@@ -78,8 +78,8 @@ const DocPrimaryNav = () => {
             headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
             dataCells={[
               'menuItems',
-              'Array',
-              'Yes',
+              'Array/Shape',
+              'No',
               'Contains additional sub prop types.',
               'navColor',
               'String',
@@ -87,7 +87,7 @@ const DocPrimaryNav = () => {
               '',
               'subBrand',
               'Shape',
-              'Yes',
+              'No',
               'Contains additional sub prop types.',
             ]}
           />

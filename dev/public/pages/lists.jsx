@@ -86,7 +86,7 @@ const listItems = [
               'No',
               '',
               'listItems',
-              'Array',
+              'Array/Shape',
               'Yes',
               'Contains additional sub prop types.',
               'modifiers',

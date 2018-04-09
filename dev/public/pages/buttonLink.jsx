@@ -70,11 +70,11 @@ const DocButtonLink = () => {
               'Yes',
               'default, primary, success',
               'size',
-              'String',
+              'oneOf',
               'No',
               "sm, lg, or ' '",
               'btnStyle',
-              'String',
+              'oneOf',
               'No',
               "default-outline, primary-outline, success-outline, or ' '",
             ]}

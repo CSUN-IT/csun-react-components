@@ -104,8 +104,8 @@ const DocSideNav = () => {
               'Yes',
               '',
               'menuItems',
-              'Array',
-              'Yes',
+              'Array/Shape',
+              'No',
               'Contains additional sub prop types.',
             ]}
           />
