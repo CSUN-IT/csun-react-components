@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaList } from '../../../src';
+import { MetaContainer, MetaColumn, MetaTable, MetaRow, MetaList } from '../../../src';
 
 const DocLists = () => {
   const listItems = [
@@ -67,6 +67,7 @@ const listItems = [
             <MetaList listItems={listItems} modifiers={['underlined']} />
           </MetaColumn>
           <br />
+          <strong>Example Code</strong>
           <pre>
             <code>
               {code}
@@ -76,6 +77,29 @@ const listItems = [
               </div>
             </code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'className',
+              'String',
+              'No',
+              '',
+              'listItems',
+              'Array',
+              'Yes',
+              'Contains additional sub prop types.',
+              'modifiers',
+              'Array/oneOf',
+              'No',
+              'arrows, hover, underlined',
+            ]}
+          />
+          <strong>listItems Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={['text', 'String', 'Yes', '', 'to', 'String', 'Yes', '']}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>
