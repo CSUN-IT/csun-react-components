@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaAccordion } from '../../../src';
+import { MetaContainer, MetaColumn, MetaTable, MetaRow, MetaAccordion } from '../../../src';
 
 const DocAccordion = () => {
   const bodyItems = [
@@ -52,6 +52,7 @@ const bodyItems = [
         <MetaColumn sizes={['sm']} values={['9']}>
           <MetaAccordion bodyItems={bodyItems} />
           <br />
+          <strong>Example Code</strong>
           <pre>
             <code>
               {code}
@@ -61,6 +62,26 @@ const bodyItems = [
               </div>
             </code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'className',
+              'String',
+              'No',
+              '',
+              'bodyItems',
+              'Array/Shape',
+              'Yes',
+              'Contains additional sub prop types.',
+            ]}
+          />
+
+          <strong>bodyItems Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={['heading', 'String', 'Yes', '', 'body', 'String', 'Yes', '']}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>
