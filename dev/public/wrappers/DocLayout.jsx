@@ -19,6 +19,7 @@ import {
   DocWebHeader,
   DocWebSidebar,
   DocTables,
+  DocCards,
   DocCardList,
   DocButtonLink,
 } from '../pages';
@@ -134,6 +135,11 @@ const DocLayout = (props) => {
       active: false,
     },
     {
+      title: 'Cards',
+      to: `${match.url}/webcards`,
+      active: false,
+    },
+    {
       title: 'Web Cardlist',
       to: `${match.url}/webcardlist`,
       active: false,
@@ -167,6 +173,7 @@ const DocLayout = (props) => {
               <Route path={`${match.url}/chatBubbles`} component={DocChatBubble} />
               <Route path={`${match.url}/webheader`} component={DocWebHeader} />
               <Route path={`${match.url}/websidebar`} component={DocWebSidebar} />
+              <Route path={`${match.url}/webcards`} component={DocCards} />
               <Route path={`${match.url}/webcardlist`} component={DocCardList} />
             </MetaColumn>
           </MetaRow>

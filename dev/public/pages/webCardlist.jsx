@@ -26,7 +26,9 @@ const DocCardList = (props) => {
         </MetaColumn>
         <MetaColumn sizes={['sm']} values={['12']}>
           <WebCardList>
-            <WebCard title={'Title'} content={'This here is content'} img={'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png'} linkTo={buttons} />
+            <WebCard title={'Title'} content={'This was a triumph. I\'m making a note here, huge success. It\'s hard to overstate my satisfaction.'} img={'https://upload.wikimedia.org/wikipedia/commons/c/c7/OviattLibrary.jpg'} linkTo={'https://www.csun.edu/'} buttonArray={buttons} />
+            <WebCard title={'Title'} content={'The cake is a lie.'} img={''} linkTo={'https://www.csun.edu/'} buttonArray={buttons} />
+            <WebCard title={'Title'} content={'This was a triumph. I\'m making a note here, huge success. It\'s hard to overstate my satisfaction.'} img={'https://upload.wikimedia.org/wikipedia/commons/c/c7/OviattLibrary.jpg'} linkTo={'https://www.csun.edu/'} buttonArray={buttons} />
           </WebCardList>
         </MetaColumn>
       </MetaRow>
