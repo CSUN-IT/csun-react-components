@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaButtonLink } from '../../../src';
+import { MetaContainer, MetaColumn, MetaTable, MetaRow, MetaButtonLink } from '../../../src';
 
 const DocButtonLink = () => {
   const code = `import MetaButtonLink from 'csun-react-components';
@@ -39,6 +39,7 @@ const DocButtonLink = () => {
             <MetaButtonLink text={'Nav'} color={'success'} size={''} to={'nav'} />
           </p>
           <br />
+          <strong>Example Code</strong>
           <pre>
             <code>
               {code}
@@ -48,6 +49,36 @@ const DocButtonLink = () => {
               </div>
             </code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'className',
+              'String',
+              'No',
+              '',
+              'href',
+              'String',
+              'Yes',
+              '',
+              'text',
+              'String',
+              'Yes',
+              '',
+              'color',
+              'String',
+              'Yes',
+              'default, primary, success',
+              'size',
+              'String',
+              'No',
+              "sm, lg, or ' '",
+              'btnStyle',
+              'String',
+              'No',
+              "default-outline, primary-outline, success-outline, or ' '",
+            ]}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>

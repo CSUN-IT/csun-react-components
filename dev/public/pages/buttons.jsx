@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaButton } from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, MetaTable, MetaButton } from '../../../src';
 
 const DocButtons = () => {
   const code = `import MetaButton from 'csun-react-components';
@@ -38,6 +38,7 @@ const DocButtons = () => {
             <MetaButton text={'Button'} color={'success'} size={''} />
           </p>
           <br />
+          <strong>Example Code</strong>
           <pre>
             <code>
               {code}
@@ -47,6 +48,32 @@ const DocButtons = () => {
               </div>
             </code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'className',
+              'String',
+              'No',
+              '',
+              'text',
+              'String',
+              'Yes',
+              '',
+              'color',
+              'String',
+              'Yes',
+              'default, primary, success',
+              'size',
+              'String',
+              'no',
+              "sm, lg, or ' '",
+              'btnStyle',
+              'String',
+              'No',
+              "default-outline, primary-outline, success-outline, or ' '",
+            ]}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>
