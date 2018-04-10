@@ -11,14 +11,28 @@ const Card = (props) => {
   const image = props.img ? <img className="card-img" src={props.img} alt={'alt text'} height={'100'} width={'300'} /> : null;
   const buttonArray = props.buttonArray ?
     props.buttonArray.map(button => {
-      return (<MetaButtonLink text={button.title} color={'default'} size={''} to={button.link} key={shortIdGenerate()}/>)
+      return (<MetaButtonLink text={button.title} color={'default'} size={''} to={button.link} key={shortIdGenerate()} />)
     })
     : null;
 
   return (
     props.linkTo ?
-    <div>
-      <a href={`${props.linkTo}`}>
+      <div>
+        <a href={`${props.linkTo}`}>
+          <div className={`${props.className}`}>
+            {image}
+            <div className="card-content">
+              {title}
+              {contents}
+            </div>
+          </div>
+        </a>
+        <div className="card-btn-wrapper">
+          {buttonArray}
+        </div>
+      </div>
+      :
+      <div>
         <div className={`${props.className}`}>
           {image}
           <div className="card-content">
@@ -26,24 +40,10 @@ const Card = (props) => {
             {contents}
           </div>
         </div>
-      </a>
-      <div className="card-btn-wrapper">
-        {buttonArray}
-      </div>
-    </div>
-    :
-    <div>
-      <div className={`${props.className}`}>
-        {image}
-        <div className="card-content">
-          {title}
-          {contents}
+        <div className="card-btn-wrapper">
+          {buttonArray}
         </div>
       </div>
-      <div className="card-btn-wrapper">
-        {buttonArray}
-      </div>
-    </div>
   );
 };
 
@@ -62,6 +62,7 @@ Card.propTypes = {
   content: PropTypes.string,
   img: PropTypes.string,
   linkTo: PropTypes.string,
+  buttonArray: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default Card;
