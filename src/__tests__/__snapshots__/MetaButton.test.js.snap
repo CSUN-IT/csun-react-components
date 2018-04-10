@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MetaButton Renders component correctly 1`] = `
+<button
+  className="btn btn-default btn-sm"
+  onClick={[Function]}
+  role="button"
+  type={null}
+  value={null}
+>
+  Button
+</button>
+`;

@@ -22,7 +22,7 @@ const MetaButton = (props) => {
 
 MetaButton.defaultProps = {
   className: '',
-  color: '',
+  color: 'default',
   size: '',
   btnStyle: '',
   text: 'button',

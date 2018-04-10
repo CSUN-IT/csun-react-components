@@ -1,0 +1,2452 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WebHeader Renders component correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <WebHeader
+    id={null}
+    menuItems={
+      Array [
+        Object {
+          "external": true,
+          "title": "About IT",
+          "to": "https://www.csun.edu/it/about",
+        },
+        Object {
+          "external": true,
+          "title": "IT",
+          "to": "it",
+        },
+        Object {
+          "external": true,
+          "title": "Giving",
+          "to": "giving",
+        },
+      ]
+    }
+    secondaryWordmark={
+      Object {
+        "title": "Information 
+Technology",
+        "to": "/it",
+      }
+    }
+    showMobileNav={false}
+    tertiaryWordmark={
+      Object {
+        "title": "AI",
+        "to": "https://www.csun.edu/it",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <MetaContainer
+          className=""
+          id={null}
+        >
+          <div
+            className="header"
+          >
+            <MetaRow
+              className="header-row"
+            >
+              <div
+                className="wordmark-container"
+              >
+                <a
+                  className="csun-logo"
+                  href="http://www.csun.edu"
+                >
+                  <span
+                    className="sr-only"
+                  >
+                    California State University, Northridge (CSUN)
+                  </span>
+                </a>
+                <a
+                  className="wordmark secondary-wordmark"
+                  href="/it"
+                >
+                  <span
+                    className="wordmark--offset"
+                  >
+                    Information 
+Technology
+                  </span>
+                </a>
+                <a
+                  className="wordmark tertiary-wordmark"
+                  href="https://www.csun.edu/it"
+                >
+                  <span
+                    className="wordmark--offset"
+                  >
+                    AI
+                  </span>
+                </a>
+              </div>
+              <ul
+                className="list-inline mini-nav pull-right"
+              >
+                <li>
+                  <a
+                    href="http://www.csun.edu/universaldesigncenter"
+                  >
+                    Accessibility
+                  </a>
+                </li>
+                |
+                <li>
+                  <a
+                    href="https://mynorthridge.csun.edu/psc/PANRPRD/EMPLOYEE/EMPL/c/NRPA_CSUN_APPS.NR_PEOPLESRCH_CMP.GBL"
+                  >
+                    Directory
+                  </a>
+                </li>
+                |
+                <li>
+                  <a
+                    href="http://www.csun.edu/calendar"
+                  >
+                    Calendar
+                  </a>
+                </li>
+                |
+                <li>
+                  <a
+                    href="http://www.csun.edu/atoz/"
+                  >
+                    A to Z
+                  </a>
+                </li>
+                |
+                <li>
+                  <a
+                    href="http://www.csun.edu/it/webmail"
+                  >
+                    Webmail
+                  </a>
+                </li>
+              </ul>
+              <div
+                className="nav-dropdown"
+              >
+                <button
+                  className="nav-dropdown-button "
+                  onClick={[Function]}
+                  title="Menu"
+                />
+              </div>
+            </MetaRow>
+          </div>
+        </MetaContainer>,
+        <div>
+          <div
+            className="web-nav-mobile "
+          >
+            <ul
+              className="mobile-menu"
+            >
+              <li>
+                <a
+                  href="https://www.csun.edu/it/about"
+                >
+                  About IT
+                </a>
+              </li>
+              <li>
+                <a
+                  href="it"
+                >
+                  IT
+                </a>
+              </li>
+              <li>
+                <a
+                  href="giving"
+                >
+                  Giving
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            className="navbar-link-wrapper"
+          >
+            <ul
+              className="web-nav navbar-nav navbar-center"
+            >
+              <li>
+                <a
+                  href="https://www.csun.edu/it/about"
+                >
+                  About IT
+                </a>
+              </li>
+              <li>
+                <a
+                  href="it"
+                >
+                  IT
+                </a>
+              </li>
+              <li>
+                <a
+                  href="giving"
+                >
+                  Giving
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>,
+      ],
+      "id": null,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <div
+            className="header"
+          >
+            <MetaRow
+              className="header-row"
+            >
+              <div
+                className="wordmark-container"
+              >
+                <a
+                  className="csun-logo"
+                  href="http://www.csun.edu"
+                >
+                  <span
+                    className="sr-only"
+                  >
+                    California State University, Northridge (CSUN)
+                  </span>
+                </a>
+                <a
+                  className="wordmark secondary-wordmark"
+                  href="/it"
+                >
+                  <span
+                    className="wordmark--offset"
+                  >
+                    Information 
+Technology
+                  </span>
+                </a>
+                <a
+                  className="wordmark tertiary-wordmark"
+                  href="https://www.csun.edu/it"
+                >
+                  <span
+                    className="wordmark--offset"
+                  >
+                    AI
+                  </span>
+                </a>
+              </div>
+              <ul
+                className="list-inline mini-nav pull-right"
+              >
+                <li>
+                  <a
+                    href="http://www.csun.edu/universaldesigncenter"
+                  >
+                    Accessibility
+                  </a>
+                </li>
+                |
+                <li>
+                  <a
+                    href="https://mynorthridge.csun.edu/psc/PANRPRD/EMPLOYEE/EMPL/c/NRPA_CSUN_APPS.NR_PEOPLESRCH_CMP.GBL"
+                  >
+                    Directory
+                  </a>
+                </li>
+                |
+                <li>
+                  <a
+                    href="http://www.csun.edu/calendar"
+                  >
+                    Calendar
+                  </a>
+                </li>
+                |
+                <li>
+                  <a
+                    href="http://www.csun.edu/atoz/"
+                  >
+                    A to Z
+                  </a>
+                </li>
+                |
+                <li>
+                  <a
+                    href="http://www.csun.edu/it/webmail"
+                  >
+                    Webmail
+                  </a>
+                </li>
+              </ul>
+              <div
+                className="nav-dropdown"
+              >
+                <button
+                  className="nav-dropdown-button "
+                  onClick={[Function]}
+                  title="Menu"
+                />
+              </div>
+            </MetaRow>
+          </div>,
+          "className": "",
+          "id": null,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <MetaRow
+              className="header-row"
+            >
+              <div
+                className="wordmark-container"
+              >
+                <a
+                  className="csun-logo"
+                  href="http://www.csun.edu"
+                >
+                  <span
+                    className="sr-only"
+                  >
+                    California State University, Northridge (CSUN)
+                  </span>
+                </a>
+                <a
+                  className="wordmark secondary-wordmark"
+                  href="/it"
+                >
+                  <span
+                    className="wordmark--offset"
+                  >
+                    Information 
+Technology
+                  </span>
+                </a>
+                <a
+                  className="wordmark tertiary-wordmark"
+                  href="https://www.csun.edu/it"
+                >
+                  <span
+                    className="wordmark--offset"
+                  >
+                    AI
+                  </span>
+                </a>
+              </div>
+              <ul
+                className="list-inline mini-nav pull-right"
+              >
+                <li>
+                  <a
+                    href="http://www.csun.edu/universaldesigncenter"
+                  >
+                    Accessibility
+                  </a>
+                </li>
+                |
+                <li>
+                  <a
+                    href="https://mynorthridge.csun.edu/psc/PANRPRD/EMPLOYEE/EMPL/c/NRPA_CSUN_APPS.NR_PEOPLESRCH_CMP.GBL"
+                  >
+                    Directory
+                  </a>
+                </li>
+                |
+                <li>
+                  <a
+                    href="http://www.csun.edu/calendar"
+                  >
+                    Calendar
+                  </a>
+                </li>
+                |
+                <li>
+                  <a
+                    href="http://www.csun.edu/atoz/"
+                  >
+                    A to Z
+                  </a>
+                </li>
+                |
+                <li>
+                  <a
+                    href="http://www.csun.edu/it/webmail"
+                  >
+                    Webmail
+                  </a>
+                </li>
+              </ul>
+              <div
+                className="nav-dropdown"
+              >
+                <button
+                  className="nav-dropdown-button "
+                  onClick={[Function]}
+                  title="Menu"
+                />
+              </div>
+            </MetaRow>,
+            "className": "header",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="wordmark-container"
+                >
+                  <a
+                    className="csun-logo"
+                    href="http://www.csun.edu"
+                  >
+                    <span
+                      className="sr-only"
+                    >
+                      California State University, Northridge (CSUN)
+                    </span>
+                  </a>
+                  <a
+                    className="wordmark secondary-wordmark"
+                    href="/it"
+                  >
+                    <span
+                      className="wordmark--offset"
+                    >
+                      Information 
+Technology
+                    </span>
+                  </a>
+                  <a
+                    className="wordmark tertiary-wordmark"
+                    href="https://www.csun.edu/it"
+                  >
+                    <span
+                      className="wordmark--offset"
+                    >
+                      AI
+                    </span>
+                  </a>
+                </div>,
+                <ul
+                  className="list-inline mini-nav pull-right"
+                >
+                  <li>
+                    <a
+                      href="http://www.csun.edu/universaldesigncenter"
+                    >
+                      Accessibility
+                    </a>
+                  </li>
+                  |
+                  <li>
+                    <a
+                      href="https://mynorthridge.csun.edu/psc/PANRPRD/EMPLOYEE/EMPL/c/NRPA_CSUN_APPS.NR_PEOPLESRCH_CMP.GBL"
+                    >
+                      Directory
+                    </a>
+                  </li>
+                  |
+                  <li>
+                    <a
+                      href="http://www.csun.edu/calendar"
+                    >
+                      Calendar
+                    </a>
+                  </li>
+                  |
+                  <li>
+                    <a
+                      href="http://www.csun.edu/atoz/"
+                    >
+                      A to Z
+                    </a>
+                  </li>
+                  |
+                  <li>
+                    <a
+                      href="http://www.csun.edu/it/webmail"
+                    >
+                      Webmail
+                    </a>
+                  </li>
+                </ul>,
+                <div
+                  className="nav-dropdown"
+                >
+                  <button
+                    className="nav-dropdown-button "
+                    onClick={[Function]}
+                    title="Menu"
+                  />
+                </div>,
+              ],
+              "className": "header-row",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <a
+                      className="csun-logo"
+                      href="http://www.csun.edu"
+                    >
+                      <span
+                        className="sr-only"
+                      >
+                        California State University, Northridge (CSUN)
+                      </span>
+                    </a>,
+                    <a
+                      className="wordmark secondary-wordmark"
+                      href="/it"
+                    >
+                      <span
+                        className="wordmark--offset"
+                      >
+                        Information 
+Technology
+                      </span>
+                    </a>,
+                    <a
+                      className="wordmark tertiary-wordmark"
+                      href="https://www.csun.edu/it"
+                    >
+                      <span
+                        className="wordmark--offset"
+                      >
+                        AI
+                      </span>
+                    </a>,
+                  ],
+                  "className": "wordmark-container",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <span
+                        className="sr-only"
+                      >
+                        California State University, Northridge (CSUN)
+                      </span>,
+                      "className": "csun-logo",
+                      "href": "http://www.csun.edu",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "California State University, Northridge (CSUN)",
+                        "className": "sr-only",
+                      },
+                      "ref": null,
+                      "rendered": "California State University, Northridge (CSUN)",
+                      "type": "span",
+                    },
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <span
+                        className="wordmark--offset"
+                      >
+                        Information 
+Technology
+                      </span>,
+                      "className": "wordmark secondary-wordmark",
+                      "href": "/it",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Information 
+Technology",
+                        "className": "wordmark--offset",
+                      },
+                      "ref": null,
+                      "rendered": "Information 
+Technology",
+                      "type": "span",
+                    },
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <span
+                        className="wordmark--offset"
+                      >
+                        AI
+                      </span>,
+                      "className": "wordmark tertiary-wordmark",
+                      "href": "https://www.csun.edu/it",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "AI",
+                        "className": "wordmark--offset",
+                      },
+                      "ref": null,
+                      "rendered": "AI",
+                      "type": "span",
+                    },
+                    "type": "a",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <li>
+                      <a
+                        href="http://www.csun.edu/universaldesigncenter"
+                      >
+                        Accessibility
+                      </a>
+                    </li>,
+                    "|",
+                    <li>
+                      <a
+                        href="https://mynorthridge.csun.edu/psc/PANRPRD/EMPLOYEE/EMPL/c/NRPA_CSUN_APPS.NR_PEOPLESRCH_CMP.GBL"
+                      >
+                        Directory
+                      </a>
+                    </li>,
+                    "|",
+                    <li>
+                      <a
+                        href="http://www.csun.edu/calendar"
+                      >
+                        Calendar
+                      </a>
+                    </li>,
+                    "|",
+                    <li>
+                      <a
+                        href="http://www.csun.edu/atoz/"
+                      >
+                        A to Z
+                      </a>
+                    </li>,
+                    "|",
+                    <li>
+                      <a
+                        href="http://www.csun.edu/it/webmail"
+                      >
+                        Webmail
+                      </a>
+                    </li>,
+                  ],
+                  "className": "list-inline mini-nav pull-right",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="http://www.csun.edu/universaldesigncenter"
+                      >
+                        Accessibility
+                      </a>,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Accessibility",
+                        "href": "http://www.csun.edu/universaldesigncenter",
+                      },
+                      "ref": null,
+                      "rendered": "Accessibility",
+                      "type": "a",
+                    },
+                    "type": "li",
+                  },
+                  "|",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="https://mynorthridge.csun.edu/psc/PANRPRD/EMPLOYEE/EMPL/c/NRPA_CSUN_APPS.NR_PEOPLESRCH_CMP.GBL"
+                      >
+                        Directory
+                      </a>,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Directory",
+                        "href": "https://mynorthridge.csun.edu/psc/PANRPRD/EMPLOYEE/EMPL/c/NRPA_CSUN_APPS.NR_PEOPLESRCH_CMP.GBL",
+                      },
+                      "ref": null,
+                      "rendered": "Directory",
+                      "type": "a",
+                    },
+                    "type": "li",
+                  },
+                  "|",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="http://www.csun.edu/calendar"
+                      >
+                        Calendar
+                      </a>,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Calendar",
+                        "href": "http://www.csun.edu/calendar",
+                      },
+                      "ref": null,
+                      "rendered": "Calendar",
+                      "type": "a",
+                    },
+                    "type": "li",
+                  },
+                  "|",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="http://www.csun.edu/atoz/"
+                      >
+                        A to Z
+                      </a>,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "A to Z",
+                        "href": "http://www.csun.edu/atoz/",
+                      },
+                      "ref": null,
+                      "rendered": "A to Z",
+                      "type": "a",
+                    },
+                    "type": "li",
+                  },
+                  "|",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="http://www.csun.edu/it/webmail"
+                      >
+                        Webmail
+                      </a>,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Webmail",
+                        "href": "http://www.csun.edu/it/webmail",
+                      },
+                      "ref": null,
+                      "rendered": "Webmail",
+                      "type": "a",
+                    },
+                    "type": "li",
+                  },
+                ],
+                "type": "ul",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <button
+                    className="nav-dropdown-button "
+                    onClick={[Function]}
+                    title="Menu"
+                  />,
+                  "className": "nav-dropdown",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "nav-dropdown-button ",
+                    "onClick": [Function],
+                    "title": "Menu",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "button",
+                },
+                "type": "div",
+              },
+            ],
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="web-nav-mobile "
+            >
+              <ul
+                className="mobile-menu"
+              >
+                <li>
+                  <a
+                    href="https://www.csun.edu/it/about"
+                  >
+                    About IT
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="it"
+                  >
+                    IT
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="giving"
+                  >
+                    Giving
+                  </a>
+                </li>
+              </ul>
+            </div>,
+            <div
+              className="navbar-link-wrapper"
+            >
+              <ul
+                className="web-nav navbar-nav navbar-center"
+              >
+                <li>
+                  <a
+                    href="https://www.csun.edu/it/about"
+                  >
+                    About IT
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="it"
+                  >
+                    IT
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="giving"
+                  >
+                    Giving
+                  </a>
+                </li>
+              </ul>
+            </div>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <ul
+                className="mobile-menu"
+              >
+                <li>
+                  <a
+                    href="https://www.csun.edu/it/about"
+                  >
+                    About IT
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="it"
+                  >
+                    IT
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="giving"
+                  >
+                    Giving
+                  </a>
+                </li>
+              </ul>,
+              "className": "web-nav-mobile ",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li>
+                    <a
+                      href="https://www.csun.edu/it/about"
+                    >
+                      About IT
+                    </a>
+                  </li>,
+                  <li>
+                    <a
+                      href="it"
+                    >
+                      IT
+                    </a>
+                  </li>,
+                  <li>
+                    <a
+                      href="giving"
+                    >
+                      Giving
+                    </a>
+                  </li>,
+                ],
+                "className": "mobile-menu",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "0",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <a
+                      href="https://www.csun.edu/it/about"
+                    >
+                      About IT
+                    </a>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "About IT",
+                      "href": "https://www.csun.edu/it/about",
+                    },
+                    "ref": null,
+                    "rendered": "About IT",
+                    "type": "a",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": "0",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <a
+                      href="it"
+                    >
+                      IT
+                    </a>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "IT",
+                      "href": "it",
+                    },
+                    "ref": null,
+                    "rendered": "IT",
+                    "type": "a",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": "0",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <a
+                      href="giving"
+                    >
+                      Giving
+                    </a>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Giving",
+                      "href": "giving",
+                    },
+                    "ref": null,
+                    "rendered": "Giving",
+                    "type": "a",
+                  },
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <ul
+                className="web-nav navbar-nav navbar-center"
+              >
+                <li>
+                  <a
+                    href="https://www.csun.edu/it/about"
+                  >
+                    About IT
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="it"
+                  >
+                    IT
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="giving"
+                  >
+                    Giving
+                  </a>
+                </li>
+              </ul>,
+              "className": "navbar-link-wrapper",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li>
+                    <a
+                      href="https://www.csun.edu/it/about"
+                    >
+                      About IT
+                    </a>
+                  </li>,
+                  <li>
+                    <a
+                      href="it"
+                    >
+                      IT
+                    </a>
+                  </li>,
+                  <li>
+                    <a
+                      href="giving"
+                    >
+                      Giving
+                    </a>
+                  </li>,
+                ],
+                "className": "web-nav navbar-nav navbar-center",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "0",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <a
+                      href="https://www.csun.edu/it/about"
+                    >
+                      About IT
+                    </a>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "About IT",
+                      "href": "https://www.csun.edu/it/about",
+                    },
+                    "ref": null,
+                    "rendered": "About IT",
+                    "type": "a",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": "0",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <a
+                      href="it"
+                    >
+                      IT
+                    </a>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "IT",
+                      "href": "it",
+                    },
+                    "ref": null,
+                    "rendered": "IT",
+                    "type": "a",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": "0",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <a
+                      href="giving"
+                    >
+                      Giving
+                    </a>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Giving",
+                      "href": "giving",
+                    },
+                    "ref": null,
+                    "rendered": "Giving",
+                    "type": "a",
+                  },
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <MetaContainer
+            className=""
+            id={null}
+          >
+            <div
+              className="header"
+            >
+              <MetaRow
+                className="header-row"
+              >
+                <div
+                  className="wordmark-container"
+                >
+                  <a
+                    className="csun-logo"
+                    href="http://www.csun.edu"
+                  >
+                    <span
+                      className="sr-only"
+                    >
+                      California State University, Northridge (CSUN)
+                    </span>
+                  </a>
+                  <a
+                    className="wordmark secondary-wordmark"
+                    href="/it"
+                  >
+                    <span
+                      className="wordmark--offset"
+                    >
+                      Information 
+Technology
+                    </span>
+                  </a>
+                  <a
+                    className="wordmark tertiary-wordmark"
+                    href="https://www.csun.edu/it"
+                  >
+                    <span
+                      className="wordmark--offset"
+                    >
+                      AI
+                    </span>
+                  </a>
+                </div>
+                <ul
+                  className="list-inline mini-nav pull-right"
+                >
+                  <li>
+                    <a
+                      href="http://www.csun.edu/universaldesigncenter"
+                    >
+                      Accessibility
+                    </a>
+                  </li>
+                  |
+                  <li>
+                    <a
+                      href="https://mynorthridge.csun.edu/psc/PANRPRD/EMPLOYEE/EMPL/c/NRPA_CSUN_APPS.NR_PEOPLESRCH_CMP.GBL"
+                    >
+                      Directory
+                    </a>
+                  </li>
+                  |
+                  <li>
+                    <a
+                      href="http://www.csun.edu/calendar"
+                    >
+                      Calendar
+                    </a>
+                  </li>
+                  |
+                  <li>
+                    <a
+                      href="http://www.csun.edu/atoz/"
+                    >
+                      A to Z
+                    </a>
+                  </li>
+                  |
+                  <li>
+                    <a
+                      href="http://www.csun.edu/it/webmail"
+                    >
+                      Webmail
+                    </a>
+                  </li>
+                </ul>
+                <div
+                  className="nav-dropdown"
+                >
+                  <button
+                    className="nav-dropdown-button "
+                    onClick={[Function]}
+                    title="Menu"
+                  />
+                </div>
+              </MetaRow>
+            </div>
+          </MetaContainer>,
+          <div>
+            <div
+              className="web-nav-mobile "
+            >
+              <ul
+                className="mobile-menu"
+              >
+                <li>
+                  <a
+                    href="https://www.csun.edu/it/about"
+                  >
+                    About IT
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="it"
+                  >
+                    IT
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="giving"
+                  >
+                    Giving
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              className="navbar-link-wrapper"
+            >
+              <ul
+                className="web-nav navbar-nav navbar-center"
+              >
+                <li>
+                  <a
+                    href="https://www.csun.edu/it/about"
+                  >
+                    About IT
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="it"
+                  >
+                    IT
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="giving"
+                  >
+                    Giving
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>,
+        ],
+        "id": null,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <div
+              className="header"
+            >
+              <MetaRow
+                className="header-row"
+              >
+                <div
+                  className="wordmark-container"
+                >
+                  <a
+                    className="csun-logo"
+                    href="http://www.csun.edu"
+                  >
+                    <span
+                      className="sr-only"
+                    >
+                      California State University, Northridge (CSUN)
+                    </span>
+                  </a>
+                  <a
+                    className="wordmark secondary-wordmark"
+                    href="/it"
+                  >
+                    <span
+                      className="wordmark--offset"
+                    >
+                      Information 
+Technology
+                    </span>
+                  </a>
+                  <a
+                    className="wordmark tertiary-wordmark"
+                    href="https://www.csun.edu/it"
+                  >
+                    <span
+                      className="wordmark--offset"
+                    >
+                      AI
+                    </span>
+                  </a>
+                </div>
+                <ul
+                  className="list-inline mini-nav pull-right"
+                >
+                  <li>
+                    <a
+                      href="http://www.csun.edu/universaldesigncenter"
+                    >
+                      Accessibility
+                    </a>
+                  </li>
+                  |
+                  <li>
+                    <a
+                      href="https://mynorthridge.csun.edu/psc/PANRPRD/EMPLOYEE/EMPL/c/NRPA_CSUN_APPS.NR_PEOPLESRCH_CMP.GBL"
+                    >
+                      Directory
+                    </a>
+                  </li>
+                  |
+                  <li>
+                    <a
+                      href="http://www.csun.edu/calendar"
+                    >
+                      Calendar
+                    </a>
+                  </li>
+                  |
+                  <li>
+                    <a
+                      href="http://www.csun.edu/atoz/"
+                    >
+                      A to Z
+                    </a>
+                  </li>
+                  |
+                  <li>
+                    <a
+                      href="http://www.csun.edu/it/webmail"
+                    >
+                      Webmail
+                    </a>
+                  </li>
+                </ul>
+                <div
+                  className="nav-dropdown"
+                >
+                  <button
+                    className="nav-dropdown-button "
+                    onClick={[Function]}
+                    title="Menu"
+                  />
+                </div>
+              </MetaRow>
+            </div>,
+            "className": "",
+            "id": null,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <MetaRow
+                className="header-row"
+              >
+                <div
+                  className="wordmark-container"
+                >
+                  <a
+                    className="csun-logo"
+                    href="http://www.csun.edu"
+                  >
+                    <span
+                      className="sr-only"
+                    >
+                      California State University, Northridge (CSUN)
+                    </span>
+                  </a>
+                  <a
+                    className="wordmark secondary-wordmark"
+                    href="/it"
+                  >
+                    <span
+                      className="wordmark--offset"
+                    >
+                      Information 
+Technology
+                    </span>
+                  </a>
+                  <a
+                    className="wordmark tertiary-wordmark"
+                    href="https://www.csun.edu/it"
+                  >
+                    <span
+                      className="wordmark--offset"
+                    >
+                      AI
+                    </span>
+                  </a>
+                </div>
+                <ul
+                  className="list-inline mini-nav pull-right"
+                >
+                  <li>
+                    <a
+                      href="http://www.csun.edu/universaldesigncenter"
+                    >
+                      Accessibility
+                    </a>
+                  </li>
+                  |
+                  <li>
+                    <a
+                      href="https://mynorthridge.csun.edu/psc/PANRPRD/EMPLOYEE/EMPL/c/NRPA_CSUN_APPS.NR_PEOPLESRCH_CMP.GBL"
+                    >
+                      Directory
+                    </a>
+                  </li>
+                  |
+                  <li>
+                    <a
+                      href="http://www.csun.edu/calendar"
+                    >
+                      Calendar
+                    </a>
+                  </li>
+                  |
+                  <li>
+                    <a
+                      href="http://www.csun.edu/atoz/"
+                    >
+                      A to Z
+                    </a>
+                  </li>
+                  |
+                  <li>
+                    <a
+                      href="http://www.csun.edu/it/webmail"
+                    >
+                      Webmail
+                    </a>
+                  </li>
+                </ul>
+                <div
+                  className="nav-dropdown"
+                >
+                  <button
+                    className="nav-dropdown-button "
+                    onClick={[Function]}
+                    title="Menu"
+                  />
+                </div>
+              </MetaRow>,
+              "className": "header",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="wordmark-container"
+                  >
+                    <a
+                      className="csun-logo"
+                      href="http://www.csun.edu"
+                    >
+                      <span
+                        className="sr-only"
+                      >
+                        California State University, Northridge (CSUN)
+                      </span>
+                    </a>
+                    <a
+                      className="wordmark secondary-wordmark"
+                      href="/it"
+                    >
+                      <span
+                        className="wordmark--offset"
+                      >
+                        Information 
+Technology
+                      </span>
+                    </a>
+                    <a
+                      className="wordmark tertiary-wordmark"
+                      href="https://www.csun.edu/it"
+                    >
+                      <span
+                        className="wordmark--offset"
+                      >
+                        AI
+                      </span>
+                    </a>
+                  </div>,
+                  <ul
+                    className="list-inline mini-nav pull-right"
+                  >
+                    <li>
+                      <a
+                        href="http://www.csun.edu/universaldesigncenter"
+                      >
+                        Accessibility
+                      </a>
+                    </li>
+                    |
+                    <li>
+                      <a
+                        href="https://mynorthridge.csun.edu/psc/PANRPRD/EMPLOYEE/EMPL/c/NRPA_CSUN_APPS.NR_PEOPLESRCH_CMP.GBL"
+                      >
+                        Directory
+                      </a>
+                    </li>
+                    |
+                    <li>
+                      <a
+                        href="http://www.csun.edu/calendar"
+                      >
+                        Calendar
+                      </a>
+                    </li>
+                    |
+                    <li>
+                      <a
+                        href="http://www.csun.edu/atoz/"
+                      >
+                        A to Z
+                      </a>
+                    </li>
+                    |
+                    <li>
+                      <a
+                        href="http://www.csun.edu/it/webmail"
+                      >
+                        Webmail
+                      </a>
+                    </li>
+                  </ul>,
+                  <div
+                    className="nav-dropdown"
+                  >
+                    <button
+                      className="nav-dropdown-button "
+                      onClick={[Function]}
+                      title="Menu"
+                    />
+                  </div>,
+                ],
+                "className": "header-row",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <a
+                        className="csun-logo"
+                        href="http://www.csun.edu"
+                      >
+                        <span
+                          className="sr-only"
+                        >
+                          California State University, Northridge (CSUN)
+                        </span>
+                      </a>,
+                      <a
+                        className="wordmark secondary-wordmark"
+                        href="/it"
+                      >
+                        <span
+                          className="wordmark--offset"
+                        >
+                          Information 
+Technology
+                        </span>
+                      </a>,
+                      <a
+                        className="wordmark tertiary-wordmark"
+                        href="https://www.csun.edu/it"
+                      >
+                        <span
+                          className="wordmark--offset"
+                        >
+                          AI
+                        </span>
+                      </a>,
+                    ],
+                    "className": "wordmark-container",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <span
+                          className="sr-only"
+                        >
+                          California State University, Northridge (CSUN)
+                        </span>,
+                        "className": "csun-logo",
+                        "href": "http://www.csun.edu",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "California State University, Northridge (CSUN)",
+                          "className": "sr-only",
+                        },
+                        "ref": null,
+                        "rendered": "California State University, Northridge (CSUN)",
+                        "type": "span",
+                      },
+                      "type": "a",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <span
+                          className="wordmark--offset"
+                        >
+                          Information 
+Technology
+                        </span>,
+                        "className": "wordmark secondary-wordmark",
+                        "href": "/it",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Information 
+Technology",
+                          "className": "wordmark--offset",
+                        },
+                        "ref": null,
+                        "rendered": "Information 
+Technology",
+                        "type": "span",
+                      },
+                      "type": "a",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <span
+                          className="wordmark--offset"
+                        >
+                          AI
+                        </span>,
+                        "className": "wordmark tertiary-wordmark",
+                        "href": "https://www.csun.edu/it",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "AI",
+                          "className": "wordmark--offset",
+                        },
+                        "ref": null,
+                        "rendered": "AI",
+                        "type": "span",
+                      },
+                      "type": "a",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <li>
+                        <a
+                          href="http://www.csun.edu/universaldesigncenter"
+                        >
+                          Accessibility
+                        </a>
+                      </li>,
+                      "|",
+                      <li>
+                        <a
+                          href="https://mynorthridge.csun.edu/psc/PANRPRD/EMPLOYEE/EMPL/c/NRPA_CSUN_APPS.NR_PEOPLESRCH_CMP.GBL"
+                        >
+                          Directory
+                        </a>
+                      </li>,
+                      "|",
+                      <li>
+                        <a
+                          href="http://www.csun.edu/calendar"
+                        >
+                          Calendar
+                        </a>
+                      </li>,
+                      "|",
+                      <li>
+                        <a
+                          href="http://www.csun.edu/atoz/"
+                        >
+                          A to Z
+                        </a>
+                      </li>,
+                      "|",
+                      <li>
+                        <a
+                          href="http://www.csun.edu/it/webmail"
+                        >
+                          Webmail
+                        </a>
+                      </li>,
+                    ],
+                    "className": "list-inline mini-nav pull-right",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          href="http://www.csun.edu/universaldesigncenter"
+                        >
+                          Accessibility
+                        </a>,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Accessibility",
+                          "href": "http://www.csun.edu/universaldesigncenter",
+                        },
+                        "ref": null,
+                        "rendered": "Accessibility",
+                        "type": "a",
+                      },
+                      "type": "li",
+                    },
+                    "|",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          href="https://mynorthridge.csun.edu/psc/PANRPRD/EMPLOYEE/EMPL/c/NRPA_CSUN_APPS.NR_PEOPLESRCH_CMP.GBL"
+                        >
+                          Directory
+                        </a>,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Directory",
+                          "href": "https://mynorthridge.csun.edu/psc/PANRPRD/EMPLOYEE/EMPL/c/NRPA_CSUN_APPS.NR_PEOPLESRCH_CMP.GBL",
+                        },
+                        "ref": null,
+                        "rendered": "Directory",
+                        "type": "a",
+                      },
+                      "type": "li",
+                    },
+                    "|",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          href="http://www.csun.edu/calendar"
+                        >
+                          Calendar
+                        </a>,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Calendar",
+                          "href": "http://www.csun.edu/calendar",
+                        },
+                        "ref": null,
+                        "rendered": "Calendar",
+                        "type": "a",
+                      },
+                      "type": "li",
+                    },
+                    "|",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          href="http://www.csun.edu/atoz/"
+                        >
+                          A to Z
+                        </a>,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "A to Z",
+                          "href": "http://www.csun.edu/atoz/",
+                        },
+                        "ref": null,
+                        "rendered": "A to Z",
+                        "type": "a",
+                      },
+                      "type": "li",
+                    },
+                    "|",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          href="http://www.csun.edu/it/webmail"
+                        >
+                          Webmail
+                        </a>,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Webmail",
+                          "href": "http://www.csun.edu/it/webmail",
+                        },
+                        "ref": null,
+                        "rendered": "Webmail",
+                        "type": "a",
+                      },
+                      "type": "li",
+                    },
+                  ],
+                  "type": "ul",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <button
+                      className="nav-dropdown-button "
+                      onClick={[Function]}
+                      title="Menu"
+                    />,
+                    "className": "nav-dropdown",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "nav-dropdown-button ",
+                      "onClick": [Function],
+                      "title": "Menu",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "button",
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": [Function],
+            },
+            "type": "div",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="web-nav-mobile "
+              >
+                <ul
+                  className="mobile-menu"
+                >
+                  <li>
+                    <a
+                      href="https://www.csun.edu/it/about"
+                    >
+                      About IT
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="it"
+                    >
+                      IT
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="giving"
+                    >
+                      Giving
+                    </a>
+                  </li>
+                </ul>
+              </div>,
+              <div
+                className="navbar-link-wrapper"
+              >
+                <ul
+                  className="web-nav navbar-nav navbar-center"
+                >
+                  <li>
+                    <a
+                      href="https://www.csun.edu/it/about"
+                    >
+                      About IT
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="it"
+                    >
+                      IT
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="giving"
+                    >
+                      Giving
+                    </a>
+                  </li>
+                </ul>
+              </div>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <ul
+                  className="mobile-menu"
+                >
+                  <li>
+                    <a
+                      href="https://www.csun.edu/it/about"
+                    >
+                      About IT
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="it"
+                    >
+                      IT
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="giving"
+                    >
+                      Giving
+                    </a>
+                  </li>
+                </ul>,
+                "className": "web-nav-mobile ",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <li>
+                      <a
+                        href="https://www.csun.edu/it/about"
+                      >
+                        About IT
+                      </a>
+                    </li>,
+                    <li>
+                      <a
+                        href="it"
+                      >
+                        IT
+                      </a>
+                    </li>,
+                    <li>
+                      <a
+                        href="giving"
+                      >
+                        Giving
+                      </a>
+                    </li>,
+                  ],
+                  "className": "mobile-menu",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": "0",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="https://www.csun.edu/it/about"
+                      >
+                        About IT
+                      </a>,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "About IT",
+                        "href": "https://www.csun.edu/it/about",
+                      },
+                      "ref": null,
+                      "rendered": "About IT",
+                      "type": "a",
+                    },
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "0",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="it"
+                      >
+                        IT
+                      </a>,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "IT",
+                        "href": "it",
+                      },
+                      "ref": null,
+                      "rendered": "IT",
+                      "type": "a",
+                    },
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "0",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="giving"
+                      >
+                        Giving
+                      </a>,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Giving",
+                        "href": "giving",
+                      },
+                      "ref": null,
+                      "rendered": "Giving",
+                      "type": "a",
+                    },
+                    "type": "li",
+                  },
+                ],
+                "type": "ul",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <ul
+                  className="web-nav navbar-nav navbar-center"
+                >
+                  <li>
+                    <a
+                      href="https://www.csun.edu/it/about"
+                    >
+                      About IT
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="it"
+                    >
+                      IT
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="giving"
+                    >
+                      Giving
+                    </a>
+                  </li>
+                </ul>,
+                "className": "navbar-link-wrapper",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <li>
+                      <a
+                        href="https://www.csun.edu/it/about"
+                      >
+                        About IT
+                      </a>
+                    </li>,
+                    <li>
+                      <a
+                        href="it"
+                      >
+                        IT
+                      </a>
+                    </li>,
+                    <li>
+                      <a
+                        href="giving"
+                      >
+                        Giving
+                      </a>
+                    </li>,
+                  ],
+                  "className": "web-nav navbar-nav navbar-center",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": "0",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="https://www.csun.edu/it/about"
+                      >
+                        About IT
+                      </a>,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "About IT",
+                        "href": "https://www.csun.edu/it/about",
+                      },
+                      "ref": null,
+                      "rendered": "About IT",
+                      "type": "a",
+                    },
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "0",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="it"
+                      >
+                        IT
+                      </a>,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "IT",
+                        "href": "it",
+                      },
+                      "ref": null,
+                      "rendered": "IT",
+                      "type": "a",
+                    },
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "0",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="giving"
+                      >
+                        Giving
+                      </a>,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Giving",
+                        "href": "giving",
+                      },
+                      "ref": null,
+                      "rendered": "Giving",
+                      "type": "a",
+                    },
+                    "type": "li",
+                  },
+                ],
+                "type": "ul",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;

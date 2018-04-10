@@ -106,6 +106,28 @@ $primary-mobile-menu-text-color: #fff;
   }
 }
 
+.btn-default > .nav__item, .btn-default > .nav__item:hover {
+  border-left: 0px;
+}
+
+.btn-default > .nav__item > .nav__link, .btn-default > .nav__item > .nav__link:hover {
+  margin-left: 0px;
+}
+
+.mainContainer {
+  margin-top: 15px;
+}
+
+.centerRow {
+  display: flex;
+    justify-content: center;
+}
+
+.intro {
+  font-size: 1.5rem;
+  width: 600px;
+}
+
 .navbar-link-wrapper {
   background-color: $csun-red;
   display: block;
