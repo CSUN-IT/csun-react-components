@@ -22,6 +22,8 @@ import MetaTableRow from './components/meta/TableRow';
 import MetaTableHead from './components/meta/TableHead';
 import MetaTableHeaderCell from './components/meta/TableHeaderCell';
 import MetaTableBody from './components/meta/TableBody';
+import WebCardList from './components/web/CardList';
+import WebCard from './components/web/Card';
 import MetaButtonLink from './components/meta/ButtonLink';
 
 export {
@@ -49,5 +51,7 @@ export {
   MetaTableBody,
   WebHeader,
   WebSidebar,
+  WebCardList,
+  WebCard,
   MetaButtonLink,
 };
