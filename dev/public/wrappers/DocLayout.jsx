@@ -18,6 +18,7 @@ import {
   DocChatBubble,
   DocWebHeader,
   DocWebSidebar,
+  DocWebSlider,
   DocTables,
   DocButtonLink,
 } from '../pages';
@@ -132,6 +133,11 @@ const DocLayout = (props) => {
       to: `${match.url}/websidebar`,
       active: false,
     },
+    {
+      title: 'Web Slider',
+      to: `${match.url}/webslider`,
+      active: false,
+    },
   ];
 
   return (
@@ -161,6 +167,7 @@ const DocLayout = (props) => {
               <Route path={`${match.url}/chatBubbles`} component={DocChatBubble} />
               <Route path={`${match.url}/webheader`} component={DocWebHeader} />
               <Route path={`${match.url}/websidebar`} component={DocWebSidebar} />
+              <Route path={`${match.url}/webslider`} component={DocWebSlider} />
             </MetaColumn>
           </MetaRow>
         </MetaContainer>

@@ -13,6 +13,7 @@ import DocAccordion from './accordion';
 import DocChatBubble from './chatBubble';
 import DocWebHeader from './webHeader';
 import DocWebSidebar from './webSidebar';
+import DocWebSlider from './webSlider';
 import DocTables from './tables';
 import DocMain from './main';
 import DocButtonLink from './buttonLink';
@@ -36,4 +37,5 @@ export {
   DocTables,
   DocMain,
   DocButtonLink,
+  DocWebSlider,
 };
