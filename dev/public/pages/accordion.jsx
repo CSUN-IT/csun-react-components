@@ -38,14 +38,6 @@ const bodyItems = [
 <MetaAccordion bodyItems={bodyItems} />
     `;
 
-  const propTypesTitle = '// Prop Types';
-  const propTypes = `
-  className: PropTypes.string,
-  bodyItems: PropTypes.arrayOf(PropTypes.shape({
-    heading: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-  })).isRequired,`;
-
   return (
     <MetaContainer>
       <MetaRow>
@@ -54,13 +46,7 @@ const bodyItems = [
           <br />
           <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
           <strong>Prop Types</strong>
           <MetaTable

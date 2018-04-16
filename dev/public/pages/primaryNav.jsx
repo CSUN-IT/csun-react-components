@@ -38,20 +38,6 @@ const DocPrimaryNav = () => {
     <MetaPrimaryNav menuitems={menuItems} navColor={'cream'}
     `;
 
-  const propTypesTitle = '// Prop Types';
-  const propTypes = `
-  menuItems: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    to: PropTypes.string.isRequired,
-    exact: PropTypes.bool,
-  }),
-  ),
-  navColor: PropTypes.string,
-  subBrand: PropTypes.shape({
-    to: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-  }),`;
-
   return (
     <MetaContainer>
       <MetaRow>
@@ -65,13 +51,7 @@ const DocPrimaryNav = () => {
           <br />
           <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
           <strong>Prop Types</strong>
           <MetaTable

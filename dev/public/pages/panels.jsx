@@ -5,23 +5,6 @@ const DocPanels = () => {
   const code = `import MetaPanel from 'csun-react-components';\n\n<MetaPanel panelHeader={{ text: 'Panel'}} panelContent={{ text: 'This is a panel w/a header' }}/>
     `;
 
-  const propTypesTitle = '// Panel Prop Types';
-  const propTypes = `
-  className: PropTypes.string,
-  panelHeader: PropTypes.shape({
-    text: PropTypes.string.isRequired,
-  }),
-  panelImage: PropTypes.shape({
-    imageURL: PropTypes.string.isRequired,
-  }),
-  panelContent: PropTypes.shape({
-    text: PropTypes.string.isRequired,
-  }).isRequired,
-  panelFooter: PropTypes.shape({
-    strongText: PropTypes.string,
-    text: PropTypes.string.isRequired,
-  }),`;
-
   return (
     <MetaContainer>
       <MetaRow>
@@ -31,10 +14,6 @@ const DocPanels = () => {
           <strong>Example Code</strong>
           <pre>
             <code>{code}</code>
-            <div>
-              <strong>{propTypesTitle}</strong>
-              {propTypes}
-            </div>
           </pre>
         </MetaColumn>
       </MetaRow>

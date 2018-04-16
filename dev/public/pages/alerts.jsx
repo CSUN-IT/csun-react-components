@@ -7,20 +7,6 @@ const DocAlerts = () => {
 <MetaAlert color={'info'} strongText={'Pro Tip'} text={'Color is info'} onClick={ () => { console.log('hello world'); }}/>
     `;
 
-  const propTypesTitle = '// Prop Types';
-  const propTypes = `
-  color: PropTypes.oneOf([
-    'info',
-    'success',
-    'warning',
-    'danger',
-  ]),
-  className: PropTypes.string,
-  strongText: PropTypes.string,
-  text: PropTypes.string.isRequired,
-  to: PropTypes.string,
-  onClick: PropTypes.func,`;
-
   return (
     <MetaContainer>
       <MetaRow>
@@ -45,13 +31,7 @@ const DocAlerts = () => {
           <br />
           <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
           <strong>Prop Types</strong>
           <MetaTable

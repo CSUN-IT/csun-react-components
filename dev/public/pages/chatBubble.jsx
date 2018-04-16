@@ -8,15 +8,6 @@ const DocChatBubble = () => {
 <MetaChatBubble text="Hey I'm Matty!" subText="This will be small" receiver />
 <MetaChatBubble text="Hey I'm sending you this" subText="This will be small too." receiver={false} />`;
 
-  const propTypesTitle = `// Prop Types
-      MetaChatBubble.propTypes = {
-        className: PropTypes.string,
-        text: PropTypes.string.isRequired,
-        subText: PropTypes.string,
-        receiver: PropTypes.bool.isRequired,
-      };`;
-  const propTypes = '';
-
   return (
     <MetaContainer>
       <MetaRow>
@@ -37,13 +28,7 @@ const DocChatBubble = () => {
           <br />
           <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
           <strong>Prop Types</strong>
           <MetaTable

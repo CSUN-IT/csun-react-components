@@ -7,19 +7,6 @@ const DocTags = () => {
 <MetaTag text={'Warning'} action={'close'} to={'#'} color={'warning'} />
     `;
 
-  const propTypesTitle = '// Prop Types';
-  const propTypes = `
-  className: PropTypes.string,
-  text: PropTypes.string,
-  color: PropTypes.oneOf([
-    'success',
-    'warning',
-    'danger',
-    '',
-  ]),
-  action: PropTypes.oneOf(['close', '']),
-  to: PropTypes.string.isRequired,`;
-
   return (
     <MetaContainer>
       <MetaRow>
@@ -44,13 +31,7 @@ const DocTags = () => {
           <br />
           <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
           <strong>Prop Types</strong>
           <MetaTable

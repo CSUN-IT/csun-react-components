@@ -69,37 +69,6 @@ const DocForms = () => {
 </MetaFormGroup>
     `;
 
-  const propTypesTitle = '// Prop Types For MetaFormField';
-  const propTypes = `
-  field: PropTypes.shape({
-    inputType: PropTypes.oneOf(['input', 'textarea', 'select', 'datepicker']).isRequired,
-    //selectOptions only needs to be called when using inputType 'select'
-    selectOptions: PropTypes.arrayOf(
-      PropTypes.shape({
-        value: PropTypes.string.isRequired,
-        text: PropTypes.string.isRequired,
-      }),
-    ),
-    id: PropTypes.string.isRequired,
-    labelText: PropTypes.string,
-    type: PropTypes.string,
-    placeholder: PropTypes.string,
-    autoComplete: PropTypes.string,
-    labelTextVisible: PropTypes.bool.isRequired,
-  }),
-  className: PropTypes.string,
-  value: PropTypes.string.isRequired,
-  changeFunction: PropTypes.func,
-  
-  `;
-
-  const propTypesTitleTwo = '// Prop Types For MetaFormGroup';
-  const propTypesTwo = `
-  className: PropTypes.string,
-  children: PropTypes.node.isRequired,
-  submitFunction: PropTypes.func,
-  `;
-
   return (
     <MetaContainer>
       <MetaRow>
@@ -163,15 +132,7 @@ const DocForms = () => {
           </MetaFormGroup>
           <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-                <strong>{propTypesTitleTwo}</strong>
-                {propTypesTwo}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
           <strong>MetaFormField Prop Types</strong>
           <MetaTable

@@ -37,18 +37,6 @@ const DocPrimaryNav = () => {
     <MetaBreadcrumbs breadcrumbItems={breadcrumbs} typecColor={'red'} />
     `;
 
-  const propTypesTitle = '// Prop Types';
-  const propTypes = `
-  className: PropTypes.string,
-  breadcrumbItems: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    to: PropTypes.string,
-    home: PropTypes.bool,
-    typeStyle: PropTypes.oneOf(typeStyles),
-  }),
-  ),
-  typeColor: PropTypes.oneOf(typeColors),`;
-
   return (
     <MetaContainer>
       <MetaRow>
@@ -57,13 +45,7 @@ const DocPrimaryNav = () => {
           <br />
           <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
           <strong>Prop Types</strong>
           <MetaTable

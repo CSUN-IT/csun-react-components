@@ -36,19 +36,6 @@ const listItems = [
 <MetaList listItems={listItems} modifiers={['arrows']} />
     `;
 
-  const propTypesTitle = '// Prop Types';
-  const propTypes = `
-  classNames: PropTypes.string,
-  listItems: PropTypes.arrayOf(PropTypes.shape({
-    text: PropTypes.string.isRequired,
-    to: PropTypes.string.isRequired,
-  })),
-  modifiers: PropTypes.arrayOf(PropTypes.oneOf([
-    'arrows',
-    'hover',
-    'underlined',
-  ])),`;
-
   return (
     <MetaContainer>
       <MetaRow>
@@ -69,13 +56,7 @@ const listItems = [
           <br />
           <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
           <strong>Prop Types</strong>
           <MetaTable

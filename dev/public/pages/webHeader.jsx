@@ -36,36 +36,6 @@ const DocWebHeader = () => {
     />
     `;
 
-  const propTypesTitle = '// Prop Types';
-  const propTypes = `
-  WebHeader.defaultProps = {
-    secondaryWordmark: null,
-    tertiaryWordmark: null,
-    showMobileNav: false,
-    menuItems: null,
-    id: null,
-  };
-  
-  WebHeader.propTypes = {
-    id: PropTypes.string,
-    secondaryWordmark: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      to: PropTypes.string.isRequired,
-    }),
-    tertiaryWordmark: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      to: PropTypes.string.isRequired,
-    }),
-    menuItems: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        to: PropTypes.string.isRequired,
-        exact: PropTypes.bool,
-        external: PropTypes.bool,
-      }),
-    ),
-  }`;
-
   const secondaryWordmark = {
     title: 'Information \nTechnology',
     to: '/it',
@@ -106,13 +76,7 @@ const DocWebHeader = () => {
           <br />
           <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
           <strong>Prop Types</strong>
           <MetaTable

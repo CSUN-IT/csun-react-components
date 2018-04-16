@@ -11,11 +11,6 @@ const DocWebSidebar = () => {
     <p> Example paragraph for WebSidebar component. </p>
   </WebSidebar>`;
 
-  const propTypesTitle = '// Prop Types';
-  const propTypes = `
-    children: PropTypes.node.isRequired,
- `;
-
   return (
     <MetaContainer>
       <MetaRow className={'flex'}>
@@ -43,13 +38,7 @@ const DocWebSidebar = () => {
           <br />
           <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
           <strong>Prop Types</strong>
           <MetaTable

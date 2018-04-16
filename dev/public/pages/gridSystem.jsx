@@ -15,21 +15,6 @@ const DocGrid = () => {
 </MetaContainer>
     `;
 
-  const propTypesTitle = '// Prop Type for MetaColumn';
-  const propTypes = `MetaColumn.defaultProps = {
-    children: {},
-    sizes: ['sm'],
-    values: ['12'],
-    className: '',
-  };
-  
-  MetaColumn.propTypes = {
-    className: PropTypes.string,
-    children: PropTypes.node.isRequired,
-    sizes: PropTypes.arrayOf(PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl'])),
-    values: PropTypes.arrayOf(PropTypes.oneOf(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'])),
-  };`;
-
   return (
     <MetaContainer>
       <MetaRow>
@@ -78,14 +63,7 @@ const DocGrid = () => {
           <br />
           <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                <br />
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
           <strong>Prop Types</strong>
           <MetaTable

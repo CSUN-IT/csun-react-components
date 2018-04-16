@@ -63,17 +63,6 @@ const DocSideNav = () => {
 <MetaSideNav menuItems={menuItems} />
     `;
 
-  const propTypesTitle = '// Prop Types';
-  const propTypes = `
-  className: PropTypes.string,
-  menuItems: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    to: PropTypes.string.isRequired,
-    exact: PropTypes.bool,
-    fill: PropTypes.bool,
-  }),
-  ),`;
-
   return (
     <MetaContainer>
       <MetaRow>
@@ -87,13 +76,7 @@ const DocSideNav = () => {
           <br />
           <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
           <strong>Prop Types</strong>
           <MetaTable
