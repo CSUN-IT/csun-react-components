@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaPrimaryNav } from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, MetaTable, MetaPrimaryNav } from '../../../src';
 
 const DocPrimaryNav = () => {
   const menuItems = [
@@ -38,20 +38,6 @@ const DocPrimaryNav = () => {
     <MetaPrimaryNav menuitems={menuItems} navColor={'cream'}
     `;
 
-  const propTypesTitle = '// Prop Types';
-  const propTypes = `
-  menuItems: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    to: PropTypes.string.isRequired,
-    exact: PropTypes.bool,
-  }),
-  ),
-  navColor: PropTypes.string,
-  subBrand: PropTypes.shape({
-    to: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-  }),`;
-
   return (
     <MetaContainer>
       <MetaRow>
@@ -63,15 +49,51 @@ const DocPrimaryNav = () => {
           <MetaPrimaryNav menuItems={menuItems} />
           <MetaPrimaryNav menuItems={menuItems} navColor={'black'} />
           <br />
+          <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'menuItems',
+              'Array/Shape',
+              'No',
+              'Contains additional sub prop types.',
+              'navColor',
+              'String',
+              'No',
+              '',
+              'subBrand',
+              'Shape',
+              'No',
+              'Contains additional sub prop types.',
+            ]}
+          />
+          <strong>menuItems Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'title',
+              'String',
+              'Yes',
+              '',
+              'to',
+              'String',
+              'Yes',
+              '',
+              'exact',
+              'Boolean',
+              'No',
+              '',
+            ]}
+          />
+          <strong>subBrand Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={['to', 'String', 'Yes', '', 'title', 'String', 'Yes', '']}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>

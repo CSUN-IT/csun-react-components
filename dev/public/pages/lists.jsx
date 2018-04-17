@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaList } from '../../../src';
+import { MetaContainer, MetaColumn, MetaTable, MetaRow, MetaList } from '../../../src';
 
 const DocLists = () => {
   const listItems = [
@@ -36,19 +36,6 @@ const listItems = [
 <MetaList listItems={listItems} modifiers={['arrows']} />
     `;
 
-  const propTypesTitle = '// Prop Types';
-  const propTypes = `
-  classNames: PropTypes.string,
-  listItems: PropTypes.arrayOf(PropTypes.shape({
-    text: PropTypes.string.isRequired,
-    to: PropTypes.string.isRequired,
-  })),
-  modifiers: PropTypes.arrayOf(PropTypes.oneOf([
-    'arrows',
-    'hover',
-    'underlined',
-  ])),`;
-
   return (
     <MetaContainer>
       <MetaRow>
@@ -67,15 +54,33 @@ const listItems = [
             <MetaList listItems={listItems} modifiers={['underlined']} />
           </MetaColumn>
           <br />
+          <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'className',
+              'String',
+              'No',
+              '',
+              'listItems',
+              'Array/Shape',
+              'Yes',
+              'Contains additional sub prop types.',
+              'modifiers',
+              'Array/oneOf',
+              'No',
+              'arrows, hover, underlined',
+            ]}
+          />
+          <strong>listItems Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={['text', 'String', 'Yes', '', 'to', 'String', 'Yes', '']}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>
