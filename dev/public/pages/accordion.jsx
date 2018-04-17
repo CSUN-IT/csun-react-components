@@ -42,6 +42,8 @@ const bodyItems = [
     <MetaContainer>
       <MetaRow>
         <MetaColumn sizes={['sm']} values={['9']}>
+          <h1>Accordion</h1>
+          <hr />
           <MetaAccordion bodyItems={bodyItems} />
           <br />
           <strong>Example Code</strong>

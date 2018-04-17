@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, WebCardList, WebCard, MetaButtonLink } from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, WebCard, MetaTable } from '../../../src';
 
 const buttons = [
   {
@@ -16,7 +16,16 @@ const buttons = [
   },
 ];
 
-const DocCards = (props) => {
+const importCode = 'import { WebCards } from csun-react-components\n';
+const code = `<WebCard
+  title={'Title'}
+  content={'This was a triumph. I\'m making a note here, huge success. It\'s hard to overstate my satisfaction.'}
+  img={'https://upload.wikimedia.org/wikipedia/commons/c/c7/OviattLibrary.jpg'} 
+  linkTo={'https://www.csun.edu/'}
+  buttonArray={buttons}
+/>`;
+
+const DocCards = () => {
   return (
     <MetaContainer>
       <MetaRow>
@@ -30,9 +39,49 @@ const DocCards = (props) => {
             content={'This was a triumph. I\'m making a note here, huge success. It\'s hard to overstate my satisfaction.'}
             img={'https://upload.wikimedia.org/wikipedia/commons/c/c7/OviattLibrary.jpg'} 
             linkTo={'https://www.csun.edu/'}
-            buttonArray={buttons} />
+            buttonArray={buttons}
+          />
         </MetaColumn>
       </MetaRow>
+      <br />
+      <strong>Example Code</strong>
+      <pre>
+        <code>
+          {importCode}
+          <br />
+          {code}
+        </code>
+      </pre>
+      <strong>Prop Types</strong>
+      <MetaTable
+        headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+        dataCells={[
+          'className',
+          'String',
+          'No',
+          '',
+          'title',
+          'String',
+          'Yes',
+          '',
+          'content',
+          'String',
+          'Yes',
+          '',
+          'img',
+          'String',
+          'No',
+          '',
+          'linkTo',
+          'String',
+          'No',
+          '',
+          'buttonArray',
+          'Array',
+          'No',
+          'Contains array of objects',
+        ]}
+      />
     </MetaContainer>
   );
 };

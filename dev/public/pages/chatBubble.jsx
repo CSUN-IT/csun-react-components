@@ -12,6 +12,8 @@ const DocChatBubble = () => {
     <MetaContainer>
       <MetaRow>
         <MetaColumn sizes={['sm']} values={['9']}>
+          <h1>ChatBubble</h1>
+          <hr />
           <div>
             <MetaChatBubble
               className={'test'}

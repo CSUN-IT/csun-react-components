@@ -67,6 +67,8 @@ const DocSideNav = () => {
     <MetaContainer>
       <MetaRow>
         <MetaColumn sizes={['sm']} values={['9']}>
+          <h1>Side Nav</h1>
+          <hr />
           <MetaColumn sizes={['sm']} values={['6']}>
             <MetaSideNav className={'test'} menuItems={menuItems} />
           </MetaColumn>

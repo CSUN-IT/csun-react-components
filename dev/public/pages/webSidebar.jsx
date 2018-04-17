@@ -6,13 +6,15 @@ const DocWebSidebar = () => {
     import WebSidebar from 'csun-react-components';
     
     <WebSidebar>
-    <h3> Test Header </h3>
-    <h4> Test Title </h4>
-    <p> Example paragraph for WebSidebar component. </p>
-  </WebSidebar>`;
+      <h3> Test Header </h3>
+      <h4> Test Title </h4>
+      <p> Example paragraph for WebSidebar component. </p>
+    </WebSidebar>`;
 
   return (
     <MetaContainer>
+      <h1>Web Sidebar</h1>
+      <hr />
       <MetaRow className={'flex'}>
         <MetaColumn className={'flex'} sizes={['md', 'xl']} values={['12', '3']}>
           <WebSidebar>

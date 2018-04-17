@@ -11,6 +11,8 @@ const DocAlerts = () => {
     <MetaContainer>
       <MetaRow>
         <MetaColumn sizes={['sm']} values={['9']}>
+          <h1>Alerts</h1>
+          <hr />
           <MetaAlert strongText={'Pro Tip:'} text={'No color is default and this grey'} />
           <MetaAlert
             className={'test classTest'}

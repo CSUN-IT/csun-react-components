@@ -11,6 +11,8 @@ const DocButtonLink = () => {
     <MetaContainer>
       <MetaRow>
         <MetaColumn sizes={['sm']} values={['9']}>
+          <h1>Button Links</h1>
+          <hr />
           <p>
             <MetaButtonLink text={'Home'} color={'default'} size={''} to={'/home'} />
             <MetaButtonLink text={'Breadcrumbs'} color={'primary'} size={''} to={'breadcrumbs'} />

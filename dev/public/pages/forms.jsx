@@ -73,6 +73,8 @@ const DocForms = () => {
     <MetaContainer>
       <MetaRow>
         <MetaColumn sizes={['sm']} values={['9']}>
+          <h1>Forms</h1>
+          <hr />
           <MetaFormGroup>
             <h2>Input Field</h2>
             <MetaFormField

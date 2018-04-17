@@ -20,7 +20,6 @@ import {
   DocWebSidebar,
   DocTables,
   DocCards,
-  DocCardList,
   DocButtonLink,
 } from '../pages';
 import SectionHelper from '../components/SectionHelper';
@@ -139,11 +138,6 @@ const DocLayout = (props) => {
       to: `${match.url}/webcards`,
       active: false,
     },
-    {
-      title: 'Web Cardlist',
-      to: `${match.url}/webcardlist`,
-      active: false,
-    },
   ];
 
   return (
@@ -174,7 +168,6 @@ const DocLayout = (props) => {
               <Route path={`${match.url}/webheader`} component={DocWebHeader} />
               <Route path={`${match.url}/websidebar`} component={DocWebSidebar} />
               <Route path={`${match.url}/webcards`} component={DocCards} />
-              <Route path={`${match.url}/webcardlist`} component={DocCardList} />
             </MetaColumn>
           </MetaRow>
         </MetaContainer>

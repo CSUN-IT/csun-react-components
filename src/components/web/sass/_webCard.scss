@@ -1,18 +1,4 @@
 /**
- * Card List
- */
-
-.card-list {
-    display: flex;
-        align-items: stretch;
-        justify-content: flex-start;
-    overflow-x: scroll;
-    padding-bottom: 24px;
-    width: 100%;
-}
-
-
-/**
  * Card
  */
 
@@ -22,11 +8,8 @@
     flex: 1 0 auto;
     overflow: hidden;
     width: 320px;
+    display: inline-block;
 }
-
-// .chatbot-card:not(:first-of-type) {
-//     margin-left: 24px;
-// }
 
 .card-img {
     display: block;

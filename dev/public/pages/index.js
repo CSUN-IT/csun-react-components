@@ -15,7 +15,6 @@ import DocWebHeader from './webHeader';
 import DocWebSidebar from './webSidebar';
 import DocTables from './tables';
 import DocCards from './cards';
-import DocCardList from './webCardlist';
 import DocMain from './main';
 import DocButtonLink from './buttonLink';
 
@@ -37,7 +36,6 @@ export {
   DocWebSidebar,
   DocTables,
   DocCards,
-  DocCardList,
   DocMain,
   DocButtonLink,
 };

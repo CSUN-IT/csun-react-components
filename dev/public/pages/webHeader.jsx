@@ -68,6 +68,8 @@ const DocWebHeader = () => {
     <MetaContainer>
       <MetaRow>
         <MetaColumn sizes={['sm']} values={['9']}>
+          <h1>Web Header</h1>
+          <hr />
           <WebHeader
             secondaryWordmark={secondaryWordmark}
             tertiaryWordmark={tertiaryWordmark}

@@ -11,6 +11,8 @@ const DocTags = () => {
     <MetaContainer>
       <MetaRow>
         <MetaColumn sizes={['sm']} values={['9']}>
+          <h1>Tags</h1>
+          <hr />
           <p>
             <span>Tag Cloud: </span>
             <MetaTag className={'test'} text={'When'} action={'close'} to={'#'} />
