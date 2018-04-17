@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, WebSlider, WebCard } from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, WebSlider, WebCard, MetaTable } from '../../../src';
 
 const DocWebSlider = () => {
 
@@ -84,15 +84,52 @@ const DocWebSlider = () => {
             />
           </WebSlider>
           <br />
+          <strong>Example Code</strong>
           <pre>
             <code>
               {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
             </code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'cards',
+              'Array/Shape',
+              'Yes',
+              'Contains additional sub prop types.',
+            ]}
+          />
+          <strong>Cards Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'className',
+              'String',
+              'No',
+              '',
+              'title',
+              'String',
+              'No',
+              '',
+              'content',
+              'String',
+              'No',
+              '',
+              'img',
+              'String',
+              'No',
+              '',
+              'linkTo',
+              'String',
+              'No',
+              '',
+              'buttonArray',
+              'Array',
+              'No',
+              'Contains an array of objects.',
+            ]}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>
