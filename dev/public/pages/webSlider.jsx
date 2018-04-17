@@ -1,34 +1,59 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, WebSlider } from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, WebSlider, WebCard } from '../../../src';
 
 const DocWebSlider = () => {
-  const cards = [
+
+  const buttons = [
     {
-      text: 'Slide 0',
+      title: 'Google',
+      link: 'https://www.google.com',
     },
     {
-      text: 'Slide 1',
+      title: 'Reddit',
+      link: 'https://www.reddit.com',
     },
     {
-      text: 'Slide 2',
+      title: 'CSUN',
+      link: 'https://www.csun.edu',
     },
   ];
 
   const code = `
     import WebSlider from 'csun-react-components';
     
-      const cards = [
+      const buttons = [
         {
-          text: 'Slide 0',
+          title: 'Google',
+          link: 'https://www.google.com',
         },
         {
-          text: 'Slide 1',
+          title: 'Reddit',
+          link: 'https://www.reddit.com',
         },
         {
-          text: 'Slide 2',
+          title: 'CSUN',
+          link: 'https://www.csun.edu',
         },
       ];
-      <WebSlider cards={cards} />`;
+      <WebSlider>
+        <WebCard
+          title={'Oviatt Library'}
+          content={'This was a triumph. I\'m making a note here, huge success. It\'s hard to overstate my satisfaction.'}
+          img={'https://upload.wikimedia.org/wikipedia/commons/c/c7/OviattLibrary.jpg'}
+          linkTo={'https://www.csun.edu/'}
+          buttonArray={buttons}
+        />
+        <WebCard
+          title={'Dormitories'}
+          content={'Education is not just about going to school and getting a degree. It\'s about widening your knowledge and absorbing the truth about life.'}
+          img={'http://busecon.csun.edu/sites/default/files/Building-16-cropped.jpg'}
+          linkTo={'https://www.csun.edu/'}
+          buttonArray={buttons}
+        />
+        <WebCard
+          buttonArray={buttons}
+        />
+      </WebSlider>`;
 
   const propTypesTitle = '\n// Prop Types';
   const propTypes = `
@@ -39,7 +64,25 @@ const DocWebSlider = () => {
     <MetaContainer>
       <MetaRow className={'flex'}>
         <MetaColumn sizes={['sm']} values={['9']}>
-          <WebSlider cards={cards} />
+          <WebSlider>
+            <WebCard
+              title={'Oviatt Library'}
+              content={'This was a triumph. I\'m making a note here, huge success. It\'s hard to overstate my satisfaction.'}
+              img={'https://upload.wikimedia.org/wikipedia/commons/c/c7/OviattLibrary.jpg'}
+              linkTo={'https://www.csun.edu/'}
+              buttonArray={buttons}
+            />
+            <WebCard
+              title={'Dormitories'}
+              content={'Education is not just about going to school and getting a degree. It\'s about widening your knowledge and absorbing the truth about life.'}
+              img={'http://busecon.csun.edu/sites/default/files/Building-16-cropped.jpg'}
+              linkTo={'https://www.csun.edu/'}
+              buttonArray={buttons}
+            />
+            <WebCard
+              buttonArray={buttons}
+            />
+          </WebSlider>
           <br />
           <pre>
             <code>

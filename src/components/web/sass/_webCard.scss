@@ -1,0 +1,58 @@
+/**
+ * Card List
+ */
+
+.card-list {
+    display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+    overflow-x: scroll;
+    padding-bottom: 24px;
+    width: 100%;
+}
+
+
+/**
+ * Card
+ */
+
+.chatbot-card {
+    border: 2px solid #eaeaea;
+    border-radius: 4px;
+    flex: 1 0 auto;
+    overflow: hidden;
+    width: 320px;
+}
+
+// .chatbot-card:not(:first-of-type) {
+//     margin-left: 24px;
+// }
+
+.card-img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.card-content {
+    padding: 24px;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-copy {
+    margin: 0;
+}
+
+.card-btn-wrapper {
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    width: 320px;
+
+    .btn {
+        margin: .5rem .25rem 0;
+    }
+}

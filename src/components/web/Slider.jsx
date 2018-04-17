@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { generate as shortIdGenerate } from 'shortid';
 import './sass/_webSlider.scss';
+import WebCard from './Card';
 
 class WebSlider extends Component {
-  constructor(props) {
-    super(props);
+  constructor({ children }) {
+    super();
     this.state = {
       slideCount: 0,
-      cards: props.cards,
+      cards: children,
     };
     this.previousSlide = this.previousSlide.bind(this);
     this.previousSlide = this.previousSlide.bind(this);
@@ -19,39 +20,48 @@ class WebSlider extends Component {
   }
 
   nextSlide() {
-    this.state.slideCount < this.props.cards.length - 1 ? this.setState({ slideCount: this.state.slideCount + 1 }) : null;
+    this.state.slideCount < this.state.cards.length - 1 ? this.setState({ slideCount: this.state.slideCount + 1 }) : null;
   }
 
   render() {
-
-    var index = this.props.cards.map((card, idx) => {
+    var index = this.state.cards.map((cards, idx) => {
       return (
-        <div key={shortIdGenerate()}>{this.state.slideCount === idx ? <div>{card.text}</div> : null}
+        <div key={shortIdGenerate()}>{this.state.slideCount === idx ? <WebCard
+          title={cards.props.title}
+          content={cards.props.content}
+          img={cards.props.img}
+          linkTo={cards.props.linkTo}
+          buttonArray={cards.props.buttonArray}
+        /> : null }
         </div>
       );
     });
 
     return (
       <div className="slider">
-        <div className="backArrow" onClick={() => this.previousSlide()}>
-          <i className="fa fa-arrow-left fa-2x" aria-hidden="true" />
-        </div>
-        <div className="cardContainer">
-          {index}
-        </div>
-        <div className="nextArrow" onClick={() => this.nextSlide()}>
-          <i className="fa fa-arrow-right fa-2x" aria-hidden="true" />
-        </div>
+        {this.state.slideCount > 0 ?
+          <button className="backArrow" onClick={() => this.previousSlide()}>
+            <i className="fa fa-angle-left fa-3x" aria-hidden="true" />
+          </button> : null }
+        {index}
+        {this.state.slideCount < this.state.cards.length - 1 ?
+          <button className="nextArrow" onClick={() => this.nextSlide()}>
+            <i className="fa fa-angle-right fa-3x" aria-hidden="true" />
+          </button> : null }
       </div>
     );
   }
 }
 
 WebSlider.defaultProps = {
-  className: '',
   cards: [
     {
-      text: 'Insert Text',
+      className: '',
+      title: 'Example',
+      content: 'Content',
+      img: 'image',
+      linkTo: '',
+      buttonArray: [],
     },
   ],
 };
@@ -59,7 +69,12 @@ WebSlider.defaultProps = {
 WebSlider.propTypes = {
   cards: PropTypes.arrayOf(
     PropTypes.shape({
-      text: PropTypes.string.isRequired,
+      className: PropTypes.string,
+      title: PropTypes.string,
+      content: PropTypes.string,
+      img: PropTypes.string,
+      linkTo: PropTypes.string,
+      buttonArray: PropTypes.arrayOf(PropTypes.object),
     }),
   ),
 };
