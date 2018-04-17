@@ -30,33 +30,18 @@ const DocLayout = (props) => {
 
   const sideNavMenuItems = [
     {
-      title: 'Grid System',
-      to: `${match.url}/grid`,
+      title: 'Accordion',
+      to: `${match.url}/accordion`,
       active: false,
     },
     {
-      title: 'Typography',
-      to: `${match.url}/typography`,
+      title: 'Alerts',
+      to: `${match.url}/alerts`,
       active: false,
     },
     {
       title: 'Breadcrumbs',
       to: `${match.url}/breadcrumbs`,
-      active: false,
-    },
-    {
-      title: 'Nav',
-      to: `${match.url}/nav`,
-      active: false,
-    },
-    {
-      title: 'Sub Nav',
-      to: `${match.url}/subnavigation`,
-      active: false,
-    },
-    {
-      title: 'Side Nav',
-      to: `${match.url}/sidenav`,
       active: false,
     },
     {
@@ -75,18 +60,13 @@ const DocLayout = (props) => {
       active: false,
     },
     {
-      title: 'Tags',
-      to: `${match.url}/tags`,
+      title: 'Forms',
+      to: `${match.url}/forms`,
       active: false,
     },
     {
-      title: 'Panels',
-      to: `${match.url}/panels`,
-      active: false,
-    },
-    {
-      title: 'Alerts',
-      to: `${match.url}/alerts`,
+      title: 'Grid System',
+      to: `${match.url}/grid`,
       active: false,
     },
     {
@@ -95,23 +75,13 @@ const DocLayout = (props) => {
       active: false,
     },
     {
-      title: 'Tables',
-      to: `${match.url}/tables`,
-      active: false,
-    },
-    {
-      title: 'Forms',
-      to: `${match.url}/forms`,
-      active: false,
-    },
-    {
       title: 'Modals',
       to: `${match.url}/modals`,
       active: false,
     },
     {
-      title: 'Timeline',
-      to: `${match.url}/timeline`,
+      title: 'Nav',
+      to: `${match.url}/nav`,
       active: false,
     },
     {
@@ -120,8 +90,48 @@ const DocLayout = (props) => {
       active: false,
     },
     {
-      title: 'Accordion',
-      to: `${match.url}/accordion`,
+      title: 'Panels',
+      to: `${match.url}/panels`,
+      active: false,
+    },
+    {
+      title: 'Side Nav',
+      to: `${match.url}/sidenav`,
+      active: false,
+    },
+    {
+      title: 'Sub Nav',
+      to: `${match.url}/subnavigation`,
+      active: false,
+    },
+    {
+      title: 'Tables',
+      to: `${match.url}/tables`,
+      active: false,
+    },
+    {
+      title: 'Tags',
+      to: `${match.url}/tags`,
+      active: false,
+    },
+    {
+      title: 'Timeline',
+      to: `${match.url}/timeline`,
+      active: false,
+    },
+    {
+      title: 'Typography',
+      to: `${match.url}/typography`,
+      active: false,
+    },
+    {
+      title: 'Web Cardlist',
+      to: `${match.url}/webcardlist`,
+      active: false,
+    },
+    {
+      title: 'Web Cards',
+      to: `${match.url}/webcards`,
       active: false,
     },
     {
@@ -132,16 +142,6 @@ const DocLayout = (props) => {
     {
       title: 'Web Sidebar',
       to: `${match.url}/websidebar`,
-      active: false,
-    },
-    {
-      title: 'Cards',
-      to: `${match.url}/webcards`,
-      active: false,
-    },
-    {
-      title: 'Web Cardlist',
-      to: `${match.url}/webcardlist`,
       active: false,
     },
   ];
