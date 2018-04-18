@@ -11,7 +11,7 @@ const DocButtons = () => {
     <MetaContainer>
       <MetaRow>
         <MetaColumn sizes={['sm']} values={['9']}>
-          <h1>Buttons</h1>
+          <h1>Button</h1>
           <hr />
           <p>
             <MetaButton text={'Button'} color={'default'} size={''} />
