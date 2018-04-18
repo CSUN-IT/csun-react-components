@@ -45,8 +45,8 @@ const DocLayout = (props) => {
       active: false,
     },
     {
-      title: 'Buttons',
-      to: `${match.url}/buttons`,
+      title: 'Button',
+      to: `${match.url}/button`,
       active: false,
     },
     {
@@ -159,7 +159,7 @@ const DocLayout = (props) => {
               <Route path={`${match.url}/nav`} component={DocPrimaryNav} />
               <Route path={`${match.url}/breadcrumbs`} component={DocBreadcrumbs} />
               <Route path={`${match.url}/alerts`} component={DocAlerts} />
-              <Route path={`${match.url}/buttons`} component={DocButtons} />
+              <Route path={`${match.url}/button`} component={DocButtons} />
               <Route path={`${match.url}/buttonLink`} component={DocButtonLink} />
               <Route path={`${match.url}/lists`} component={DocLists} />
               <Route path={`${match.url}/panels`} component={DocPanels} />
