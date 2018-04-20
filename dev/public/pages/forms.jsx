@@ -1,5 +1,12 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaFormField, MetaFormGroup } from '../../../src';
+import {
+  MetaContainer,
+  MetaColumn,
+  MetaTable,
+  MetaRow,
+  MetaFormField,
+  MetaFormGroup,
+} from '../../../src';
 
 const DocForms = () => {
   const code = `import { MetaFormGroup, MetaFormField } from 'csun-components';
@@ -62,37 +69,6 @@ const DocForms = () => {
 </MetaFormGroup>
     `;
 
-  const propTypesTitle = '// Prop Types For MetaFormField';
-  const propTypes = `
-  field: PropTypes.shape({
-    inputType: PropTypes.oneOf(['input', 'textarea', 'select', 'datepicker']).isRequired,
-    //selectOptions only needs to be called when using inputType 'select'
-    selectOptions: PropTypes.arrayOf(
-      PropTypes.shape({
-        value: PropTypes.string.isRequired,
-        text: PropTypes.string.isRequired,
-      }),
-    ),
-    id: PropTypes.string.isRequired,
-    labelText: PropTypes.string,
-    type: PropTypes.string,
-    placeholder: PropTypes.string,
-    autoComplete: PropTypes.string,
-    labelTextVisible: PropTypes.bool.isRequired,
-  }),
-  className: PropTypes.string,
-  value: PropTypes.string.isRequired,
-  changeFunction: PropTypes.func,
-  
-  `;
-
-  const propTypesTitleTwo = '// Prop Types For MetaFormGroup';
-  const propTypesTwo = `
-  className: PropTypes.string,
-  children: PropTypes.node.isRequired,
-  submitFunction: PropTypes.func,
-  `;
-
   return (
     <MetaContainer>
       <MetaRow>
@@ -154,17 +130,96 @@ const DocForms = () => {
             />
             <br />
           </MetaFormGroup>
+          <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-                <strong>{propTypesTitleTwo}</strong>
-                {propTypesTwo}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
+          <strong>MetaFormField Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'field',
+              'Shape',
+              'Yes',
+              'Contains additional sub prop types.',
+              'className',
+              'String',
+              'No',
+              '',
+              'value',
+              'String',
+              'Yes',
+              '',
+              'changeFunction',
+              'function',
+              'No',
+              '',
+            ]}
+          />
+
+          <strong>Field Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'inputType',
+              'oneOf',
+              'Yes',
+              'input, textarea, select, datepicker',
+              'selectOptions',
+              'Array/Shape',
+              'No',
+              "Only needs to be called when using inputType 'select'.",
+              'id',
+              'String',
+              'Yes',
+              '',
+              'labelText',
+              'String',
+              'No',
+              '',
+              'type',
+              'String',
+              'No',
+              '',
+              'placeHolder',
+              'String',
+              'No',
+              '',
+              'autoComplete',
+              'String',
+              'No',
+              '',
+              'labelTextVisible',
+              'Boolean',
+              'Yes',
+              '',
+            ]}
+          />
+
+          <strong>selectOptions Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={['value', 'String', 'Yes', '', 'text', 'String', 'Yes', '']}
+          />
+
+          <strong>MetaFormGroup Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'className',
+              'String',
+              'No',
+              '',
+              'children',
+              'any',
+              'Yes',
+              'Requires having child elements/data within it.',
+              'submitFunction',
+              'Function',
+              'No',
+              '',
+            ]}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>

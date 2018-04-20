@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaAccordion } from '../../../src';
+import { MetaContainer, MetaColumn, MetaTable, MetaRow, MetaAccordion } from '../../../src';
 
 const DocAccordion = () => {
   const bodyItems = [
@@ -38,29 +38,36 @@ const bodyItems = [
 <MetaAccordion bodyItems={bodyItems} />
     `;
 
-  const propTypesTitle = '// Prop Types';
-  const propTypes = `
-  className: PropTypes.string,
-  bodyItems: PropTypes.arrayOf(PropTypes.shape({
-    heading: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-  })).isRequired,`;
-
   return (
     <MetaContainer>
       <MetaRow>
         <MetaColumn sizes={['sm']} values={['9']}>
           <MetaAccordion bodyItems={bodyItems} />
           <br />
+          <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'className',
+              'String',
+              'No',
+              '',
+              'bodyItems',
+              'Array/Shape',
+              'Yes',
+              'Contains additional sub prop types.',
+            ]}
+          />
+
+          <strong>bodyItems Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={['heading', 'String', 'Yes', '', 'body', 'String', 'Yes', '']}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, WebSidebar } from '../../../src';
+import { MetaContainer, MetaColumn, MetaTable, MetaRow, WebSidebar } from '../../../src';
 
 const DocWebSidebar = () => {
   const code = `
@@ -10,11 +10,6 @@ const DocWebSidebar = () => {
     <h4> Test Title </h4>
     <p> Example paragraph for WebSidebar component. </p>
   </WebSidebar>`;
-
-  const propTypesTitle = '// Prop Types';
-  const propTypes = `
-    children: PropTypes.node.isRequired,
- `;
 
   return (
     <MetaContainer>
@@ -41,15 +36,15 @@ const DocWebSidebar = () => {
       <MetaRow>
         <MetaColumn sizes={['sm']} values={['9']}>
           <br />
+          <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={['children', 'any', 'Yes', 'Requires having child elements/data within it.']}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>

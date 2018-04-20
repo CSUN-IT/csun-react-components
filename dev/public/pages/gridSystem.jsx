@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow } from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, MetaTable } from '../../../src';
 
 const DocGrid = () => {
   const code = `import { MetaContainer, MetaCoulumn, MetaRow } from 'csun-react-components';
@@ -14,21 +14,6 @@ const DocGrid = () => {
   </MetaRow>
 </MetaContainer>
     `;
-
-  const propTypesTitle = '// Prop Type for MetaColumn';
-  const propTypes = `MetaColumn.defaultProps = {
-    children: {},
-    sizes: ['sm'],
-    values: ['12'],
-    className: '',
-  };
-  
-  MetaColumn.propTypes = {
-    className: PropTypes.string,
-    children: PropTypes.node.isRequired,
-    sizes: PropTypes.arrayOf(PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl'])),
-    values: PropTypes.arrayOf(PropTypes.oneOf(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'])),
-  };`;
 
   return (
     <MetaContainer>
@@ -76,15 +61,32 @@ const DocGrid = () => {
             6
           </MetaColumn>
           <br />
+          <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'className',
+              'String',
+              'No',
+              '',
+              'children',
+              'any',
+              'Yes',
+              'Requires having child elements/data within it.',
+              'sizes',
+              'Array/oneOf',
+              'Yes',
+              'xs, sm, md, lg, xl',
+              'Values',
+              'Array/oneOf',
+              'Yes',
+              '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12',
+            ]}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>

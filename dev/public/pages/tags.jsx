@@ -1,24 +1,11 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaTag } from '../../../src';
+import { MetaContainer, MetaColumn, MetaTable, MetaRow, MetaTag } from '../../../src';
 
 const DocTags = () => {
   const code = `import MetaTag from 'csun-react-components';
 
 <MetaTag text={'Warning'} action={'close'} to={'#'} color={'warning'} />
     `;
-
-  const propTypesTitle = '// Prop Types';
-  const propTypes = `
-  className: PropTypes.string,
-  text: PropTypes.string,
-  color: PropTypes.oneOf([
-    'success',
-    'warning',
-    'danger',
-    '',
-  ]),
-  action: PropTypes.oneOf(['close', '']),
-  to: PropTypes.string.isRequired,`;
 
   return (
     <MetaContainer>
@@ -42,15 +29,36 @@ const DocTags = () => {
             <MetaTag text={'Error'} action={'close'} to={'#'} color={'danger'} />
           </p>
           <br />
+          <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'className',
+              'String',
+              'No',
+              '',
+              'text',
+              'String',
+              'No',
+              '',
+              'color',
+              'oneOf',
+              'No',
+              "success, warning, danger, or ' '",
+              'action',
+              'oneOf',
+              'No',
+              "close, or ' '",
+              'to',
+              'String',
+              'Yes',
+              '',
+            ]}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>

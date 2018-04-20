@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, MetaSideNav } from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, MetaTable, MetaSideNav } from '../../../src';
 
 const DocSideNav = () => {
   const menuItems = [
@@ -63,17 +63,6 @@ const DocSideNav = () => {
 <MetaSideNav menuItems={menuItems} />
     `;
 
-  const propTypesTitle = '// Prop Types';
-  const propTypes = `
-  className: PropTypes.string,
-  menuItems: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    to: PropTypes.string.isRequired,
-    exact: PropTypes.bool,
-    fill: PropTypes.bool,
-  }),
-  ),`;
-
   return (
     <MetaContainer>
       <MetaRow>
@@ -85,15 +74,46 @@ const DocSideNav = () => {
             <MetaSideNav menuItems={menuItemsFill} />
           </MetaColumn>
           <br />
+          <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'className',
+              'String',
+              'Yes',
+              '',
+              'menuItems',
+              'Array/Shape',
+              'No',
+              'Contains additional sub prop types.',
+            ]}
+          />
+          <strong>menuItems Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'title',
+              'String',
+              'Yes',
+              '',
+              'to',
+              'String',
+              'Yes',
+              '',
+              'exact',
+              'Boolean',
+              'No',
+              '',
+              'fill',
+              'Boolean',
+              'No',
+              '',
+            ]}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>
