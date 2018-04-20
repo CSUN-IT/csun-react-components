@@ -179,12 +179,8 @@ const DocLayout = (props) => {
               <Route path={`${match.url}/chatBubbles`} component={DocChatBubble} />
               <Route path={`${match.url}/webheader`} component={DocWebHeader} />
               <Route path={`${match.url}/websidebar`} component={DocWebSidebar} />
-<<<<<<< HEAD
               <Route path={`${match.url}/webcard`} component={DocCards} />
-=======
               <Route path={`${match.url}/webslider`} component={DocWebSlider} />
-              <Route path={`${match.url}/webcards`} component={DocCards} />
->>>>>>> develop
               <Route path={`${match.url}/webcardlist`} component={DocCardList} />
             </MetaColumn>
           </MetaRow>
