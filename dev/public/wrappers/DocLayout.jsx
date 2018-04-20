@@ -130,8 +130,8 @@ const DocLayout = (props) => {
       active: false,
     },
     {
-      title: 'Web Cards',
-      to: `${match.url}/webcards`,
+      title: 'Web Card',
+      to: `${match.url}/webcard`,
       active: false,
     },
     {
@@ -173,7 +173,7 @@ const DocLayout = (props) => {
               <Route path={`${match.url}/chatBubbles`} component={DocChatBubble} />
               <Route path={`${match.url}/webheader`} component={DocWebHeader} />
               <Route path={`${match.url}/websidebar`} component={DocWebSidebar} />
-              <Route path={`${match.url}/webcards`} component={DocCards} />
+              <Route path={`${match.url}/webcard`} component={DocCards} />
               <Route path={`${match.url}/webcardlist`} component={DocCardList} />
             </MetaColumn>
           </MetaRow>
