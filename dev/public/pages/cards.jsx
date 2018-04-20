@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, WebCardList, WebCard, MetaButtonLink } from '../../../src';
+import { MetaContainer, MetaColumn, MetaRow, WebCard } from '../../../src';
 
 const buttons = [
   {
@@ -16,7 +16,7 @@ const buttons = [
   },
 ];
 
-const DocCards = (props) => {
+const DocCards = () => {
   return (
     <MetaContainer>
       <MetaRow>
@@ -30,7 +30,8 @@ const DocCards = (props) => {
             content={'This was a triumph. I\'m making a note here, huge success. It\'s hard to overstate my satisfaction.'}
             img={'https://upload.wikimedia.org/wikipedia/commons/c/c7/OviattLibrary.jpg'}
             linkTo={'https://www.csun.edu/'}
-            buttonArray={buttons} />
+            buttonArray={buttons}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>

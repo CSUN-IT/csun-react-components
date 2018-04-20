@@ -16,6 +16,7 @@ import MetaAccordion from './components/meta/Accordion';
 import MetaChatBubble from './components/web/ChatBubble';
 import WebHeader from './components/web/Header';
 import WebSidebar from './components/web/Sidebar';
+import WebSlider from './components/web/Slider';
 import MetaTable from './components/meta/Table';
 import MetaTableCell from './components/meta/TableCell';
 import MetaTableRow from './components/meta/TableRow';
@@ -51,6 +52,7 @@ export {
   MetaTableBody,
   WebHeader,
   WebSidebar,
+  WebSlider,
   WebCardList,
   WebCard,
   MetaButtonLink,

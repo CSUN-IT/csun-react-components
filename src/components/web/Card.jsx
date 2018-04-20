@@ -10,8 +10,8 @@ const Card = (props) => {
   const contents = props.content ? <p className="card-copy">{props.content}</p> : null;
   const image = props.img ? <img className="card-img" src={props.img} alt={'alt text'} height={'100'} width={'300'} /> : null;
   const buttonArray = props.buttonArray ?
-    props.buttonArray.map(button => {
-      return (<MetaButtonLink text={button.title} color={'default'} size={''} to={button.link} key={shortIdGenerate()} />)
+    props.buttonArray.map((button) => {
+      return (<MetaButtonLink text={button.title} color={'default'} size={''} to={button.link} key={shortIdGenerate()} />);
     })
     : null;
 
@@ -49,16 +49,16 @@ const Card = (props) => {
 
 Card.defaultProps = {
   className: 'chatbot-card',
-  title: null,
-  content: null,
+  title: 'Title',
+  content: 'Some Content',
   img: null,
   linkTo: null,
   buttonArray: null,
 };
 
 Card.propTypes = {
-  className: PropTypes.string,
-  title: PropTypes.string,
+  className: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   content: PropTypes.string,
   img: PropTypes.string,
   linkTo: PropTypes.string,
