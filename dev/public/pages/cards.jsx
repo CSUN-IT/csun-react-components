@@ -21,7 +21,7 @@ const DocCards = () => {
     <MetaContainer>
       <MetaRow>
         <MetaColumn sizes={['sm']} values={['12']}>
-          <h1>Cards</h1>
+          <h1>Card</h1>
           <hr />
         </MetaColumn>
         <MetaColumn sizes={['sm']} values={['12']}>
