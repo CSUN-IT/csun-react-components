@@ -12,7 +12,7 @@ class WebSlider extends Component {
       cards: children,
     };
     this.previousSlide = this.previousSlide.bind(this);
-    this.previousSlide = this.previousSlide.bind(this);
+    this.nextSlide = this.nextSlide.bind(this);
   }
 
   previousSlide() {
@@ -32,7 +32,7 @@ class WebSlider extends Component {
           img={cards.props.img}
           linkTo={cards.props.linkTo}
           buttonArray={cards.props.buttonArray}
-        /> : null }
+        /> : null}
         </div>
       );
     });
@@ -42,12 +42,12 @@ class WebSlider extends Component {
         {this.state.slideCount > 0 ?
           <button className="backArrow" onClick={() => this.previousSlide()}>
             <i className="fa fa-angle-left fa-3x" aria-hidden="true" />
-          </button> : null }
+          </button> : null}
         {index}
         {this.state.slideCount < this.state.cards.length - 1 ?
           <button className="nextArrow" onClick={() => this.nextSlide()}>
             <i className="fa fa-angle-right fa-3x" aria-hidden="true" />
-          </button> : null }
+          </button> : null}
       </div>
     );
   }
