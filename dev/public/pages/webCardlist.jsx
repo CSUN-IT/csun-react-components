@@ -17,21 +17,21 @@ const buttonsWebsites = [
 ];
 
 const buttonsSocial = [
-    {
-      title: 'Facebook',
-      link: 'https://www.facebook.com/calstatenorthridge',
-    },
-    {
-      title: 'Twitter',
-      link: 'https://www.twitter.com/csunorthridge',
-    },
-    {
-      title: 'Instagram',
-      link: 'https://www.instagram.edu/csun_edu',
-    },
+  {
+    title: 'Facebook',
+    link: 'https://www.facebook.com/calstatenorthridge',
+  },
+  {
+    title: 'Twitter',
+    link: 'https://www.twitter.com/csunorthridge',
+  },
+  {
+    title: 'Instagram',
+    link: 'https://www.instagram.edu/csun_edu',
+  },
 ];
 
-const DocCardList = (props) => {
+const DocCardList = () => {
   return (
     <MetaContainer>
       <MetaRow>
