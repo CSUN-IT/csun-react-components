@@ -1,8 +1,6 @@
+@import "variables";
 
-
-@import 'variables';
-
-$mobile-menu-button: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAgCAYAAACFM/9sAAABAUlEQVR42u2XTQrCMBBGR1Ai5gA9hGfwAu6La8/QTa/TtYfxBIILl6K4MP1bRGdbLEaEyTR8hUcJBIY8hmQ+6vvea4aIdAOBEKhPYOeuPs/zKFRVFSRwMye/XcjB9YIFNreTeoHH1VqccIH3MwQOONgMAsU6sH1c1AvkjlDbgYx2gYwZWZsv0GAfffjTyL5ggXyQWGAOxCANgf8J7Brf1s675xsnQ938JtBEIKkksjPk90s5uB6SCJLIVJIIOjD9JML3UmHl4HrJJRHVcyCSCAZpCJx0Eon1hQrMZvIk9Qrzy1gKwvUwByKJIIkgiWgRyPeSpLzSIokgiWCQRhKBwCEvwLSRj8/zxTMAAAAASUVORK5CYII=');
+$mobile-menu-button: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAgCAYAAACFM/9sAAABAUlEQVR42u2XTQrCMBBGR1Ai5gA9hGfwAu6La8/QTa/TtYfxBIILl6K4MP1bRGdbLEaEyTR8hUcJBIY8hmQ+6vvea4aIdAOBEKhPYOeuPs/zKFRVFSRwMye/XcjB9YIFNreTeoHH1VqccIH3MwQOONgMAsU6sH1c1AvkjlDbgYx2gYwZWZsv0GAfffjTyL5ggXyQWGAOxCANgf8J7Brf1s675xsnQ938JtBEIKkksjPk90s5uB6SCJLIVJIIOjD9JML3UmHl4HrJJRHVcyCSCAZpCJx0Eon1hQrMZvIk9Qrzy1gKwvUwByKJIIkgiWgRyPeSpLzSIokgiWCQRhKBwCEvwLSRj8/zxTMAAAAASUVORK5CYII=");
 $mini-nav-text-color: #000;
 $secondary-border-color: #000;
 $primary-mobile-menu-border-color: #fff;
@@ -10,7 +8,7 @@ $primary-mobile-menu-text-color: #fff;
 
 .header-row {
   display: flex;
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 // This is stone thrown to a broken window. Ideally, Metaphor would have a responsive
@@ -20,7 +18,7 @@ $primary-mobile-menu-text-color: #fff;
 @media (min-width: $break-large) {
   .wordmark-container {
     display: flex;
-      align-items: stretch;
+    align-items: stretch;
   }
 }
 
@@ -32,7 +30,7 @@ $primary-mobile-menu-text-color: #fff;
 
 // Mini nav
 .mini-nav {
-  font-size: .65em;
+  font-size: 0.65em;
   margin-bottom: 8px;
   margin-left: auto;
   margin-top: 15px;
@@ -106,11 +104,13 @@ $primary-mobile-menu-text-color: #fff;
   }
 }
 
-.btn-default > .nav__item, .btn-default > .nav__item:hover {
+.btn-default > .nav__item,
+.btn-default > .nav__item:hover {
   border-left: 0px;
 }
 
-.btn-default > .nav__item > .nav__link, .btn-default > .nav__item > .nav__link:hover {
+.btn-default > .nav__item > .nav__link,
+.btn-default > .nav__item > .nav__link:hover {
   margin-left: 0px;
 }
 
@@ -120,7 +120,7 @@ $primary-mobile-menu-text-color: #fff;
 
 .centerRow {
   display: flex;
-    justify-content: center;
+  justify-content: center;
 }
 
 .intro {
@@ -164,7 +164,7 @@ $primary-mobile-menu-text-color: #fff;
     a {
       border-left: 1px solid $nav-bar-border-color;
       color: $nav-bar-text-color;
-      font-family: 'museo-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: bold;
       line-height: 1.25;
       padding: 0 25px;
@@ -178,11 +178,10 @@ $primary-mobile-menu-text-color: #fff;
   }
 }
 
-
 // Header main
 
 .header {
-  margin: 10px;
+  margin: 15px 10px 20px;
 
   // Logo
   .csun-logo {
@@ -218,7 +217,7 @@ $primary-mobile-menu-text-color: #fff;
       flex-direction: column;
       justify-content: center;
       line-height: 26px;
-      margin-bottom: .1em;
+      margin-bottom: 0.1em;
       margin-left: 10px;
       padding: 0 16px;
       white-space: pre;
