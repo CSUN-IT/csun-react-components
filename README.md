@@ -3,7 +3,7 @@ Reusable CSUN themed react view components.
 
 ## Introduction
 CSUN React Components is a package you can include in your react project to quickly and easily add CSUN themed components to your application.
-The styles are all part of a required project [Metaphor](https://github.com/csun-metalab/metaphor). 
+The styles are all part of a required project [Metaphor](https://github.com/csun-metalab/metaphor).
 
 ## Getting Started
 
@@ -52,12 +52,12 @@ If you want to experiment or contribute to this project, refer to the following 
 
 Navigate to root of project and run the following which will install all dependencies:
   ```bash
-  $ yarn
+  $ npm install
   ```
 
 To start the development server run the following:
   ```bash
-  $ yarn start
+  $ npm start
   ```
 Refer to output to determine your development URL (e.g localhost:8080)
 
@@ -65,5 +65,5 @@ This is also the best way to read documentation and see examples.
 
 ## Current status
 This project is in very early development, you are best suited to use the develop branch. This project will likely restrict you more than help you.
-First goal of this project is to create naive components that are styled with Metaphor. Ideally if you find a limitation, please consider contributing or 
+First goal of this project is to create naive components that are styled with Metaphor. Ideally if you find a limitation, please consider contributing or
 open an issue.
