@@ -1,8 +1,6 @@
 /dev/
-/dist/
 /webpack/
 /node_modules/
-/lib/
 .babelrc
 .eslintrc.js
 .npmignore
