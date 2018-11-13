@@ -2,8 +2,7 @@
 /dist/
 /webpack/
 /node_modules/
-/src/
+/lib/
 .babelrc
 .eslintrc.js
 .npmignore
-yarn.lock
