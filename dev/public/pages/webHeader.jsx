@@ -71,6 +71,7 @@ const DocWebHeader = () => {
           <WebHeader
             secondaryWordmark={secondaryWordmark}
             tertiaryWordmark={tertiaryWordmark}
+            contentID="#content"
             menuItems={menuItems}
           />
           <br />

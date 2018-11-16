@@ -60,6 +60,11 @@ class WebHeader extends Component {
         <MetaContainer>
           <div className={"header"}>
             <MetaRow className="header-row">
+              {this.props.contentID && (
+                <a className="sr-only sr-only-focusable" href={this.props.contentID}>
+                  Skip to Content
+                </a>
+              )}
               <div className="wordmark-container">
                 <a className={"csun-logo"} href={"http://www.csun.edu"}>
                   <span className="sr-only">
@@ -133,11 +138,13 @@ WebHeader.defaultProps = {
   secondaryWordmark: null,
   tertiaryWordmark: null,
   showMobileNav: false,
+  contentID: '',
   menuItems: null,
   id: null
 };
 
 WebHeader.propTypes = {
+  contentID: PropTypes.string,
   secondaryWordmark: PropTypes.shape({
     title: PropTypes.string.isRequired,
     to: PropTypes.string.isRequired

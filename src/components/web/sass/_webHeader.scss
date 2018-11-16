@@ -6,6 +6,21 @@ $secondary-border-color: #000;
 $primary-mobile-menu-border-color: #fff;
 $primary-mobile-menu-text-color: #fff;
 
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: absolute;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  opacity: 1;
+  clip: auto;
+
+  // custom mods
+  background-color: white;
+  padding: 5px 15px;
+}
+
 .header-row {
   display: flex;
   justify-content: space-between;
