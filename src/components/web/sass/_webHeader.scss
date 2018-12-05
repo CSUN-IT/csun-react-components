@@ -156,7 +156,7 @@ $primary-mobile-menu-text-color: #fff;
   justify-content: center;
   height: 43px;
   margin-bottom: 10px;
-  overflow: visible;
+  overflow: hidden;
   padding-bottom: 0;
   text-align: center;
   visibility: visible;
@@ -202,6 +202,10 @@ $primary-mobile-menu-text-color: #fff;
       text-decoration: none;
       text-shadow: rgb(0, 0, 0) 1px 1px 0px;
       text-transform: uppercase;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
