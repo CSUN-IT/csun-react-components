@@ -34,6 +34,11 @@ $primary-mobile-menu-text-color: #fff;
   .wordmark-container {
     display: flex;
     align-items: stretch;
+    font-family: serif;
+
+    a {
+      color: $color-header-links;
+    }
   }
 }
 
@@ -216,7 +221,7 @@ $primary-mobile-menu-text-color: #fff;
 
   // Wordmarks
   .wordmark {
-    text-align: center;
+    text-align: left;
 
     &.secondary-wordmark {
       font-size: 24px;
