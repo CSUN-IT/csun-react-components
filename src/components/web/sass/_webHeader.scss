@@ -184,17 +184,18 @@ $primary-mobile-menu-text-color: #fff;
     border-left: 1px solid $nav-bar-border-color;
     float: left;
     line-height: 1;
-    // padding-bottom: 10px;
-    // padding-top: 10px;
 
     &:first-child {
       border-left: 0;
     }
 
+    &:hover,
+    &:hover + li {
+      border-color: transparent;
+    }
+
     a {
-      //border-left: 1px solid $nav-bar-border-color;
       color: $nav-bar-text-color;
-      //display: inline-block;
       font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: bold;
       line-height: 1.125;
@@ -204,6 +205,7 @@ $primary-mobile-menu-text-color: #fff;
       text-transform: uppercase;
 
       &:hover {
+        background: rgb(51, 51, 51);
         text-decoration: underline;
       }
     }
