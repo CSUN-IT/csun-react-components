@@ -61,7 +61,10 @@ class WebHeader extends Component {
           <div className={"header"}>
             <MetaRow className="header-row">
               {this.props.contentID && (
-                <a className="sr-only sr-only-focusable" href={this.props.contentID}>
+                <a
+                  className="sr-only sr-only-focusable"
+                  href={this.props.contentID}
+                >
                   Skip to Content
                 </a>
               )}
@@ -122,6 +125,24 @@ class WebHeader extends Component {
                 this.state.showMobileNav ? "active" : ""
               }`}
             >
+              <div className="mobile-only">
+                <ul className="layout-csun--mobile-links">
+                  <li>
+                    <a href="https://auth.csun.edu/cas/login?service=https://mynorthridge.csun.edu/psp/PANRPRD/?cmd=login&amp;languageCd=ENG">
+                      Portal
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.csun.edu/webmail">Webmail</a>
+                  </li>
+                  <li>
+                    <a href="http://www.csun.edu/peoplefinder">Directory</a>
+                  </li>
+                  <li>
+                    <a href="https://canvas.csun.edu/">Canvas</a>
+                  </li>
+                </ul>
+              </div>
               <ul className="mobile-menu">{navLinks}</ul>
             </div>
             <div className="navbar-link-wrapper">
@@ -138,7 +159,7 @@ WebHeader.defaultProps = {
   secondaryWordmark: null,
   tertiaryWordmark: null,
   showMobileNav: false,
-  contentID: '',
+  contentID: "",
   menuItems: null,
   id: null
 };
