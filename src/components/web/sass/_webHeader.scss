@@ -194,10 +194,11 @@ $primary-mobile-menu-text-color: #fff;
       border-left: 0;
     }
 
-    &:hover,
-    &:hover + li {
-      border-color: transparent;
-    }
+    // Uncomment when ready to add sub-menus
+    // &:hover,
+    // &:hover + li {
+    //   border-color: transparent;
+    // }
 
     a {
       color: $nav-bar-text-color;
@@ -210,7 +211,7 @@ $primary-mobile-menu-text-color: #fff;
       text-transform: uppercase;
 
       &:hover {
-        background: rgb(51, 51, 51);
+        //background: rgb(51, 51, 51);
         text-decoration: underline;
       }
     }
@@ -508,9 +509,10 @@ $primary-mobile-menu-text-color: #fff;
       a {
         background-color: #333;
       }
-      & + .mega-menu__trigger {
-        border-left-color: transparent;
-      }
+      // Uncomment when ready to add sub-menus
+      // & + .mega-menu__trigger {
+      //   border-left-color: transparent;
+      // }
     }
   }
   // @media (min-width: $break-small) {
