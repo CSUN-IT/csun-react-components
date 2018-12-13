@@ -143,10 +143,14 @@ class WebHeader extends Component {
                   </li>
                 </ul>
               </div>
-              <ul className="mobile-menu">{navLinks}</ul>
+              <ul className="mobile-menu" role="menu">
+                {navLinks}
+              </ul>
             </div>
             <div className="navbar-link-wrapper">
-              <ul className="web-nav navbar-nav navbar-center">{navLinks}</ul>
+              <ul className="web-nav navbar-nav navbar-center" role="menu">
+                {navLinks}
+              </ul>
             </div>
           </div>
         ) : null}
