@@ -45,7 +45,9 @@ class WebHeader extends Component {
       ? this.props.menuItems.map(link => (
           <li key={shortIdGenerate()}>
             {link.external ? (
-              <a href={link.to}>{link.title}</a>
+              <a href={link.to} role="menuitem">
+                {link.title}
+              </a>
             ) : (
               <NavLink exact={link.exact ? link.exact : false} to={link.to}>
                 {link.title}
@@ -113,6 +115,12 @@ class WebHeader extends Component {
                   }`}
                   title="Menu"
                   onClick={this.togglePrimaryNav}
+                  aria-expanded={`${
+                    this.state.showMobileNav ? "true" : "false"
+                  }`}
+                  aria-pressed={`${
+                    this.state.showMobileNav ? "true" : "false"
+                  }`}
                 />
               </div>
             </MetaRow>

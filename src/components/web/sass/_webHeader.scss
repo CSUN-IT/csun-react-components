@@ -26,19 +26,21 @@ $primary-mobile-menu-text-color: #fff;
   justify-content: space-between;
 }
 
-// This is stone thrown to a broken window. Ideally, Metaphor would have a responsive
-// flexbox utlity system similar to Bootstrap's, then we could apply these as single utilities.
-//
-// @ToDo Contribute flex utility system to Metaphor; update this when ready
+.wordmark-container {
+  a {
+    color: $color-header-links;
+  }
+
+  a.tertiary-wordmark {
+    color: black;
+  }
+}
+
 @media (min-width: $break-large) {
   .wordmark-container {
     display: flex;
     align-items: stretch;
     font-family: serif;
-
-    a {
-      color: $color-header-links;
-    }
   }
 }
 
@@ -118,7 +120,7 @@ $primary-mobile-menu-text-color: #fff;
         color: $primary-mobile-menu-text-color;
         display: block;
         font-size: 18px;
-        padding: 5px 0;
+        padding: 5px;
         text-decoration: none;
       }
 
@@ -212,7 +214,6 @@ $primary-mobile-menu-text-color: #fff;
       text-transform: uppercase;
 
       &:hover {
-        //background: rgb(51, 51, 51);
         text-decoration: underline;
       }
     }
