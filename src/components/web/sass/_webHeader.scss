@@ -63,7 +63,7 @@ $primary-mobile-menu-text-color: #fff;
 
 .list-inline {
   list-style: none;
-  margin-right: 10px;
+  //margin-right: 10px;
   padding-left: 0;
 }
 
@@ -565,5 +565,30 @@ $primary-mobile-menu-text-color: #fff;
   &:link,
   &:visited {
     color: #fff;
+  }
+}
+
+.bg-white {
+  background: white;
+}
+
+/**
+ * This will keep the search form nested below the utility links
+ * on the rifht side of the header in desktop, and below in the
+ * dropdown for mobile.
+ */
+.header-utilities {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.desktop-only {
+  display: none;
+}
+@media (min-width: $break-large) {
+  .desktop-only {
+    display: block;
   }
 }

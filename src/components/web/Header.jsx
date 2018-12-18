@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import MetaRow from "../meta/Row";
 import MetaContainer from "../meta/Container";
 import "./sass/_webHeader.scss";
+import "./sass/_webHeaderSearch.scss";
 
 class WebHeader extends Component {
   constructor(props, context) {
@@ -79,35 +80,74 @@ class WebHeader extends Component {
                 {secondaryWordmark}
                 {tertiaryWordmark}
               </div>
-              <ul className={"list-inline mini-nav pull-right"}>
-                <li>
-                  <a href={"http://www.csun.edu/universaldesigncenter"}>
-                    Accessibility
-                  </a>
-                </li>
-                |
-                <li>
-                  <a
-                    href={
-                      "https://mynorthridge.csun.edu/psc/PANRPRD/EMPLOYEE/EMPL/c/NRPA_CSUN_APPS.NR_PEOPLESRCH_CMP.GBL"
-                    }
-                  >
-                    Directory
-                  </a>
-                </li>
-                |
-                <li>
-                  <a href={"http://www.csun.edu/calendar"}>Calendar</a>
-                </li>
-                |
-                <li>
-                  <a href={"http://www.csun.edu/atoz/"}>A to Z</a>
-                </li>
-                |
-                <li>
-                  <a href={"http://www.csun.edu/it/webmail"}>Webmail</a>
-                </li>
-              </ul>
+              <div className="header-utilities">
+                <ul className={"list-inline mini-nav pull-right"}>
+                  <li>
+                    <a href={"http://www.csun.edu/universaldesigncenter"}>
+                      Accessibility
+                    </a>
+                  </li>
+                  |
+                  <li>
+                    <a
+                      href={
+                        "https://mynorthridge.csun.edu/psc/PANRPRD/EMPLOYEE/EMPL/c/NRPA_CSUN_APPS.NR_PEOPLESRCH_CMP.GBL"
+                      }
+                    >
+                      Directory
+                    </a>
+                  </li>
+                  |
+                  <li>
+                    <a href={"http://www.csun.edu/calendar"}>Calendar</a>
+                  </li>
+                  |
+                  <li>
+                    <a href={"http://www.csun.edu/atoz/"}>A to Z</a>
+                  </li>
+                  |
+                  <li>
+                    <a href={"http://www.csun.edu/it/webmail"}>Webmail</a>
+                  </li>
+                </ul>
+                <div className="panel-pane pane-block pane-google-appliance-ga-block-search-form bg-white desktop-only">
+                  <form action="/search" method="GET" accept-charset="UTF-8">
+                    <div className="search-container">
+                      <div className="form-item form-type-textfield form-item-search-keys">
+                        <label
+                          className="sr-only"
+                          for="edit-search-keys-desktop"
+                        >
+                          Enter the terms you wish to search for.{" "}
+                        </label>
+                        <input
+                          type="text"
+                          id="edit-search-keys-desktop"
+                          name="query"
+                          value=""
+                          size="15"
+                          maxlength="128"
+                          className="form-text"
+                        />
+                      </div>
+
+                      <input type="hidden" name="col" value="15" />
+                      <div
+                        className="form-actions form-wrapper"
+                        id="edit-actions"
+                      >
+                        <input
+                          type="submit"
+                          id="edit-submit-desktop"
+                          value="Search"
+                          className="form-submit"
+                        />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
               <div className="nav-dropdown">
                 <button
                   className={`nav-dropdown-button ${
@@ -134,6 +174,39 @@ class WebHeader extends Component {
               }`}
             >
               <div className="mobile-only">
+                <div className="panel-pane pane-block pane-google-appliance-ga-block-search-form bg-white">
+                  <form action="/search" method="GET" accept-charset="UTF-8">
+                    <div className="search-container">
+                      <div className="form-item form-type-textfield form-item-search-keys">
+                        <label className="sr-only" for="edit-search-keys">
+                          Enter the terms you wish to search for.{" "}
+                        </label>
+                        <input
+                          type="text"
+                          id="edit-search-keys"
+                          name="query"
+                          value=""
+                          size="15"
+                          maxlength="128"
+                          className="form-text"
+                        />
+                      </div>
+
+                      <input type="hidden" name="col" value="15" />
+                      <div
+                        className="form-actions form-wrapper"
+                        id="edit-actions"
+                      >
+                        <input
+                          type="submit"
+                          id="edit-submit"
+                          value="Search"
+                          className="form-submit"
+                        />
+                      </div>
+                    </div>
+                  </form>
+                </div>
                 <ul className="layout-csun--mobile-links">
                   <li>
                     <a href="https://auth.csun.edu/cas/login?service=https://mynorthridge.csun.edu/psp/PANRPRD/?cmd=login&amp;languageCd=ENG">
