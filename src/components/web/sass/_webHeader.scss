@@ -52,12 +52,14 @@ $primary-mobile-menu-text-color: #fff;
 
 // Mini nav
 .mini-nav {
-  font-size: 0.65em;
-  margin-bottom: 8px;
-  margin-left: auto;
-  //.margin-top: 15px;
-  @media (max-width: $break-large) {
-    display: none;
+  display: none;
+
+  @media (min-width: $break-large) {
+    display: block;
+    font-size: 0.65em;
+    margin-bottom: 8px;
+    margin-left: auto;
+    //.margin-top: 15px;
   }
 }
 
@@ -78,57 +80,62 @@ $primary-mobile-menu-text-color: #fff;
 }
 
 .nav-dropdown-button {
-  display: none;
+  background-image: $mobile-menu-button;
+  background-position: 0 top;
+  background-repeat: no-repeat;
+  border: 0;
+  display: block;
+  height: 33px;
+  overflow: hidden;
+  padding: 0;
+  text-decoration: none;
+  text-indent: -100%;
+  width: 40px;
 
-  @media (max-width: $break-large) {
-    background-image: $mobile-menu-button;
-    background-position: 0 top;
-    background-repeat: no-repeat;
+  &.active {
+    background-position: -40px top;
     border: 0;
-    display: block;
-    height: 33px;
-    overflow: hidden;
-    padding: 0;
-    text-decoration: none;
-    text-indent: -100%;
-    width: 40px;
+    color: $csun-red;
+  }
 
-    &.active {
-      background-position: -40px top;
-      border: 0;
-      color: $csun-red;
-    }
+  @media (min-width: $break-large) {
+    display: none;
   }
 }
 
 .web-nav-mobile {
-  box-shadow: rgb(150, 145, 145) 0px 5px 7px -3px;
-  display: none;
-  @media (max-width: $break-large) {
-    &.active {
-      background-color: $csun-red;
+  &.active {
+    background-color: $csun-red;
+    display: block;
+
+    ul:not(.layout-csun--mobile-links) {
+      list-style-type: none;
+      margin: 0;
+      padding: 0 10px;
+    }
+
+    li > a {
+      border-bottom: 1px solid #9a2730;
+      color: $primary-mobile-menu-text-color;
       display: block;
+      font-size: 18px;
+      padding: 5px;
+      text-decoration: none;
+    }
 
-      ul:not(.layout-csun--mobile-links) {
-        list-style-type: none;
-        margin: 0;
-        padding: 0 10px;
-      }
-
-      li > a {
-        border-bottom: 1px solid #9a2730;
-        color: $primary-mobile-menu-text-color;
-        display: block;
-        font-size: 18px;
-        padding: 5px;
-        text-decoration: none;
-      }
-
-      li:last-child a {
-        border: none;
-      }
+    li:last-child a {
+      border: none;
     }
   }
+
+  box-shadow: rgb(150, 145, 145) 0px 5px 7px -3px;
+  display: none;
+
+  // @media (max-width: $break-large) {
+  //   /* Put the shits in here */
+  //   box-shadow: rgb(150, 145, 145) 0px 5px 7px -3px;
+  //   display: none;
+  // }
 }
 
 .btn-default > .nav__item,
@@ -156,71 +163,70 @@ $primary-mobile-menu-text-color: #fff;
 }
 
 .navbar-link-wrapper {
-  background-color: $csun-red;
-  box-shadow: rgb(150, 145, 145) 0px 5px 7px -3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 43px;
-  margin-bottom: 10px;
-  overflow: hidden;
-  padding-bottom: 0;
-  text-align: center;
-  visibility: visible;
-  @media (max-width: $break-large) {
-    display: none;
-  }
+  display: none;
+  height: 2px;
 
-  .navbar-center {
-    display: inline-block;
-    float: none;
-    list-style: none;
-    vertical-align: top;
-  }
+  @media (min-width: $break-large) {
+    /* Put more shits in here */
+    background-color: $csun-red;
+    box-shadow: rgb(150, 145, 145) 0px 5px 7px -3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 43px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding-bottom: 0;
+    text-align: center;
+    visibility: visible;
 
-  .web-nav {
-    border-left: 0;
-  }
+    .navbar-center {
+      display: inline-block;
+      float: none;
+      list-style: none;
+      vertical-align: top;
+    }
 
-  .navbar-nav {
-    margin: 0;
-    padding: 0;
-  }
-
-  .navbar-nav > li {
-    border-left: 1px solid $nav-bar-border-color;
-    float: left;
-    line-height: 1;
-
-    &:first-child {
+    .web-nav {
       border-left: 0;
     }
 
-    // Uncomment when ready to add sub-menus
-    // &:hover,
-    // &:hover + li {
-    //   border-color: transparent;
-    // }
+    .navbar-nav {
+      margin: 0;
+      padding: 0;
+    }
 
-    a {
-      color: $nav-bar-text-color;
-      font-family: "museo-sans-700", "Helvetica Neue", Helvetica, Arial,
-        sans-serif;
-      font-weight: bold;
-      line-height: 1.125;
-      padding: 25px;
-      text-decoration: none;
-      text-shadow: rgb(0, 0, 0) 1px 1px 0px;
-      text-transform: uppercase;
+    .navbar-nav > li {
+      border-left: 1px solid $nav-bar-border-color;
+      float: left;
+      line-height: 1;
 
-      &:hover {
-        text-decoration: underline;
+      &:first-child {
+        border-left: 0;
+      }
+
+      // Uncomment when ready to add sub-menus
+      // &:hover,
+      // &:hover + li {
+      //   border-color: transparent;
+      // }
+
+      a {
+        color: $nav-bar-text-color;
+        font-family: "museo-sans-700", "Helvetica Neue", Helvetica, Arial,
+          sans-serif;
+        font-weight: bold;
+        line-height: 1.125;
+        padding: 25px;
+        text-decoration: none;
+        text-shadow: rgb(0, 0, 0) 1px 1px 0px;
+        text-transform: uppercase;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
-  }
-
-  @media (max-width: $break-large) {
-    height: 2px;
   }
 }
 
@@ -233,15 +239,13 @@ $primary-mobile-menu-text-color: #fff;
   .csun-logo {
     float: left;
     margin-top: 5px;
+    background-image: $csun-logo-small;
+    height: 29px;
+    width: 107px;
     @media (min-width: $break-large) {
       background-image: $csun-logo-large;
       height: 43px;
       width: 160px;
-    }
-    @media (max-width: $break-large) {
-      background-image: $csun-logo-small;
-      height: 29px;
-      width: 107px;
     }
   }
 
@@ -260,6 +264,11 @@ $primary-mobile-menu-text-color: #fff;
       font-family: serif;
       font-size: 22px;
     }
+
+    clear: both;
+    float: left;
+    white-space: nowrap;
+
     @media (min-width: $break-large) {
       border-left: 1px solid $secondary-border-color;
       display: flex;
@@ -272,11 +281,11 @@ $primary-mobile-menu-text-color: #fff;
       white-space: pre;
     }
 
-    @media (max-width: $break-large) {
-      clear: both;
-      float: left;
-      white-space: nowrap;
-    }
+    // @media (max-width: $break-large) {
+    //   clear: both;
+    //   float: left;
+    //   white-space: nowrap;
+    // }
   }
 }
 
