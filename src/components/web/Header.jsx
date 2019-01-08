@@ -11,9 +11,15 @@ class WebHeader extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      showMobileNav: false
+      showMobileNav: false,
+      value: ""
     };
     this.togglePrimaryNav = this.togglePrimaryNav.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
   }
 
   togglePrimaryNav() {
@@ -128,6 +134,8 @@ class WebHeader extends Component {
                           size="15"
                           maxlength="128"
                           className="form-text"
+                          value={this.state.value}
+                          onChange={this.handleChange}
                         />
                       </div>
 
