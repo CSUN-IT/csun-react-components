@@ -130,7 +130,6 @@ class WebHeader extends Component {
                           type="text"
                           id="edit-search-keys-desktop"
                           name="query"
-                          value=""
                           size="15"
                           maxlength="128"
                           className="form-text"
@@ -193,10 +192,11 @@ class WebHeader extends Component {
                           type="text"
                           id="edit-search-keys"
                           name="query"
-                          value=""
                           size="15"
                           maxlength="128"
                           className="form-text"
+                          value={this.state.value}
+                          onChange={this.handleChange}
                         />
                       </div>
 
