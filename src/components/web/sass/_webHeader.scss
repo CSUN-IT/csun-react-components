@@ -138,6 +138,13 @@ $primary-mobile-menu-text-color: #fff;
   // }
 }
 
+@media (min-width: $break-large) {
+  .web-nav-mobile,
+  .web-nav-mobile.active {
+    display: none;
+  }
+}
+
 .btn-default > .nav__item,
 .btn-default > .nav__item:hover {
   border-left: 0px;
