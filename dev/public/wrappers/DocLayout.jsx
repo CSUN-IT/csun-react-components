@@ -18,7 +18,10 @@ import {
   DocChatBubble,
   DocWebHeader,
   DocWebSidebar,
+  DocWebSlider,
   DocTables,
+  DocCards,
+  DocCardList,
   DocButtonLink,
 } from '../pages';
 import SectionHelper from '../components/SectionHelper';
@@ -28,13 +31,13 @@ const DocLayout = (props) => {
 
   const sideNavMenuItems = [
     {
-      title: 'Grid System',
-      to: `${match.url}/grid`,
+      title: 'Accordion',
+      to: `${match.url}/accordion`,
       active: false,
     },
     {
-      title: 'Typography',
-      to: `${match.url}/typography`,
+      title: 'Alerts',
+      to: `${match.url}/alerts`,
       active: false,
     },
     {
@@ -43,23 +46,8 @@ const DocLayout = (props) => {
       active: false,
     },
     {
-      title: 'Nav',
-      to: `${match.url}/nav`,
-      active: false,
-    },
-    {
-      title: 'Sub Nav',
-      to: `${match.url}/subnavigation`,
-      active: false,
-    },
-    {
-      title: 'Side Nav',
-      to: `${match.url}/sidenav`,
-      active: false,
-    },
-    {
-      title: 'Buttons',
-      to: `${match.url}/buttons`,
+      title: 'Button',
+      to: `${match.url}/button`,
       active: false,
     },
     {
@@ -73,18 +61,13 @@ const DocLayout = (props) => {
       active: false,
     },
     {
-      title: 'Tags',
-      to: `${match.url}/tags`,
+      title: 'Forms',
+      to: `${match.url}/forms`,
       active: false,
     },
     {
-      title: 'Panels',
-      to: `${match.url}/panels`,
-      active: false,
-    },
-    {
-      title: 'Alerts',
-      to: `${match.url}/alerts`,
+      title: 'Grid System',
+      to: `${match.url}/grid`,
       active: false,
     },
     {
@@ -93,23 +76,13 @@ const DocLayout = (props) => {
       active: false,
     },
     {
-      title: 'Tables',
-      to: `${match.url}/tables`,
-      active: false,
-    },
-    {
-      title: 'Forms',
-      to: `${match.url}/forms`,
-      active: false,
-    },
-    {
       title: 'Modals',
       to: `${match.url}/modals`,
       active: false,
     },
     {
-      title: 'Timeline',
-      to: `${match.url}/timeline`,
+      title: 'Nav',
+      to: `${match.url}/nav`,
       active: false,
     },
     {
@@ -118,8 +91,48 @@ const DocLayout = (props) => {
       active: false,
     },
     {
-      title: 'Accordion',
-      to: `${match.url}/accordion`,
+      title: 'Panels',
+      to: `${match.url}/panels`,
+      active: false,
+    },
+    {
+      title: 'Side Nav',
+      to: `${match.url}/sidenav`,
+      active: false,
+    },
+    {
+      title: 'Sub Nav',
+      to: `${match.url}/subnavigation`,
+      active: false,
+    },
+    {
+      title: 'Tables',
+      to: `${match.url}/tables`,
+      active: false,
+    },
+    {
+      title: 'Tags',
+      to: `${match.url}/tags`,
+      active: false,
+    },
+    {
+      title: 'Timeline',
+      to: `${match.url}/timeline`,
+      active: false,
+    },
+    {
+      title: 'Typography',
+      to: `${match.url}/typography`,
+      active: false,
+    },
+    {
+      title: 'Web Cardlist',
+      to: `${match.url}/webcardlist`,
+      active: false,
+    },
+    {
+      title: 'Web Card',
+      to: `${match.url}/webcard`,
       active: false,
     },
     {
@@ -130,6 +143,11 @@ const DocLayout = (props) => {
     {
       title: 'Web Sidebar',
       to: `${match.url}/websidebar`,
+      active: false,
+    },
+    {
+      title: 'Web Slider',
+      to: `${match.url}/webslider`,
       active: false,
     },
   ];
@@ -147,7 +165,7 @@ const DocLayout = (props) => {
               <Route path={`${match.url}/nav`} component={DocPrimaryNav} />
               <Route path={`${match.url}/breadcrumbs`} component={DocBreadcrumbs} />
               <Route path={`${match.url}/alerts`} component={DocAlerts} />
-              <Route path={`${match.url}/buttons`} component={DocButtons} />
+              <Route path={`${match.url}/button`} component={DocButtons} />
               <Route path={`${match.url}/buttonLink`} component={DocButtonLink} />
               <Route path={`${match.url}/lists`} component={DocLists} />
               <Route path={`${match.url}/panels`} component={DocPanels} />
@@ -161,6 +179,9 @@ const DocLayout = (props) => {
               <Route path={`${match.url}/chatBubbles`} component={DocChatBubble} />
               <Route path={`${match.url}/webheader`} component={DocWebHeader} />
               <Route path={`${match.url}/websidebar`} component={DocWebSidebar} />
+              <Route path={`${match.url}/webcard`} component={DocCards} />
+              <Route path={`${match.url}/webslider`} component={DocWebSlider} />
+              <Route path={`${match.url}/webcardlist`} component={DocCardList} />
             </MetaColumn>
           </MetaRow>
         </MetaContainer>

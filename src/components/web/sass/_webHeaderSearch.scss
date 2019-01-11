@@ -1,0 +1,124 @@
+@import "variables";
+
+// Search Box (Desktop + Mobile)
+
+.pane-google-appliance-ga-block-search-form {
+  //
+  // Scoped variables to configure our search box
+  //
+
+  $_border-width: 1px;
+  $_border-color: #919191;
+  $_border-type: solid;
+  $_border: $_border-width $_border-type $_border-color;
+
+  $_mobile-border-radius: 5px;
+  $_desktop-border-radius: 11px;
+
+  $_mobile-background-color: #ffffff;
+  $_desktop-background-color: #f2f2f2;
+
+  //
+  // Our actual CSS
+  //
+
+  // This is literally just to group together the CSS for our "super" container
+  // in a way that it's easy to read.
+  & {
+    box-sizing: border-box;
+    font-size: 16px;
+
+    margin-left: auto;
+    padding: 10px;
+    width: 100%;
+
+    @media (min-width: $break-large) {
+      font-size: 12px;
+      padding: 0;
+      width: 230px;
+    }
+  }
+
+  // The parent container of our search box
+  .search-container {
+    background-color: $_mobile-background-color;
+    border-radius: $_mobile-border-radius;
+    border: $_border;
+    display: -ms-flexbox;
+    display: flex;
+
+    @media (min-width: $break-large) {
+      background-color: $_desktop-background-color;
+      border-radius: $_desktop-border-radius;
+    }
+  }
+
+  //
+  // Input field
+  //
+
+  // The `input` parent container
+  .form-item-search-keys {
+    margin: 0;
+    width: 100%;
+  }
+
+  // The `input[type=text]` box
+  .form-text {
+    background-color: transparent;
+    border: none;
+    border-radius: $_mobile-border-radius;
+
+    box-shadow: none;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 10px;
+
+    position: relative;
+    width: 100%;
+
+    @media (min-width: $break-large) {
+      border-radius: $_desktop-border-radius;
+      padding: 0 5px;
+    }
+  }
+
+  //
+  // Submit button
+  //
+
+  // The submit button parent container
+  .form-actions {
+    // On desktop, put this before the input field
+    @media (min-width: $break-large) {
+      -ms-flex-order: -1;
+      order: -1;
+    }
+  }
+
+  // The actual submit button
+  .form-submit {
+    background-color: transparent;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAAEYUjbiAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA+JJREFUeNpi+P//P8PMuYvug2iGrTv3LAUxvnz5KsUAYvz69Yt35rzF9wECiOHjx09KIAFGsDogYGKAAoAAYvj1+zf37Tv3gkAyK9du2A+imVhZWL7u2ndwKkjBs+cvTUE0QACBTVyzYcuO/YeP9oHYYLN6J834BuNMnjHnFVi7oAD/A5j5P3784gfRLEBXSXz6/FnhzZt3+saGejPhZv77948JRE+YOvsDiAYIILAjz56/VHLo6PEmIUHBWyIiQtfvP3jk/BPoney0RCkOdvb3YN2HjhzrnTFn4UOYA2D479+/bD0Tp//88eOHINhBsjLS+759/yHMgAZevn5tBKT+sbGxfQTx4eEzf/GKK+/ef1D+//8fEyMT0182NtYvnBwc71Pio9XhDseHQeHy/sNHFYAAgpt49sKlogsXr6RzcLJ/cLCxLpeWkjgAcwZY0cRpYO8zKSsq7Pr2/bvos+cvjOXlZA4F+Xl7gVUtX73+8LRZ858jW/P58xcZkFUPHz9xBfsUGFvGIYE+Xsi+5OHhfqKipLDjwOFjneDI//f/H7MAP/8t9OAQEOC//+XrN3GwIhZmlp8nTp+rQ1d0+dqNKFVFhe1gzr37D337Js/4duLU2TqQ/aAoWrR89an+KTM/wdwI9t2167cSt+/eO+Mf0IeMjIz/uLg43/z+9Zs70NczVE5WZjdK4P0Gpsk/wDgEsU+fu1AG8uGjJ0+d4IGJDZw+e6Hq1p27/gABhqLo+o1bCSdOny979/69MtDav0A5ZnCIMzIA2QzMHOxs7zU11VZZm5s2srOzv0U3FGzY/YePvLdu373w958/XMCU8snIQHe6lob6Un4+3jsgRT9//hIGOs/x+MkzVUCL1P7+/ceqp6u10NXRLg3FsHsPHnpv3LJzJSiajQ31p9pZm5cy4AHPX7y0Wrd529of338IGerpznVysMmCyTFdv3k74s/fP8CI5LtnaWbUxEAASEqIH9PV0lwGSiU3gOH09es3KbhhvNzcL4AJ/T+oxPjw8aMKIcOAPmD58PGTPDBM//Bwcb1kYWH+CTfMwsykQVJC7PzXb99F16zfsg2YSPxxGfTl61ep1es377x7774XKxvLV1tr81rkiIDH5plzFyqOHD9V9R+agISEBG8JCwreZWJm+gHKBa/fvNX+9es3H9Al34AlCouXu3OKqrLSGozYRAYfP31WuXv/gd+jR0+cPn7+LPPr5y9eIHgmJSV+TEVJcfOzZy+sjp44XfXv3182bm7u555uTqmy0lL7sBpGLACm6Iqjx08DffKPhZOT862/t0c4wfKEEL505Vo6MO2pg9gAskiIN9EqPqAAAAAASUVORK5CYII=");
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: $_mobile-border-radius;
+    text-indent: -9000px;
+    width: 35px;
+
+    // The word 'Search' for desktop
+    @media (min-width: $break-large) {
+      background-image: none;
+      border-bottom-left-radius: $_desktop-border-radius;
+      border-top-left-radius: $_desktop-border-radius;
+      border-right: $_border;
+      border-radius: 0;
+      color: #333333;
+      height: 100%;
+      padding: 0 15px;
+      text-indent: 0;
+      width: auto;
+    }
+  }
+}

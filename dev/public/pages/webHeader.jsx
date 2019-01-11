@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaContainer, MetaColumn, MetaRow, WebHeader } from '../../../src';
+import { MetaContainer, MetaColumn, MetaTable, MetaRow, WebHeader } from '../../../src';
 
 const DocWebHeader = () => {
   const code = `import Webheader from 'csun-components';
@@ -36,36 +36,6 @@ const DocWebHeader = () => {
     />
     `;
 
-  const propTypesTitle = '// Prop Types';
-  const propTypes = `
-  WebHeader.defaultProps = {
-    secondaryWordmark: null,
-    tertiaryWordmark: null,
-    showMobileNav: false,
-    menuItems: null,
-    id: null,
-  };
-  
-  WebHeader.propTypes = {
-    id: PropTypes.string,
-    secondaryWordmark: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      to: PropTypes.string.isRequired,
-    }),
-    tertiaryWordmark: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      to: PropTypes.string.isRequired,
-    }),
-    menuItems: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        to: PropTypes.string.isRequired,
-        exact: PropTypes.bool,
-        external: PropTypes.bool,
-      }),
-    ),
-  }`;
-
   const secondaryWordmark = {
     title: 'Information \nTechnology',
     to: '/it',
@@ -101,18 +71,71 @@ const DocWebHeader = () => {
           <WebHeader
             secondaryWordmark={secondaryWordmark}
             tertiaryWordmark={tertiaryWordmark}
+            contentID="#content"
             menuItems={menuItems}
           />
           <br />
+          <strong>Example Code</strong>
           <pre>
-            <code>
-              {code}
-              <div className="type--dark-gray">
-                <strong>{propTypesTitle}</strong>
-                {propTypes}
-              </div>
-            </code>
+            <code>{code}</code>
           </pre>
+          <strong>Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'id',
+              'String',
+              'No',
+              '',
+              'secondaryWordmark',
+              'Shape',
+              'No',
+              'Contains additional sub prop types.',
+              'tertiaryWordmark',
+              'Shape',
+              'No',
+              'Contains additional sub prop types.',
+              'menuItems',
+              'Array/Shape',
+              'No',
+              'Contains additional sub prop types.',
+            ]}
+          />
+
+          <strong>secondaryWordmark Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={['title', 'String', 'Yes', '', 'to', 'String', 'Yes', '']}
+          />
+
+          <strong>tertiaryWordmark Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={['title', 'String', 'Yes', '', 'to', 'String', 'Yes', '']}
+          />
+
+          <strong>menuItems Prop Types</strong>
+          <MetaTable
+            headerCells={['Name', 'Type', 'Required', 'Additional Notes']}
+            dataCells={[
+              'title',
+              'String',
+              'Yes',
+              '',
+              'to',
+              'String',
+              'Yes',
+              '',
+              'exact',
+              'Boolean',
+              'No',
+              '',
+              'external',
+              'Boolean',
+              'No',
+              '',
+            ]}
+          />
         </MetaColumn>
       </MetaRow>
     </MetaContainer>

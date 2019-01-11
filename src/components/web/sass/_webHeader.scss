@@ -1,26 +1,46 @@
+@import "variables";
 
-
-@import 'variables';
-
-$mobile-menu-button: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAgCAYAAACFM/9sAAABAUlEQVR42u2XTQrCMBBGR1Ai5gA9hGfwAu6La8/QTa/TtYfxBIILl6K4MP1bRGdbLEaEyTR8hUcJBIY8hmQ+6vvea4aIdAOBEKhPYOeuPs/zKFRVFSRwMye/XcjB9YIFNreTeoHH1VqccIH3MwQOONgMAsU6sH1c1AvkjlDbgYx2gYwZWZsv0GAfffjTyL5ggXyQWGAOxCANgf8J7Brf1s675xsnQ938JtBEIKkksjPk90s5uB6SCJLIVJIIOjD9JML3UmHl4HrJJRHVcyCSCAZpCJx0Eon1hQrMZvIk9Qrzy1gKwvUwByKJIIkgiWgRyPeSpLzSIokgiWCQRhKBwCEvwLSRj8/zxTMAAAAASUVORK5CYII=');
+$mobile-menu-button: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAgCAYAAACFM/9sAAABAUlEQVR42u2XTQrCMBBGR1Ai5gA9hGfwAu6La8/QTa/TtYfxBIILl6K4MP1bRGdbLEaEyTR8hUcJBIY8hmQ+6vvea4aIdAOBEKhPYOeuPs/zKFRVFSRwMye/XcjB9YIFNreTeoHH1VqccIH3MwQOONgMAsU6sH1c1AvkjlDbgYx2gYwZWZsv0GAfffjTyL5ggXyQWGAOxCANgf8J7Brf1s675xsnQ938JtBEIKkksjPk90s5uB6SCJLIVJIIOjD9JML3UmHl4HrJJRHVcyCSCAZpCJx0Eon1hQrMZvIk9Qrzy1gKwvUwByKJIIkgiWgRyPeSpLzSIokgiWCQRhKBwCEvwLSRj8/zxTMAAAAASUVORK5CYII=");
 $mini-nav-text-color: #000;
 $secondary-border-color: #000;
 $primary-mobile-menu-border-color: #fff;
 $primary-mobile-menu-text-color: #fff;
 
-.header-row {
-  display: flex;
-    justify-content: space-between;
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: absolute;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  opacity: 1;
+  clip: auto;
+
+  // custom mods
+  background-color: white;
+  padding: 5px 15px;
 }
 
-// This is stone thrown to a broken window. Ideally, Metaphor would have a responsive
-// flexbox utlity system similar to Bootstrap's, then we could apply these as single utilities.
-//
-// @ToDo Contribute flex utility system to Metaphor; update this when ready
+.header-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wordmark-container {
+  a {
+    color: $color-header-links;
+  }
+
+  a.tertiary-wordmark {
+    color: black;
+  }
+}
+
 @media (min-width: $break-large) {
   .wordmark-container {
     display: flex;
-      align-items: stretch;
+    align-items: stretch;
+    font-family: serif;
   }
 }
 
@@ -32,18 +52,20 @@ $primary-mobile-menu-text-color: #fff;
 
 // Mini nav
 .mini-nav {
-  font-size: .65em;
-  margin-bottom: 8px;
-  margin-left: auto;
-  margin-top: 15px;
-  @media (max-width: $break-large) {
-    display: none;
+  display: none;
+
+  @media (min-width: $break-large) {
+    display: block;
+    font-size: 0.65em;
+    margin-bottom: 8px;
+    margin-left: auto;
+    //.margin-top: 15px;
   }
 }
 
 .list-inline {
   list-style: none;
-  margin-right: 10px;
+  //margin-right: 10px;
   padding-left: 0;
 }
 
@@ -58,59 +80,78 @@ $primary-mobile-menu-text-color: #fff;
 }
 
 .nav-dropdown-button {
-  display: none;
+  background-image: $mobile-menu-button;
+  background-position: 0 top;
+  background-repeat: no-repeat;
+  border: 0;
+  display: block;
+  height: 33px;
+  overflow: hidden;
+  padding: 0;
+  text-decoration: none;
+  text-indent: -100%;
+  width: 40px;
 
-  @media (max-width: $break-large) {
-    background-image: $mobile-menu-button;
-    background-position: 0 top;
-    background-repeat: no-repeat;
+  &.active {
+    background-position: -40px top;
     border: 0;
-    display: block;
-    height: 33px;
-    overflow: hidden;
-    padding: 0;
-    text-decoration: none;
-    text-indent: -100%;
-    width: 40px;
+    color: $csun-red;
+  }
 
-    &.active {
-      background-position: -40px top;
-      border: 0;
-      color: $csun-red;
-    }
+  @media (min-width: $break-large) {
+    display: none;
   }
 }
 
 .web-nav-mobile {
-  display: none;
-  @media (max-width: $break-large) {
-    &.active {
-      background-color: $csun-red;
-      display: block;
+  &.active {
+    background-color: $csun-red;
+    display: block;
 
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      li > a {
-        border-bottom: 1px solid $primary-mobile-menu-border-color;
-        color: $primary-mobile-menu-text-color;
-        display: block;
-        font-size: 25px;
-        padding: 5px 10px;
-        text-decoration: none;
-      }
+    ul:not(.layout-csun--mobile-links) {
+      list-style-type: none;
+      margin: 0;
+      padding: 0 10px;
     }
+
+    li > a {
+      border-bottom: 1px solid #9a2730;
+      color: $primary-mobile-menu-text-color;
+      display: block;
+      font-size: 18px;
+      padding: 5px;
+      text-decoration: none;
+    }
+
+    li:last-child a {
+      border: none;
+    }
+  }
+
+  box-shadow: rgb(150, 145, 145) 0px 5px 7px -3px;
+  display: none;
+
+  // @media (max-width: $break-large) {
+  //   /* Put the shits in here */
+  //   box-shadow: rgb(150, 145, 145) 0px 5px 7px -3px;
+  //   display: none;
+  // }
+}
+
+@media (min-width: $break-large) {
+  .web-nav-mobile,
+  .web-nav-mobile.active {
+    display: none;
   }
 }
 
-.btn-default > .nav__item, .btn-default > .nav__item:hover {
+.btn-default > .nav__item,
+.btn-default > .nav__item:hover {
   border-left: 0px;
 }
 
-.btn-default > .nav__item > .nav__link, .btn-default > .nav__item > .nav__link:hover {
+.btn-default > .nav__item > .nav__link,
+.btn-default > .nav__item > .nav__link:hover {
   margin-left: 0px;
 }
 
@@ -120,7 +161,7 @@ $primary-mobile-menu-text-color: #fff;
 
 .centerRow {
   display: flex;
-    justify-content: center;
+  justify-content: center;
 }
 
 .intro {
@@ -129,105 +170,441 @@ $primary-mobile-menu-text-color: #fff;
 }
 
 .navbar-link-wrapper {
-  background-color: $csun-red;
-  display: block;
-  height: 43px;
-  margin-bottom: 10px;
-  overflow: visible;
-  padding-bottom: 0;
-  text-align: center;
-  visibility: visible;
-  @media (max-width: $break-large) {
-    display: none;
-  }
+  display: none;
+  height: 2px;
 
-  .navbar-center {
-    display: inline-block;
-    float: none;
-    list-style: none;
-    vertical-align: top;
-  }
+  @media (min-width: $break-large) {
+    /* Put more shits in here */
+    background-color: $csun-red;
+    box-shadow: rgb(150, 145, 145) 0px 5px 7px -3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 43px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding-bottom: 0;
+    text-align: center;
+    visibility: visible;
 
-  .web-nav {
-    border-left: 0;
-  }
+    .navbar-center {
+      display: inline-block;
+      float: none;
+      list-style: none;
+      vertical-align: top;
+    }
 
-  .navbar-nav > li {
-    float: left;
-    padding-bottom: 10px;
-    padding-top: 10px;
-
-    &:first-child > a {
+    .web-nav {
       border-left: 0;
     }
 
-    a {
+    .navbar-nav {
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar-nav > li {
       border-left: 1px solid $nav-bar-border-color;
-      color: $nav-bar-text-color;
-      font-family: 'museo-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-weight: bold;
-      line-height: 1.25;
-      padding: 0 25px;
-      text-decoration: none;
-      text-transform: uppercase;
+      float: left;
+      line-height: 1;
+
+      &:first-child {
+        border-left: 0;
+      }
+
+      // Uncomment when ready to add sub-menus
+      // &:hover,
+      // &:hover + li {
+      //   border-color: transparent;
+      // }
+
+      a {
+        color: $nav-bar-text-color;
+        font-family: "museo-sans-700", "Helvetica Neue", Helvetica, Arial,
+          sans-serif;
+        font-weight: bold;
+        line-height: 1.125;
+        padding: 25px;
+        text-decoration: none;
+        text-shadow: rgb(0, 0, 0) 1px 1px 0px;
+        text-transform: uppercase;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
-
-  @media (max-width: $break-large) {
-    height: 2px;
-  }
 }
-
 
 // Header main
 
 .header {
-  margin: 10px;
+  margin: 15px 10px 20px;
 
   // Logo
   .csun-logo {
     float: left;
     margin-top: 5px;
+    background-image: $csun-logo-small;
+    height: 29px;
+    width: 107px;
     @media (min-width: $break-large) {
       background-image: $csun-logo-large;
       height: 43px;
       width: 160px;
     }
-    @media (max-width: $break-large) {
-      background-image: $csun-logo-small;
-      height: 29px;
-      width: 107px;
-    }
   }
 
   // Wordmarks
   .wordmark {
-    text-align: center;
+    text-align: left;
 
     &.secondary-wordmark {
+      font-family: serif;
       font-size: 24px;
       font-weight: bold;
+      text-align: center;
     }
 
     &.tertiary-wordmark {
+      font-family: serif;
       font-size: 22px;
     }
+
+    clear: both;
+    float: left;
+    white-space: nowrap;
+
     @media (min-width: $break-large) {
       border-left: 1px solid $secondary-border-color;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
       line-height: 26px;
-      margin-bottom: .1em;
+      margin-bottom: 0.1em;
       margin-left: 10px;
       padding: 0 16px;
       white-space: pre;
     }
 
-    @media (max-width: $break-large) {
-      clear: both;
-      float: left;
-      white-space: nowrap;
+    // @media (max-width: $break-large) {
+    //   clear: both;
+    //   float: left;
+    //   white-space: nowrap;
+    // }
+  }
+}
+
+/**
+ * Mobile Nav (Current Web-One Style)
+ *
+ * Brings the mobile nav in line with the Web-One
+ * mobile nav changes that were pushed in Fall 2018.
+ */
+
+// Website Navigation
+.layout-csun--navbar {
+  @media (min-width: $break-large) {
+    // Since our menu can/will be hidden via JavaScript, if it's hidden on mobile
+    // we need to ensure it'd still be visible on desktop if the window is
+    // resized; hence the !important.
+    display: block !important;
+  }
+  @media (min-width: $break-small) {
+    display: none;
+    margin: 5px -10px 0 -10px;
+  }
+}
+// The black square buttons available on the mobile menu
+.layout-csun--mobile-links {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  // Setting visibility to hidden on desktop prevents the keyboard from focusing
+  // on this element since this is intended for mobile only.
+  @media (min-width: $break-large) {
+    visibility: hidden;
+  }
+  li {
+    border-bottom: 1px solid #fff;
+    box-sizing: border-box;
+    width: 50%;
+    &:nth-child(odd) {
+      border-right: 1px solid #fff;
     }
+  }
+  a {
+    background-color: #000;
+    color: #ecebec;
+    display: block;
+    font-size: 18px;
+    padding: 10px 0;
+    text-decoration: none;
+    &:focus {
+      box-shadow: inset 0 0 0 3px $csun-red;
+    }
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.pane-menu-block-custom-primary-links {
+  & {
+    background-color: $csun-red;
+    box-shadow: 0px 5px 7px -3px #969191;
+    @media (min-width: $break-large) {
+      // font-family: $museo-heavy;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 11px;
+      text-transform: uppercase;
+    }
+    @media (min-width: $break-small) {
+      margin-bottom: 1em;
+      padding: 15px 0;
+    }
+  }
+  // Temporary work around. The `mobile-only` class has been named misleadingly
+  // so it's being used to visually hide things from desktop but is still
+  // accessible to screen readers.
+  .mobile-only {
+    @media (min-width: $break-large) {
+      visibility: hidden;
+    }
+  }
+  // Section heading for the navigation (screenreader only)
+  .pane-title {
+    //@include element-invisible();
+    color: #000;
+    background-color: #fff;
+  }
+  .menu-block-wrapper {
+    margin: 0 auto;
+    max-width: 1128px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    position: relative;
+  }
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    @media (min-width: $break-large) {
+      text-align: center;
+    }
+  }
+  // The container of a "top level" menu item
+  .menu--leaf {
+    & {
+      @media (min-width: $break-large) {
+        border-left: 1px solid rgba(#fff, 0.8);
+        display: inline;
+        &:first-child {
+          border-left: none;
+        }
+      }
+      @media (min-width: $break-small) {
+        background-position: right top;
+        display: block;
+        list-style: none;
+        font-size: 20px;
+        // Don't add a division to the first menu item
+        &:not(:first-child) {
+          border-top: 1px solid;
+        }
+      }
+    }
+    // On desktop, we only want to affect the top level menu items. However, they
+    // have different classes based on certain conditions, so that's why we select
+    // the anchor tag explicitly.
+    & > a {
+      @media (min-width: $break-large) {
+        display: inline-block;
+        padding: 9px 15px 7px;
+      }
+      // @media (min-width: $mq-xlarge) {
+      //   padding-left: 25px;
+      //   padding-right: 25px;
+      // }
+    }
+    // On mobile, all links are treated the same way but still have multiple
+    // different classes.
+    a {
+      @media (min-width: $break-small) {
+        display: block;
+        padding: 10px 5px;
+      }
+    }
+  }
+  .menu--link,
+  .menu--link-active-trail {
+    //@include link-no-underline();
+    color: #fff;
+    @media (min-width: $break-large) {
+      text-shadow: #000 1px 1px 0;
+    }
+  }
+}
+.mega-menu__wrapper {
+  display: none;
+  width: 100%;
+  @media (min-width: $break-large) {
+    left: 0;
+    position: absolute;
+    z-index: 9999;
+  }
+}
+// The mega menu is defined as the submenu for the top level menu items. This is
+// what shows up when you hover over a menu item and more links show up below.
+.mega-menu {
+  margin: 0;
+  @media (min-width: $break-large) {
+    background-color: #333;
+    padding: 15px 0;
+  }
+  @media (min-width: $break-small) {
+    padding-left: 30px;
+  }
+  // Since we are stacking mega menu columns, they'll have a non-easily accessible
+  // selector path, so we need to get the *very very* last item to strip its
+  // border.
+  //
+  // Not easy to maintain, sorry future me.
+  .mega-menu__column:last-child {
+    .mega-menu__column-list:last-child {
+      .mega-menu__item:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+// In order to prevent the mega menu from being really tall, they're split up into
+// columns; these are the columns.
+.mega-menu__column {
+  list-style: none;
+  a {
+    &:hover,
+    &:active,
+    &:focus {
+      color: #fff;
+    }
+  }
+  // Put the columns side by side on desktop while keeping them stacked on mobile
+  @media (min-width: $break-large) {
+    float: left;
+    width: 25%;
+  }
+}
+// This is the unordered list for links that belong in each column.
+.mega-menu__column-list {
+  margin: 0;
+  padding: 0;
+}
+.mega-menu__item {
+  list-style: none;
+  margin: 0;
+  text-align: left;
+  @media (min-width: $break-large) {
+    padding: 0 0 0.5em 1em;
+  }
+  @media (min-width: $break-small) {
+    border-top: none;
+    border-bottom: 1px solid;
+  }
+}
+// This class is attached to the top level menu items; it's only added whenever
+// it has a mega menu.
+.mega-menu__trigger {
+  @media (min-width: $break-large) {
+    &.hovered,
+    &:hover {
+      border-left-color: transparent;
+      a {
+        background-color: #333;
+      }
+      // Uncomment when ready to add sub-menus
+      // & + .mega-menu__trigger {
+      //   border-left-color: transparent;
+      // }
+    }
+  }
+  // @media (min-width: $break-small) {
+  //   & > a {
+  //     background-position: top right;
+  //     background-repeat: no-repeat;
+  //     //background-image: url(../images/main-menu-expand.png);
+  //   }
+  //   &.hovered {
+  //     & > a {
+  //       //background-image: url(../images/main-menu-collaps.png);
+  //     }
+  //   }
+  // }
+}
+.mega-menu__trigger.hovered {
+  & > a {
+    @media (min-width: $break-small) {
+      border-bottom: 1px solid;
+    }
+  }
+  & .mega-menu__wrapper {
+    display: block;
+  }
+}
+.mega-menu__trigger:hover {
+  @media (min-width: $break-large) {
+    & .mega-menu__wrapper {
+      display: block;
+    }
+  }
+}
+.mega-menu__link {
+  //@extend %link-no-underline;
+  line-height: 20px;
+  text-transform: none;
+  font-weight: normal;
+  @media (min-width: $break-large) {
+    font-size: 13px;
+  }
+  @media (min-width: $break-small) {
+    font-size: 0.8em;
+  }
+  a {
+    color: #fff;
+  }
+  &:link,
+  &:visited {
+    color: #fff;
+  }
+}
+
+.bg-white {
+  background: white;
+}
+
+/**
+ * This will keep the search form nested below the utility links
+ * on the rifht side of the header in desktop, and below in the
+ * dropdown for mobile.
+ */
+.header-utilities {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.desktop-only {
+  display: none;
+}
+@media (min-width: $break-large) {
+  .desktop-only {
+    display: block;
   }
 }
